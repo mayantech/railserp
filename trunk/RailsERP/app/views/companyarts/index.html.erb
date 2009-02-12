@@ -1,0 +1,26 @@
+<h1>Listing companyarts</h1>
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b>Fulltextsearch : </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag "Search" %>
+  </p>
+<% end %>
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% for companyart in @companyarts %>
+  <tr>
+    <td><%=h companyart.name %></td>
+    <td><%= link_to 'Show', companyart %></td>
+    <td><%= link_to 'Edit', edit_companyart_path(companyart) %></td>
+    <td><%= link_to 'Destroy', companyart, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New companyart', new_companyart_path %>

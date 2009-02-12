@@ -1,0 +1,29 @@
+<%= image_tag "/images/parts/#{@part.id}/#{@part.id}.#{@part.imageext}", :size => "200x200" %>
+<p>
+  <b>Name:</b>
+  <%=h @part.name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @part.price %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%=h @part.info %>
+</p>
+
+<p>
+  <b>Imagename:</b>
+  <%=h @part.imagename %>
+</p>
+
+<p>
+  <b>Imageext:</b>
+  <%=h @part.imageext %>
+</p>
+
+
+<%= link_to 'Edit', edit_part_path(@part) %> |
+<%= link_to 'Back', parts_path %>

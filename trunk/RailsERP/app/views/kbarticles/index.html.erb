@@ -1,0 +1,36 @@
+<h1>Listing kbarticles</h1>
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b>Fulltextsearch : </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag "Search" %>
+  </p>
+<% end %>
+<table>
+  <tr>
+    <th>KB-ID</th>
+    <th>Symptoms</th>
+    <th>Cause</th>
+    <th>Solution</th>
+    <th>Kbcat</th>
+    <th>Kblang</th>
+  </tr>
+
+<% for kbarticle in @kbarticles %>
+  <tr>
+    <td><%=h kbarticle.id %></td>
+    <td><%=h kbarticle.symptoms %></td>
+    <td><%=h kbarticle.cause %></td>
+    <td><%=h kbarticle.solution %></td>
+    <td><%=h kbarticle.kbcat.name %></td>
+    <td><%=h kbarticle.kblang.language %></td>
+    <td><%= link_to 'Show', kbarticle %></td>
+    <td><%= link_to 'Edit', edit_kbarticle_path(kbarticle) %></td>
+    <td><%= link_to 'Destroy', kbarticle, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New kbarticle', new_kbarticle_path %>

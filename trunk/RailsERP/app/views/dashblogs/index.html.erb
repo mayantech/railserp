@@ -1,0 +1,30 @@
+<h1>Listing dashblogs</h1>
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b>Fulltextsearch : </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag "Search" %>
+  </p>
+<% end %>
+<table border="1px">
+  <tr>
+    <th>Title</th>
+    <th>Blogtext</th>
+    <th>Published</th>
+  </tr>
+
+<% for dashblog in @dashblogs %>
+  <tr>
+    <td><%=h dashblog.title %></td>
+    <td><%=h dashblog.blogtext %></td>
+    <td><%=h dashblog.published %></td>
+    <td><%= link_to 'Show', dashblog %></td>
+    <td><%= link_to 'Edit', edit_dashblog_path(dashblog) %></td>
+    <td><%= link_to 'Destroy', dashblog, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New dashblog', new_dashblog_path %>

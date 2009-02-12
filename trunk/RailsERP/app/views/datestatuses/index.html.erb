@@ -1,0 +1,26 @@
+<h1>Listing datestatuses</h1>
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b>Fulltextsearch : </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag "Search" %>
+  </p>
+<% end %>
+<table>
+  <tr>
+    <th>Status</th>
+  </tr>
+
+<% for datestatus in @datestatuses %>
+  <tr>
+    <td><%=h datestatus.status %></td>
+    <td><%= link_to 'Show', datestatus %></td>
+    <td><%= link_to 'Edit', edit_datestatus_path(datestatus) %></td>
+    <td><%= link_to 'Destroy', datestatus, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New datestatus', new_datestatus_path %>

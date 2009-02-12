@@ -1,0 +1,29 @@
+development:
+      host: localhost
+      adapter: mysql
+      database: RailsERP_dev
+      port: 8889
+      username: root
+      password: root
+      socket: /Applications/MAMP/tmp/mysql/mysql.sock
+
+# Warning: The database defined as 'test' will be erased and
+# re-generated from your development database when you run 'rake'.
+# Do not set this db to the same as development or production.
+test:
+      host: localhost
+      adapter: mysql
+      database: RailsERP_test
+      port: 8889
+      username: root
+      password: root
+      socket: /Applications/MAMP/tmp/mysql/mysql.sock
+
+production:
+      host: localhost
+      adapter: mysql
+      database: RailsERP_pro
+      port: 8889
+      username: root
+      password: root
+      socket: /Applications/MAMP/tmp/mysql/mysql.sock

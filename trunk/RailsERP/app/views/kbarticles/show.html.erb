@@ -1,0 +1,47 @@
+<p>
+  <b>Symptoms:</b>
+  <%=h @kbarticle.symptoms %>
+</p>
+
+<p>
+  <b>Cause:</b>
+  <%=h @kbarticle.cause %>
+</p>
+
+<p>
+  <b>Solution:</b>
+  <%=h @kbarticle.solution %>
+</p>
+
+<p>
+  <b>Kbcat:</b>
+  <%=h @kbarticle.kbcat.name %>
+</p>
+
+<p>
+  <b>Kblang:</b>
+  <%=h @kbarticle.kblang.language %>
+</p>
+
+
+<hr>
+<h1>All Comments</h1>
+<br>
+  <table>
+  <tr>
+    <th>Comment</th>
+  </tr>
+
+<% for kbcomment in @kbarticle.kbcomments %>
+  <tr>
+    <td><%=h kbcomment.comment %></td>
+    <td><%= link_to 'Show', kbcomment %></td>
+    <td><%= link_to 'Edit', edit_kbcomment_path(kbcomment) %></td>
+    <td><%= link_to 'Destroy', kbcomment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br>
+
+<%= link_to 'Edit', edit_kbarticle_path(@kbarticle) %> |
+<%= link_to 'Back', kbarticles_path %>

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Rails ERP: <%= controller.controller_name %> -> <%= controller.action_name %></title>
+    <%= stylesheet_link_tag 'global' %>
+  </head>
+  <body>
+    <div id="Page">
+
+<div class="nav-container-outer">
+        <img src="/images/nav-bg-l.jpg" alt="" class="float-left" />
+        <img src="/images/nav-bg-r.jpg" alt="" class="float-right" />
+        <ul id="nav-container" class="nav-container">
+          <li><a class="item-primary" href="#" target="_self">News</a>
+            <ul style="width:150px;">
+              <li><%= link_to "Dashblogs", :controller => "Dashblogs"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li><a class="item-primary" href="#" target="_self">Sales</a>
+            <ul style="width:150px;">
+              <li><%= link_to "Contacts", :controller => "contacts"%></li>
+              <li><%= link_to "Companies", :controller => "Companies"%></li>
+              <li><%= link_to "Adresses", :controller => "Adresses"%></li>
+              <li><%= link_to "Companyarts", :controller => "Companyarts"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li><a class="item-primary" href="#" target="_self">Production</a>
+            <ul style="width:150px;">
+              <li><%= link_to "Products", :controller => "Products"%></li>
+              <li><%= link_to "Parts", :controller => "Parts"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li><a class="item-primary" href="#" target="_self">Support</a>
+            <ul style="width:150px;">
+              <li><%= link_to "Kbcats", :controller => "Kbcats"%></li>
+              <li><%= link_to "Kblangs", :controller => "Kblangs"%></li>
+              <li><%= link_to "Kbcomments", :controller => "Kbcomments"%></li>
+              <li><%= link_to "Kbarticles", :controller => "Kbarticles"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li><a class="item-primary" href="#" target="_self">Documents</a>
+            <ul style="width:150px;">
+              <li><%= link_to "Folders", :controller => "Folders"%></li>
+              <li><%= link_to "Files", :controller => "Filedatas"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li><a class="item-primary" href="#" target="_self">Organisation</a>
+            <ul style="width:150px;">
+              <li><%= link_to "Caldates", :controller => "Caldates"%></li>
+              <li><%= link_to "Dateprios", :controller => "Dateprios"%></li>
+              <li><%= link_to "Datestatuses", :controller => "Datestatuses"%></li>
+              <li><%= link_to "Datearts", :controller => "Datearts"%></li>
+              <li><%= link_to "Datetasks", :controller => "Datetasks"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li class="clear"> </li>
+        </ul>
+      </div>
+      
+      <div id="header">
+        <div id="Login">
+          <% if logged_in? %>
+            <p>Welcom <%= current_account.login %> -> Click here to( <%= link_to "Logoff", logout_path %> )</p>
+          <%  else %>
+            <p>You are not login. -> Please
+              (<%= link_to "Login", login_path %> )<br>
+              If you are don´t have a account ->(<%= link_to "Register", signup_path %> )
+            </p>
+          <% end %>
+        </div>
+
+        <div id="Path">
+          <%= link_to "Dashboard", :controller => 'dashboards' %>
+          -> ( <%= controller.controller_name %> -> <%= controller.action_name %>)
+        </div>
+
+        <div id="lanchanger">
+          <p>
+            <%= :language.l %> <%= @current_locale %>(
+            <%= link_to "english",params.merge(:locale=>'en') %>,
+            <%= link_to "deutsch",params.merge(:locale=>'de') %>
+            )
+          </p>
+        </div>
+
+
+      </div>
+
+      <div id="Logo">
+        <%=  image_tag("RailsERP-logo.png", :size => "300x200")   %>
+      </div>
+
+
+      <div align="center" id="flash">
+        <p style="color: green"><%= flash[:notice] %></p>
+      </div>
+
+
+      
+
+
+      <div id="main">
+        <%= yield  %>
+      </div>
+    </div>
+  </body>
+</html>

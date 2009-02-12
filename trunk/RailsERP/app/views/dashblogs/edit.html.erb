@@ -1,0 +1,27 @@
+<h1>Editing dashblog</h1>
+
+<%= error_messages_for :dashblog %>
+
+<% form_for(@dashblog) do |f| %>
+  <p>
+    <b>Title</b><br />
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <b>Blogtext</b><br />
+    <%= f.text_area :blogtext %>
+  </p>
+
+  <p>
+    <b>Published</b><br />
+    <%= f.check_box :published %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @dashblog %> |
+<%= link_to 'Back', dashblogs_path %>

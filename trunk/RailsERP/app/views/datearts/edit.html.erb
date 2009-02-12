@@ -1,0 +1,17 @@
+<h1>Editing dateart</h1>
+
+<%= error_messages_for :dateart %>
+
+<% form_for(@dateart) do |f| %>
+  <p>
+    <b>Art</b><br />
+    <%= f.text_field :art %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @dateart %> |
+<%= link_to 'Back', datearts_path %>

@@ -1,0 +1,63 @@
+<h1>Editing caldate</h1>
+
+<%= error_messages_for :caldate %>
+
+<% form_for(@caldate) do |f| %>
+  <p>
+    <b>Startdate</b><br />
+    <%= f.datetime_select :startdate %>
+  </p>
+
+  <p>
+    <b>Enddate</b><br />
+    <%= f.datetime_select :enddate %>
+  </p>
+
+  <p>
+    <b>Info</b><br />
+    <%= f.text_area :info %>
+  </p>
+
+  <p>
+    <b>Fullday</b><br />
+    <%= f.check_box :fullday %>
+  </p>
+
+  <p>
+    <b>Account</b><br />
+    <%= f.text_field :account_id %>
+  </p>
+
+
+  <p>
+    <b>Contact</b><br />
+    <%= f.collection_select :contact_id ,@contacts, :id, :name %>
+  </p>
+
+  <p>
+    <b>Dateprio</b><br />
+    <%= f.collection_select :dateprio_id ,@dateprios, :id, :prio %>
+  </p>
+
+  <p>
+    <b>Datestatus</b><br />
+    <%= f.collection_select :datestatus_id ,@datestatuses, :id, :status %>
+  </p>
+
+  <p>
+    <b>Dateart</b><br />
+    <%= f.collection_select :dateart_id ,@datearts, :id, :art %>
+  </p>
+
+  <p>
+    <b>Reminder</b><br />
+    <%= f.datetime_select :reminder %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @caldate %> |
+<%= link_to 'Back', caldates_path %>

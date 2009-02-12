@@ -1,0 +1,112 @@
+<p>
+  <b>Name:</b>
+  <%=h @contact.name %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%=h @contact.lastname %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%=h @contact.position %>
+</p>
+
+<p>
+  <b>Tel:</b>
+  <%=h @contact.tel %>
+</p>
+
+<p>
+  <b>Mobile:</b>
+  <%=h @contact.mobile %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @contact.email %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%=h @contact.Info %>
+</p>
+
+<p>
+  <b>Birthday:</b>
+  <%=h @contact.birthday %>
+</p>
+<p>
+  <b>Company:</b>
+  <%=h @contact.company.name %>
+</p>
+
+
+<table>
+  <tr>
+    <th>Startdate</th>
+    <th>Enddate</th>
+    <th>Info</th>
+    <th>Fullday</th>
+    <th>Account</th>
+    <th>Contact</th>
+    <th>Dateprio</th>
+    <th>Datestatus</th>
+    <th>Dateart</th>
+    <th>Reminder</th>
+  </tr>
+
+<br>
+  <h1>Cal Dates with this Contact:</h1><br>
+
+<% for caldate in @contact.caldates %>
+  <tr>
+    <td><%=h caldate.startdate.day %>.<%=h caldate.startdate.month %>.<%=h caldate.startdate.year %></td>
+    <td><%=h caldate.enddate.day %>.<%=h caldate.enddate.month %>.<%=h caldate.enddate.year %></td>
+    <td><%=h caldate.info %></td>
+    <td><%=h caldate.fullday %></td>
+    <td><%=h caldate.account_id %></td>
+    <td><%=h caldate.contact.name %></td>
+    <td><%=h caldate.dateprio.prio %></td>
+    <td><%=h caldate.datestatus.status %></td>
+    <td><%=h caldate.dateart.art %></td>
+    <td><%=h caldate.reminder.day %>.<%=h caldate.reminder.month %>.<%=h caldate.reminder.year %></td>
+    <td><%= link_to 'Show', caldate %></td>
+    <td><%= link_to 'Edit', edit_caldate_path(caldate) %></td>
+    <td><%= link_to 'Destroy', caldate, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<hr>
+  <h1>Files:</h1>
+  <br>
+<table>
+  <tr>
+    <th>Filename</th>
+    <th>Size:(MB)</th>
+  </tr>
+
+<% for filedata in @contact.filedatas %>
+  <tr>
+    <td><a href="/files/<%= filedata.id.to_s %>/<%= filedata.id.to_s + "." + filedata.ext%>"><%=h filedata.name + "." + filedata.ext %></a></td>
+    <td><%=h filedata.size/1024/1024 %></td>
+    <td><%= link_to 'Show', filedata %></td>
+    <td><%= link_to 'Edit', edit_filedata_path(filedata) %></td>
+    <td><%= link_to 'Destroy', filedata, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New filedata', new_filedata_path %>
+<br>
+  <hr>
+
+
+
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>

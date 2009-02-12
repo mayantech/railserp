@@ -1,0 +1,36 @@
+<p>
+  <b>Language:</b>
+  <%=h @kblang.language %>
+</p>
+<br>
+<hr>
+<br>
+  <h1>All KB Articles in this Language</h1>
+
+  <table>
+  <tr>
+    <th>KB-ID</th>
+    <th>Symptoms</th>
+    <th>Cause</th>
+    <th>Solution</th>
+    <th>Kbcat</th>
+    <th>Kblang</th>
+  </tr>
+
+<% for kbarticle in @kblang.kbarticles %>
+  <tr>
+    <td><%=h kbarticle.id %></td>
+    <td><%=h kbarticle.symptoms %></td>
+    <td><%=h kbarticle.cause %></td>
+    <td><%=h kbarticle.solution %></td>
+    <td><%=h kbarticle.kbcat.name %></td>
+    <td><%=h kbarticle.kblang.language %></td>
+    <td><%= link_to 'Show', kbarticle %></td>
+    <td><%= link_to 'Edit', edit_kbarticle_path(kbarticle) %></td>
+    <td><%= link_to 'Destroy', kbarticle, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Edit', edit_kblang_path(@kblang) %> |
+<%= link_to 'Back', kblangs_path %>

@@ -1,0 +1,17 @@
+<h1>Editing kbcat</h1>
+
+<%= error_messages_for :kbcat %>
+
+<% form_for(@kbcat) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @kbcat %> |
+<%= link_to 'Back', kbcats_path %>

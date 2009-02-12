@@ -1,0 +1,26 @@
+<h1>Listing dateprios</h1>
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b>Fulltextsearch : </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag "Search" %>
+  </p>
+<% end %>
+<table>
+  <tr>
+    <th>Prio</th>
+  </tr>
+
+<% for dateprio in @dateprios %>
+  <tr>
+    <td><%=h dateprio.prio %></td>
+    <td><%= link_to 'Show', dateprio %></td>
+    <td><%= link_to 'Edit', edit_dateprio_path(dateprio) %></td>
+    <td><%= link_to 'Destroy', dateprio, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New dateprio', new_dateprio_path %>

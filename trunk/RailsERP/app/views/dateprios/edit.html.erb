@@ -1,0 +1,17 @@
+<h1>Editing dateprio</h1>
+
+<%= error_messages_for :dateprio %>
+
+<% form_for(@dateprio) do |f| %>
+  <p>
+    <b>Prio</b><br />
+    <%= f.text_field :prio %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @dateprio %> |
+<%= link_to 'Back', dateprios_path %>

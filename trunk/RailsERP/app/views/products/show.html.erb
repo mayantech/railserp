@@ -1,0 +1,57 @@
+<%= image_tag "/images/product/#{@product.id}/#{@product.id}.#{@product.imagepath}", :size => "200x200" %>
+<br>
+<p>
+  <b>Name:</b>
+  <%=h @product.name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @product.price %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%=h @product.info %>
+</p>
+
+<p>
+  <b>FileType:</b>
+  <%=h @product.imagepath %>
+</p>
+
+<p>
+  <b>Parts of Product:</b>
+  <%=h @product.parts.count%>
+</p>
+
+<% form_tag :action => 'addpart' do %>
+ <%= hidden_field 'product', 'id' %>
+ <select name="add_parts[]" >
+ <%= options_from_collection_for_select @parts, 'id','name' %>
+ </select>
+ <%= submit_tag "Add Selected Part" %>
+<% end %>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Info</th>
+  </tr>
+
+<% for part in @product.parts %>
+  <tr>
+    <td><%= image_tag "/images/parts/#{part.id}/#{part.id}.#{part.imageext}", :size => "100x100" %></td>
+    <td><%=h part.name %></td>
+    <td><%=h part.price %></td>
+    <td><%=h part.info %></td>
+    <td><%= link_to "Del Part", { :action => "delpart", :id => @product.id , :partid => part.id}, :confirm => "Are you sure?"%> </td>
+ </tr>
+<% end %>
+</table>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

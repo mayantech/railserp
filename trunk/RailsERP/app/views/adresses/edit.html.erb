@@ -1,0 +1,46 @@
+<h1>Editing adress</h1>
+
+<%= error_messages_for :adress %>
+
+<% form_for(@adress) do |f| %>
+  <p>
+    <b>Street</b><br />
+    <%= f.text_field :street %>
+  </p>
+
+  <p>
+    <b>Streetnr</b><br />
+    <%= f.text_field :streetnr %>
+  </p>
+
+  <p>
+    <b>Zip</b><br />
+    <%= f.text_field :zip %>
+  </p>
+
+  <p>
+    <b>Area</b><br />
+    <%= f.text_field :area %>
+  </p>
+
+  <p>
+    <b>Land</b><br />
+    <%= f.text_field :land %>
+  </p>
+
+  <p>
+    <b>Postcode</b><br />
+    <%= f.text_field :postcode %>
+  </p>
+  
+ <p><b>Company</b><br />
+    <%= f.collection_select :company_id ,@companies, :id, :name %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @adress %> |
+<%= link_to 'Back', adresses_path %>

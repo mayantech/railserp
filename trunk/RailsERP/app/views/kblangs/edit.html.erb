@@ -1,0 +1,17 @@
+<h1>Editing kblang</h1>
+
+<%= error_messages_for :kblang %>
+
+<% form_for(@kblang) do |f| %>
+  <p>
+    <b>Language</b><br />
+    <%= f.text_field :language %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @kblang %> |
+<%= link_to 'Back', kblangs_path %>

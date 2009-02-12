@@ -1,0 +1,73 @@
+<h1>Listing caldates</h1>
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b>Fulltextsearch : </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag "Search" %>
+  </p>
+<% end %>
+
+<hr>
+<table align="center"><tr>
+    <td><%= link_to "befor", {:action => "datechange", :id => 1, :today => @today<<1}  %> </td>
+<td><%= calendar({:year => @today.year, :month => @today.month}) do |d|
+  cell_text = "#{link_to d.mday, { :action => "filterdate" ,:id => 1,:date => d , :today => @today}}"
+  cell_attrs = {:class => 'day'}
+  [cell_text, cell_attrs]
+end %></td>
+<td><%= link_to "next", {:action => "datechange", :id => 1, :today => @today>>1}  %> </td>
+</tr></table>
+<hr>
+
+<%#*<pre>%>
+<%#=
+calendar({:year => @today.year, :month => @today.month+3}) do |d|
+  cell_text = "#{d.mday}<br />"
+  cell_attrs = {:class => 'day'}
+  @caldates.each do |e|
+    if d === e.startdate.to_date then
+      cell_text << e.info << "<br />"
+      cell_attrs[:class] = 'specialDay'
+    end
+  end
+  [cell_text, cell_attrs]
+end %>
+
+<%#*</pre>%>
+
+<table>
+  <tr>
+    <th>Startdate</th>
+    <th>Enddate</th>
+    <th>Info</th>
+    <th>Fullday</th>
+    <th>Account</th>
+    <th>Contact</th>
+    <th>Dateprio</th>
+    <th>Datestatus</th>
+    <th>Dateart</th>
+    <th>Reminder</th>
+  </tr>
+
+<% for caldate in @caldates %>
+  <tr>
+    <td><%=h caldate.startdate.day %>.<%=h caldate.startdate.month %>.<%=h caldate.startdate.year %></td>
+    <td><%=h caldate.enddate.day %>.<%=h caldate.enddate.month %>.<%=h caldate.enddate.year %></td>
+    <td><%=h caldate.info %></td>
+    <td><%=h caldate.fullday %></td>
+    <td><%=h caldate.account_id %></td>
+    <td><%=h caldate.contact.name %></td>
+    <td><%=h caldate.dateprio.prio %></td>
+    <td><%=h caldate.datestatus.status %></td>
+    <td><%=h caldate.dateart.art %></td>
+    <td><%=h caldate.reminder.day %>.<%=h caldate.reminder.month %>.<%=h caldate.reminder.year %></td>
+    <td><%= link_to 'Show', caldate %></td>
+    <td><%= link_to 'Edit', edit_caldate_path(caldate) %></td>
+    <td><%= link_to 'Destroy', caldate, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New caldate', new_caldate_path %>

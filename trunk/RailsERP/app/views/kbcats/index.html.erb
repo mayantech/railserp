@@ -1,0 +1,26 @@
+<h1>Listing kbcats</h1>
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b>Fulltextsearch : </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag "Search" %>
+  </p>
+<% end %>
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% for kbcat in @kbcats %>
+  <tr>
+    <td><%=h kbcat.name %></td>
+    <td><%= link_to 'Show', kbcat %></td>
+    <td><%= link_to 'Edit', edit_kbcat_path(kbcat) %></td>
+    <td><%= link_to 'Destroy', kbcat, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New kbcat', new_kbcat_path %>
