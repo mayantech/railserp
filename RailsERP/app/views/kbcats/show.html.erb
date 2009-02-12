@@ -1,0 +1,37 @@
+<p>
+  <b>Name:</b>
+  <%=h @kbcat.name %>
+</p>
+<br>
+<hr>
+  <br>
+<h1>All KB Articles in this KBcat</h1>
+
+<table>
+  <tr>
+    <th>KD-ID</th>
+    <th>Symptoms</th>
+    <th>Cause</th>
+    <th>Solution</th>
+    <th>Kbcat</th>
+    <th>Kblang</th>
+  </tr>
+
+<% for kbarticle in @kbcat.kbarticles %>
+  <tr>
+    <td><%=h kbarticle.id %></td>
+    <td><%=h kbarticle.symptoms %></td>
+    <td><%=h kbarticle.cause %></td>
+    <td><%=h kbarticle.solution %></td>
+    <td><%=h kbarticle.kbcat.name %></td>
+    <td><%=h kbarticle.kblang.language %></td>
+    <td><%= link_to 'Show', kbarticle %></td>
+    <td><%= link_to 'Edit', edit_kbarticle_path(kbarticle) %></td>
+    <td><%= link_to 'Destroy', kbarticle, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<%= link_to 'Edit', edit_kbcat_path(@kbcat) %> |
+<%= link_to 'Back', kbcats_path %>

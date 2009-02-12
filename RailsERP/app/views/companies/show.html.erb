@@ -1,0 +1,80 @@
+<p>
+  <b>Name:</b>
+  <%=h @company.name %>
+</p>
+<p>
+  <b>Companyart:</b>
+  <%=h @company.companyart.name %>
+</p>
+
+<b><u><p>Adresses <%= @company.name  %> : </p></u></b>
+<br>
+<table border="1px">
+  <tr>
+    <th>Street</th>
+    <th>Streetnr</th>
+    <th>Zip</th>
+    <th>Area</th>
+    <th>Land</th>
+    <th>Postcode</th>
+    <th>Company</th>
+  </tr>
+
+<% for adress in @company.adresses %>
+  <tr>
+    <td><%=h adress.street %></td>
+    <td><%=h adress.streetnr %></td>
+    <td><%=h adress.zip %></td>
+    <td><%=h adress.area %></td>
+    <td><%=h adress.land %></td>
+    <td><%=h adress.postcode %></td>
+    <td><%=h adress.company.name%></td>
+    <td><%= link_to 'Show', adress %></td>
+    <td><%= link_to 'Edit', edit_adress_path(adress) %></td>
+    <td><%= link_to 'Destroy', adress, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br>
+  <b><u><p>Contacts from <%= @company.name  %> : </p></u></b>
+<br>
+
+<table border="1px">
+  <tr>
+    <th>Name</th>
+    <th>Lastname</th> 
+    <th>Position</th>
+    <th>Tel</th>
+    <th>Mobile</th>
+    <th>Email</th>
+    <th>Info</th>
+    <th>Birthday</th>
+    <th>Company</th>
+    <th>Functions</th>
+  </tr>
+
+<% for contact in @company.contacts %>
+  <tr>
+    <td><%=h contact.name %></td>
+    <td><%=h contact.lastname %></td>
+    <td><%=h contact.position %></td>
+    <td><%=h contact.tel %></td>
+    <td><%=h contact.mobile %></td>
+    <td><%=h contact.email %></td>
+    <td><%=h contact.Info %></td>
+    <td><%=h contact.birthday %></td>
+    <td><%=h contact.company.name %> </td>
+    <td><%= link_to 'Show', contact %></td>
+    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+    <td><%= link_to 'Destroy', contact, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br>
+
+
+
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

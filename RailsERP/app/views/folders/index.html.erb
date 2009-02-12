@@ -1,0 +1,28 @@
+<h1>Listing folders</h1>
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b>Fulltextsearch : </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag "Search" %>
+  </p>
+<% end %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Info</th>
+  </tr>
+
+<% for folder in @folders %>
+  <tr>
+    <td><%=h folder.name %></td>
+    <td><%=h folder.info %></td>
+    <td><%= link_to 'Show', folder %></td>
+    <td><%= link_to 'Edit', edit_folder_path(folder) %></td>
+    <td><%= link_to 'Destroy', folder, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New folder', new_folder_path %>

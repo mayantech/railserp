@@ -1,0 +1,20 @@
+<h1>New kbcomment</h1>
+
+<%= error_messages_for :kbcomment %>
+
+<% form_for(@kbcomment) do |f| %>
+  <p><b>Kbarticle</b><br />
+    <%= f.collection_select :kbarticle_id ,@kbarticles, :id, :symptoms %>
+  </p>
+
+  <p>
+    <b>Comment</b><br />
+    <%= f.text_area :comment %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', kbcomments_path %>

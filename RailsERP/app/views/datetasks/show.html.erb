@@ -1,0 +1,33 @@
+<p>
+  <b>Taskname:</b>
+  <%=h @datetask.taskname %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%=h @datetask.info %>
+</p>
+
+<p>
+  <b>Progressed:</b>
+  <%=h @datetask.progressed %>
+</p>
+
+<p>
+  <b>Dateprio:</b>
+  <%=h @datetask.dateprio.prio %>
+</p>
+
+<p>
+  <b>Datestatus:</b>
+  <%=h @datetask.datestatus.status %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @datetask.caldate.info %>
+</p>
+
+
+<%= link_to 'Edit', edit_datetask_path(@datetask) %> |
+<%= link_to 'Back', datetasks_path %>

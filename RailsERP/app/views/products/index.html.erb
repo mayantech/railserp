@@ -1,0 +1,32 @@
+<h1>Listing products</h1>
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b>Fulltextsearch : </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag "Search" %>
+  </p>
+<% end %>
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Info</th>
+  </tr>
+
+<% for product in @products %>
+  <tr>
+    <td><%= image_tag "/images/product/#{product.id}/#{product.id}.#{product.imagepath}", :size => "100x100" %></td>
+    <td><%=h product.name %></td>
+    <td><%=h product.price %></td>
+    <td><%=h product.info %></td>
+    <td><%= link_to 'Show', product %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New product', new_product_path %>

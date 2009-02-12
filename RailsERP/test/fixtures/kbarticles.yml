@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  symptoms: MyText
+  cause: MyText
+  solution: MyText
+  kbcat_id: 1
+  kblang_id: 1
+
+two:
+  symptoms: MyText
+  cause: MyText
+  solution: MyText
+  kbcat_id: 1
+  kblang_id: 1

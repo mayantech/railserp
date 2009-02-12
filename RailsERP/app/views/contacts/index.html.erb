@@ -1,0 +1,47 @@
+<h1>Listing contacts</h1>
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b>Fulltextsearch : </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag "Search" %>
+  </p>
+<% end %>
+
+<table border="1px">
+  <tr>
+    <th>Name</th>
+    <th>Lastname</th> 
+    <th>Position</th>
+    <th>Tel</th>
+    <th>Mobile</th>
+    <th>Email</th>
+    <th>Info</th>
+    <th>Birthday</th>
+    <th>Company</th>
+    <th>Functions</th>
+  </tr>
+
+<% for contact in @contacts %>
+  <tr>
+    <td><%=h contact.name %></td>
+    <td><%=h contact.lastname %></td>
+    <td><%=h contact.position %></td>
+    <td><%=h contact.tel %></td>
+    <td><%=h contact.mobile %></td>
+    <td><%= mail_to contact.email %></td>
+    <td><%=h contact.Info %></td>
+    <td><%=h contact.birthday %></td>
+    <td><%=h contact.company.name %> </td>
+    <td><%= link_to 'Show', contact %></td>
+    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+    <td><%= link_to 'Destroy', contact, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Write', { :action =>"writeletter", :id => contact} %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<br />
+
+<%= link_to 'New contact', new_contact_path %>
+

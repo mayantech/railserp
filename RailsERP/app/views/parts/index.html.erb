@@ -1,0 +1,36 @@
+<h1>Listing parts</h1>
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b>Fulltextsearch : </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag "Search" %>
+  </p>
+<% end %>
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Info</th>
+    <th>Imagename</th>
+    <th>Imageext</th>
+  </tr>
+
+<% for part in @parts %>
+  <tr>
+    <td><%= image_tag "/images/parts/#{part.id}/#{part.id}.#{part.imageext}", :size => "100x100" %></td>
+    <td><%=h part.name %></td>
+    <td><%=h part.price %></td>
+    <td><%=h part.info %></td>
+    <td><%=h part.imagename %></td>
+    <td><%=h part.imageext %></td>
+    <td><%= link_to 'Show', part %></td>
+    <td><%= link_to 'Edit', edit_part_path(part) %></td>
+    <td><%= link_to 'Destroy', part, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New part', new_part_path %>

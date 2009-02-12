@@ -1,0 +1,28 @@
+<p>
+  <b> Filename:</b>
+  <%=h @filedata.name + "." + @filedata.ext%>
+</p>
+
+<p>
+  <b>Size: (MB)</b>
+  <%=h @filedata.size/1024/1024 %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%=h @filedata.info %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%=h @filedata.contact.name %>
+</p>
+
+<p>
+  <b>Folder:</b>
+  <%=h @filedata.folder.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_filedata_path(@filedata) %> |
+<%= link_to 'Back', filedatas_path %>

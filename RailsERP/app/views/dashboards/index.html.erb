@@ -1,0 +1,9 @@
+<h1>RailsERP Dashboard</h1>
+<hr>
+  <br>
+<% for dashblog in @dashblogs %>
+  <p><u>( <%=h dashblog.created_at%>)</u></p>
+  <b>Title: <%=h dashblog.title %></b>
+  <br><%=h dashblog.blogtext %>
+<% end %>
+<hr>

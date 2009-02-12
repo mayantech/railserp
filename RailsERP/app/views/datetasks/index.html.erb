@@ -1,0 +1,36 @@
+<h1>Listing datetasks</h1>
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b>Fulltextsearch : </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag "Search" %>
+  </p>
+<% end %>
+<table>
+  <tr>
+    <th>Taskname</th>
+    <th>Info</th>
+    <th>Progressed</th>
+    <th>Dateprio</th>
+    <th>Datestatus</th>
+    <th>Date</th>
+  </tr>
+
+<% for datetask in @datetasks %>
+  <tr>
+    <td><%=h datetask.taskname %></td>
+    <td><%=h datetask.info %></td>
+    <td><%=h datetask.progressed %></td>
+    <td><%=h datetask.dateprio.prio %></td>
+    <td><%=h datetask.datestatus.status %></td>
+    <td><%=h datetask.caldate.info %></td>
+    <td><%= link_to 'Show', datetask %></td>
+    <td><%= link_to 'Edit', edit_datetask_path(datetask) %></td>
+    <td><%= link_to 'Destroy', datetask, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New datetask', new_datetask_path %>

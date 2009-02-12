@@ -1,0 +1,38 @@
+<h1>Listing adresses</h1>
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b>Fulltextsearch : </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag "Search" %>
+  </p>
+<% end %>
+<table border="1px">
+  <tr>
+    <th>Street</th>
+    <th>Streetnr</th>
+    <th>Zip</th>
+    <th>Area</th>
+    <th>Land</th>
+    <th>Postcode</th>
+    <th>Company</th>
+  </tr>
+
+<% for adress in @adresses %>
+  <tr>
+    <td><%=h adress.street %></td>
+    <td><%=h adress.streetnr %></td>
+    <td><%=h adress.zip %></td>
+    <td><%=h adress.area %></td>
+    <td><%=h adress.land %></td>
+    <td><%=h adress.postcode %></td>
+    <td><%=h adress.company.name%></td>
+    <td><%= link_to 'Show', adress %></td>
+    <td><%= link_to 'Edit', edit_adress_path(adress) %></td>
+    <td><%= link_to 'Destroy', adress, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New adress', new_adress_path %>

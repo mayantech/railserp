@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  ext: MyString
+  size: 1.5
+  info: MyText
+  contact_id: 1
+  folder_id: 1
+
+two:
+  name: MyString
+  ext: MyString
+  size: 1.5
+  info: MyText
+  contact_id: 1
+  folder_id: 1

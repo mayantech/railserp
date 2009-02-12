@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @dashblog.title %>
+</p>
+
+<p>
+  <b>Blogtext:</b>
+  <%=h @dashblog.blogtext %>
+</p>
+
+<p>
+  <b>Published:</b>
+  <%=h @dashblog.published %>
+</p>
+
+
+<%= link_to 'Edit', edit_dashblog_path(@dashblog) %> |
+<%= link_to 'Back', dashblogs_path %>

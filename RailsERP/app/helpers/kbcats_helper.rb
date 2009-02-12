@@ -1,0 +1,2 @@
+module KbcatsHelper
+end
