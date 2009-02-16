@@ -5,6 +5,7 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   include  AuthenticatedSystem
+  include FaceboxRender
   session :session_key => '_railserp_globalite_session_id'
   before_filter :set_locale
   # See ActionController::RequestForgeryProtection for details
