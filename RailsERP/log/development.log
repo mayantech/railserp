@@ -4258,3 +4258,10 @@ Processing DashboardsController#index (for 127.0.0.1 at 2009-02-27 23:21:42) [GE
 Rendering template within layouts/application
 Rendering dashboards/index
 Completed in 84ms (View: 77, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing DashboardsController#index (for 127.0.0.1 at 2009-02-27 23:27:58) [GET]
+  [4;35;1mDashblog Load (0.8ms)[0m   [0mSELECT * FROM "dashblogs" WHERE ("dashblogs"."published" = 't') [0m
+Rendering template within layouts/application
+Rendering dashboards/index
+Completed in 29ms (View: 22, DB: 1) | 200 OK [http://localhost/]
