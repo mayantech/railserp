@@ -1,27 +1,27 @@
 <%= image_tag "/images/product/#{@product.id}/#{@product.id}.#{@product.imagepath}", :size => "200x200" %>
 <br>
 <p>
-  <b>Name:</b>
+  <b><%= t 'products_editnewshowindex_name' %>:</b>
   <%=h @product.name %>
 </p>
 
 <p>
-  <b>Price:</b>
+  <b><%= t 'products_editnewshowindex_price' %>:</b>
   <%=h @product.price %>
 </p>
 
 <p>
-  <b>Info:</b>
+  <b><%= t 'products_editnewshowindex_info' %>:</b>
   <%=h @product.info %>
 </p>
 
 <p>
-  <b>FileType:</b>
+  <b><%= t 'products_editnewshowindex_imageext' %>:</b>
   <%=h @product.imagepath %>
 </p>
 
 <p>
-  <b>Parts of Product:</b>
+  <b><%= t 'parts_index_headline' %></b>
   <%=h @product.parts.count%>
 </p>
 
@@ -30,15 +30,15 @@
  <select name="add_parts[]" >
  <%= options_from_collection_for_select @parts, 'id','name' %>
  </select>
- <%= submit_tag "Add Selected Part" %>
+ <%= submit_tag t('products_editnewshowindex_add') %>
 <% end %>
 
 <table>
   <tr>
-    <th>Image</th>
-    <th>Name</th>
-    <th>Price</th>
-    <th>Info</th>
+    <th><%= t 'parts_editnewshowindex_image' %></th>
+    <th><%= t 'parts_editnewshowindex_name' %></th>
+    <th><%= t 'parts_editnewshowindex_price' %></th>
+    <th><%= t 'parts_editnewshowindex_info' %></th>
   </tr>
 
 <% for part in @product.parts %>
@@ -47,11 +47,11 @@
     <td><%=h part.name %></td>
     <td><%=h part.price %></td>
     <td><%=h part.info %></td>
-    <td><%= link_to "Del Part", { :action => "delpart", :id => @product.id , :partid => part.id}, :confirm => "Are you sure?"%> </td>
+    <td><%= link_to t('parts_editnewshowindex_delete'), { :action => "delpart", :id => @product.id , :partid => part.id}, :confirm => "Are you sure?"%> </td>
  </tr>
 <% end %>
 </table>
 
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to t('products_editnewshowindex_edit'), edit_product_path(@product) %> |
+<%= link_to t('products_editnewshowindex_back'), products_path %>

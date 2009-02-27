@@ -1,20 +1,20 @@
-<h1>Listing adresses</h1>
+<h1><%= t 'adress_index_headline' %></h1>
 <% form_tag :action => "search" do%>
   <p align="right">
-    <b>Fulltextsearch : </b>
+    <b><%= t 'global_search' %> </b>
     <%= text_field_tag :name, "" %>
-   <%= submit_tag "Search" %>
+   <%= submit_tag t('global_search_go') %>
   </p>
 <% end %>
 <table border="1px">
   <tr>
-    <th>Street</th>
-    <th>Streetnr</th>
-    <th>Zip</th>
-    <th>Area</th>
-    <th>Land</th>
-    <th>Postcode</th>
-    <th>Company</th>
+    <th><%= t 'adress_editnewshowindex_street' %></th>
+    <th><%= t 'adress_editnewshowindex_streetnr' %></th>
+    <th><%= t 'adress_editnewshowindex_zip' %></th>
+    <th><%= t 'adress_editnewshowindex_area' %></th>
+    <th><%= t 'adress_editnewshowindex_land' %></th>
+    <th><%= t 'adress_editnewshowindex_postcode' %></th>
+    <th><%= t 'adress_editnewshowindex_company' %></th>
   </tr>
 
 <% for adress in @adresses %>
@@ -26,13 +26,13 @@
     <td><%=h adress.land %></td>
     <td><%=h adress.postcode %></td>
     <td><%=h adress.company.name%></td>
-    <td><%= link_to 'Show', adress %></td>
-    <td><%= link_to 'Edit', edit_adress_path(adress) %></td>
-    <td><%= link_to 'Destroy', adress, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('adress_editnewshowindex_show'), adress %></td>
+    <td><%= link_to t('adress_editnewshowindex_edit'), edit_adress_path(adress) %></td>
+    <td><%= link_to t('adress_editnewshowindex_delete'), adress, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New adress', new_adress_path %>
+<%= link_to t('adress_editnewshowindex_new'), new_adress_path %>

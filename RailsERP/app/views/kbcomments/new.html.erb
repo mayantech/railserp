@@ -1,20 +1,20 @@
-<h1>New kbcomment</h1>
+<h1><%= t 'kbcomments_new_headline' %></h1>
 
 <%= error_messages_for :kbcomment %>
 
 <% form_for(@kbcomment) do |f| %>
-  <p><b>Kbarticle</b><br />
+  <p><b><%= t 'kbcomments_editnewshowindex_artikel' %></b><br />
     <%= f.collection_select :kbarticle_id ,@kbarticles, :id, :symptoms %>
   </p>
 
   <p>
-    <b>Comment</b><br />
+    <b><%= t 'kbcomments_editnewshowindex_comment' %></b><br />
     <%= f.text_area :comment %>
   </p>
 
   <p>
-    <%= f.submit "Create" %>
+    <%= f.submit t('kbcomments_editnewshowindex_create') %>
   </p>
 <% end %>
 
-<%= link_to 'Back', kbcomments_path %>
+<%= link_to t('kbcomments_editnewshowindex_back'), kbcomments_path %>

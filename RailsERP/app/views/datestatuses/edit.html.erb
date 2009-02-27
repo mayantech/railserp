@@ -1,17 +1,17 @@
-<h1>Editing datestatus</h1>
+<h1><%= t 'datestatus_edit_headline' %></h1>
 
 <%= error_messages_for :datestatus %>
 
 <% form_for(@datestatus) do |f| %>
   <p>
-    <b>Status</b><br />
+    <b><%= t 'datestatus_editnewshowindex_status' %></b><br />
     <%= f.text_field :status %>
   </p>
 
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit t('datestatus_editnewshowindex_update') %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @datestatus %> |
-<%= link_to 'Back', datestatuses_path %>
+<%= link_to t('datestatus_editnewshowindex_show'), @datestatus %> |
+<%= link_to t('datestatus_editnewshowindex_back'), datestatuses_path %>

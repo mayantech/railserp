@@ -1,56 +1,56 @@
-<h1>New contact</h1>
+<h1><%= t 'contacts_new_headline'%></h1>
 
 <%= error_messages_for :contact %>
 
 <% form_for(@contact) do |f| %>
   <p>
-    <b>Name</b><br />
+    <b><%= t 'contacts_editnewshowindex_name'%></b><br />
     <%= f.text_field :name %>
   </p>
 
   <p>
-    <b>Lastname</b><br />
+    <b><%= t 'contacts_editnewshowindex_lastname'%></b><br />
     <%= f.text_field :lastname %>
   </p>
 
   <p>
-    <b>Position</b><br />
+    <b><%= t 'contacts_editnewshowindex_position'%></b><br />
     <%= f.text_field :position %>
   </p>
 
   <p>
-    <b>Tel</b><br />
+    <b><%= t 'contacts_editnewshowindex_tel'%></b><br />
     <%= f.text_field :tel %>
   </p>
 
   <p>
-    <b>Mobile</b><br />
+    <b><%= t 'contacts_editnewshowindex_mobile'%></b><br />
     <%= f.text_field :mobile %>
   </p>
 
   <p>
-    <b>Email</b><br />
+    <b><%= t 'contacts_editnewshowindex_email'%></b><br />
     <%= f.text_field :email %>
   </p>
 
   <p>
-    <b>Info</b><br />
+    <b><%= t 'contacts_editnewshowindex_info'%></b><br />
     <%= f.text_field :Info %>
   </p>
 
   <p>
-    <b>Birthday</b><br />
+    <b><%= t 'contacts_editnewshowindex_birthday' %></b><br />
     <%= f.date_select :birthday , :start_year => 1930 , :end_year => 2008 %>
   </p>
 
   <p>
-    <b>Company</b><br />
+    <b><%= t 'contacts_editnewshowindex_company'%></b><br />
     <%= f.collection_select :company_id ,@companies, :id, :name %>
   </p>
 
     <p>
-    <%= f.submit "Create" %>
+    <%= f.submit t('contacts_editnewshowindex_create') %>
   </p>
 <% end %>
 
-<%= link_to 'Back', contacts_path %>
+<%= link_to t('contacts_editnewshowindex_back'), contacts_path %>

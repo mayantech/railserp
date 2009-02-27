@@ -1,19 +1,19 @@
-<h1>Listing parts</h1>
+<h1><%= t 'parts_index_headline' %></h1>
 <% form_tag :action => "search" do%>
   <p align="right">
-    <b>Fulltextsearch : </b>
+    <b><%= t 'global_search' %></b>
     <%= text_field_tag :name, "" %>
-   <%= submit_tag "Search" %>
+   <%= submit_tag t('global_search_go') %>
   </p>
 <% end %>
 <table>
   <tr>
-    <th>Image</th>
-    <th>Name</th>
-    <th>Price</th>
-    <th>Info</th>
-    <th>Imagename</th>
-    <th>Imageext</th>
+    <th><%= t 'parts_editnewshowindex_image' %></th>
+    <th><%= t 'parts_editnewshowindex_name' %></th>
+    <th><%= t 'parts_editnewshowindex_price' %></th>
+    <th><%= t 'parts_editnewshowindex_info' %></th>
+    <th><%= t 'parts_editnewshowindex_imagename' %></th>
+    <th><%= t 'parts_editnewshowindex_imageext' %></th>
   </tr>
 
 <% for part in @parts %>
@@ -24,13 +24,13 @@
     <td><%=h part.info %></td>
     <td><%=h part.imagename %></td>
     <td><%=h part.imageext %></td>
-    <td><%= link_to 'Show', part %></td>
-    <td><%= link_to 'Edit', edit_part_path(part) %></td>
-    <td><%= link_to 'Destroy', part, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('parts_editnewshowindex_show'), part %></td>
+    <td><%= link_to t('parts_editnewshowindex_edit'), edit_part_path(part) %></td>
+    <td><%= link_to t('parts_editnewshowindex_delete'), part, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New part', new_part_path %>
+<%= link_to t('parts_editnewshowindex_new'), new_part_path %>

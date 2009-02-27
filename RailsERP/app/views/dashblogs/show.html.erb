@@ -1,18 +1,18 @@
 <p>
-  <b>Title:</b>
+  <b><%= t 'dashblogs_editnewshowindex_title' %></b>
   <%=h @dashblog.title %>
 </p>
 
 <p>
-  <b>Blogtext:</b>
+  <b><%= t 'dashblogs_editnewshowindex_blogtext' %></b>
   <%=h @dashblog.blogtext %>
 </p>
 
 <p>
-  <b>Published:</b>
+  <b><%= t 'dashblogs_editnewshowindex_published' %></b>
   <%=h @dashblog.published %>
 </p>
 
 
-<%= link_to 'Edit', edit_dashblog_path(@dashblog) %> |
-<%= link_to 'Back', dashblogs_path %>
+<%= link_to t('dashblogs_editnewshowindex_edit'), edit_dashblog_path(@dashblog) %> |
+<%= link_to t('dashblogs_editnewshowindex_back'), dashblogs_path %>

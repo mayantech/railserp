@@ -1,46 +1,46 @@
-<h1>Editing adress</h1>
+<h1><%=  t 'adress_edit_headline' %></h1>
 
 <%= error_messages_for :adress %>
 
 <% form_for(@adress) do |f| %>
   <p>
-    <b>Street</b><br />
+    <b><%= t 'adress_editnewshowindex_street' %></b><br />
     <%= f.text_field :street %>
   </p>
 
   <p>
-    <b>Streetnr</b><br />
+    <b><%= t 'adress_editnewshowindex_streetnr' %></b><br />
     <%= f.text_field :streetnr %>
   </p>
 
   <p>
-    <b>Zip</b><br />
+    <b><%= t 'adress_editnewshowindex_zip' %></b><br />
     <%= f.text_field :zip %>
   </p>
 
   <p>
-    <b>Area</b><br />
+    <b><%= t 'adress_editnewshowindex_area' %></b><br />
     <%= f.text_field :area %>
   </p>
 
   <p>
-    <b>Land</b><br />
+    <b><%= t 'adress_editnewshowindex_land' %></b><br />
     <%= f.text_field :land %>
   </p>
 
   <p>
-    <b>Postcode</b><br />
+    <b><%= t 'adress_editnewshowindex_postcode' %></b><br />
     <%= f.text_field :postcode %>
   </p>
   
- <p><b>Company</b><br />
+ <p><b><%= t 'adress_editnewshowindex_company' %></b><br />
     <%= f.collection_select :company_id ,@companies, :id, :name %>
   </p>
 
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit t('adress_editnewshowindex_update') %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @adress %> |
-<%= link_to 'Back', adresses_path %>
+<%= link_to t('adress_editnewshowindex_show'), @adress %> |
+<%= link_to t('adress_editnewshowindex_back'), adresses_path %>

@@ -1,21 +1,21 @@
-<h1>Listing caldates</h1>
+<h1><%= t 'caldate_index_headline' %></h1>
 <% form_tag :action => "search" do%>
   <p align="right">
-    <b>Fulltextsearch : </b>
+    <b><%=  t 'global_search' %></b>
     <%= text_field_tag :name, "" %>
-   <%= submit_tag "Search" %>
+   <%= submit_tag t('global_search_go') %>
   </p>
 <% end %>
 
 <hr>
 <table align="center"><tr>
-    <td><%= link_to "befor", {:action => "datechange", :id => 1, :today => @today<<1}  %> </td>
+    <td><%= link_to "<<<", {:action => "datechange", :id => 1, :today => @today<<1}  %> </td>
 <td><%= calendar({:year => @today.year, :month => @today.month}) do |d|
   cell_text = "#{link_to d.mday, { :action => "filterdate" ,:id => 1,:date => d , :today => @today}}"
   cell_attrs = {:class => 'day'}
   [cell_text, cell_attrs]
 end %></td>
-<td><%= link_to "next", {:action => "datechange", :id => 1, :today => @today>>1}  %> </td>
+<td><%= link_to ">>>", {:action => "datechange", :id => 1, :today => @today>>1}  %> </td>
 </tr></table>
 <hr>
 
@@ -37,16 +37,16 @@ end %>
 
 <table>
   <tr>
-    <th>Startdate</th>
-    <th>Enddate</th>
-    <th>Info</th>
-    <th>Fullday</th>
-    <th>Account</th>
-    <th>Contact</th>
-    <th>Dateprio</th>
-    <th>Datestatus</th>
-    <th>Dateart</th>
-    <th>Reminder</th>
+    <th><%= t 'caldate_editnewshowindex_startdate' %></th>
+    <th><%= t 'caldate_editnewshowindex_enddate' %></th>
+    <th><%= t 'caldate_editnewshowindex_info' %></th>
+    <th><%= t 'caldate_editnewshowindex_fullday' %></th>
+    <th><%= t 'caldate_editnewshowindex_account' %></th>
+    <th><%= t 'caldate_editnewshowindex_contact' %></th>
+    <th><%= t 'caldate_editnewshowindex_dateprio' %></th>
+    <th><%= t 'caldate_editnewshowindex_datestatus' %></th>
+    <th><%= t 'caldate_editnewshowindex_dateart' %></th>
+    <th><%= t 'caldate_editnewshowindex_reminder' %></th>
   </tr>
 
 <% for caldate in @caldates %>
@@ -61,13 +61,13 @@ end %>
     <td><%=h caldate.datestatus.status %></td>
     <td><%=h caldate.dateart.art %></td>
     <td><%=h caldate.reminder.day %>.<%=h caldate.reminder.month %>.<%=h caldate.reminder.year %></td>
-    <td><%= link_to 'Show', caldate %></td>
-    <td><%= link_to 'Edit', edit_caldate_path(caldate) %></td>
-    <td><%= link_to 'Destroy', caldate, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('caldate_editnewshowindex_show'), caldate %></td>
+    <td><%= link_to t('caldate_editnewshowindex_edit'), edit_caldate_path(caldate) %></td>
+    <td><%= link_to t('caldate_editnewshowindex_delete'), caldate, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New caldate', new_caldate_path %>
+<%= link_to t('caldate_editnewshowindex_new'), new_caldate_path %>

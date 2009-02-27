@@ -1,9 +1,9 @@
 <p>
-  <b>Name:</b>
+  <b><%= t 'companies_editnewshowindex_name' %> </b>
   <%=h @company.name %>
 </p>
 <p>
-  <b>Companyart:</b>
+  <b><%= t 'companies_editnewshowindex_companyart' %> </b>
   <%=h @company.companyart.name %>
 </p>
 
@@ -11,13 +11,13 @@
 <br>
 <table border="1px">
   <tr>
-    <th>Street</th>
-    <th>Streetnr</th>
-    <th>Zip</th>
-    <th>Area</th>
-    <th>Land</th>
-    <th>Postcode</th>
-    <th>Company</th>
+    <th><%= t('adress_editnewshowindex_street') %></th>
+    <th><%= t('adress_editnewshowindex_streetnr') %></th>
+    <th><%= t('adress_editnewshowindex_zip') %></th>
+    <th><%= t('adress_editnewshowindex_area') %></th>
+    <th><%= t('adress_editnewshowindex_land ')%></th>
+    <th><%= t('adress_editnewshowindex_postcode') %></th>
+    <th><%= t('adress_editnewshowindex_company') %></th>
   </tr>
 
 <% for adress in @company.adresses %>
@@ -29,9 +29,9 @@
     <td><%=h adress.land %></td>
     <td><%=h adress.postcode %></td>
     <td><%=h adress.company.name%></td>
-    <td><%= link_to 'Show', adress %></td>
-    <td><%= link_to 'Edit', edit_adress_path(adress) %></td>
-    <td><%= link_to 'Destroy', adress, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('adress_editnewshowindex_show'), adress %></td>
+    <td><%= link_to t('adress_editnewshowindex_edit'), edit_adress_path(adress) %></td>
+    <td><%= link_to t('adress_editnewshowindex_delete'), adress, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -76,5 +76,5 @@
 
 
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<%= link_to t('companies_editnewshowindex_edit'), edit_company_path(@company) %> |
+<%= link_to t('companies_editnewshowindex_back'), companies_path %>

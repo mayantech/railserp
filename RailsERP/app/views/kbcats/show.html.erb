@@ -1,20 +1,20 @@
 <p>
-  <b>Name:</b>
+  <b><%= t 'kbcats_editnewshowindex_name' %>:</b>
   <%=h @kbcat.name %>
 </p>
 <br>
 <hr>
   <br>
-<h1>All KB Articles in this KBcat</h1>
+<h1><%= t 'kbarticles_index_headline' %></h1>
 
 <table>
   <tr>
     <th>KD-ID</th>
-    <th>Symptoms</th>
-    <th>Cause</th>
-    <th>Solution</th>
-    <th>Kbcat</th>
-    <th>Kblang</th>
+    <th><%= t 'kbarticles_editnewshowindex_symptoms' %></th>
+    <th><%= t 'kbarticles_editnewshowindex_cause' %></th>
+    <th><%= t 'kbarticles_editnewshowindex_solution' %></th>
+    <th><%= t 'kbarticles_editnewshowindex_kbcat' %></th>
+    <th><%= t 'kbarticles_editnewshowindex_kblang' %></th>
   </tr>
 
 <% for kbarticle in @kbcat.kbarticles %>
@@ -25,13 +25,13 @@
     <td><%=h kbarticle.solution %></td>
     <td><%=h kbarticle.kbcat.name %></td>
     <td><%=h kbarticle.kblang.language %></td>
-    <td><%= link_to 'Show', kbarticle %></td>
-    <td><%= link_to 'Edit', edit_kbarticle_path(kbarticle) %></td>
-    <td><%= link_to 'Destroy', kbarticle, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('kbarticles_editnewshowindex_show'), kbarticle %></td>
+    <td><%= link_to t('kbarticles_editnewshowindex_edit'), edit_kbarticle_path(kbarticle) %></td>
+    <td><%= link_to t('kbarticles_editnewshowindex_delete'), kbarticle, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
+<%= link_to t('kbarticles_editnewshowindex_new'), new_kbarticle_path %>
 
-
-<%= link_to 'Edit', edit_kbcat_path(@kbcat) %> |
-<%= link_to 'Back', kbcats_path %>
+<%= link_to t('kbcats_editnewshowindex_edit'), edit_kbcat_path(@kbcat) %> |
+<%= link_to t('kbcats_editnewshowindex_back'), kbcats_path %>

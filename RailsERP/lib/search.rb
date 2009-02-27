@@ -56,7 +56,7 @@ module ActiveRecord
       condition_list = []
       unless text.nil?
         text_condition = if case_insensitive
-          fields.collect { |f| "UCASE(#{f}) LIKE #{sanitize('%'+text.upcase+'%')}" }.join " OR "
+          fields.collect { |f| "#{f.upcase} LIKE #{sanitize('%'+text.upcase+'%')}" }.join " OR "
         else
           fields.collect { |f| "#{f} LIKE #{sanitize('%'+text+'%')}" }.join " OR "
         end

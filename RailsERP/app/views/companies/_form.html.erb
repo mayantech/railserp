@@ -1,9 +1,9 @@
 <p>
-  <b>Company Name</b><br />
+  <b><%=  t 'companies_editnewshowindex_name' %></b><br />
   <%= f.text_field :name %>
 </p>
 
-<p><b>Company Category</b><br />
+<p><b><%= t 'companies_editnewshowindex_companyart' %> </b><br />
   <%= f.collection_select :companyart_id, companyarts, :id, :name %>
 </p>
 

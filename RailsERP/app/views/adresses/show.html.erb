@@ -1,38 +1,38 @@
 <p>
-  <b>Street:</b>
+  <b><%= t 'adress_editnewshowindex_street' %></b>
   <%=h @adress.street %>
 </p>
 
 <p>
-  <b>Streetnr:</b>
+  <b><%= t 'adress_editnewshowindex_streetnr' %></b>
   <%=h @adress.streetnr %>
 </p>
 
 <p>
-  <b>Zip:</b>
+  <b><%= t 'adress_editnewshowindex_zip' %></b>
   <%=h @adress.zip %>
 </p>
 
 <p>
-  <b>Area:</b>
+  <b><%= t 'adress_editnewshowindex_area' %></b>
   <%=h @adress.area %>
 </p>
 
 <p>
-  <b>Land:</b>
+  <b><%= t 'adress_editnewshowindex_land' %></b>
   <%=h @adress.land %>
 </p>
 
 <p>
-  <b>Postcode:</b>
+  <b><%= t 'adress_editnewshowindex_postcode' %></b>
   <%=h @adress.postcode %>
 </p>
 
 <p>
-  <b>Company:</b>
+  <b><%= t 'adress_editnewshowindex_company' %></b>
   <%=h @adress.company.name %>
 </p>
 
 
-<%= link_to 'Edit', edit_adress_path(@adress) %> |
-<%= link_to 'Back', adresses_path %>
+<%= link_to t('adress_editnewshowindex_edit'), edit_adress_path(@adress) %> |
+<%= link_to t('adress_editnewshowindex_back'), adresses_path %>

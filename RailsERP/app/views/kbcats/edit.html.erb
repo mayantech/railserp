@@ -1,17 +1,17 @@
-<h1>Editing kbcat</h1>
+<h1><%= t 'kbcats_edit_headline' %></h1>
 
 <%= error_messages_for :kbcat %>
 
 <% form_for(@kbcat) do |f| %>
   <p>
-    <b>Name</b><br />
+    <b><%= t 'kbcats_editnewshowindex_name' %></b><br />
     <%= f.text_field :name %>
   </p>
 
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit t('kbcats_editnewshowindex_edit') %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @kbcat %> |
-<%= link_to 'Back', kbcats_path %>
+<%= link_to t('kbcats_editnewshowindex_show'), @kbcat %> |
+<%= link_to t('kbcats_editnewshowindex_back'), kbcats_path %>

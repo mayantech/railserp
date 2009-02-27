@@ -1,17 +1,17 @@
-<h1>Editing kblang</h1>
+<h1><%= t 'kblang_edit_headline' %></h1>
 
 <%= error_messages_for :kblang %>
 
 <% form_for(@kblang) do |f| %>
   <p>
-    <b>Language</b><br />
+    <b><%= t 'kblang_editnewshowindex_language' %></b><br />
     <%= f.text_field :language %>
   </p>
 
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit t('kblang_editnewshowindex_update') %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @kblang %> |
-<%= link_to 'Back', kblangs_path %>
+<%= link_to t('kblang_editnewshowindex_show'), @kblang %> |
+<%= link_to t('kblang_editnewshowindex_back'), kblangs_path %>
