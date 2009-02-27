@@ -6,5 +6,5 @@ class Contact < ActiveRecord::Base
   has_many :filedatas
   searches_on :all
 
-  validates_presence_of :name, :last_name, :position, :tel, :mobile, :email, :Info, :birthday, :company_id
+  #validates_presence_of :name, :last_name, :position, :tel, :mobile, :email, :Info, :birthday, :company_id
 end

@@ -1,17 +1,17 @@
-<h1>Editing dateart</h1>
+<h1><%= t 'dateart_edit_headline' %></h1>
 
 <%= error_messages_for :dateart %>
 
 <% form_for(@dateart) do |f| %>
   <p>
-    <b>Art</b><br />
+    <b><%= t 'dateart_editnewshowindex_art' %></b><br />
     <%= f.text_field :art %>
   </p>
 
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit t('dateart_editnewshowindex_update') %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @dateart %> |
-<%= link_to 'Back', datearts_path %>
+<%= link_to t('dateart_editnewshowindex_show'), @dateart %> |
+<%= link_to t('dateart_editnewshowindex_back'), datearts_path %>

@@ -1,28 +1,28 @@
-<h1>Listing filedatas</h1>
+<h1><%= t 'filedatas_index_headline' %></h1>
 <% form_tag :action => "search" do%>
   <p align="right">
-    <b>Fulltextsearch : </b>
+    <b><%= t 'global_search' %></b>
     <%= text_field_tag :name, "" %>
-   <%= submit_tag "Search" %>
+   <%= submit_tag t('global_search_go') %>
   </p>
 <% end %>
 <table>
   <tr>
-    <th>Filename</th>
-    <th>Size:(MB)</th>
+    <th><%= t 'filedatas_editnewshowindex_filename' %></th>
+    <th><%= t 'filedatas_editnewshowindex_size' %></th>
   </tr>
 
 <% for filedata in @filedatas %>
   <tr>
     <td><a href="/files/<%= filedata.id.to_s %>/<%= filedata.id.to_s + "." + filedata.ext%>"><%=h filedata.name + "." + filedata.ext %></a></td>
     <td><%=h filedata.size/1024/1024 %></td>
-    <td><%= link_to 'Show', filedata %></td>
-    <td><%= link_to 'Edit', edit_filedata_path(filedata) %></td>
-    <td><%= link_to 'Destroy', filedata, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('filedatas_editnewshowindex_show'), filedata %></td>
+    <td><%= link_to t('filedatas_editnewshowindex_edit'), edit_filedata_path(filedata) %></td>
+    <td><%= link_to t('filedatas_editnewshowindex_delete'), filedata, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New filedata', new_filedata_path %>
+<%= link_to t('filedatas_editnewshowindex_new'), new_filedata_path %>

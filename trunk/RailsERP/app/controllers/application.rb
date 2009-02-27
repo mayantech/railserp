@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   
   def set_locale
     default_locale = :de
-    accepted_langs = [:de, :en, :fr]
+    accepted_langs = [:de, :en]
     http_accept_language = request.env['HTTP_ACCEPT_LANGUAGE']
     browser_locale = http_accept_language[/[a-z]{1,2}/].to_sym
     @current_locale = params[:locale] || session[:locale] ||
@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
     if !accepted_langs.include? @current_locale.to_sym
       @current_locale = default_locale
     end
-    Globalite.language = @current_locale
+    I18n.locale = @current_locale
     session[:locale] = @current_locale
   end
 

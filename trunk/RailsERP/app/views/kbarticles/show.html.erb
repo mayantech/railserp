@@ -1,25 +1,25 @@
 <p>
-  <b>Symptoms:</b>
+  <b><%= t 'kbarticles_editnewshowindex_symptoms' %>:</b>
   <%=h @kbarticle.symptoms %>
 </p>
 
 <p>
-  <b>Cause:</b>
+  <b><%= t 'kbarticles_editnewshowindex_cause' %></b>
   <%=h @kbarticle.cause %>
 </p>
 
 <p>
-  <b>Solution:</b>
+  <b><%= t 'kbarticles_editnewshowindex_solution' %></b>
   <%=h @kbarticle.solution %>
 </p>
 
 <p>
-  <b>Kbcat:</b>
+  <b><%= t 'kbarticles_editnewshowindex_kbcat' %></b>
   <%=h @kbarticle.kbcat.name %>
 </p>
 
 <p>
-  <b>Kblang:</b>
+  <b><%= t 'kbarticles_editnewshowindex_kblang' %></b>
   <%=h @kbarticle.kblang.language %>
 </p>
 
@@ -43,5 +43,5 @@
 </table>
 <br>
 
-<%= link_to 'Edit', edit_kbarticle_path(@kbarticle) %> |
-<%= link_to 'Back', kbarticles_path %>
+<%= link_to t('kbarticles_editnewshowindex_edit'), edit_kbarticle_path(@kbarticle) %> |
+<%= link_to t('kbarticles_editnewshowindex_back'), kbarticles_path %>

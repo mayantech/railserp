@@ -1,60 +1,60 @@
 <p>
-  <b>Name:</b>
+  <b><%= t 'contacts_editnewshowindex_name'%></b>
   <%=h @contact.name %>
 </p>
 
 <p>
-  <b>Lastname:</b>
+  <b><%= t 'contacts_editnewshowindex_lastname'%></b>
   <%=h @contact.lastname %>
 </p>
 
 <p>
-  <b>Position:</b>
+  <b><%= t 'contacts_editnewshowindex_position'%></b>
   <%=h @contact.position %>
 </p>
 
 <p>
-  <b>Tel:</b>
+  <b><%= t 'contacts_editnewshowindex_tel'%></b>
   <%=h @contact.tel %>
 </p>
 
 <p>
-  <b>Mobile:</b>
+  <b><%= t 'contacts_editnewshowindex_mobile'%></b>
   <%=h @contact.mobile %>
 </p>
 
 <p>
-  <b>Email:</b>
+  <b><%= t 'contacts_editnewshowindex_email'%></b>
   <%=h @contact.email %>
 </p>
 
 <p>
-  <b>Info:</b>
+  <b><%= t 'contacts_editnewshowindex_info'%></b>
   <%=h @contact.Info %>
 </p>
 
 <p>
-  <b>Birthday:</b>
+  <b><%= t 'contacts_editnewshowindex_birtday'%></b>
   <%=h @contact.birthday %>
 </p>
 <p>
-  <b>Company:</b>
+  <b><%= t 'contacts_editnewshowindex_company'%></b>
   <%=h @contact.company.name %>
 </p>
 
 
 <table>
   <tr>
-    <th>Startdate</th>
-    <th>Enddate</th>
-    <th>Info</th>
-    <th>Fullday</th>
-    <th>Account</th>
-    <th>Contact</th>
-    <th>Dateprio</th>
-    <th>Datestatus</th>
-    <th>Dateart</th>
-    <th>Reminder</th>
+    <th><%= t 'caldate_editnewshowindex_startdate' %></th>
+    <th><%= t 'caldate_editnewshowindex_enddate' %></th>
+    <th><%= t 'caldate_editnewshowindex_info' %></th>
+    <th><%= t 'caldate_editnewshowindex_fullday' %></th>
+    <th><%= t 'caldate_editnewshowindex_account' %></th>
+    <th><%= t 'caldate_editnewshowindex_contact' %></th>
+    <th><%= t 'caldate_editnewshowindex_dateprio' %></th>
+    <th><%= t 'caldate_editnewshowindex_datestatus' %></th>
+    <th><%= t 'caldate_editnewshowindex_dateart' %></th>
+    <th><%= t 'caldate_editnewshowindex_reminder' %></th>
   </tr>
 
 <br>
@@ -72,9 +72,9 @@
     <td><%=h caldate.datestatus.status %></td>
     <td><%=h caldate.dateart.art %></td>
     <td><%=h caldate.reminder.day %>.<%=h caldate.reminder.month %>.<%=h caldate.reminder.year %></td>
-    <td><%= link_to 'Show', caldate %></td>
-    <td><%= link_to 'Edit', edit_caldate_path(caldate) %></td>
-    <td><%= link_to 'Destroy', caldate, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('caldate_editnewshowindex_show'), caldate %></td>
+    <td><%= link_to t('caldate_editnewshowindex_edit'), edit_caldate_path(caldate) %></td>
+    <td><%= link_to t('caldate_editnewshowindex_delete'), caldate, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -108,5 +108,5 @@
 
 
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<%= link_to t('contacts_editnewshowindex_edit'), edit_contact_path(@contact) %> |
+<%= link_to t('contacts_editnewshowindex_back'), contacts_path %>

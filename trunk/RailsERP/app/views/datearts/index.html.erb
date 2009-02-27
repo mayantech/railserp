@@ -1,26 +1,26 @@
-<h1>Listing dateart</h1>
+<h1><%= t 'dateart_index_headline' %></h1>
 <% form_tag :action => "search" do%>
   <p align="right">
-    <b>Fulltextsearch : </b>
+    <b><%= t 'global_search' %></b>
     <%= text_field_tag :name, "" %>
-   <%= submit_tag "Search" %>
+   <%= submit_tag t('global_search_go') %>
   </p>
 <% end %>
 <table>
   <tr>
-    <th>Prio</th>
+    <th><%= t 'dateart_editnewshowindex_art' %></th>
   </tr>
 
 <% for dateart in @datearts %>
   <tr>
     <td><%=h dateart.art %></td>
-    <td><%= link_to 'Show', dateart %></td>
-    <td><%= link_to 'Edit', edit_dateart_path(dateart) %></td>
-    <td><%= link_to 'Destroy', dateart, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('dateart_editnewshowindex_show'), dateart %></td>
+    <td><%= link_to t('dateart_editnewshowindex_edit'), edit_dateart_path(dateart) %></td>
+    <td><%= link_to t('dateart_editnewshowindex_delete'), dateart, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New dateprio', new_dateart_path %>
+<%= link_to t('dateart_editnewshowindex_new'), new_dateart_path %>

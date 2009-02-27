@@ -1,8 +1,8 @@
 <p>
-  <b>Prio:</b>
+  <b><%= t 'dateprio_editnewshowindex_prio' %></b>
   <%=h @dateprio.prio %>
 </p>
 
 
-<%= link_to 'Edit', edit_dateprio_path(@dateprio) %> |
-<%= link_to 'Back', dateprios_path %>
+<%= link_to t('dateprio_editnewshowindex_edit'), edit_dateprio_path(@dateprio) %> |
+<%= link_to t('dateprio_editnewshowindex_back'), dateprios_path %>

@@ -1,41 +1,41 @@
-<h1>New datetask</h1>
+<h1><%= t 'datetasks_new_headline' %></h1>
 
 <%= error_messages_for :datetask %>
 
 <% form_for(@datetask) do |f| %>
   <p>
-    <b>Taskname</b><br />
+    <b><%= t 'datetasks_editnewshowindex_taskname' %></b><br />
     <%= f.text_field :taskname %>
   </p>
 
   <p>
-    <b>Info</b><br />
+    <b><%= t 'datetasks_editnewshowindex_info' %></b><br />
     <%= f.text_area :info %>
   </p>
 
   <p>
-    <b>Progressed</b><br />
+    <b><%= t 'datetasks_editnewshowindex_progress' %></b><br />
     <%= f.text_field :progressed %>
   </p>
 
   <p>
-    <b>Dateprio</b><br />
+    <b><%= t 'datetasks_editnewshowindex_dateprio' %></b><br />
     <%= f.collection_select :dateprio_id ,@dateprios, :id, :prio %>
   </p>
 
   <p>
-    <b>Datestatus</b><br />
+    <b><%= t 'datetasks_editnewshowindex_datestatus' %></b><br />
     <%= f.collection_select :datestatus_id ,@datestatuses, :id, :status %>
   </p>
 
   <p>
-    <b>Date</b><br />
+    <b><%= t 'datetasks_editnewshowindex_date' %></b><br />
     <%= f.collection_select :caldate_id ,@caldates, :id, :info %>
   </p>
 
   <p>
-    <%= f.submit "Create" %>
+    <%= f.submit t('datetasks_editnewshowindex_create') %>
   </p>
 <% end %>
 
-<%= link_to 'Back', datetasks_path %>
+<%= link_to t('datetasks_editnewshowindex_back'), datetasks_path %>

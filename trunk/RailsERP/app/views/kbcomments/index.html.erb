@@ -1,28 +1,28 @@
-<h1>Listing kbcomments</h1>
+<h1><%= t 'kbcomments_index_headline' %></h1>
 <% form_tag :action => "search" do%>
   <p align="right">
-    <b>Fulltextsearch : </b>
+    <b><%= t 'global_search' %></b>
     <%= text_field_tag :name, "" %>
-   <%= submit_tag "Search" %>
+   <%= submit_tag t('global_search_go') %>
   </p>
 <% end %>
 <table>
   <tr>
-    <th>Kbarticle</th>
-    <th>Comment</th>
+    <th><%= t 'kbcomments_editnewshowindex_artikel' %></th>
+    <th><%= t 'kbcomments_editnewshowindex_comment' %></th>
   </tr>
 
 <% for kbcomment in @kbcomments %>
   <tr>
     <td><%= link_to kbcomment.kbarticle_id , kbcomment.kbarticle %></td>
     <td><%=h kbcomment.comment %></td>
-    <td><%= link_to 'Show', kbcomment %></td>
-    <td><%= link_to 'Edit', edit_kbcomment_path(kbcomment) %></td>
-    <td><%= link_to 'Destroy', kbcomment, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('kbcomments_editnewshowindex_show'), kbcomment %></td>
+    <td><%= link_to t('kbcomments_editnewshowindex_edit'), edit_kbcomment_path(kbcomment) %></td>
+    <td><%= link_to t('kbcomments_editnewshowindex_delete'), kbcomment, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New kbcomment', new_kbcomment_path %>
+<%= link_to t('kbcomments_editnewshowindex_new'), new_kbcomment_path %>

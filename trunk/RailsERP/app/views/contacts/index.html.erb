@@ -1,23 +1,23 @@
-<h1>Listing contacts</h1>
+<h1><%= t 'contacts_index_headline'%></h1>
 <% form_tag :action => "search" do%>
   <p align="right">
-    <b>Fulltextsearch : </b>
+    <b><%= t 'global_search'%> </b>
     <%= text_field_tag :name, "" %>
-   <%= submit_tag "Search" %>
+   <%= submit_tag t('global_search_go') %>
   </p>
 <% end %>
 
 <table border="1px">
   <tr>
-    <th>Name</th>
-    <th>Lastname</th> 
-    <th>Position</th>
-    <th>Tel</th>
-    <th>Mobile</th>
-    <th>Email</th>
-    <th>Info</th>
-    <th>Birthday</th>
-    <th>Company</th>
+    <th><%= t 'contacts_editnewshowindex_name'%></th>
+    <th><%= t 'contacts_editnewshowindex_lastname'%></th>
+    <th><%= t 'contacts_editnewshowindex_position'%></th>
+    <th><%= t 'contacts_editnewshowindex_tel'%></th>
+    <th><%= t 'contacts_editnewshowindex_mobile'%></th>
+    <th><%= t 'contacts_editnewshowindex_email'%></th>
+    <th><%= t 'contacts_editnewshowindex_info'%></th>
+    <th><%= t 'contacts_editnewshowindex_birthday'%></th>
+    <th><%= t 'contacts_editnewshowindex_company'%></th>
     <th>Functions</th>
   </tr>
 
@@ -32,10 +32,10 @@
     <td><%=h contact.Info %></td>
     <td><%=h contact.birthday %></td>
     <td><%=h contact.company.name %> </td>
-    <td><%= link_to 'Show', contact %></td>
-    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-    <td><%= link_to 'Destroy', contact, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><%= link_to 'Write', { :action =>"writeletter", :id => contact} %></td>
+    <td><%= link_to t('contacts_editnewshowindex_show'), contact %></td>
+    <td><%= link_to t('contacts_editnewshowindex_edit'), edit_contact_path(contact) %></td>
+    <td><%= link_to t('contacts_editnewshowindex_delete'), contact, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('contacts_editnewshowindex_write'), { :action =>"writeletter", :id => contact} %></td>
   </tr>
 <% end %>
 </table>
@@ -43,5 +43,5 @@
 
 <br />
 
-<%= link_to 'New contact', new_contact_path %>
+<%= link_to t('contacts_editnewshowindex_create'), new_contact_path %>
 

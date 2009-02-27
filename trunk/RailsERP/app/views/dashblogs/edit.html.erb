@@ -1,27 +1,27 @@
-<h1>Editing dashblog</h1>
+<h1><%= t 'dashblogs_edit_headline'%></h1>
 
 <%= error_messages_for :dashblog %>
 
 <% form_for(@dashblog) do |f| %>
   <p>
-    <b>Title</b><br />
+    <b><%= t 'dashblogs_editnewshowindex_title' %></b><br />
     <%= f.text_field :title %>
   </p>
 
   <p>
-    <b>Blogtext</b><br />
+    <b><%= t 'dashblogs_editnewshowindex_blogtext' %></b><br />
     <%= f.text_area :blogtext %>
   </p>
 
   <p>
-    <b>Published</b><br />
+    <b><%= t 'dashblogs_editnewshowindex_published' %></b><br />
     <%= f.check_box :published %>
   </p>
 
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit t('dashblogs_editnewshowindex_update') %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @dashblog %> |
-<%= link_to 'Back', dashblogs_path %>
+<%= link_to t('dashblogs_editnewshowindex_show'), @dashblog %> |
+<%= link_to t('dashblogs_editnewshowindex_back'), dashblogs_path %>

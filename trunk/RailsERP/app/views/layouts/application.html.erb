@@ -13,84 +13,90 @@
   <body>
     <div id="Page">
 
-<div class="nav-container-outer">
+      <div class="nav-container-outer">
         <img src="/images/nav-bg-l.jpg" alt="" class="float-left" />
         <img src="/images/nav-bg-r.jpg" alt="" class="float-right" />
         <ul id="nav-container" class="nav-container">
-          <li><a class="item-primary" href="#" target="_self">News</a>
+          <li><a class="item-primary" href="#" target="_self"><%= t 'navinews' %></a>
             <ul style="width:150px;">
-              <li><%= link_to "Dashblogs", :controller => "Dashblogs"%></li>
+              <li><%= link_to t('navidashblogs') , :controller => "Dashblogs"%></li>
             </ul>
           </li>
           <li><span class="divider divider-vert" ></span></li>
-          <li><a class="item-primary" href="#" target="_self">Sales</a>
+          <li><a class="item-primary" href="#" target="_self"><%=  t 'navisales' %></a>
             <ul style="width:150px;">
-              <li><%= link_to "Contacts", :controller => "contacts"%></li>
-              <li><%= link_to "Companies", :controller => "Companies"%></li>
-              <li><%= link_to "Adresses", :controller => "Adresses"%></li>
-              <li><%= link_to "Companyarts", :controller => "Companyarts"%></li>
+              <li><%= link_to t('navicontacts') , :controller => "contacts"%></li>
+              <li><%= link_to t('navicompanies'), :controller => "Companies"%></li>
+              <li><%= link_to t('naviadresses'), :controller => "Adresses"%></li>
             </ul>
           </li>
           <li><span class="divider divider-vert" ></span></li>
-          <li><a class="item-primary" href="#" target="_self">Production</a>
+          <li><a class="item-primary" href="#" target="_self"><%= t 'naviproduction' %></a>
             <ul style="width:150px;">
-              <li><%= link_to "Products", :controller => "Products"%></li>
-              <li><%= link_to "Parts", :controller => "Parts"%></li>
+              <li><%= link_to t('naviproducts'), :controller => "Products"%></li>
+              <li><%= link_to t('naviparts'), :controller => "Parts"%></li>
             </ul>
           </li>
           <li><span class="divider divider-vert" ></span></li>
-          <li><a class="item-primary" href="#" target="_self">Support</a>
+          <li><a class="item-primary" href="#" target="_self"><%= t 'navisupport' %></a>
             <ul style="width:150px;">
-              <li><%= link_to "Kbcats", :controller => "Kbcats"%></li>
-              <li><%= link_to "Kblangs", :controller => "Kblangs"%></li>
-              <li><%= link_to "Kbcomments", :controller => "Kbcomments"%></li>
-              <li><%= link_to "Kbarticles", :controller => "Kbarticles"%></li>
+              <li><%= link_to t('navikbcomments'), :controller => "Kbcomments"%></li>
+              <li><%= link_to t('navikbarticles'), :controller => "Kbarticles"%></li>
             </ul>
           </li>
           <li><span class="divider divider-vert" ></span></li>
-          <li><a class="item-primary" href="#" target="_self">Documents</a>
+          <li><a class="item-primary" href="#" target="_self"><%= t 'navidocuments' %></a>
             <ul style="width:150px;">
-              <li><%= link_to "Folders", :controller => "Folders"%></li>
-              <li><%= link_to "Files", :controller => "Filedatas"%></li>
+              <li><%= link_to t('navifolders'), :controller => "Folders"%></li>
+              <li><%= link_to t('navifiles'), :controller => "Filedatas"%></li>
             </ul>
           </li>
           <li><span class="divider divider-vert" ></span></li>
-          <li><a class="item-primary" href="#" target="_self">Organisation</a>
+          <li><a class="item-primary" href="#" target="_self"><%= t 'naviorganisation' %></a>
             <ul style="width:150px;">
-              <li><%= link_to "Caldates", :controller => "Caldates"%></li>
-              <li><%= link_to "Dateprios", :controller => "Dateprios"%></li>
-              <li><%= link_to "Datestatuses", :controller => "Datestatuses"%></li>
-              <li><%= link_to "Datearts", :controller => "Datearts"%></li>
-              <li><%= link_to "Datetasks", :controller => "Datetasks"%></li>
+              <li><%= link_to t('navicaldates'), :controller => "Caldates"%></li>
+              <li><%= link_to t('navidatetasks'), :controller => "Datetasks"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li><a class="item-primary" href="#" target="_self"><%= t 'naviadmin' %></a>
+            <ul style="width:150px;">
+              <li><%= link_to t('navidateprios'), :controller => "Dateprios"%></li>
+              <li><%= link_to t('navidatestatuses'), :controller => "Datestatuses"%></li>
+              <li><%= link_to t('navidatearts'), :controller => "Datearts"%></li>
+              <li><%= link_to t('navikbcats'), :controller => "Kbcats"%></li>
+              <li><%= link_to t('navikblangs'), :controller => "Kblangs"%></li>
+              <li><%= link_to t('navicompanyarts'), :controller => "Companyarts"%></li>
             </ul>
           </li>
           <li><span class="divider divider-vert" ></span></li>
           <li class="clear"> </li>
         </ul>
       </div>
-      
+
       <div id="header">
         <div id="Login">
           <% if logged_in? %>
-            <p>Welcom <%= current_account.login %> -> Click here to( <%= link_to "Logoff", logout_path %> )</p>
+            <p><%= t 'loginwelcom' %> <%= current_account.login %><br> <%= t 'logofftext' %>( <%= link_to "Logoff", logout_path %> )</p>
           <%  else %>
-            <p>You are not login. -> Please
+            <p><%= t 'logintext' %>
               (<%= link_to "Login", login_path %> )<br>
-              If you are don´t have a account ->(<%= link_to "Register", signup_path %> )
+              <%= t 'registertext' %>(<%= link_to "Register", signup_path %> )
             </p>
           <% end %>
         </div>
 
         <div id="Path">
-          <%= link_to "Dashboard", :controller => 'dashboards' %>
+          <%= link_to t('startpagelink'), :controller => 'dashboards' %>
           -> ( <%= controller.controller_name %> -> <%= controller.action_name %>)
         </div>
 
         <div id="lanchanger">
           <p>
-            <%= :language.l %> <%= @current_locale %>(
-            <%= link_to "english",params.merge(:locale=>'en') %>,
-            <%= link_to "deutsch",params.merge(:locale=>'de') %>
+            <%= t 'language' %> <%= @current_locale %>
+            (
+            <%= link_to image_tag("englishflag.png"),params.merge(:locale=>'en') %>,
+            <%= link_to image_tag("germanflag.png"),params.merge(:locale=>'de') %>
             )
           </p>
         </div>
@@ -108,7 +114,7 @@
       </div>
 
 
-      
+
 
 
       <div id="main">

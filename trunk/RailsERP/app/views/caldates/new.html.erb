@@ -1,61 +1,63 @@
-<h1>New caldate</h1>
+<h1><%= t 'caldate_new_headline' %></h1>
 
 <%= error_messages_for :caldate %>
 
 <% form_for(@caldate) do |f| %>
-  <p>
-    <b>Startdate</b><br />
+ <p>
+    <b><%= t 'caldate_editnewshowindex_startdate' %></b><br />
     <%= f.datetime_select :startdate %>
   </p>
 
   <p>
-    <b>Enddate</b><br />
+    <b><%= t 'caldate_editnewshowindex_enddate' %></b><br />
     <%= f.datetime_select :enddate %>
   </p>
 
   <p>
-    <b>Info</b><br />
+    <b><%= t 'caldate_editnewshowindex_info' %></b><br />
     <%= f.text_area :info %>
   </p>
 
   <p>
-    <b>Fullday</b><br />
+    <b><%= t 'caldate_editnewshowindex_fullday' %></b><br />
     <%= f.check_box :fullday %>
   </p>
 
   <p>
-    <b>Account</b><br />
+    <b><%= t 'caldate_editnewshowindex_account' %></b><br />
     <%= f.text_field :account_id %>
   </p>
 
+
   <p>
-    <b>Contact</b><br />
+    <b><%= t 'caldate_editnewshowindex_contact' %></b><br />
     <%= f.collection_select :contact_id ,@contacts, :id, :name %>
   </p>
 
   <p>
-    <b>Dateprio</b><br />
+    <b><%= t 'caldate_editnewshowindex_dateprio' %></b><br />
     <%= f.collection_select :dateprio_id ,@dateprios, :id, :prio %>
   </p>
 
   <p>
-    <b>Datestatus</b><br />
+    <b><%= t 'caldate_editnewshowindex_datestatus' %></b><br />
     <%= f.collection_select :datestatus_id ,@datestatuses, :id, :status %>
   </p>
 
   <p>
-    <b>Dateart</b><br />
+    <b><%= t 'caldate_editnewshowindex_dateart' %></b><br />
     <%= f.collection_select :dateart_id ,@datearts, :id, :art %>
   </p>
 
   <p>
-    <b>Reminder</b><br />
+    <b><%= t 'caldate_editnewshowindex_reminder' %></b><br />
     <%= f.datetime_select :reminder %>
   </p>
 
+
   <p>
-    <%= f.submit "Create" %>
+    <%= f.submit t('caldate_editnewshowindex_create') %>
   </p>
 <% end %>
 
-<%= link_to 'Back', caldates_path %>
+<%= link_to t('caldate_editnewshowindex_back'), caldates_path %>

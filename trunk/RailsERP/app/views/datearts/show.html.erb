@@ -1,8 +1,8 @@
 <p>
-  <b>Art:</b>
+  <b><%= t 'dateart_editnewshowindex_art' %></b>
   <%=h @dateart.art %>
 </p>
 
 
-<%= link_to 'Edit', edit_dateart_path(@dateart) %> |
-<%= link_to 'Back', datearts_path %>
+<%= link_to t('dateart_editnewshowindex_edit'), edit_dateart_path(@dateart) %> |
+<%= link_to t('dateart_editnewshowindex_back'), datearts_path %>

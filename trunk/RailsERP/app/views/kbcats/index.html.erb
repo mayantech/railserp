@@ -1,26 +1,26 @@
-<h1>Listing kbcats</h1>
+<h1><%= t 'kbcats_index_headline' %></h1>
 <% form_tag :action => "search" do%>
   <p align="right">
-    <b>Fulltextsearch : </b>
+    <b><%= t 'global_search' %></b>
     <%= text_field_tag :name, "" %>
-   <%= submit_tag "Search" %>
+   <%= submit_tag t('global_search_go') %>
   </p>
 <% end %>
 <table>
   <tr>
-    <th>Name</th>
+    <th><%= t 'kbcats_editnewshowindex_name' %></th>
   </tr>
 
 <% for kbcat in @kbcats %>
   <tr>
     <td><%=h kbcat.name %></td>
-    <td><%= link_to 'Show', kbcat %></td>
-    <td><%= link_to 'Edit', edit_kbcat_path(kbcat) %></td>
-    <td><%= link_to 'Destroy', kbcat, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('kbcats_editnewshowindex_show'), kbcat %></td>
+    <td><%= link_to t('kbcats_editnewshowindex_edit'), edit_kbcat_path(kbcat) %></td>
+    <td><%= link_to t('kbcats_editnewshowindex_delete'), kbcat, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New kbcat', new_kbcat_path %>
+<%= link_to t('kbcats_editnewshowindex_new'), new_kbcat_path %>
