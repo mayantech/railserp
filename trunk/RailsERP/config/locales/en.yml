@@ -1,6 +1,6 @@
 en:
     ## YAML Template.
-    language: "The actuel language is "
+    language: "The actual language is "
     loginwelcom: "Welcome "
     logofftext: "Click here to Logoff ->"
     logintext: "Click here to Login ->"
@@ -23,19 +23,19 @@ en:
 
     navisupport: "Support"
     navikbcomments: "KB Comments"
-    navikbarticles: "KB Artikels"
+    navikbarticles: "KB Articles"
 
     navidocuments: "Documents"
     navifolders: "Folder"
     navifiles: "Files"
 
-    naviorganisation: "Organisation"
+    naviorganisation: "Organization"
     navicaldates: "Calendar"
-    navidatetasks: "Calendar Taskes"
+    navidatetasks: "Calendar Tasks"
 
     naviadmin: "Administration"
     navidateprios: "Calendar Prios"
-    navidatestatuses: "Calendar Statuses"
+    navidatestatuses: "Calendar Status"
     navidatearts: "Calendar Categories"
     navikbcats: "KB Categories"
     navikblangs: "KB Language"
@@ -60,7 +60,7 @@ en:
     adress_index_headline: "List Adress"
 
     adress_editnewshowindex_street: "Street: "
-    adress_editnewshowindex_streetnr: "Streetnr:"
+    adress_editnewshowindex_streetnr: "Street nr:"
     adress_editnewshowindex_zip: "Zipcode:"
     adress_editnewshowindex_area: "Area:"
     adress_editnewshowindex_land: "Land:"
@@ -138,7 +138,7 @@ en:
     contacts_editnewshowindex_mobile: "Mobile"
     contacts_editnewshowindex_email: "E-Mail"
     contacts_editnewshowindex_info: "Info"
-    contacts_editnewshowindex_birthday: "Birstday"
+    contacts_editnewshowindex_birthday: "Birthday"
     contacts_editnewshowindex_company: "Company"
     contacts_editnewshowindex_write: "Write a Letter"
 
@@ -264,8 +264,8 @@ en:
     kbarticles_edit_headline: "Change KB Entry"
     kbarticles_index_headline: "List KB Entries"
 
-    kbarticles_editnewshowindex_symptoms: "Symtoms"
-    kbarticles_editnewshowindex_cause: "Cause"
+    kbarticles_editnewshowindex_symptoms: "Symptoms"
+    kbarticles_editnewshowindex_cause: "Cause"	
     kbarticles_editnewshowindex_solution: "Solution"
     kbarticles_editnewshowindex_kbcat: "Categorie"
     kbarticles_editnewshowindex_kblang: "Language"
@@ -297,7 +297,7 @@ en:
     kbcomments_index_headline: "List KB-Comment"
 
     kbcomments_editnewshowindex_comment: "KB-Comment"
-    kbcomments_editnewshowindex_artikel: "KB-Artikel"
+    kbcomments_editnewshowindex_artikel: "KB-Article"
 
     kbcomments_editnewshowindex_update: "Update"
     kbcomments_editnewshowindex_show: "Show"
@@ -307,11 +307,11 @@ en:
     kbcomments_editnewshowindex_delete: "Delete"
     kbcomments_editnewshowindex_new: "Create new KB-Comment"
 
-    kblang_new_headline: "Create KB-Lanuage"
-    kblang_edit_headline: "Edit KB-Lanuage"
-    kblang_index_headline: "List KB-Lanuage"
+    kblang_new_headline: "Create KB-Language"
+    kblang_edit_headline: "Edit KB-Language"
+    kblang_index_headline: "List KB-Language"
 
-    kblang_editnewshowindex_language: "KB-Lanuage"
+    kblang_editnewshowindex_language: "KB-Language"
 
     kblang_editnewshowindex_update: "Update"
     kblang_editnewshowindex_show: "Show"
@@ -319,7 +319,7 @@ en:
     kblang_editnewshowindex_create: "Create"
     kblang_editnewshowindex_edit: "Edit"
     kblang_editnewshowindex_delete: "Delete"
-    kblang_editnewshowindex_new: "New KB-Lanuage"
+    kblang_editnewshowindex_new: "New KB-Language"
 
     parts_new_headline: "Create Part"
     parts_edit_headline: "Edit Part"
@@ -344,7 +344,7 @@ en:
     products_edit_headline: "Change Product"
     products_index_headline: "List Product"
 
-    products_editnewshowindex_name: "Productname"
+    products_editnewshowindex_name: "Product Name"
     products_editnewshowindex_price: "Price"
     products_editnewshowindex_info: "Info"
     products_editnewshowindex_image: "Image"
