@@ -4265,3 +4265,31 @@ Processing DashboardsController#index (for 127.0.0.1 at 2009-02-27 23:27:58) [GE
 Rendering template within layouts/application
 Rendering dashboards/index
 Completed in 29ms (View: 22, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing DashboardsController#index (for 127.0.0.1 at 2009-02-27 23:35:54) [GET]
+  [4;36;1mDashblog Load (0.9ms)[0m   [0;1mSELECT * FROM "dashblogs" WHERE ("dashblogs"."published" = 't') [0m
+Rendering template within layouts/application
+Rendering dashboards/index
+Completed in 40ms (View: 33, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing DashboardsController#index (for 127.0.0.1 at 2009-02-28 16:26:59) [GET]
+  [4;36;1mDashblog Load (19.7ms)[0m   [0;1mSELECT * FROM "dashblogs" WHERE ("dashblogs"."published" = 't') [0m
+Rendering template within layouts/application
+Rendering dashboards/index
+Completed in 144ms (View: 98, DB: 20) | 200 OK [http://localhost/]
+
+
+Processing DashboardsController#index (for 127.0.0.1 at 2009-02-28 16:43:42) [GET]
+  [4;35;1mDashblog Load (0.9ms)[0m   [0mSELECT * FROM "dashblogs" WHERE ("dashblogs"."published" = 't') [0m
+Rendering template within layouts/application
+Rendering dashboards/index
+Completed in 28ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing DashboardsController#index (for 127.0.0.1 at 2009-02-28 16:43:59) [GET]
+  [4;36;1mDashblog Load (0.9ms)[0m   [0;1mSELECT * FROM "dashblogs" WHERE ("dashblogs"."published" = 't') [0m
+Rendering template within layouts/application
+Rendering dashboards/index
+Completed in 51ms (View: 43, DB: 1) | 200 OK [http://localhost/]
