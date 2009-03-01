@@ -1,0 +1,11 @@
+development:
+    writetemplate: /Users/marcel/Desktop/RailsERP/public/vorlage.odt
+    writetemplateout: /Users/marcel/Desktop/RailsERP/public/Out.odt
+
+test:
+    writetemplate: /Users/marcel/Desktop/RailsERP/public/vorlage.odt
+    writetemplateout: /Users/marcel/Desktop/RailsERP/public/Out.odt
+
+production:
+    writetemplate: /Users/marcel/Desktop/RailsERP/public/vorlage.odt
+    writetemplateout: /Users/marcel/Desktop/RailsERP/public/Out.odt

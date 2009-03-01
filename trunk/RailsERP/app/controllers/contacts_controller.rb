@@ -1,5 +1,7 @@
 require 'rubygems'
 require 'zip/zipfilesystem'
+require 'ftools'
+
 
 class ContactsController < ApplicationController
   # before_filter :login_required, :only => [:edit, :update]
@@ -104,8 +106,10 @@ class ContactsController < ApplicationController
 
   def writeletter
     @contact = Contact.find(params[:id])
-    result= `cp /Users/marcel/Desktop/RailsERP/public/vorlage.odt /Users/marcel/Desktop/RailsERP/public/Out.odt`
-    Zip::ZipFile.open("/Users/marcel/Desktop/RailsERP/public/Out.odt") {
+    #result= `cp /Users/marcel/Desktop/RailsERP/public/vorlage.odt /Users/marcel/Desktop/RailsERP/public/Out.odt`
+    #Zip::ZipFile.open("/Users/marcel/Desktop/RailsERP/public/Out.odt") {
+    File.copy(APP_CONFIG['writetemplate'],APP_CONFIG['writetemplateout'])
+    Zip::ZipFile.open(APP_CONFIG['writetemplateout']) {
       |zipfile|
       contect=zipfile.file.read("content.xml")
       new=contect.gsub("%NAME%",@contact.name)
@@ -122,7 +126,7 @@ class ContactsController < ApplicationController
       zipfile.file.open("content.xml", "w") { |f| f.puts new }
     }
   
-    send_file "/Users/marcel/Desktop/RailsERP/public/Out.odt"
+    send_file APP_CONFIG['writetemplateout']
   end
   
 end
