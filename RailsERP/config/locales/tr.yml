@@ -1,0 +1,482 @@
+tr:
+  locale:
+    native_name: Türkçe
+    address_separator: " "
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      numeric: "%d.%m.%Y"
+      short: "%e %b"
+      long: "%e %B %Y, %A"
+      only_day: "%e"
+ 
+    day_names: [Pazar, Pazartesi, Salı, Çarşamba, Perşembe, Cuma, Cumartesi]
+    abbr_day_names: [Pzr, Pzt, Sal, Çrş, Prş, Cum, Cts]
+    month_names: [~, Ocak, Şubat, Mart, Nisan, Mayıs, Haziran, Temmuz, Ağustos, Eylül, Ekim, Kasım, Aralık]
+    abbr_month_names: [~, Oca, Şub, Mar, Nis, May, Haz, Tem, Ağu, Eyl, Eki, Kas, Ara]
+    order: [ :day, :month, :year ]
+  
+  time:
+    formats:
+      default: "%a %d.%b.%y %H:%M"
+      numeric: "%d.%b.%y %H:%M"
+      short: "%e %B, %H:%M"
+      long: "%e %B %Y, %A, %H:%M"
+      time: "%H:%M"
+ 
+    am: "öğleden önce"
+    pm: "öğleden sonra"
+      
+  datetime:
+    distance_in_words:
+      half_a_minute: 'yarım dakika'
+      less_than_x_seconds:
+        zero: '1 saniyeden az'
+        one: '1 saniyeden az'
+        other: '{{count}} saniyeden az'
+      x_seconds:
+        one: '1 saniye'
+        other: '{{count}} saniye'
+      less_than_x_minutes:
+        zero: '1 dakikadan az'
+        one: '1 dakikadan az'
+        other: '{{count}} dakikadan az'
+      x_minutes:
+        one: '1 dakika'
+        other: '{{count}} dakika'
+      about_x_hours:
+        one: '1 saat civarında'
+        other: '{{count}} saat civarında'
+      x_days:
+        one: '1 gün'
+        other: '{{count}} gün'
+      about_x_months:
+        one: '1 ay civarında'
+        other: '{{count}} ay civarında'
+      x_months:
+        one: '1 ay'
+        other: '{{count}} ay'
+      about_x_years:
+        one: '1 yıl civarında'
+        other: '{{count}} yıl civarında'
+      over_x_years:
+        one: '1 yıldan fazla'
+        other: '{{count}} yıldan fazla'
+      
+  number:
+    format:
+      precision: 2
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: 'TL'
+        format: '%n %u'
+        separator: ','
+        delimiter: '.'
+        precision: 2
+    percentage:
+      format:
+        delimiter: '.'
+        separator: ','
+        precision: 2
+    precision:
+      format:
+        delimiter: '.'
+        separator: ','
+    human:
+      format:
+        delimiter: '.'
+        separator: ','
+        precision: 2
+ 
+  support:
+    array:
+      sentence_connector: "ve"
+      skip_last_comma: true
+        
+  activerecord:
+    errors:
+      template:
+        header:
+          one:    "{{model}} girişi kaydedilemedi: 1 hata."
+          other:  "{{model}} girişi kadedilemedi: {{count}} hata."
+        body: "Lütfen aşağıdaki hataları düzeltiniz:"
+ 
+      messages:
+        inclusion: "kabul edilen bir kelime değil"
+        exclusion: "kullanılamaz"
+        invalid: "geçersiz"
+        confirmation: "teyidi uyuşmamakta"
+        accepted: "kabul edilmeli"
+        empty: "doldurulmalı"
+        blank: "doldurulmalı"
+        too_long: "çok uzun (en fazla {{count}} karakter)"
+        too_short: "çok kısa (en az {{count}} karakter)"
+        wrong_length: "yanlış uzunlukta (tam olarak {{count}} karakter olmalı)"
+        taken: "hali hazırda kullanılmakta"
+        not_a_number: "geçerli bir sayı değil"
+        greater_than: "{{count}} sayısından büyük olmalı"
+        greater_than_or_equal_to: "{{count}} sayısına eşit veya büyük olmalı"
+        equal_to: "tam olarak {{count}} olmalı"
+        less_than: "{{count}} sayısından küçük olmalı"
+        less_than_or_equal_to: "{{count}} sayısına eşit veya küçük olmalı"
+        odd: "tek olmalı"
+        even: "çift olmalı"
+   
+    
+    
+## YAML Template.
+  language: "The actuel language is "
+  loginwelcom: "Hoşgeldiniz "
+  logofftext: "Çıkış için buraya tıklayınız ->"
+  logintext: "Giriş için tıklayınız ->"
+  registertext: "Giriş yapmadınız,giriş için buraya tıklayın ->"
+  startpagelink: "Ana Sayfa"
+
+    ## Navi
+  navinews: "Haberler"
+  navidashblogs: "Haber Blogu"
+
+  navisales: "Satış"
+  navicontacts: "Bağlantılar"
+  navicompanies: "Şirketler"
+  naviadresses: "Şirket Adresi"
+  navicompanyarts: "Şirket Kategorisi"
+
+  naviproduction: "Üretim"
+  naviproducts: "Ürünler"
+  naviparts: "Kısımlar"
+  navisupport: "Destek"
+  navikbcomments: "KB Yorumlar"
+  navikbarticles: "KB Makaleler"
+  navidocuments: "Dökümanlar"
+  navifolders: "Klasörler"
+  navifiles: "Dosyalar"
+  naviorganisation: "Organizasyon"
+  navicaldates: "Takvim"
+  navidatetasks: "Takvim Görevler"
+
+  naviadmin: "Yönetim"
+  navidateprios: "Takvim Öncelikler"
+  navidatestatuses: "Takvim Durumlar"
+  navidatearts: "Takvim Kategoriler"
+  navikbcats: "KB Kategoriler"
+  navikblangs: "KB Dil"
+
+    ## Controller
+  account_new_login: "Kullanıcı"
+  account_new_email: "E-Posta Adresiniz!"
+  account_new_password: "Şifre"
+  account_new_confirmpassword: "Şifreyi Doğrular"
+  account_new_sigup: "Kullanıcı Oluştur"
+  sessions_new_headline: "RailsERP ye Giriş"
+  sessions_new_user: "Kullanıcı Adı"
+  sessions_new_password: "Şifre"
+  sessions_new_rememberme: "Hatırlasın mı?"
+  sessions_new_login: "Giriş"
+
+  global_search: "Ara"
+  global_search_go: "Arama yap"
+  adress_new_headline: "Yeni Adres"
+  adress_edit_headline: "Adresi Düzenle"
+  adress_index_headline: "Adres Listele"
+
+  adress_editnewshowindex_street: "Sokak: "
+  adress_editnewshowindex_streetnr: "Sokak No:"
+  adress_editnewshowindex_zip: "Posta Kodu:"
+  adress_editnewshowindex_area: "Alan:"
+  adress_editnewshowindex_land: "Bölge:"
+  adress_editnewshowindex_postcode: "Posta Kodu:"
+  adress_editnewshowindex_company: "Şirket"
+
+  adress_editnewshowindex_update: "Güncelle"
+  adress_editnewshowindex_show: "Göster"
+  adress_editnewshowindex_back: "Geri"
+  adress_editnewshowindex_create: "Oluştur"
+  adress_editnewshowindex_edit: "Düzenle"
+  adress_editnewshowindex_delete: "Sil"
+  adress_editnewshowindex_new: "Yeni Adres"
+
+  caldate_new_headline: "Tarih Oluştur"
+  caldate_edit_headline: "Tarih Düzenle"
+  caldate_index_headline: "Tarih Listele"
+
+  caldate_editnewshowindex_startdate: "Başlangıç Tarihi"
+  caldate_editnewshowindex_enddate: "Bitiş Tarihi"
+  caldate_editnewshowindex_info: "Bilgi"
+  caldate_editnewshowindex_fullday: "Tüm Gün?"
+  caldate_editnewshowindex_account: "Hesap"
+  caldate_editnewshowindex_contact: "Bağlantı"
+  caldate_editnewshowindex_dateprio: "Öncelik"
+  caldate_editnewshowindex_datestatus: "Durum"
+  caldate_editnewshowindex_dateart: "Sanat"
+  caldate_editnewshowindex_reminder: "Hatırlatıcı"
+
+  caldate_editnewshowindex_update: "Güncelle"
+  caldate_editnewshowindex_show: "Göster"
+  caldate_editnewshowindex_back: "Geri"
+  caldate_editnewshowindex_create: "Oluştur"
+  caldate_editnewshowindex_edit: "Düzenle"
+  caldate_editnewshowindex_delete: "Sil"
+  caldate_editnewshowindex_new: "Yeni Tarih"
+
+  companies_new_headline: "Şirket Oluştur"
+  companies_edit_headline: "Şirket Bilgisi Düzenle"
+  companies_index_headline: "Şirketleri Listele"
+
+  companies_editnewshowindex_name: "Şirket Adı"
+  companies_editnewshowindex_companyart: "Kategori"
+
+  companies_editnewshowindex_update: "Güncelle"
+  companies_editnewshowindex_show: "Göster"
+  companies_editnewshowindex_back: "Geri"
+  companies_editnewshowindex_create: "Oluştur"
+  companies_editnewshowindex_edit: "Düzenle"
+  companies_editnewshowindex_delete: "Sil"
+  companies_editnewshowindex_new: "Şirket Oluştur"
+
+  companiesarts_new_headline: "Şirket Kategorisi Oluştur"
+  companiesarts_edit_headline: "Şirket Kategorisi Düzenle"
+  companiesarts_index_headline: "Şirket Kategorilerini Listele"
+
+  companiesarts_editnewshowindex_name: "Şirket Kategorileri"
+
+  companiesarts_editnewshowindex_update: "Güncelle"
+  companiesarts_editnewshowindex_show: "Göster"
+  companiesarts_editnewshowindex_back: "Geri"
+  companiesarts_editnewshowindex_create: "Oluştur"
+  companiesarts_editnewshowindex_edit: "Düzenle"
+  companiesarts_editnewshowindex_delete: "Sil"
+  companiesarts_editnewshowindex_new: "Yeni Şirket Kategorisi Oluştur"
+
+  contacts_new_headline: "Bağlantı Oluştur"
+  contacts_edit_headline: "Bağlantı Düzenle"
+  contacts_index_headline: "Bağlantıları Listele"
+
+  contacts_editnewshowindex_name: "Ad"
+  contacts_editnewshowindex_lastname: "Soyad"
+  contacts_editnewshowindex_position: "Pozisyon"
+  contacts_editnewshowindex_tel: "Tel"
+  contacts_editnewshowindex_mobile: "Mobil"
+  contacts_editnewshowindex_email: "E-Posta"
+  contacts_editnewshowindex_info: "Bilgi"
+  contacts_editnewshowindex_birthday: "Doğum Günü"
+  contacts_editnewshowindex_company: "Şirket"
+  contacts_editnewshowindex_write: "Mektup Yaz"
+
+  contacts_editnewshowindex_update: "Güncelle"
+  contacts_editnewshowindex_show: "Göster"
+  contacts_editnewshowindex_back: "Geri"
+  contacts_editnewshowindex_create: "Oluştur"
+  contacts_editnewshowindex_edit: "Güncelle"
+  contacts_editnewshowindex_delete: "Sil"
+  contacts_editnewshowindex_new: "Yeni Bağlantı Oluştur"
+
+  dashblogs_new_headline: "Haber Oluştur"
+  dashblogs_edit_headline: "Haber Güncelle"
+  dashblogs_index_headline: "Haberleri Listele"
+
+  dashblogs_editnewshowindex_title: "Başlık"
+  dashblogs_editnewshowindex_blogtext: "Mesaj"
+  dashblogs_editnewshowindex_published: "Yayınlandı mı?"
+
+  dashblogs_editnewshowindex_update: "Güncelle"
+  dashblogs_editnewshowindex_show: "Göster"
+  dashblogs_editnewshowindex_back: "Geri"
+  dashblogs_editnewshowindex_create: "Oluştur"
+  dashblogs_editnewshowindex_edit: "Düzenle"
+  dashblogs_editnewshowindex_delete: "Sil"
+  dashblogs_editnewshowindex_new: "Yeni Haber Oluştur"
+
+  dateart_new_headline: "Takvim Kategorisi Oluştur"
+  dateart_edit_headline: "Takvim Kategorisi Düzenle"
+  dateart_index_headline: "Takvim Kategorisi Listele"
+
+  dateart_editnewshowindex_art: "Takvim Kategorisi"
+
+  dateart_editnewshowindex_update: "Güncelle"
+  dateart_editnewshowindex_show: "Göster"
+  dateart_editnewshowindex_back: "Geri"
+  dateart_editnewshowindex_create: "Oluştur"
+  dateart_editnewshowindex_edit: "Düzenle"
+  dateart_editnewshowindex_delete: "Sil"
+  dateart_editnewshowindex_new: "Yeni Takvim Kategorisi!"
+
+  dateprio_new_headline: "Takvim Önceliği Oluştur"
+  dateprio_edit_headline: "Takvim Önceliği Düzenle"
+  dateprio_index_headline: "Takvim Önceliği Listele"
+
+  dateprio_editnewshowindex_prio: "Takvim Önceliği"
+
+  dateprio_editnewshowindex_update: "Güncelle"
+  dateprio_editnewshowindex_show: "Göster"
+  dateprio_editnewshowindex_back: "Geri"
+  dateprio_editnewshowindex_create: "Oluştur"
+  dateprio_editnewshowindex_edit: "Düzenle"
+  dateprio_editnewshowindex_delete: "Sil"
+  dateprio_editnewshowindex_new: "Yeni Takvim Önceliği!"
+
+  datestatus_new_headline: "Takvim Durumu Oluştur"
+  datestatus_edit_headline: "Takvim Durumu Düzenle"
+  datestatus_index_headline: "Takvim Durumu Listele"
+
+  datestatus_editnewshowindex_status: "Takvim Durumu"
+
+  datestatus_editnewshowindex_update: "Güncelle"
+  datestatus_editnewshowindex_show: "Göster"
+  datestatus_editnewshowindex_back: "Geri"
+  datestatus_editnewshowindex_create: "Oluştur"
+  datestatus_editnewshowindex_edit: "Düzenle"
+  datestatus_editnewshowindex_delete: "Sil"
+  datestatus_editnewshowindex_new: "Yeni Takvim Durumu Oluştur"
+
+  datetasks_new_headline: "Takvim Görevi Oluştur"
+  datetasks_edit_headline: "Takvim Görevi Düzenle"
+  datetasks_index_headline: "Takvim Görevi Listele"
+
+  datetasks_editnewshowindex_taskname: "Görev Adı"
+  datetasks_editnewshowindex_info: "Bilgi"
+  datetasks_editnewshowindex_progress: "İlerleme"
+  datetasks_editnewshowindex_dateprio: "Öncelik"
+  datetasks_editnewshowindex_datestatus: "Durum"
+  datetasks_editnewshowindex_date: "Tarih?"
+
+  datetasks_editnewshowindex_update: "Güncelle"
+  datetasks_editnewshowindex_show: "Göster"
+  datetasks_editnewshowindex_back: "Geri"
+  datetasks_editnewshowindex_create: "Oluştur"
+  datetasks_editnewshowindex_edit: "Düzenle"
+  datetasks_editnewshowindex_delete: "Sil"
+  datetasks_editnewshowindex_new: "Yeni Takvim Görevi Oluştur"
+
+  filedatas_new_headline: "Dosya Yükle"
+  filedatas_edit_headline: "Dosya Değiştir"
+  filedatas_index_headline: "Dosyaları Listele"
+
+  filedatas_editnewshowindex_filename: "Dosya Adı"
+  filedatas_editnewshowindex_info: "Bilgi"
+  filedatas_editnewshowindex_size: "Boyut(MB)"
+  filedatas_editnewshowindex_contact: "Bağlantı"
+  filedatas_editnewshowindex_folder: "Klasör"
+
+  filedatas_editnewshowindex_update: "Değiştir"
+  filedatas_editnewshowindex_show: "Göster"
+  filedatas_editnewshowindex_back: "Geri"
+  filedatas_editnewshowindex_create: "Güncelle"
+  filedatas_editnewshowindex_edit: "Değiştir"
+  filedatas_editnewshowindex_delete: "Sil"
+  filedatas_editnewshowindex_new: "Yeni Dosya Yükle"
+
+  folders_new_headline: "Klasör Oluştur"
+  folders_edit_headline: "Klasör Değiştir"
+  folders_index_headline: "Klasör Listele"
+  folders_editnewshowindex_fodlername: "Klasör Adı"
+  folders_editnewshowindex_info: "Bilgi"
+
+  folders_editnewshowindex_update: "Güncelle"
+  folders_editnewshowindex_show: "Dosyaları Göster"
+  folders_editnewshowindex_back: "Geri"
+  folders_editnewshowindex_create: "Oluştur"
+  folders_editnewshowindex_edit: "Düzenle"
+  folders_editnewshowindex_delete: "Sil"
+  folders_editnewshowindex_new: "Yeni Klasör Oluştur"
+
+  kbarticles_new_headline: "KB Girdi Oluştur"
+  kbarticles_edit_headline: "KB Girdi Değiştir"
+  kbarticles_index_headline: "KB Girdileri Listele"
+
+  kbarticles_editnewshowindex_symptoms: "Belirtiler"
+  kbarticles_editnewshowindex_cause: "Neden"
+  kbarticles_editnewshowindex_solution: "Çözüm"
+  kbarticles_editnewshowindex_kbcat: "Kategoriler"
+  kbarticles_editnewshowindex_kblang: "Dil"
+
+  kbarticles_editnewshowindex_update: "Güncelle"
+  kbarticles_editnewshowindex_show: "Göster"
+  kbarticles_editnewshowindex_back: "Geri"
+  kbarticles_editnewshowindex_create: "Oluştur"
+  kbarticles_editnewshowindex_edit: "Düzenle"
+  kbarticles_editnewshowindex_delete: "Sil"
+  kbarticles_editnewshowindex_new: "Yeni KB Girdisi Oluştur"
+
+  kbcats_new_headline: "KB-Kategori Oluştur"
+  kbcats_edit_headline: "KB-Kategori Değiştir"
+  kbcats_index_headline: "KB-Kategori Listele"
+
+  kbcats_editnewshowindex_name: "Kategori"
+
+  kbcats_editnewshowindex_update: "Güncelle"
+  kbcats_editnewshowindex_show: "Göster"
+  kbcats_editnewshowindex_back: "Geri"
+  kbcats_editnewshowindex_create: "Oluştur"
+  kbcats_editnewshowindex_edit: "Düzenle"
+  kbcats_editnewshowindex_delete: "Sil"
+  kbcats_editnewshowindex_new: "Yeni KB-Kategori Oluştur"
+
+  kbcomments_new_headline: "KB-Yorum Oluştur"
+  kbcomments_edit_headline: "KB-Yorum Düzenle"
+  kbcomments_index_headline: "KB-Yorum Listele"
+
+  kbcomments_editnewshowindex_comment: "KB-Yorum"
+  kbcomments_editnewshowindex_artikel: "KB-Makale"
+
+  kbcomments_editnewshowindex_update: "Güncelle"
+  kbcomments_editnewshowindex_show: "Göster"
+  kbcomments_editnewshowindex_back: "Geri"
+  kbcomments_editnewshowindex_create: "Oluştur"
+  kbcomments_editnewshowindex_edit: "Düzenle"
+  kbcomments_editnewshowindex_delete: "Sil"
+  kbcomments_editnewshowindex_new: "Yeni KB-Yorum Oluştur"
+
+  kblang_new_headline: "KB-Dil Oluştur"
+  kblang_edit_headline: "KB-Dil Düzenle"
+  kblang_index_headline: "KB-Dil Listele"
+
+  kblang_editnewshowindex_language: "KB-Dil"
+
+  kblang_editnewshowindex_update: "Güncelle"
+  kblang_editnewshowindex_show: "Göster"
+  kblang_editnewshowindex_back: "Geri"
+  kblang_editnewshowindex_create: "Oluştur"
+  kblang_editnewshowindex_edit: "Düzenle"
+  kblang_editnewshowindex_delete: "Sil"
+  kblang_editnewshowindex_new: "Yeni KB-Dil"
+
+  parts_new_headline: "Kısım Oluştur"
+  parts_edit_headline: "Kısım Düzenle"
+  parts_index_headline: "Kısımları Listele"
+
+  parts_editnewshowindex_name: "Kısım Ad"
+  parts_editnewshowindex_price: "Tutar"
+  parts_editnewshowindex_info: "Bilgi"
+  parts_editnewshowindex_image: "Resim"
+  parts_editnewshowindex_imagename: "Resimadi"
+  parts_editnewshowindex_imageext: "Tip"
+
+  parts_editnewshowindex_update: "Güncelle"
+  parts_editnewshowindex_show: "Göster"
+  parts_editnewshowindex_back: "Geri"
+  parts_editnewshowindex_create: "Oluştur"
+  parts_editnewshowindex_edit: "Düzenle"
+  parts_editnewshowindex_delete: "Sil"
+  parts_editnewshowindex_new: "Yeni Kısım Oluştur"
+
+  products_new_headline: "Ürün Oluştur"
+  products_edit_headline: "Ürün Değiştir"
+  products_index_headline: "Ürün Listele"
+
+  products_editnewshowindex_name: "Ürün Adı"
+  products_editnewshowindex_price: "Tutar"
+  products_editnewshowindex_info: "Bilgi"
+  products_editnewshowindex_image: "Resim"
+  products_editnewshowindex_imageext: "Tip"
+
+  products_editnewshowindex_update: "Güncelle"
+  products_editnewshowindex_show: "Göster"
+  products_editnewshowindex_back: "Geri"
+  products_editnewshowindex_create: "Oluştur"
+  products_editnewshowindex_edit: "Düzenle"
+  products_editnewshowindex_delete: "Sil"
+  products_editnewshowindex_new: "Yeni Ürün Oluştur"
+  products_editnewshowindex_add: "Ürüne Kısım Ekle"
