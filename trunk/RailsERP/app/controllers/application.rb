@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   
   def set_locale
     default_locale = :de
-    accepted_langs = [:de, :en]
+    accepted_langs = [:de, :en, :tr]
     http_accept_language = request.env['HTTP_ACCEPT_LANGUAGE']
     browser_locale = http_accept_language[/[a-z]{1,2}/].to_sym
     @current_locale = params[:locale] || session[:locale] ||
