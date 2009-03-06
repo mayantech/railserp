@@ -103,7 +103,7 @@ en:
     companies_index_headline: "List Companies"
 
     companies_editnewshowindex_name: "Company Name"
-    companies_editnewshowindex_companyart: "Categorie"
+    companies_editnewshowindex_companyart: "Category"
 
     companies_editnewshowindex_update: "Update"
     companies_editnewshowindex_show: "Show"
@@ -113,11 +113,11 @@ en:
     companies_editnewshowindex_delete: "Delete"
     companies_editnewshowindex_new: "Create Company"
 
-    companiesarts_new_headline: "Create Company Categorie"
-    companiesarts_edit_headline: "Edit Company Categorie"
+    companiesarts_new_headline: "Create Company Category"
+    companiesarts_edit_headline: "Edit Company Category"
     companiesarts_index_headline: "List Company Categories"
 
-    companiesarts_editnewshowindex_name: "Company Categorie"
+    companiesarts_editnewshowindex_name: "Company Category"
 
     companiesarts_editnewshowindex_update: "Update"
     companiesarts_editnewshowindex_show: "Show"
@@ -125,7 +125,7 @@ en:
     companiesarts_editnewshowindex_create: "Create"
     companiesarts_editnewshowindex_edit: "Edit"
     companiesarts_editnewshowindex_delete: "Delete"
-    companiesarts_editnewshowindex_new: "Create new Company Categorie"
+    companiesarts_editnewshowindex_new: "Create new Company Category"
 
     contacts_new_headline: "Create Contact"
     contacts_edit_headline: "Edit Contact"
@@ -166,11 +166,11 @@ en:
     dashblogs_editnewshowindex_delete: "Delete"
     dashblogs_editnewshowindex_new: "Create new News"
 
-    dateart_new_headline: "Create Calendar Categorie"
-    dateart_edit_headline: "Edit Calendar Categorie"
-    dateart_index_headline: "List Calendar Categorie"
+    dateart_new_headline: "Create Calendar Category"
+    dateart_edit_headline: "Edit Calendar Category"
+    dateart_index_headline: "List Calendar Category"
 
-    dateart_editnewshowindex_art: "Calendar Categorie"
+    dateart_editnewshowindex_art: "Calendar Category"
 
     dateart_editnewshowindex_update: "Update"
     dateart_editnewshowindex_show: "Show"
@@ -178,7 +178,7 @@ en:
     dateart_editnewshowindex_create: "Create"
     dateart_editnewshowindex_edit: "Edit"
     dateart_editnewshowindex_delete: "Delete"
-    dateart_editnewshowindex_new: "New Calendar Categorie!"
+    dateart_editnewshowindex_new: "New Calendar Category!"
 
     dateprio_new_headline: "Create Calendar Prio"
     dateprio_edit_headline: "Edit Calendar Prio"
@@ -267,7 +267,7 @@ en:
     kbarticles_editnewshowindex_symptoms: "Symptoms"
     kbarticles_editnewshowindex_cause: "Cause"	
     kbarticles_editnewshowindex_solution: "Solution"
-    kbarticles_editnewshowindex_kbcat: "Categorie"
+    kbarticles_editnewshowindex_kbcat: "Category"
     kbarticles_editnewshowindex_kblang: "Language"
 
     kbarticles_editnewshowindex_update: "Update"
@@ -278,11 +278,11 @@ en:
     kbarticles_editnewshowindex_delete: "Delete"
     kbarticles_editnewshowindex_new: "Create new KB Entry"
 
-    kbcats_new_headline: "Create KB-Categorie"
-    kbcats_edit_headline: "Change KB-Categorie"
-    kbcats_index_headline: "List KB-Categorie"
+    kbcats_new_headline: "Create KB-Category"
+    kbcats_edit_headline: "Change KB-Category"
+    kbcats_index_headline: "List KB-Category"
 
-    kbcats_editnewshowindex_name: "Categorie"
+    kbcats_editnewshowindex_name: "Category"
 
     kbcats_editnewshowindex_update: "Update"
     kbcats_editnewshowindex_show: "Show"
@@ -290,7 +290,7 @@ en:
     kbcats_editnewshowindex_create: "Create"
     kbcats_editnewshowindex_edit: "Edit"
     kbcats_editnewshowindex_delete: "Delete"
-    kbcats_editnewshowindex_new: "Create new KB-Categorie"
+    kbcats_editnewshowindex_new: "Create new KB-Category"
 
     kbcomments_new_headline: "Create KB-Comment"
     kbcomments_edit_headline: "Edit KB-Comment"
