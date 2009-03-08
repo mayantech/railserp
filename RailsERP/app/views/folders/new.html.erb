@@ -3,19 +3,7 @@
 <%= error_messages_for :folder %>
 
 <% form_for(@folder) do |f| %>
-  <p>
-    <b><%= t 'folders_editnewshowindex_fodlername' %></b><br />
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <b><%= t 'folders_editnewshowindex_info' %></b><br />
-    <%= f.text_area :info %>
-  </p>
-
-  <p>
-    <%= f.submit t('folders_editnewshowindex_create') %>
-  </p>
+  <%= render :partial => 'form', :locals => { :f => f, :button_name => t('folders_editnewshowindex_update') } %>
 <% end %>
 
 <%= link_to t('folders_editnewshowindex_back'), folders_path %>

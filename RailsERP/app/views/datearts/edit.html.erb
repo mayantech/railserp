@@ -3,14 +3,7 @@
 <%= error_messages_for :dateart %>
 
 <% form_for(@dateart) do |f| %>
-  <p>
-    <b><%= t 'dateart_editnewshowindex_art' %></b><br />
-    <%= f.text_field :art %>
-  </p>
-
-  <p>
-    <%= f.submit t('dateart_editnewshowindex_update') %>
-  </p>
+<%= render :partial => 'form', :locals => { :f => f, :button_name => t('dateart_editnewshowindex_update') } %>
 <% end %>
 
 <%= link_to t('dateart_editnewshowindex_show'), @dateart %> |

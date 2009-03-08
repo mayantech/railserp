@@ -1,0 +1,12 @@
+  <p><b>Kbarticle</b><br />
+    <%= f.collection_select :kbarticle_id ,kbarticles, :id, :symptoms %>
+  </p>
+
+  <p>
+    <b><%= t 'kbcomments_editnewshowindex_comment' %></b><br />
+    <%= f.text_area :comment %>
+  </p>
+
+  <p>
+    <%= f.submit button_name %>
+  </p>

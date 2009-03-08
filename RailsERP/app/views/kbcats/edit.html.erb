@@ -3,14 +3,7 @@
 <%= error_messages_for :kbcat %>
 
 <% form_for(@kbcat) do |f| %>
-  <p>
-    <b><%= t 'kbcats_editnewshowindex_name' %></b><br />
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <%= f.submit t('kbcats_editnewshowindex_edit') %>
-  </p>
+<%= render :partial => 'form', :locals => { :f => f, :button_name => t('kbcats_editnewshowindex_edit') } %>
 <% end %>
 
 <%= link_to t('kbcats_editnewshowindex_show'), @kbcat %> |

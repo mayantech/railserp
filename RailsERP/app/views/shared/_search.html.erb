@@ -1,0 +1,7 @@
+<% form_tag :action => "search" do%>
+  <p align="right">
+    <b><%= t 'global_search' %> </b>
+    <%= text_field_tag :name, "" %>
+   <%= submit_tag t('global_search_go') %>
+  </p>
+<% end %>

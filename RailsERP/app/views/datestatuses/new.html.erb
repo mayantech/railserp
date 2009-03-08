@@ -3,14 +3,7 @@
 <%= error_messages_for :datestatus %>
 
 <% form_for(@datestatus) do |f| %>
-  <p>
-    <b><%= t 'datestatus_editnewshowindex_status' %></b><br />
-    <%= f.text_field :status %>
-  </p>
-
-  <p>
-    <%= f.submit t('datestatus_editnewshowindex_create') %>
-  </p>
+<%= render :partial => 'form', :locals => { :f => f, :button_name => t('datestatus_editnewshowindex_create') } %>
 <% end %>
 
 <%= link_to t('datestatus_editnewshowindex_back'), datestatuses_path %>

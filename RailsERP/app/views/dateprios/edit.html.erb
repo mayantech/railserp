@@ -3,14 +3,7 @@
 <%= error_messages_for :dateprio %>
 
 <% form_for(@dateprio) do |f| %>
-  <p>
-    <b><%= t 'dateprio_editnewshowindex_prio' %></b><br />
-    <%= f.text_field :prio %>
-  </p>
-
-  <p>
-    <%= f.submit t('dateprio_editnewshowindex_update') %>
-  </p>
+<%= render :partial => 'form', :locals => { :f => f, :button_name => t('dateprio_editnewshowindex_update') } %>
 <% end %>
 
 <%= link_to t('dateprio_editnewshowindex_show'), @dateprio %> |
