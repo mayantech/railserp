@@ -1,0 +1,548 @@
+ru:
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      short: "%d %b"
+      long: "%d %B %Y"
+
+    day_names: [воскресенье, понедельник, вторник, среда, четверг, пятница, суббота]
+    standalone_day_names: [Воскресенье, Понедельник, Вторник, Среда, Четверг, Пятница, Суббота]
+    abbr_day_names: [Вс, Пн, Вт, Ср, Чт, Пт, Сб]
+
+    month_names: [~, января, февраля, марта, апреля, мая, июня, июля, августа, сентября, октября, ноября, декабря]
+
+    standalone_month_names: [~, Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь]
+    abbr_month_names: [~, янв., февр., марта, апр., мая, июня, июля, авг., сент., окт., нояб., дек.]
+    standalone_abbr_month_names: [~, янв., февр., март, апр., май, июнь, июль, авг., сент., окт., нояб., дек.]
+
+    order: [ :day, :month, :year ]
+
+  time:
+    formats:
+      default: "%a, %d %b %Y, %H:%M:%S %z"
+      short: "%d %b, %H:%M"
+      long: "%d %B %Y, %H:%M"
+
+    am: "утра"
+    pm: "вечера"
+
+  number:
+    format:
+      separator: "."
+      delimiter: " "
+      precision: 3
+
+    currency:
+      format:
+        format: "%n %u"
+        unit: "руб."
+        separator: "."
+        delimiter: " "
+        precision: 2
+
+    percentage:
+      format:
+        delimiter: ""
+
+    precision:
+      format:
+        delimiter: ""
+
+    human:
+      format:
+        delimiter: ""
+        precision: 1
+      # Rails 2.2
+      # storage_units: [байт, КБ, МБ, ГБ, ТБ]
+
+      # Rails 2.3
+      storage_units:
+        # Storage units output formatting.
+        # %u is the storage unit, %n is the number (default: 2 MB)
+        format: "%n %u"
+        units:
+          byte:
+            one:   "байт"
+            few:   "байта"
+            many:  "байт"
+            other: "байта"
+          kb: "КБ"
+          mb: "МБ"
+          gb: "ГБ"
+          tb: "ТБ"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "меньше минуты"
+      less_than_x_seconds:
+        one:   "меньше {{count}} секунды"
+        few:   "меньше {{count}} секунд"
+        many:  "меньше {{count}} секунд"
+        other: "меньше {{count}} секунды"
+      x_seconds:
+        one:   "{{count}} секунда"
+        few:   "{{count}} секунды"
+        many:  "{{count}} секунд"
+        other: "{{count}} секунды"
+      less_than_x_minutes:
+        one:   "меньше {{count}} минуты"
+        few:   "меньше {{count}} минут"
+        many:  "меньше {{count}} минут"
+        other: "меньше {{count}} минуты"
+      x_minutes:
+        one:   "{{count}} минуту"
+        few:   "{{count}} минуты"
+        many:  "{{count}} минут"
+        other: "{{count}} минуты"
+      about_x_hours:
+        one:   "около {{count}} часа"
+        few:   "около {{count}} часов"
+        many:  "около {{count}} часов"
+        other: "около {{count}} часа"
+      x_days:
+        one:   "{{count}} день"
+        few:   "{{count}} дня"
+        many:  "{{count}} дней"
+        other: "{{count}} дня"
+      about_x_months:
+        one:   "около {{count}} месяца"
+        few:   "около {{count}} месяцев"
+        many:  "около {{count}} месяцев"
+        other: "около {{count}} месяца"
+      x_months:
+        one:   "{{count}} месяц"
+        few:   "{{count}} месяца"
+        many:  "{{count}} месяцев"
+        other: "{{count}} месяца"
+      about_x_years:
+        one:   "около {{count}} года"
+        few:   "около {{count}} лет"
+        many:  "около {{count}} лет"
+        other: "около {{count}} лет"
+      over_x_years:
+        one:   "больше {{count}} года"
+        few:   "больше {{count}} лет"
+        many:  "больше {{count}} лет"
+        other: "больше {{count}} лет"
+    prompts:
+      year: "Год"
+      month: "Месяц"
+      day: "День"
+      hour: "Часов"
+      minute: "Минут"
+      second: "Секунд"
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one:   "{{model}}: сохранение не удалось из-за {{count}} ошибки"
+          few:   "{{model}}: сохранение не удалось из-за {{count}} ошибок"
+          many:  "{{model}}: сохранение не удалось из-за {{count}} ошибок"
+          other: "{{model}}: сохранение не удалось из-за {{count}} ошибки"
+
+        body: "Проблемы возникли со следующими полями:"
+
+      messages:
+        inclusion: "имеет непредусмотренное значение"
+        exclusion: "имеет зарезервированное значение"
+        invalid: "имеет неверное значение"
+        confirmation: "не совпадает с подтверждением"
+        accepted: "нужно подтвердить"
+        empty: "не может быть пустым"
+        blank: "не может быть пустым"
+        too_long:
+          one:   "слишком большой длины (не может быть больше чем {{count}} символ)"
+          few:   "слишком большой длины (не может быть больше чем {{count}} символа)"
+          many:  "слишком большой длины (не может быть больше чем {{count}} символов)"
+          other: "слишком большой длины (не может быть больше чем {{count}} символа)"
+        too_short:
+          one:   "недостаточной длины (не может быть меньше {{count}} символа)"
+          few:   "недостаточной длины (не может быть меньше {{count}} символов)"
+          many:  "недостаточной длины (не может быть меньше {{count}} символов)"
+          other: "недостаточной длины (не может быть меньше {{count}} символа)"
+        wrong_length:
+          one:   "неверной длины (может быть длиной ровно {{count}} символ)"
+          few:   "неверной длины (может быть длиной ровно {{count}} символа)"
+          many:  "неверной длины (может быть длиной ровно {{count}} символов)"
+          other: "неверной длины (может быть длиной ровно {{count}} символа)"
+        taken: "уже существует"
+        not_a_number: "не является числом"
+        greater_than: "может иметь значение большее {{count}}"
+        greater_than_or_equal_to: "может иметь значение большее или равное {{count}}"
+        equal_to: "может иметь лишь значение, равное {{count}}"
+        less_than: "может иметь значение меньшее чем {{count}}"
+        less_than_or_equal_to: "может иметь значение меньшее или равное {{count}}"
+        odd: "может иметь лишь четное значение"
+        even: "может иметь лишь нечетное значение"
+
+  support:
+    array:
+      # Rails 2.2
+      sentence_connector: "и"
+      skip_last_comma: true
+
+      # Rails 2.3
+      words_connector: ", "
+      two_words_connector: " и "
+      last_word_connector: " и "
+      
+
+  language: "Фактически язык"
+  loginwelcom: "Добро пожаловать"
+  logofftext: "Нажмите здесь, чтобы выход -> "
+  logintext: "Нажмите здесь, чтобы Логин ->"
+  registertext: "Вы еще не зарегистрировались, пожалуйста, нажмите сюда ->"
+  startpagelink: "Главная"
+
+
+  navinews: "Новости"
+  navidashblogs: "Новости блога"
+
+  navisales: "Продажи"
+  navicontacts: "Контакты"
+  navicompanies: "Компании"
+  naviadresses: "Компания Адреса"
+  navicompanyarts: "Фирма занимается следующими видами деятельности"
+
+  naviproduction: "Производство"
+  naviproducts: "Продукты"
+  naviparts: "Детали"
+
+  navisupport: "Поддержка"
+  navikbcomments: "КБ Комментарии"
+  navikbarticles: "КБ Статьи"
+
+  navidocuments: "Документы"
+  navifolders: "Папка"
+  navifiles: "Files"
+
+  naviorganisation: "Организация"
+  navicaldates: "Календарь"
+  navidatetasks: "Календарь Задание"
+
+  naviadmin: "Администрация"
+  navidateprios: "Календарь Prios"
+  navidatestatuses: "Календарь Статус"
+  navidatearts: "Календарь категории"
+  navikbcats: "КБ категории"
+  navikblangs: "KB Язык"
+
+
+  account_new_login: "Пользователь"
+  account_new_email: "Ваш E-Mail адрес!"
+  account_new_password: "Пароль"
+  account_new_confirmpassword: "Подтвердите пароль"
+  account_new_sigup: "Создать пользователя"
+
+  sessions_new_headline: "Войти в RailsERP"
+  sessions_new_user: "Имя пользователя"
+  sessions_new_password: "Пароль"
+  sessions_new_rememberme: "Remmember меня?"
+  sessions_new_login: "Логин"
+
+  global_search: "Поиск"
+  global_search_go: "Идите поиск"
+  adress_new_headline: "Новый адрес"
+  adress_edit_headline: "Изменить адрес"
+  adress_index_headline: "Список адресов"
+
+  adress_editnewshowindex_street: "Улица:"
+  adress_editnewshowindex_streetnr: "Улица Nr:"
+  adress_editnewshowindex_zip: "Индекс:"
+  adress_editnewshowindex_area: "Площадь:"
+  adress_editnewshowindex_land: "Земля:"
+  adress_editnewshowindex_postcode: "Индекс:"
+  adress_editnewshowindex_company: "Компания"
+
+  adress_editnewshowindex_update: "Обновление"
+  adress_editnewshowindex_show: "Показать"
+  adress_editnewshowindex_back: "Назад"
+  adress_editnewshowindex_create: "Создать"
+  adress_editnewshowindex_edit: "Изменить"
+  adress_editnewshowindex_delete: "Удалить"
+  adress_editnewshowindex_new: "Новый адрес"
+
+  caldate_new_headline: "Создание Дата"
+  caldate_edit_headline: "Изменение даты"
+  caldate_index_headline: "Список Дата"
+
+  caldate_editnewshowindex_startdate: "Дата начала"
+  caldate_editnewshowindex_enddate: "Дата"
+  caldate_editnewshowindex_info: "Информация"
+  caldate_editnewshowindex_fullday: "Fullday?"
+  caldate_editnewshowindex_account: "Счет"
+  caldate_editnewshowindex_contact: "Контакт"
+  caldate_editnewshowindex_dateprio: "PRIO"
+  caldate_editnewshowindex_datestatus: "Статус"
+  caldate_editnewshowindex_dateart: "Искусство"
+  caldate_editnewshowindex_reminder: "Напоминание"
+
+  caldate_editnewshowindex_update: "Обновление"
+  caldate_editnewshowindex_show: "Показать"
+  caldate_editnewshowindex_back: "Назад"
+  caldate_editnewshowindex_create: "Создать"
+  caldate_editnewshowindex_edit: "Изменить"
+  caldate_editnewshowindex_delete: "Удалить"
+  caldate_editnewshowindex_new: "Новые Дата"
+
+  companies_new_headline: "Создание компании"
+  companies_edit_headline: "Изменить общество"
+  companies_index_headline: "Список компаний"
+
+  companies_editnewshowindex_name: "Название компании"
+  companies_editnewshowindex_companyart: "Категория"
+
+  companies_editnewshowindex_update: "Обновление"
+  companies_editnewshowindex_show: "Показать"
+  companies_editnewshowindex_back: "Назад"
+  companies_editnewshowindex_create: "Создать"
+  companies_editnewshowindex_edit: "Изменить"
+  companies_editnewshowindex_delete: "Удалить"
+  companies_editnewshowindex_new: "Создание компании"
+
+  companiesarts_new_headline: "Создание компании по категории"
+  companiesarts_edit_headline: "Изменить компании в категории"
+  companiesarts_index_headline: "Перечень категорий компания"
+
+  companiesarts_editnewshowindex_name: "Категория"
+
+  companiesarts_editnewshowindex_update: "Обновление"
+  companiesarts_editnewshowindex_show: "Показать"
+  companiesarts_editnewshowindex_back: "Назад"
+  companiesarts_editnewshowindex_create: "Создать"
+  companiesarts_editnewshowindex_edit: "Изменить"
+  companiesarts_editnewshowindex_delete: "Удалить"
+  companiesarts_editnewshowindex_new: "Создание новой компании в категории"
+
+  contacts_new_headline: "Создать связь"
+  contacts_edit_headline: "Изменить контакт"
+  contacts_index_headline: "Список Контакт"
+
+  contacts_editnewshowindex_name: "Fristname"
+  contacts_editnewshowindex_lastname: "Фамилия"
+  contacts_editnewshowindex_position: "Позиция"
+  contacts_editnewshowindex_tel: "Телефон"
+  contacts_editnewshowindex_mobile: "Мобильный"
+  contacts_editnewshowindex_email: "E-Mail"
+  contacts_editnewshowindex_info: "Info"
+  contacts_editnewshowindex_birthday: "День рождения"
+  contacts_editnewshowindex_company: "Компания"
+  contacts_editnewshowindex_write: "Написать письмо"
+
+  contacts_editnewshowindex_update: "Обновление"
+  contacts_editnewshowindex_show: "Показать"
+  contacts_editnewshowindex_back: "Назад"
+  contacts_editnewshowindex_create: "Создать"
+  contacts_editnewshowindex_edit: "Изменить"
+  contacts_editnewshowindex_delete: "Удалить"
+  contacts_editnewshowindex_new: "Создать новый контакт"
+
+  dashblogs_new_headline: "Создавайте новости"
+  dashblogs_edit_headline: "Изменить Новости"
+  dashblogs_index_headline: "Список новостей"
+
+  dashblogs_editnewshowindex_title: "Название"
+  dashblogs_editnewshowindex_blogtext: "Сообщение"
+  dashblogs_editnewshowindex_published: "Опубликован?"
+
+  dashblogs_editnewshowindex_update: "Обновление"
+  dashblogs_editnewshowindex_show: "Показать"
+  dashblogs_editnewshowindex_back: "Назад"
+  dashblogs_editnewshowindex_create: "Создать"
+  dashblogs_editnewshowindex_edit: "Изменить"
+  dashblogs_editnewshowindex_delete: "Удалить"
+  dashblogs_editnewshowindex_new: "Создать новую Новости"
+
+  dateart_new_headline: "Создать календарь Категория"
+  dateart_edit_headline: "Изменить календарь категории"
+  dateart_index_headline: "Календарь категории"
+
+  dateart_editnewshowindex_art: "Календарь Категория"
+
+  dateart_editnewshowindex_update: "Обновление"
+  dateart_editnewshowindex_show: "Показать"
+  dateart_editnewshowindex_back: "Назад"
+  dateart_editnewshowindex_create: "Создать"
+  dateart_editnewshowindex_edit: "Изменить"
+  dateart_editnewshowindex_delete: "Удалить"
+  dateart_editnewshowindex_new: "Новый календарь Категория!"
+
+  dateprio_new_headline: "Создать календарь PRIO"
+  dateprio_edit_headline: "Изменить календарь PRIO"
+  dateprio_index_headline: "Календарь PRIO"
+
+  dateprio_editnewshowindex_prio: "Календарь PRIO"
+
+  dateprio_editnewshowindex_update: "Обновление"
+  dateprio_editnewshowindex_show: "Показать"
+  dateprio_editnewshowindex_back: "Назад"
+  dateprio_editnewshowindex_create: "Создать"
+  dateprio_editnewshowindex_edit: "Изменить"
+  dateprio_editnewshowindex_delete: "Удалить"
+  dateprio_editnewshowindex_new: "Новый календарь PRIO!"
+
+  datestatus_new_headline: "Создать календарь Статус"
+  datestatus_edit_headline: "Изменить календарь Статус"
+  datestatus_index_headline: "Календарь Статус"
+
+  datestatus_editnewshowindex_status: "Календарь Статус"
+
+  datestatus_editnewshowindex_update: "Обновление"
+  datestatus_editnewshowindex_show: "Показать"
+  datestatus_editnewshowindex_back: "Назад"
+  datestatus_editnewshowindex_create: "Создать"
+  datestatus_editnewshowindex_edit: "Изменить"
+  datestatus_editnewshowindex_delete: "Удалить"
+  datestatus_editnewshowindex_new: "Создать новый календарь Статус"
+
+  datetasks_new_headline: "Создать календарь задачу"
+  datetasks_edit_headline: "Изменить Календарь задачи"
+  datetasks_index_headline: "Календарь задачи"
+
+  datetasks_editnewshowindex_taskname: "Taskname"
+  datetasks_editnewshowindex_info: "Info"
+  datetasks_editnewshowindex_progress: "Прогресс"
+  datetasks_editnewshowindex_dateprio: "PRIO"
+  datetasks_editnewshowindex_datestatus: "Статус"
+  datetasks_editnewshowindex_date: "Дата"
+
+  datetasks_editnewshowindex_update: "Обновление"
+  datetasks_editnewshowindex_show: "Показать"
+  datetasks_editnewshowindex_back: "Назад"
+  datetasks_editnewshowindex_create: "Создать"
+  datetasks_editnewshowindex_edit: "Изменить"
+  datetasks_editnewshowindex_delete: "Удалить"
+  datetasks_editnewshowindex_new: "Создать новый календарь задачу"
+
+  filedatas_new_headline: "Загрузка файла"
+  filedatas_edit_headline: "Файл перемен"
+  filedatas_index_headline: "Список файлов"
+
+  filedatas_editnewshowindex_filename: "Имя файла"
+  filedatas_editnewshowindex_info: "Info"
+  filedatas_editnewshowindex_size: "Размер (MB)"
+  filedatas_editnewshowindex_contact: "Контакт"
+  filedatas_editnewshowindex_folder: "Папка"
+
+  filedatas_editnewshowindex_update: "Заменить"
+  filedatas_editnewshowindex_show: "Показать"
+  filedatas_editnewshowindex_back: "Назад"
+  filedatas_editnewshowindex_create: "Загрузить"
+  filedatas_editnewshowindex_edit: "Заменить"
+  filedatas_editnewshowindex_delete: "Удалить"
+  filedatas_editnewshowindex_new: "Добавить новый файл"
+
+  folders_new_headline: "Создать папку"
+  folders_edit_headline: "Изменить папку"
+  folders_index_headline: "Список папок"
+
+  folders_editnewshowindex_fodlername: "Foldername"
+  folders_editnewshowindex_info: "Info"
+
+  folders_editnewshowindex_update: "Обновление"
+  folders_editnewshowindex_show: "Показать файлы"
+  folders_editnewshowindex_back: "Назад"
+  folders_editnewshowindex_create: "Создать"
+  folders_editnewshowindex_edit: "Изменить"
+  folders_editnewshowindex_delete: "Удалить"
+  folders_editnewshowindex_new: "Создать новую папку"
+
+  kbarticles_new_headline: "Создать KB Entry"
+  kbarticles_edit_headline: "Изменения KB Entry"
+  kbarticles_index_headline: "Список KB позиций"
+
+  kbarticles_editnewshowindex_symptoms: "Проблема"
+  kbarticles_editnewshowindex_cause: "Причина"
+  kbarticles_editnewshowindex_solution: "Решение"
+  kbarticles_editnewshowindex_kbcat: "Категория"
+  kbarticles_editnewshowindex_kblang: "Язык"
+
+  kbarticles_editnewshowindex_update: "Обновление"
+  kbarticles_editnewshowindex_show: "Показать"
+  kbarticles_editnewshowindex_back: "Назад"
+  kbarticles_editnewshowindex_create: "Создать"
+  kbarticles_editnewshowindex_edit: "Изменить"
+  kbarticles_editnewshowindex_delete: "Удалить"
+  kbarticles_editnewshowindex_new: "Создать новую KB Вступление"
+
+  kbcats_new_headline: "Создать KB-категории"
+  kbcats_edit_headline: "Изменения KB категории"
+  kbcats_index_headline: "Список KB категории"
+
+  kbcats_editnewshowindex_name: "Категория"
+
+  kbcats_editnewshowindex_update: "Обновление"
+  kbcats_editnewshowindex_show: "Показать"
+  kbcats_editnewshowindex_back: "Назад"
+  kbcats_editnewshowindex_create: "Создать"
+  kbcats_editnewshowindex_edit: "Изменить"
+  kbcats_editnewshowindex_delete: "Удалить"
+  kbcats_editnewshowindex_new: "Создать новую категорию КБ"
+
+  kbcomments_new_headline: "Создать KB-комментарий"
+  kbcomments_edit_headline: "Изменить KB-комментарий"
+  kbcomments_index_headline: "Список KB-комментарий"
+
+  kbcomments_editnewshowindex_comment: "KB-комментарий"
+  kbcomments_editnewshowindex_artikel: "KB-статья"
+
+  kbcomments_editnewshowindex_update: "Обновление"
+  kbcomments_editnewshowindex_show: "Показать"
+  kbcomments_editnewshowindex_back: "Назад"
+  kbcomments_editnewshowindex_create: "Создать"
+  kbcomments_editnewshowindex_edit: "Изменить"
+  kbcomments_editnewshowindex_delete: "Удалить"
+  kbcomments_editnewshowindex_new: "Создать новую KB-комментарий"
+
+  kblang_new_headline: "Создать KB-язык"
+  kblang_edit_headline: "Изменить KB-язык"
+  kblang_index_headline: "Список KB-язык"
+
+  kblang_editnewshowindex_language: "KB-язык"
+
+  kblang_editnewshowindex_update: "Обновление"
+  kblang_editnewshowindex_show: "Показать"
+  kblang_editnewshowindex_back: "Назад"
+  kblang_editnewshowindex_create: "Создать"
+  kblang_editnewshowindex_edit: "Изменить"
+  kblang_editnewshowindex_delete: "Удалить"
+  kblang_editnewshowindex_new: "Нью-KB Язык"
+
+  parts_new_headline: "Создать части"
+  parts_edit_headline: "Изменить Часть"
+  parts_index_headline: "Список частей"
+
+  parts_editnewshowindex_name: "Partname"
+  parts_editnewshowindex_price: "Цена"
+  parts_editnewshowindex_info: "Info"
+  parts_editnewshowindex_image: "Имидж"
+  parts_editnewshowindex_imagename: "Imagename"
+  parts_editnewshowindex_imageext: "Тип"
+
+  parts_editnewshowindex_update: "Обновление"
+  parts_editnewshowindex_show: "Показать"
+  parts_editnewshowindex_back: "Назад"
+  parts_editnewshowindex_create: "Создать"
+  parts_editnewshowindex_edit: "Изменить"
+  parts_editnewshowindex_delete: "Удалить"
+  parts_editnewshowindex_new: "Создание новой части"
+
+  products_new_headline: "Создать Продукт"
+  products_edit_headline: "Изменения Продукт"
+  products_index_headline: "Перечень продукции"
+
+  products_editnewshowindex_name: "Название"
+  products_editnewshowindex_price: "Цена"
+  products_editnewshowindex_info: "Info"
+  products_editnewshowindex_image: "Имидж"
+  products_editnewshowindex_imageext: "Тип"
+
+  products_editnewshowindex_update: "Обновление"
+  products_editnewshowindex_show: "Показать"
+  products_editnewshowindex_back: "Назад"
+  products_editnewshowindex_create: "Создать"
+  products_editnewshowindex_edit: "Изменить"
+  products_editnewshowindex_delete: "Удалить"
+  products_editnewshowindex_new: "Создание нового продукта"
+  products_editnewshowindex_add: "Добавить Часть продукции"

@@ -1,0 +1,474 @@
+cn:
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      short: "%e. %b"
+      long: "%e. %B %Y"
+      only_day: "%e"
+
+    day_names: [Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag]
+    abbr_day_names: [So, Mo, Di, Mi, Do, Fr, Sa]
+    month_names: [~, Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
+    abbr_month_names: [~, Jan, Feb, Mär, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov, Dez]
+    order: [ :day, :month, :year ]
+
+  time:
+    formats:
+      default: "%A, %e. %B %Y, %H:%M Uhr"
+      short: "%e. %B, %H:%M Uhr"
+      long: "%A, %e. %B %Y, %H:%M Uhr"
+      time: "%H:%M"
+
+    am: "vormittags"
+    pm: "nachmittags"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: 'eine halbe Minute'
+      less_than_x_seconds:
+        zero: 'weniger als 1 Sekunde'
+        one: 'weniger als 1 Sekunde'
+        other: 'weniger als {{count}} Sekunden'
+      x_seconds:
+        one: '1 Sekunde'
+        other: '{{count}} Sekunden'
+      less_than_x_minutes:
+        zero: 'weniger als 1 Minute'
+        one: 'weniger als eine Minute'
+        other: 'weniger als {{count}} Minuten'
+      x_minutes:
+        one: '1 Minute'
+        other: '{{count}} Minuten'
+      about_x_hours:
+        one: 'etwa 1 Stunde'
+        other: 'etwa {{count}} Stunden'
+      x_days:
+        one: '1 Tag'
+        other: '{{count}} Tage'
+      about_x_months:
+        one: 'etwa 1 Monat'
+        other: 'etwa {{count}} Monate'
+      x_months:
+        one: '1 Monat'
+        other: '{{count}} Monate'
+      about_x_years:
+        one: 'etwa 1 Jahr'
+        other: 'etwa {{count}} Jahre'
+      over_x_years:
+        one: 'mehr als 1 Jahr'
+        other: 'mehr als {{count}} Jahre'
+
+  number:
+    format:
+      precision: 2
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: '€'
+        format: '%n%u'
+        separator:
+        delimiter:
+        precision:
+    percentage:
+      format:
+        delimiter: ""
+    precision:
+      format:
+        delimiter: ""
+    human:
+      format:
+        delimiter: ""
+        precision: 1
+
+  support:
+    array:
+      sentence_connector: "und"
+      skip_last_comma: true
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one:    "Konnte dieses {{model}} Objekt nicht speichern: 1 Fehler."
+          other:  "Konnte dieses {{model}} Objekt nicht speichern: {{count}} Fehler."
+        body: "Bitte überprüfen Sie die folgenden Felder:"
+
+      messages:
+        inclusion: "ist kein gültiger Wert"
+        exclusion: "ist nicht verfügbar"
+        invalid: "ist nicht gültig"
+        confirmation: "stimmt nicht mit der Bestätigung überein"
+        accepted: "muss akzeptiert werden"
+        empty: "muss ausgefüllt werden"
+        blank: "muss ausgefüllt werden"
+        too_long: "ist zu lang (nicht mehr als {{count}} Zeichen)"
+        too_short: "ist zu kurz (nicht weniger als {{count}} Zeichen)"
+        wrong_length: "hat die falsche Länge (muss genau {{count}} Zeichen haben)"
+        taken: "ist bereits vergeben"
+        not_a_number: "ist keine Zahl"
+        greater_than: "muss größer als {{count}} sein"
+        greater_than_or_equal_to: "muss größer oder gleich {{count}} sein"
+        equal_to: "muss genau {{count}} sein"
+        less_than: "muss kleiner als {{count}} sein"
+        less_than_or_equal_to: "muss kleiner oder gleich {{count}} sein"
+        odd: "muss ungerade sein"
+        even: "muss gerade sein"
+
+  language : "实际的语言" 
+  loginwelcom : "欢迎"
+  logofftext : "请点击这里注销- "
+  logintext : "请点击这里登录- "
+  registertext : "您没有登录请点击这里- "
+  startpagelink : "主页"
+
+  navinews : "新闻"
+  navidashblogs : "新闻博客"
+
+  navisales : "销售"
+  navicontacts : "联系人"
+  navicompanies : "公司"
+  naviadresses : "公司地址"
+  navicompanyarts : "公司类别"
+
+  naviproduction : "生产"
+  naviproducts : "产品"
+  naviparts : "零件"
+
+  navisupport : "支持"
+  navikbcomments : "或评论"
+  navikbarticles : " KB文章"
+
+  navidocuments : "文件"
+  navifolders : "文件夹"
+  navifiles : "档案"
+
+  naviorganisation : "本组织"
+  navicaldates : "日历"
+  navidatetasks : "日历任务"
+
+  naviadmin : "行政"
+  navidateprios : "日历Prios "
+  navidatestatuses : "日历状态"
+  navidatearts : "日历分类"
+  navikbcats : "或分类"
+  navikblangs : "或语言"
+
+
+  account_new_login : "用户"
+  account_new_email : "您的E - mail地址！ "
+  account_new_password : "密码"
+  account_new_confirmpassword : "确认密码"
+  account_new_sigup : "创建用户"
+
+  sessions_new_headline : "登录RailsERP "
+  sessions_new_user : "用户名"
+  sessions_new_password : "密码"
+  sessions_new_rememberme : " Remmember我吗？ "
+  sessions_new_login : "登录"
+
+  global_search : "搜索"
+  global_search_go : "去寻找"
+  adress_new_headline : "新地址"
+  adress_edit_headline : "修改地址"
+  adress_index_headline : "列表地址"
+
+  adress_editnewshowindex_street : "街: "
+  adress_editnewshowindex_streetnr : "街上午十时十五分: "
+  adress_editnewshowindex_zip : "邮编: "
+  adress_editnewshowindex_area : "面积: "
+  adress_editnewshowindex_land : "土地: "
+  adress_editnewshowindex_postcode : "邮编: "
+  adress_editnewshowindex_company : "本公司"
+
+  adress_editnewshowindex_update : "更新"
+  adress_editnewshowindex_show : "显示"
+  adress_editnewshowindex_back : "返回"
+  adress_editnewshowindex_create : "创建"
+  adress_editnewshowindex_edit : "编辑"
+  adress_editnewshowindex_delete : "删除"
+  adress_editnewshowindex_new : "新地址"
+
+  caldate_new_headline : "创建日期"
+  caldate_edit_headline : "修改日期"
+  caldate_index_headline : "名单的日期"
+
+  caldate_editnewshowindex_startdate : "开始日期"
+  caldate_editnewshowindex_enddate : "结束日期"
+  caldate_editnewshowindex_info : "信息"
+  caldate_editnewshowindex_fullday : " Fullday ？ "
+  caldate_editnewshowindex_account : "户口"
+  caldate_editnewshowindex_contact : "联系"
+  caldate_editnewshowindex_dateprio : " Prio "
+  caldate_editnewshowindex_datestatus : "状态"
+  caldate_editnewshowindex_dateart : "艺术"
+  caldate_editnewshowindex_reminder : "提醒"
+
+  caldate_editnewshowindex_update : "更新"
+  caldate_editnewshowindex_show : "显示"
+  caldate_editnewshowindex_back : "返回"
+  caldate_editnewshowindex_create : "创建"
+  caldate_editnewshowindex_edit : "编辑"
+  caldate_editnewshowindex_delete : "删除"
+  caldate_editnewshowindex_new : "新的日期"
+
+  companies_new_headline : "创建公司"
+  companies_edit_headline : "修改公司"
+  companies_index_headline : "上市公司"
+
+  companies_editnewshowindex_name : "公司名称"
+  companies_editnewshowindex_companyart : "分类"
+
+  companies_editnewshowindex_update : "更新"
+  companies_editnewshowindex_show : "显示"
+  companies_editnewshowindex_back : "返回"
+  companies_editnewshowindex_create : "创建"
+  companies_editnewshowindex_edit : "编辑"
+  companies_editnewshowindex_delete : "删除"
+  companies_editnewshowindex_new : "创建公司"
+
+  companiesarts_new_headline : "创建公司分类"
+  companiesarts_edit_headline : "修改公司分类"
+  companiesarts_index_headline : "上市公司分类"
+
+  companiesarts_editnewshowindex_name : "公司类别"
+
+  companiesarts_editnewshowindex_update : "更新"
+  companiesarts_editnewshowindex_show : "显示"
+  companiesarts_editnewshowindex_back : "返回"
+  companiesarts_editnewshowindex_create : "创建"
+  companiesarts_editnewshowindex_edit : "编辑"
+  companiesarts_editnewshowindex_delete : "删除"
+  companiesarts_editnewshowindex_new : "建立新的企业分类"
+
+  contacts_new_headline : "建立联系"
+  contacts_edit_headline : "编辑联系人"
+  contacts_index_headline : "列表联系"
+
+  contacts_editnewshowindex_name : " Fristname "
+  contacts_editnewshowindex_lastname : "姓"
+  contacts_editnewshowindex_position : "位置"
+  contacts_editnewshowindex_tel : "电话"
+  contacts_editnewshowindex_mobile : "移动"
+  contacts_editnewshowindex_email : "电子邮件"
+  contacts_editnewshowindex_info : "信息"
+  contacts_editnewshowindex_birthday : "生日"
+  contacts_editnewshowindex_company : "本公司"
+  contacts_editnewshowindex_write : "写一封信"
+
+  contacts_editnewshowindex_update : "更新"
+  contacts_editnewshowindex_show : "显示"
+  contacts_editnewshowindex_back : "返回"
+  contacts_editnewshowindex_create : "创建"
+  contacts_editnewshowindex_edit : "编辑"
+  contacts_editnewshowindex_delete : "删除"
+  contacts_editnewshowindex_new : "建立新的联系"
+
+  dashblogs_new_headline : "创建新闻"
+  dashblogs_edit_headline : "编辑新闻"
+  dashblogs_index_headline : "名单新闻"
+
+  dashblogs_editnewshowindex_title : "书名"
+  dashblogs_editnewshowindex_blogtext : "信息"
+  dashblogs_editnewshowindex_published : "时间？ "
+
+  dashblogs_editnewshowindex_update : "更新"
+  dashblogs_editnewshowindex_show : "显示"
+  dashblogs_editnewshowindex_back : "返回"
+  dashblogs_editnewshowindex_create : "创建"
+  dashblogs_editnewshowindex_edit : "编辑"
+  dashblogs_editnewshowindex_delete : "删除"
+  dashblogs_editnewshowindex_new : "建立新的新闻"
+
+  dateart_new_headline : "创建日历分类"
+  dateart_edit_headline : "编辑日历分类"
+  dateart_index_headline : "列表日历分类"
+
+  dateart_editnewshowindex_art : "日历种类"
+
+  dateart_editnewshowindex_update : "更新"
+  dateart_editnewshowindex_show : "显示"
+  dateart_editnewshowindex_back : "返回"
+  dateart_editnewshowindex_create : "创建"
+  dateart_editnewshowindex_edit : "编辑"
+  dateart_editnewshowindex_delete : "删除"
+  dateart_editnewshowindex_new : "新日历种类！ "
+
+  dateprio_new_headline : "创建日历Prio "
+  dateprio_edit_headline : "编辑日历Prio "
+  dateprio_index_headline : "列表日历Prio "
+
+  dateprio_editnewshowindex_prio : "日历Prio "
+
+  dateprio_editnewshowindex_update : "更新"
+  dateprio_editnewshowindex_show : "显示"
+  dateprio_editnewshowindex_back : "返回"
+  dateprio_editnewshowindex_create : "创建"
+  dateprio_editnewshowindex_edit : "编辑"
+  dateprio_editnewshowindex_delete : "删除"
+  dateprio_editnewshowindex_new : "新日历Prio ！ "
+
+  datestatus_new_headline : "创建日历状态"
+  datestatus_edit_headline : "编辑日历状态"
+  datestatus_index_headline : "列表日历状态"
+
+  datestatus_editnewshowindex_status : "日历状态"
+
+  datestatus_editnewshowindex_update : "更新"
+  datestatus_editnewshowindex_show : "显示"
+  datestatus_editnewshowindex_back : "返回"
+  datestatus_editnewshowindex_create : "创建"
+  datestatus_editnewshowindex_edit : "编辑"
+  datestatus_editnewshowindex_delete : "删除"
+  datestatus_editnewshowindex_new : "创建新日历状态"
+
+  datetasks_new_headline : "创建日历工作"
+  datetasks_edit_headline : "编辑日历工作"
+  datetasks_index_headline : "列表日历任务"
+
+  datetasks_editnewshowindex_taskname : " Taskname "
+  datetasks_editnewshowindex_info : "信息"
+  datetasks_editnewshowindex_progress : "进步"
+  datetasks_editnewshowindex_dateprio : " Prio "
+  datetasks_editnewshowindex_datestatus : "状态"
+  datetasks_editnewshowindex_date : "最新的吗？ "
+
+  datetasks_editnewshowindex_update : "更新"
+  datetasks_editnewshowindex_show : "显示"
+  datetasks_editnewshowindex_back : "返回"
+  datetasks_editnewshowindex_create : "创建"
+  datetasks_editnewshowindex_edit : "编辑"
+  datetasks_editnewshowindex_delete : "删除"
+  datetasks_editnewshowindex_new : "创建新日历任务"
+
+  filedatas_new_headline : "文件上传"
+  filedatas_edit_headline : "档案变"
+  filedatas_index_headline : "列出文件"
+
+  filedatas_editnewshowindex_filename : "文件名"
+  filedatas_editnewshowindex_info : "信息"
+  filedatas_editnewshowindex_size : "大小（ MB ） "
+  filedatas_editnewshowindex_contact : "联系"
+  filedatas_editnewshowindex_folder : "文件夹"
+
+  filedatas_editnewshowindex_update : "替换"
+  filedatas_editnewshowindex_show : "显示"
+  filedatas_editnewshowindex_back : "返回"
+  filedatas_editnewshowindex_create : "上传"
+  filedatas_editnewshowindex_edit : "替换"
+  filedatas_editnewshowindex_delete : "删除"
+  filedatas_editnewshowindex_new : "上传新文件"
+
+  folders_new_headline : "创建文件夹"
+  folders_edit_headline : "更改文件夹"
+  folders_index_headline : "列出文件夹"
+
+  folders_editnewshowindex_fodlername : "文件夹"
+  folders_editnewshowindex_info : "信息"
+
+  folders_editnewshowindex_update : "更新"
+  folders_editnewshowindex_show : "查看文件"
+  folders_editnewshowindex_back : "返回"
+  folders_editnewshowindex_create : "创建"
+  folders_editnewshowindex_edit : "编辑"
+  folders_editnewshowindex_delete : "删除"
+  folders_editnewshowindex_new : "创建新文件夹"
+
+  kbarticles_new_headline : "创建或进入"
+  kbarticles_edit_headline : "更改或进入"
+  kbarticles_index_headline : "列表或项目"
+
+  kbarticles_editnewshowindex_symptoms : "症状"
+  kbarticles_editnewshowindex_cause : "原因"
+  kbarticles_editnewshowindex_solution : "解决办法"
+  kbarticles_editnewshowindex_kbcat : "分类"
+  kbarticles_editnewshowindex_kblang : "语言"
+
+  kbarticles_editnewshowindex_update : "更新"
+  kbarticles_editnewshowindex_show : "显示"
+  kbarticles_editnewshowindex_back : "返回"
+  kbarticles_editnewshowindex_create : "创建"
+  kbarticles_editnewshowindex_edit : "编辑"
+  kbarticles_editnewshowindex_delete : "删除"
+  kbarticles_editnewshowindex_new : "建立新的或进入"
+
+  kbcats_new_headline : "创建或类别"
+  kbcats_edit_headline : "更改或类别"
+  kbcats_index_headline : "列表或类别"
+
+  kbcats_editnewshowindex_name : "分类"
+
+  kbcats_editnewshowindex_update : "更新"
+  kbcats_editnewshowindex_show : "显示"
+  kbcats_editnewshowindex_back : "返回"
+  kbcats_editnewshowindex_create : "创建"
+  kbcats_editnewshowindex_edit : "编辑"
+  kbcats_editnewshowindex_delete : "删除"
+  kbcats_editnewshowindex_new : "建立新的或类别"
+
+  kbcomments_new_headline : "创建或评论"
+  kbcomments_edit_headline : "编辑或评论"
+  kbcomments_index_headline : "列表或评论"
+
+  kbcomments_editnewshowindex_comment : "或评论"
+  kbcomments_editnewshowindex_artikel : "或第"
+
+  kbcomments_editnewshowindex_update : "更新"
+  kbcomments_editnewshowindex_show : "显示"
+  kbcomments_editnewshowindex_back : "返回"
+  kbcomments_editnewshowindex_create : "创建"
+  kbcomments_editnewshowindex_edit : "编辑"
+  kbcomments_editnewshowindex_delete : "删除"
+  kbcomments_editnewshowindex_new : "建立新的或评论"
+
+  kblang_new_headline : "创建或语言"
+  kblang_edit_headline : "修改或语言"
+  kblang_index_headline : "列表或语言"
+
+  kblang_editnewshowindex_language : "或语言"
+
+  kblang_editnewshowindex_update : "更新"
+  kblang_editnewshowindex_show : "显示"
+  kblang_editnewshowindex_back : "返回"
+  kblang_editnewshowindex_create : "创建"
+  kblang_editnewshowindex_edit : "编辑"
+  kblang_editnewshowindex_delete : "删除"
+  kblang_editnewshowindex_new : "新的或语言"
+
+  parts_new_headline : "创建部分"
+  parts_edit_headline : "修改部分"
+  parts_index_headline : "列表部分"
+
+  parts_editnewshowindex_name : " Partname "
+  parts_editnewshowindex_price : "价格"
+  parts_editnewshowindex_info : "信息"
+  parts_editnewshowindex_image : "图片"
+  parts_editnewshowindex_imagename : " Imagename "
+  parts_editnewshowindex_imageext : "类型"
+
+  parts_editnewshowindex_update : "更新"
+  parts_editnewshowindex_show : "显示"
+  parts_editnewshowindex_back : "返回"
+  parts_editnewshowindex_create : "创建"
+  parts_editnewshowindex_edit : "编辑"
+  parts_editnewshowindex_delete : "删除"
+  parts_editnewshowindex_new : "创建新的第二部分"
+
+  products_new_headline : "创建产品"
+  products_edit_headline : "更改产品"
+  products_index_headline : "列表产品"
+
+  products_editnewshowindex_name : "产品名称"
+  products_editnewshowindex_price : "价格"
+  products_editnewshowindex_info : "信息"
+  products_editnewshowindex_image : "图片"
+  products_editnewshowindex_imageext : "类型"
+
+  products_editnewshowindex_update : "更新"
+  products_editnewshowindex_show : "显示"
+  products_editnewshowindex_back : "返回"
+  products_editnewshowindex_create : "创建"
+  products_editnewshowindex_edit : "编辑"
+  products_editnewshowindex_delete : "删除"
+  products_editnewshowindex_new : "建立新的产品"
+  products_editnewshowindex_add : "购买部分产品"
