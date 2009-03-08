@@ -3,14 +3,7 @@
 <%= error_messages_for :kblang %>
 
 <% form_for(@kblang) do |f| %>
-  <p>
-    <b><%= t 'kblang_editnewshowindex_language' %></b><br />
-    <%= f.text_field :language %>
-  </p>
-
-  <p>
-    <%= f.submit t('kblang_editnewshowindex_create') %>
-  </p>
+<%= render :partial => 'form', :locals => { :f => f, :button_name => t('kblang_editnewshowindex_create') } %>
 <% end %>
 
 <%= link_to t('kblang_editnewshowindex_back'), kblangs_path %>

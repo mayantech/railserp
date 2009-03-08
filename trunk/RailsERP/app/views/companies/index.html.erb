@@ -1,11 +1,5 @@
 <h1><%= t 'companies_index_headline' %></h1>
-<% form_tag :action => "search" do%>
-  <p align="right">
-    <b><%= t 'global_search' %></b>
-    <%= text_field_tag :name, "" %>
-   <%= submit_tag t('global_search_go') %>
-  </p>
-<% end %>
+<%= render :partial => '/shared/search'%>
 <table border="1px">
   <tr>
     <th><%= t 'companies_editnewshowindex_name' %></th>
