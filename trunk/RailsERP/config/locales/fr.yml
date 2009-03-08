@@ -1,0 +1,479 @@
+fr:
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%e %b"
+      long: "%e %B %Y"
+      long_ordinal: "%e %B %Y"
+      only_day: "%e"
+
+    day_names: [dimanche, lundi, mardi, mercredi, jeudi, vendredi, samedi]
+    abbr_day_names: [dim, lun, mar, mer, jeu, ven, sam]
+    month_names: [~, janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre]
+    abbr_month_names: [~, jan., fév., mar., avr., mai, juin, juil., août, sept., oct., nov., déc.]
+    order: [ :day, :month, :year ]
+
+  time:
+    formats:
+      default: "%d %B %Y %H:%M"
+      time: "%H:%M"
+      short: "%d %b %H:%M"
+      long: "%A %d %B %Y %H:%M:%S %Z"
+      long_ordinal: "%A %d %B %Y %H:%M:%S %Z"
+      only_second: "%S"
+    am: 'am'
+    pm: 'pm'
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "une demi-minute"
+      less_than_x_seconds:
+        zero:  "moins d'une seconde"
+        one:   "moins de 1 seconde"
+        other: "moins de {{count}} secondes"
+      x_seconds:
+        one:   "1 seconde"
+        other: "{{count}} secondes"
+      less_than_x_minutes:
+        zero:  "moins d'une minute"
+        one:   "moins de 1 minute"
+        other: "moins de {{count}} minutes"
+      x_minutes:
+        one:   "1 minute"
+        other: "{{count}} minutes"
+      about_x_hours:
+        one:   "environ une heure"
+        other: "environ {{count}} heures"
+      x_days:
+        one:   "1 jour"
+        other: "{{count}} jours"
+      about_x_months:
+        one:   "environ un mois"
+        other: "environ {{count}} mois"
+      x_months:
+        one:   "1 mois"
+        other: "{{count}} mois"
+      about_x_years:
+        one:   "environ un an"
+        other: "environ {{count}} ans"
+      over_x_years:
+        one:   "plus d'un an"
+        other: "plus de {{count}} ans"
+    prompts:
+      year:   "Année"
+      month:  "Mois"
+      day:    "Jour"
+      hour:   "Heure"
+      minute: "Minute"
+      second: "Seconde"
+
+  number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: ' '
+    currency:
+      format:
+        unit: '€'
+        precision: 2
+        format: '%n %u'
+    human:
+      format:
+        precision: 2
+      storage_units: [ Octet, ko, Mo, Go, To ]
+
+  support:
+    array:
+      sentence_connector: 'et'
+      skip_last_comma: true
+      word_connector: ", "
+      two_words_connector: " et "
+      last_word_connector: " et "
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "Impossible d'enregistrer {{model}}: 1 erreur"
+          other: "Impossible d'enregistrer {{model}}: {{count}} erreurs."
+        body: "Veuillez vérifier les champs suivants :"
+      messages:
+        inclusion: "n'est pas inclus(e) dans la liste"
+        exclusion: "n'est pas disponible"
+        invalid: "n'est pas valide"
+        confirmation: "ne concorde pas avec la confirmation"
+        accepted: "doit être accepté(e)"
+        empty: "doit être rempli(e)"
+        blank: "doit être rempli(e)"
+        too_long: "est trop long (pas plus de {{count}} caractères)"
+        too_short: "est trop court (au moins {{count}} caractères)"
+        wrong_length: "ne fait pas la bonne longueur (doit comporter {{count}} caractères)"
+        taken: "n'est pas disponible"
+        not_a_number: "n'est pas un nombre"
+        greater_than: "doit être supérieur à {{count}}"
+        greater_than_or_equal_to: "doit être supérieur ou égal à {{count}}"
+        equal_to: "doit être égal à {{count}}"
+        less_than: "doit être inférieur à {{count}}"
+        less_than_or_equal_to: "doit être inférieur ou égal à {{count}}"
+        odd: "doit être impair"
+        even: "doit être pair"
+
+   # # YAML Template.
+  language: "La langue est"
+  loginwelcom: "Bienvenue"
+  logofftext: "Cliquez ici pour Logoff ->"
+  logintext: "Cliquez ici pour Login ->"
+  registertext: "Vous n'avez pas de login s'il vous plaît, cliquez ici ->"
+  startpagelink: "Home"
+
+  # # Navi
+  navinews: "News"
+  navidashblogs: "News Blog"
+
+  navisales: "Sales"
+  navicontacts: "Contacts"
+  navicompanies: "Entreprises"
+  naviadresses: "Société Adresses"
+  navicompanyarts: "Société des catégories"
+
+  naviproduction: "Production"
+  naviproducts: "Produits"
+  naviparts: "Parts"
+
+  navisupport: "Support"
+  navikbcomments: "KB Commentaires"
+  navikbarticles: "KB articles"
+
+  navidocuments: "Documents"
+  navifolders: "Folder"
+  navifiles: "Fichiers"
+
+  naviorganisation: "Organisation"
+  navicaldates: "Calendrier"
+  navidatetasks: "Calendrier des tâches"
+
+  naviadmin: "Administration"
+  navidateprios: "Calendrier PRIOS"
+  navidatestatuses: "Calendar Status"
+  navidatearts: "Calendrier des catégories"
+  navikbcats: "KB Catégories"
+  navikblangs: "KB Langue"
+
+  # # Controller
+  account_new_login: "User"
+  account_new_email: "Votre adresse E-Mail!"
+  account_new_password: "Mot de passe"
+  account_new_confirmpassword: "Confirmer le mot de passe"
+  account_new_sigup: "Créer un utilisateur"
+
+  sessions_new_headline: "Connexion à RailsERP"
+  sessions_new_user: "Username"
+  sessions_new_password: "Mot de passe"
+  sessions_new_rememberme: "Remmember Me?"
+  sessions_new_login: "Login"
+
+  global_search: "Recherche"
+  global_search_go: "Va chercher"
+  adress_new_headline: "Nouvelle adresse"
+  adress_edit_headline: "Modifier l'adresse"
+  adress_index_headline: "Liste d'adresses"
+
+  adress_editnewshowindex_street: "la rue"
+  adress_editnewshowindex_streetnr: "Street nr:"
+  adress_editnewshowindex_zip: "Code postal:"
+  adress_editnewshowindex_area: "Zone:"
+  adress_editnewshowindex_land: "Terre"
+  adress_editnewshowindex_postcode: "Code postal:"
+  adress_editnewshowindex_company: "Société"
+
+  adress_editnewshowindex_update: "Update"
+  adress_editnewshowindex_show: "Show"
+  adress_editnewshowindex_back: "Retour"
+  adress_editnewshowindex_create: "Créer"
+  adress_editnewshowindex_edit: "Edit"
+  adress_editnewshowindex_delete: "Supprimer"
+  adress_editnewshowindex_new: "Nouvelle adresse"
+
+  caldate_new_headline: "Create Date"
+  caldate_edit_headline: "Edit Date"
+  caldate_index_headline: "Liste Date"
+
+  caldate_editnewshowindex_startdate: "Start Date"
+  caldate_editnewshowindex_enddate: "Fin"
+  caldate_editnewshowindex_info: "Information"
+  caldate_editnewshowindex_fullday: "Fullday?"
+  caldate_editnewshowindex_account: "Compte"
+  caldate_editnewshowindex_contact: "Contact"
+  caldate_editnewshowindex_dateprio: "Prio"
+  caldate_editnewshowindex_datestatus: "Status"
+  caldate_editnewshowindex_dateart: "Art"
+  caldate_editnewshowindex_reminder: "Rappel"
+
+  caldate_editnewshowindex_update: "Update"
+  caldate_editnewshowindex_show: "Show"
+  caldate_editnewshowindex_back: "Retour"
+  caldate_editnewshowindex_create: "Créer"
+  caldate_editnewshowindex_edit: "Edit"
+  caldate_editnewshowindex_delete: "Supprimer"
+  caldate_editnewshowindex_new: "New Date"
+
+  companies_new_headline: "Créer l'entreprise"
+  companies_edit_headline: "Modifier l'entreprise"
+  companies_index_headline: "Liste des Sociétés"
+
+  companies_editnewshowindex_name: "Nom de la société"
+  companies_editnewshowindex_companyart: "Catégorie"
+
+  companies_editnewshowindex_update: "Update"
+  companies_editnewshowindex_show: "Show"
+  companies_editnewshowindex_back: "Retour"
+  companies_editnewshowindex_create: "Créer"
+  companies_editnewshowindex_edit: "Edit"
+  companies_editnewshowindex_delete: "Supprimer"
+  companies_editnewshowindex_new: "Créer l'entreprise"
+
+  companiesarts_new_headline: "Créer l'entreprise la catégorie"
+  companiesarts_edit_headline: "Modifier l'entreprise la catégorie"
+  companiesarts_index_headline: "Liste Company Catégories"
+
+  companiesarts_editnewshowindex_name: "Catégorie de l'entreprise"
+
+  companiesarts_editnewshowindex_update: "Update"
+  companiesarts_editnewshowindex_show: "Show"
+  companiesarts_editnewshowindex_back: "Retour"
+  companiesarts_editnewshowindex_create: "Créer"
+  companiesarts_editnewshowindex_edit: "Edit"
+  companiesarts_editnewshowindex_delete: "Supprimer"
+  companiesarts_editnewshowindex_new: "Créer une nouvelle catégorie d'entreprises"
+
+  contacts_new_headline: "Créer un contact"
+  contacts_edit_headline: "Modifier le contact"
+  contacts_index_headline: "Liste"
+
+  contacts_editnewshowindex_name: "Fristname"
+  contacts_editnewshowindex_lastname: "Nom"
+  contacts_editnewshowindex_position: "Position"
+  contacts_editnewshowindex_tel: "Tel"
+  contacts_editnewshowindex_mobile: "Mobile"
+  contacts_editnewshowindex_email: "E-Mail"
+  contacts_editnewshowindex_info: "Info"
+  contacts_editnewshowindex_birthday: "Birthday"
+  contacts_editnewshowindex_company: "Société"
+  contacts_editnewshowindex_write: "Ecrire une lettre"
+
+  contacts_editnewshowindex_update: "Update"
+  contacts_editnewshowindex_show: "Show"
+  contacts_editnewshowindex_back: "Retour"
+  contacts_editnewshowindex_create: "Créer"
+  contacts_editnewshowindex_edit: "Edit"
+  contacts_editnewshowindex_delete: "Supprimer"
+  contacts_editnewshowindex_new: "Créer un nouveau contact"
+
+  dashblogs_new_headline: "Créer News"
+  dashblogs_edit_headline: "Edit News"
+  dashblogs_index_headline: "Nouvelles"
+
+  dashblogs_editnewshowindex_title: "Titre"
+  dashblogs_editnewshowindex_blogtext: "Message"
+  dashblogs_editnewshowindex_published: "publiée?"
+
+  dashblogs_editnewshowindex_update: "Update"
+  dashblogs_editnewshowindex_show: "Show"
+  dashblogs_editnewshowindex_back: "Retour"
+  dashblogs_editnewshowindex_create: "Créer"
+  dashblogs_editnewshowindex_edit: "Edit"
+  dashblogs_editnewshowindex_delete: "Supprimer"
+  dashblogs_editnewshowindex_new: "Créer un nouveau News"
+
+  dateart_new_headline: "Créer l'agenda Catégorie"
+  dateart_edit_headline: "Modifier la catégorie Calendrier"
+  dateart_index_headline: "Calendrier Catégorie"
+
+  dateart_editnewshowindex_art: "Calendrier Catégorie"
+
+  dateart_editnewshowindex_update: "Update"
+  dateart_editnewshowindex_show: "Show"
+  dateart_editnewshowindex_back: "Retour"
+  dateart_editnewshowindex_create: "Créer"
+  dateart_editnewshowindex_edit: "Edit"
+  dateart_editnewshowindex_delete: "Supprimer"
+  dateart_editnewshowindex_new: "New Calendar Catégorie!"
+
+  dateprio_new_headline: "Créer l'agenda Prio"
+  dateprio_edit_headline: "Modifier le calendrier Prio"
+  dateprio_index_headline: "Calendrier Prio"
+
+  dateprio_editnewshowindex_prio: "Calendrier Prio"
+
+  dateprio_editnewshowindex_update: "Update"
+  dateprio_editnewshowindex_show: "Show"
+  dateprio_editnewshowindex_back: "Retour"
+  dateprio_editnewshowindex_create: "Créer"
+  dateprio_editnewshowindex_edit: "Edit"
+  dateprio_editnewshowindex_delete: "Supprimer"
+  dateprio_editnewshowindex_new: "Nouveau Calendrier Prio!"
+
+  datestatus_new_headline: "Créer l'agenda Status"
+  datestatus_edit_headline: "Edit Calendrier Status"
+  datestatus_index_headline: "Calendrier Status"
+
+  datestatus_editnewshowindex_status: "Calendar Status"
+
+  datestatus_editnewshowindex_update: "Update"
+  datestatus_editnewshowindex_show: "Show"
+  datestatus_editnewshowindex_back: "Retour"
+  datestatus_editnewshowindex_create: "Créer"
+  datestatus_editnewshowindex_edit: "Edit"
+  datestatus_editnewshowindex_delete: "Supprimer"
+  datestatus_editnewshowindex_new: "Créer un nouveau calendrier Status"
+
+  datetasks_new_headline: "Créer l'agenda des tâches"
+  datetasks_edit_headline: "Modifier le calendrier des tâches"
+  datetasks_index_headline: "Calendrier Équipe"
+
+  datetasks_editnewshowindex_taskname: "Taskname"
+  datetasks_editnewshowindex_info: "Info"
+  datetasks_editnewshowindex_progress: "Progress"
+  datetasks_editnewshowindex_dateprio: "Prio"
+  datetasks_editnewshowindex_datestatus: "Status"
+  datetasks_editnewshowindex_date: "Date?"
+
+  datetasks_editnewshowindex_update: "Update"
+  datetasks_editnewshowindex_show: "Show"
+  datetasks_editnewshowindex_back: "Retour"
+  datetasks_editnewshowindex_create: "Créer"
+  datetasks_editnewshowindex_edit: "Edit"
+  datetasks_editnewshowindex_delete: "Supprimer"
+  datetasks_editnewshowindex_new: "Créer un nouveau calendrier des tâches"
+
+  filedatas_new_headline: "File Upload"
+  filedatas_edit_headline: "changer de dossier"
+  filedatas_index_headline: "Liste de fichiers"
+
+  filedatas_editnewshowindex_filename: "Nom de fichier"
+  filedatas_editnewshowindex_info: "Info"
+  filedatas_editnewshowindex_size: "Taille (MB)"
+  filedatas_editnewshowindex_contact: "Contact"
+  filedatas_editnewshowindex_folder: "Folder"
+
+  filedatas_editnewshowindex_update: "Remplacer"
+  filedatas_editnewshowindex_show: "Show"
+  filedatas_editnewshowindex_back: "Retour"
+  filedatas_editnewshowindex_create: "Upload"
+  filedatas_editnewshowindex_edit: "Remplacer"
+  filedatas_editnewshowindex_delete: "Supprimer"
+  filedatas_editnewshowindex_new: "Envoyer nouveau dossier"
+
+  folders_new_headline: "Créer un dossier"
+  folders_edit_headline: "Changer de dossier"
+  folders_index_headline: "Liste des dossiers"
+
+  folders_editnewshowindex_fodlername: "nom_dossier"
+  folders_editnewshowindex_info: "Info"
+
+  folders_editnewshowindex_update: "Update"
+  folders_editnewshowindex_show: "Afficher les fichiers"
+  folders_editnewshowindex_back: "Retour"
+  folders_editnewshowindex_create: "Créer"
+  folders_editnewshowindex_edit: "Edit"
+  folders_editnewshowindex_delete: "Supprimer"
+  folders_editnewshowindex_new: "Créer un nouveau dossier"
+
+  kbarticles_new_headline: "Créer KB Entry"
+  kbarticles_edit_headline: "Change KB Entry"
+  kbarticles_index_headline: "Liste KB entrées"
+
+  kbarticles_editnewshowindex_symptoms: "Symptômes"
+  kbarticles_editnewshowindex_cause: "Cause"
+  kbarticles_editnewshowindex_solution: "Solution"
+  kbarticles_editnewshowindex_kbcat: "Catégorie"
+  kbarticles_editnewshowindex_kblang: "Langue"
+
+  kbarticles_editnewshowindex_update: "Update"
+  kbarticles_editnewshowindex_show: "Show"
+  kbarticles_editnewshowindex_back: "Retour"
+  kbarticles_editnewshowindex_create: "Créer"
+  kbarticles_editnewshowindex_edit: "Edit"
+  kbarticles_editnewshowindex_delete: "Supprimer"
+  kbarticles_editnewshowindex_new: "Créer un nouveau KB Entry"
+
+  kbcats_new_headline: "Créer KB-catégorie"
+  kbcats_edit_headline: "Change KB-catégorie"
+  kbcats_index_headline: "Liste KB-catégorie"
+
+  kbcats_editnewshowindex_name: "Catégorie"
+
+  kbcats_editnewshowindex_update: "Update"
+  kbcats_editnewshowindex_show: "Show"
+  kbcats_editnewshowindex_back: "Retour"
+  kbcats_editnewshowindex_create: "Créer"
+  kbcats_editnewshowindex_edit: "Edit"
+  kbcats_editnewshowindex_delete: "Supprimer"
+  kbcats_editnewshowindex_new: "Créer un nouveau KB-catégorie"
+
+  kbcomments_new_headline: "Créer KB-commentaire"
+  kbcomments_edit_headline: "Edit KB-commentaire"
+  kbcomments_index_headline: "Liste KB-commentaire"
+
+  kbcomments_editnewshowindex_comment: "KB-commentaire"
+  kbcomments_editnewshowindex_artikel: "KB-Article"
+
+  kbcomments_editnewshowindex_update: "Update"
+  kbcomments_editnewshowindex_show: "Show"
+  kbcomments_editnewshowindex_back: "Retour"
+  kbcomments_editnewshowindex_create: "Créer"
+  kbcomments_editnewshowindex_edit: "Edit"
+  kbcomments_editnewshowindex_delete: "Supprimer"
+  kbcomments_editnewshowindex_new: "Créer un nouveau KB-commentaire"
+
+  kblang_new_headline: "Créer KB-Language"
+  kblang_edit_headline: "Edit KB-Language"
+  kblang_index_headline: "Liste KB-Language"
+
+  kblang_editnewshowindex_language: "KB-Language"
+
+  kblang_editnewshowindex_update: "Update"
+  kblang_editnewshowindex_show: "Show"
+  kblang_editnewshowindex_back: "Retour"
+  kblang_editnewshowindex_create: "Créer"
+  kblang_editnewshowindex_edit: "Edit"
+  kblang_editnewshowindex_delete: "Supprimer"
+  kblang_editnewshowindex_new: "New KB-Language"
+
+  parts_new_headline: "Créer partie"
+  parts_edit_headline: "Modifier la partie"
+  parts_index_headline: "Liste de pièces"
+
+  parts_editnewshowindex_name: "partName"
+  parts_editnewshowindex_price: "Prix"
+  parts_editnewshowindex_info: "Info"
+  parts_editnewshowindex_image: "Image"
+  parts_editnewshowindex_imagename: "Imagename"
+  parts_editnewshowindex_imageext: "Type"
+
+  parts_editnewshowindex_update: "Update"
+  parts_editnewshowindex_show: "Show"
+  parts_editnewshowindex_back: "Retour"
+  parts_editnewshowindex_create: "Créer"
+  parts_editnewshowindex_edit: "Edit"
+  parts_editnewshowindex_delete: "Supprimer"
+  parts_editnewshowindex_new: "Créer une nouvelle partie"
+
+  products_new_headline: "Créer un produit"
+  products_edit_headline: "Changer de produit"
+  products_index_headline: "Liste des produits"
+
+  products_editnewshowindex_name: "Nom du produit"
+  products_editnewshowindex_price: "Prix"
+  products_editnewshowindex_info: "Info"
+  products_editnewshowindex_image: "Image"
+  products_editnewshowindex_imageext: "Type"
+
+  products_editnewshowindex_update: "Update"
+  products_editnewshowindex_show: "Show"
+  products_editnewshowindex_back: "Retour"
+  products_editnewshowindex_create: "Créer"
+  products_editnewshowindex_edit: "Edit"
+  products_editnewshowindex_delete: "Supprimer"
+  products_editnewshowindex_new: "Créer un nouveau produit"
+  products_editnewshowindex_add: "Ajouter à la partie du produit"

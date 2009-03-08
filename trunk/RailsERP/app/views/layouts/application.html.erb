@@ -93,11 +93,15 @@
 
         <div id="lanchanger">
           <p>
-            <%= t 'language' %> <%= @current_locale %>
+            <%= t 'language' %> <%= @current_locale %><br>
             (
             <%= link_to image_tag("englishflag.png"),params.merge(:locale=>'en') %>,
             <%= link_to image_tag("germanflag.png"),params.merge(:locale=>'de') %> ,
             <%= link_to image_tag("turkeyflag.png"),params.merge(:locale=>'tr') %> ,
+            <%= link_to image_tag("chinaflag.png"),params.merge(:locale=>'cn') %> ,
+            <%= link_to image_tag("indiaflag.png"),params.merge(:locale=>'in') %> ,
+            <%= link_to image_tag("franceflag.png"),params.merge(:locale=>'fr') %> ,
+            <%= link_to image_tag("russiaflag.png"),params.merge(:locale=>'ru') %> ,
             <%= link_to image_tag("brazilflag.png"),params.merge(:locale=>'pt_BR') %>
             )
           </p>
