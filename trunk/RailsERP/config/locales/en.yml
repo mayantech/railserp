@@ -131,7 +131,7 @@ en:
     contacts_edit_headline: "Edit Contact"
     contacts_index_headline: "List Contact"
 
-    contacts_editnewshowindex_name: "Fristname"
+    contacts_editnewshowindex_name: "Firstname"
     contacts_editnewshowindex_lastname: "Lastname"
     contacts_editnewshowindex_position: "Position"
     contacts_editnewshowindex_tel: "Tel"
