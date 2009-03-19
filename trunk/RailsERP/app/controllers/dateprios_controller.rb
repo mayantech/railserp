@@ -1,7 +1,9 @@
+# Controller Class for Date Prio
 class DatepriosController < ApplicationController
   # GET /dateprios
   # GET /dateprios.xml
    before_filter :login_required
+  # List all Date Prios
   def index
     @dateprios = Dateprio.find(:all)
 
@@ -13,6 +15,7 @@ class DatepriosController < ApplicationController
 
   # GET /dateprios/1
   # GET /dateprios/1.xml
+  # Show a Date Prio
   def show
     @dateprio = Dateprio.find(params[:id])
 
@@ -24,6 +27,7 @@ class DatepriosController < ApplicationController
 
   # GET /dateprios/new
   # GET /dateprios/new.xml
+  # Create a new Date Prio
   def new
     @dateprio = Dateprio.new
 
@@ -34,12 +38,14 @@ class DatepriosController < ApplicationController
   end
 
   # GET /dateprios/1/edit
+  # Edit a Date Prio
   def edit
     @dateprio = Dateprio.find(params[:id])
   end
 
   # POST /dateprios
   # POST /dateprios.xml
+  # Save a Date Prio
   def create
     @dateprio = Dateprio.new(params[:dateprio])
 
@@ -57,6 +63,7 @@ class DatepriosController < ApplicationController
 
   # PUT /dateprios/1
   # PUT /dateprios/1.xml
+  # Update a Date Prio
   def update
     @dateprio = Dateprio.find(params[:id])
 
@@ -74,6 +81,7 @@ class DatepriosController < ApplicationController
 
   # DELETE /dateprios/1
   # DELETE /dateprios/1.xml
+  # Delete a Date Prio
   def destroy
     @dateprio = Dateprio.find(params[:id])
     @dateprio.destroy
@@ -84,6 +92,7 @@ class DatepriosController < ApplicationController
     end
   end
 
+  #Search for a Date Prio
   def search
     @dateprios = Dateprio.search params[:name]
     respond_to do |format|

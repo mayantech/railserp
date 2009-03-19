@@ -3,7 +3,7 @@
 <%= error_messages_for :filedata %>
 
 <% form_for(@filedata, :html => { :multipart => true }) do |f| %>
-  <%= render :partial => 'form', :locals => { :f => f, :button_name => t('filedatas_editnewshowindex_create'), :companies => @companies, :folders => @folders } %>
+  <%= render :partial => 'form', :locals => { :f => f, :button_name => t('filedatas_editnewshowindex_create'), :companies => @companies, :folders => @folders, :contacts => @contacts } %>
 <% end %>
 
 <%= link_to t('filedatas_editnewshowindex_back'), filedatas_path %>

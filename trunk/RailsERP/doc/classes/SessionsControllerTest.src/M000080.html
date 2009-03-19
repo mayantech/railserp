@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>test_should_not_remember_me (SessionsControllerTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File test/functional/sessions_controller_test.rb, line 44</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_should_not_remember_me</span>
+    <span class="ruby-identifier">post</span> <span class="ruby-identifier">:create</span>, <span class="ruby-identifier">:login</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'quentin'</span>, <span class="ruby-identifier">:password</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'test'</span>, <span class="ruby-identifier">:remember_me</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;0&quot;</span>
+    <span class="ruby-identifier">assert_nil</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">cookies</span>[<span class="ruby-value str">&quot;auth_token&quot;</span>]
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

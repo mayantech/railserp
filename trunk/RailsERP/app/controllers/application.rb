@@ -1,7 +1,7 @@
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
 
-
+# This the Main Controller Class
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   include  AuthenticatedSystem
@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # :secret => '2e8cf15e111afc0a88cf55169b1084f0'
   
   private
-  
+  # This function Set the Language 
   def set_locale
     default_locale = :de
     accepted_langs = [:de, :en, :tr, :pt_BR, :cn ,:in ,:fr ,:ru ]

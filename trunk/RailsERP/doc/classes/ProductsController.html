@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: ProductsController</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">ProductsController</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/app/controllers/products_controller_rb.html">
+                app/controllers/products_controller.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="ApplicationController.html">
+                ApplicationController
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Controller Class for Products
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000027">addpart</a>&nbsp;&nbsp;
+      <a href="#M000023">create</a>&nbsp;&nbsp;
+      <a href="#M000028">delpart</a>&nbsp;&nbsp;
+      <a href="#M000025">destroy</a>&nbsp;&nbsp;
+      <a href="#M000022">edit</a>&nbsp;&nbsp;
+      <a href="#M000019">index</a>&nbsp;&nbsp;
+      <a href="#M000021">new</a>&nbsp;&nbsp;
+      <a href="#M000026">search</a>&nbsp;&nbsp;
+      <a href="#M000020">show</a>&nbsp;&nbsp;
+      <a href="#M000024">update</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000027" class="method-detail">
+        <a name="M000027"></a>
+
+        <div class="method-heading">
+          <a href="ProductsController.src/M000027.html" target="Code" class="method-signature"
+            onclick="popupCode('ProductsController.src/M000027.html');return false;">
+          <span class="method-name">addpart</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Add a <a href="Part.html">Part</a> to <a href="Product.html">Product</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000023" class="method-detail">
+        <a name="M000023"></a>
+
+        <div class="method-heading">
+          <a href="ProductsController.src/M000023.html" target="Code" class="method-signature"
+            onclick="popupCode('ProductsController.src/M000023.html');return false;">
+          <span class="method-name">create</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+POST /products POST /products.xml Save a <a href="Product.html">Product</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000028" class="method-detail">
+        <a name="M000028"></a>
+
+        <div class="method-heading">
+          <a href="ProductsController.src/M000028.html" target="Code" class="method-signature"
+            onclick="popupCode('ProductsController.src/M000028.html');return false;">
+          <span class="method-name">delpart</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Delete a <a href="Part.html">Part</a> from a <a
+href="Product.html">Product</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000025" class="method-detail">
+        <a name="M000025"></a>
+
+        <div class="method-heading">
+          <a href="ProductsController.src/M000025.html" target="Code" class="method-signature"
+            onclick="popupCode('ProductsController.src/M000025.html');return false;">
+          <span class="method-name">destroy</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+DELETE /products/1 DELETE /products/1.xml Delete a <a
+href="Product.html">Product</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000022" class="method-detail">
+        <a name="M000022"></a>
+
+        <div class="method-heading">
+          <a href="ProductsController.src/M000022.html" target="Code" class="method-signature"
+            onclick="popupCode('ProductsController.src/M000022.html');return false;">
+          <span class="method-name">edit</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+GET /products/1/edit Edit a <a href="Product.html">Product</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000019" class="method-detail">
+        <a name="M000019"></a>
+
+        <div class="method-heading">
+          <a href="ProductsController.src/M000019.html" target="Code" class="method-signature"
+            onclick="popupCode('ProductsController.src/M000019.html');return false;">
+          <span class="method-name">index</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+GET /products GET /products.xml List all <a href="Product.html">Product</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000021" class="method-detail">
+        <a name="M000021"></a>
+
+        <div class="method-heading">
+          <a href="ProductsController.src/M000021.html" target="Code" class="method-signature"
+            onclick="popupCode('ProductsController.src/M000021.html');return false;">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+GET /products/new GET /products/new.xml Ceate a <a
+href="ProductsController.html#M000021">new</a> <a
+href="Product.html">Product</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000026" class="method-detail">
+        <a name="M000026"></a>
+
+        <div class="method-heading">
+          <a href="ProductsController.src/M000026.html" target="Code" class="method-signature"
+            onclick="popupCode('ProductsController.src/M000026.html');return false;">
+          <span class="method-name">search</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000020" class="method-detail">
+        <a name="M000020"></a>
+
+        <div class="method-heading">
+          <a href="ProductsController.src/M000020.html" target="Code" class="method-signature"
+            onclick="popupCode('ProductsController.src/M000020.html');return false;">
+          <span class="method-name">show</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+GET /products/1 GET /products/1.xml Show a <a
+href="Product.html">Product</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000024" class="method-detail">
+        <a name="M000024"></a>
+
+        <div class="method-heading">
+          <a href="ProductsController.src/M000024.html" target="Code" class="method-signature"
+            onclick="popupCode('ProductsController.src/M000024.html');return false;">
+          <span class="method-name">update</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+PUT /products/1 PUT /products/1.xml Update a <a
+href="Product.html">Product</a>
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

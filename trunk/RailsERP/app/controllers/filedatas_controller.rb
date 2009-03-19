@@ -1,7 +1,9 @@
+# Controller Class for File
 class FiledatasController < ApplicationController
   # GET /filedatas
   # GET /filedatas.xml
    before_filter :login_required
+  # List all Files
   def index
     @filedatas = Filedata.find(:all)
 
@@ -13,6 +15,7 @@ class FiledatasController < ApplicationController
 
   # GET /filedatas/1
   # GET /filedatas/1.xml
+  # Show a File
   def show
     @filedata = Filedata.find(params[:id])
 
@@ -24,6 +27,7 @@ class FiledatasController < ApplicationController
 
   # GET /filedatas/new
   # GET /filedatas/new.xml
+  # Create a new File
   def new
     @filedata = Filedata.new
     @folders = Folder.find(:all)
@@ -36,6 +40,7 @@ class FiledatasController < ApplicationController
   end
 
   # GET /filedatas/1/edit
+  # Edit a FIle
   def edit
     @filedata = Filedata.find(params[:id])
     @folders = Folder.find(:all)
@@ -44,6 +49,7 @@ class FiledatasController < ApplicationController
 
   # POST /filedatas
   # POST /filedatas.xml
+  # Save a File
   def create
     @filedata = Filedata.new(params[:filedata])
     @filedata.ext=@filedata.extension
@@ -64,6 +70,7 @@ class FiledatasController < ApplicationController
 
   # PUT /filedatas/1
   # PUT /filedatas/1.xml
+  # Update a File
   def update
     @filedata = Filedata.find(params[:id])
     @filedata.ext=@filedata.extension
@@ -84,6 +91,7 @@ class FiledatasController < ApplicationController
 
   # DELETE /filedatas/1
   # DELETE /filedatas/1.xml
+  # Delete a File
   def destroy
     @filedata = Filedata.find(params[:id])
     @filedata.destroy
@@ -94,6 +102,7 @@ class FiledatasController < ApplicationController
     end
   end
 
+  # Search for a File
   def search
     @filedatas = Filedata.search params[:name]
     respond_to do |format|

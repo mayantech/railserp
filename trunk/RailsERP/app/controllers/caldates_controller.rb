@@ -1,9 +1,10 @@
 require 'date'
-
+# This Controller Class are for Dates
 class CaldatesController < ApplicationController
   # GET /caldates
   # GET /caldates.xml
    before_filter :login_required
+  #List all Dates
   def index
     @today=Date.today
     @caldates = Caldate.find(:all, :limit => 10)
@@ -16,6 +17,7 @@ class CaldatesController < ApplicationController
 
   # GET /caldates/1
   # GET /caldates/1.xml
+  # Show a Date
   def show
     @caldate = Caldate.find(params[:id])
 
@@ -27,6 +29,7 @@ class CaldatesController < ApplicationController
 
   # GET /caldates/new
   # GET /caldates/new.xml
+  # Create a new Date
   def new
     @caldate = Caldate.new
     @contacts= Contact.find(:all)
@@ -41,6 +44,7 @@ class CaldatesController < ApplicationController
   end
 
   # GET /caldates/1/edit
+  # Edit a Date
   def edit
     @contacts= Contact.find(:all)
     @datearts=Dateart.find(:all)
@@ -51,6 +55,7 @@ class CaldatesController < ApplicationController
 
   # POST /caldates
   # POST /caldates.xml
+  # Create a new Date
   def create
     @caldate = Caldate.new(params[:caldate])
 
@@ -68,6 +73,7 @@ class CaldatesController < ApplicationController
 
   # PUT /caldates/1
   # PUT /caldates/1.xml
+  # Update a new Date
   def update
     @caldate = Caldate.find(params[:id])
 
@@ -85,6 +91,7 @@ class CaldatesController < ApplicationController
 
   # DELETE /caldates/1
   # DELETE /caldates/1.xml
+  # Delete a Date
   def destroy
     @caldate = Caldate.find(params[:id])
     @caldate.destroy
@@ -94,7 +101,7 @@ class CaldatesController < ApplicationController
       format.xml  { head :ok }
     end
   end
-
+ # Search a Date
  def search
     @today=Date.today
     @caldates = Caldate.search params[:name]
@@ -103,7 +110,7 @@ class CaldatesController < ApplicationController
       format.xml  { render :xml => @caldates }
     end
   end
-
+ # Filter Date
  def filterdate
    @today = params[:today]
    @today=@today.to_date
@@ -115,7 +122,7 @@ class CaldatesController < ApplicationController
       format.xml  { render :xml => @caldates }
     end
  end
-
+   # Change a Date
    def datechange
    @today = params[:today]
    @today=@today.to_date

@@ -1,7 +1,9 @@
+# Controller CLass for Companies
 class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.xml
   before_filter :login_required
+  # List all Companys
   def index
     @companies = Company.find(:all)
 
@@ -13,6 +15,7 @@ class CompaniesController < ApplicationController
 
   # GET /companies/1
   # GET /companies/1.xml
+  # Show the Company
   def show
     @company = Company.find(params[:id])
     respond_to do |format|
@@ -23,6 +26,7 @@ class CompaniesController < ApplicationController
 
   # GET /companies/new
   # GET /companies/new.xml
+  # Create a new Company
   def new
     @company = Company.new
     @companyarts= Companyart.find(:all)
@@ -33,6 +37,7 @@ class CompaniesController < ApplicationController
   end
 
   # GET /companies/1/edit
+  # Edit a Company
   def edit
     @companyarts= Companyart.find(:all)
     @company = Company.find(params[:id])
@@ -40,6 +45,7 @@ class CompaniesController < ApplicationController
 
   # POST /companies
   # POST /companies.xml
+  # Save the Company
   def create
     @company = Company.new(params[:company])
 
@@ -57,6 +63,7 @@ class CompaniesController < ApplicationController
 
   # PUT /companies/1
   # PUT /companies/1.xml
+  # Update a Company
   def update
     @company = Company.find(params[:id])
 
@@ -74,6 +81,7 @@ class CompaniesController < ApplicationController
 
   # DELETE /companies/1
   # DELETE /companies/1.xml
+  # Delete a Company
   def destroy
     @company = Company.find(params[:id])
     @company.destroy
@@ -84,6 +92,7 @@ class CompaniesController < ApplicationController
     end
   end
 
+ # Search for a Company with a String
  def search
     @companies = Company.search params[:name]
     respond_to do |format|

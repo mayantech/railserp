@@ -1,7 +1,9 @@
+# Controller Class for Date Task
 class DatetasksController < ApplicationController
    before_filter :login_required
   # GET /datetasks
   # GET /datetasks.xml
+  # List all Date Taskes
   def index
     @datetasks = Datetask.find(:all)
 
@@ -13,6 +15,7 @@ class DatetasksController < ApplicationController
 
   # GET /datetasks/1
   # GET /datetasks/1.xml
+  # Show a Date Task
   def show
     @datetask = Datetask.find(params[:id])
 
@@ -24,6 +27,7 @@ class DatetasksController < ApplicationController
 
   # GET /datetasks/new
   # GET /datetasks/new.xml
+  # Create a new Date Task
   def new
     @datetask = Datetask.new
     @dateprios=Dateprio.find(:all)
@@ -36,6 +40,7 @@ class DatetasksController < ApplicationController
   end
 
   # GET /datetasks/1/edit
+  # Edit a Date Task
   def edit
     @datetask = Datetask.find(params[:id])
     @dateprios=Dateprio.find(:all)
@@ -45,6 +50,7 @@ class DatetasksController < ApplicationController
 
   # POST /datetasks
   # POST /datetasks.xml
+  # Save a Date Task
   def create
     @datetask = Datetask.new(params[:datetask])
 
@@ -62,6 +68,7 @@ class DatetasksController < ApplicationController
 
   # PUT /datetasks/1
   # PUT /datetasks/1.xml
+  # Update a Date Task
   def update
     @datetask = Datetask.find(params[:id])
 
@@ -79,6 +86,7 @@ class DatetasksController < ApplicationController
 
   # DELETE /datetasks/1
   # DELETE /datetasks/1.xml
+  # Delete a Date Task
   def destroy
     @datetask = Datetask.find(params[:id])
     @datetask.destroy
@@ -89,6 +97,7 @@ class DatetasksController < ApplicationController
     end
   end
 
+ # Search for a Date Task
  def search
     @datetasks = Datetask.search params[:name]
     respond_to do |format|

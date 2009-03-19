@@ -1,7 +1,9 @@
+# Controller Class for Parts
 class PartsController < ApplicationController
   # GET /parts
   # GET /parts.xml
   before_filter :login_required
+  # List all Parts
   def index
     @parts = Part.find(:all)
 
@@ -13,6 +15,7 @@ class PartsController < ApplicationController
 
   # GET /parts/1
   # GET /parts/1.xml
+  # Show a Part
   def show
     @part = Part.find(params[:id])
 
@@ -24,6 +27,7 @@ class PartsController < ApplicationController
 
   # GET /parts/new
   # GET /parts/new.xml
+  # Create a new Part
   def new
     @part = Part.new
 
@@ -34,12 +38,14 @@ class PartsController < ApplicationController
   end
 
   # GET /parts/1/edit
+  # Edit a Part
   def edit
     @part = Part.find(params[:id])
   end
 
   # POST /parts
   # POST /parts.xml
+  # Save a Part
   def create
     @part = Part.new(params[:part])
     @part.imageext=@part.extension
@@ -57,6 +63,7 @@ class PartsController < ApplicationController
 
   # PUT /parts/1
   # PUT /parts/1.xml
+  # Update a Part
   def update
     @part = Part.find(params[:id])
 
@@ -74,6 +81,7 @@ class PartsController < ApplicationController
 
   # DELETE /parts/1
   # DELETE /parts/1.xml
+  # Delete Part
   def destroy
     @part = Part.find(params[:id])
     @part.destroy
@@ -84,6 +92,7 @@ class PartsController < ApplicationController
     end
   end
 
+  # Search a Part
   def search
     @parts = Part.search params[:name]
     respond_to do |format|

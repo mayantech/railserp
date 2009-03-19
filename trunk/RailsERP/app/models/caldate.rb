@@ -1,6 +1,6 @@
 
 require_dependency "search"
-
+# Caledar Entries
 class Caldate < ActiveRecord::Base
   belongs_to :datestatus
   belongs_to :dateprio

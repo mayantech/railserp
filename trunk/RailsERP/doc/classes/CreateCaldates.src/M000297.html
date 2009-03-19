@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>up (CreateCaldates)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File db/migrate/016_create_caldates.rb, line 2</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">up</span>
+    <span class="ruby-identifier">create_table</span> <span class="ruby-identifier">:caldates</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">datetime</span> <span class="ruby-identifier">:startdate</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">datetime</span> <span class="ruby-identifier">:enddate</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">text</span> <span class="ruby-identifier">:info</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">boolean</span> <span class="ruby-identifier">:fullday</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">integer</span> <span class="ruby-identifier">:account_id</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">integer</span> <span class="ruby-identifier">:contact_id</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">integer</span> <span class="ruby-identifier">:dateprio_id</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">integer</span> <span class="ruby-identifier">:datestatus_id</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">integer</span> <span class="ruby-identifier">:dateart_id</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">datetime</span> <span class="ruby-identifier">:reminder</span>
+
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">timestamps</span>
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -1,7 +1,9 @@
+# Controller Class for Knowlagebase Categorie
 class KbcatsController < ApplicationController
   # GET /kbcats
   # GET /kbcats.xml
   before_filter :login_required
+  # List all Knowlagebase Categorie
   def index
     @kbcats = Kbcat.find(:all)
 
@@ -13,6 +15,7 @@ class KbcatsController < ApplicationController
 
   # GET /kbcats/1
   # GET /kbcats/1.xml
+  # Show a Knowlagebase Categorie
   def show
     @kbcat = Kbcat.find(params[:id])
 
@@ -24,6 +27,7 @@ class KbcatsController < ApplicationController
 
   # GET /kbcats/new
   # GET /kbcats/new.xml
+  # Create a new Knowlagebase Categorie
   def new
     @kbcat = Kbcat.new
 
@@ -34,12 +38,14 @@ class KbcatsController < ApplicationController
   end
 
   # GET /kbcats/1/edit
+  # Edit a Knowlagebase Categorie
   def edit
     @kbcat = Kbcat.find(params[:id])
   end
 
   # POST /kbcats
   # POST /kbcats.xml
+  # Save a Knowlagebase Categorie
   def create
     @kbcat = Kbcat.new(params[:kbcat])
 
@@ -57,6 +63,7 @@ class KbcatsController < ApplicationController
 
   # PUT /kbcats/1
   # PUT /kbcats/1.xml
+  # Update a Knowlagebase Categorie
   def update
     @kbcat = Kbcat.find(params[:id])
 
@@ -74,6 +81,7 @@ class KbcatsController < ApplicationController
 
   # DELETE /kbcats/1
   # DELETE /kbcats/1.xml
+  # Delete a Knowlagebase Categorie
   def destroy
     @kbcat = Kbcat.find(params[:id])
     @kbcat.destroy
@@ -84,6 +92,7 @@ class KbcatsController < ApplicationController
     end
   end
 
+  # Search for a Knowlagebase Categorie
   def search
     @kbcats = Kbcat.search params[:name]
     respond_to do |format|

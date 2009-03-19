@@ -1,7 +1,9 @@
+# Controller Class for Date Status
 class DatestatusesController < ApplicationController
   # GET /datestatuses
   # GET /datestatuses.xml
    before_filter :login_required
+  # List all Date Statuses
   def index
     @datestatuses = Datestatus.find(:all)
 
@@ -13,6 +15,7 @@ class DatestatusesController < ApplicationController
 
   # GET /datestatuses/1
   # GET /datestatuses/1.xml
+  # Show a Date Status
   def show
     @datestatus = Datestatus.find(params[:id])
 
@@ -24,6 +27,7 @@ class DatestatusesController < ApplicationController
 
   # GET /datestatuses/new
   # GET /datestatuses/new.xml
+  # Create a new Date Status
   def new
     @datestatus = Datestatus.new
 
@@ -34,12 +38,14 @@ class DatestatusesController < ApplicationController
   end
 
   # GET /datestatuses/1/edit
+  # Edit a Date Status
   def edit
     @datestatus = Datestatus.find(params[:id])
   end
 
   # POST /datestatuses
   # POST /datestatuses.xml
+  # Save a Date Status
   def create
     @datestatus = Datestatus.new(params[:datestatus])
 
@@ -57,6 +63,7 @@ class DatestatusesController < ApplicationController
 
   # PUT /datestatuses/1
   # PUT /datestatuses/1.xml
+  # Update a Date Status
   def update
     @datestatus = Datestatus.find(params[:id])
 
@@ -74,6 +81,7 @@ class DatestatusesController < ApplicationController
 
   # DELETE /datestatuses/1
   # DELETE /datestatuses/1.xml
+  # Delete a Date Status
   def destroy
     @datestatus = Datestatus.find(params[:id])
     @datestatus.destroy
@@ -84,6 +92,7 @@ class DatestatusesController < ApplicationController
     end
   end
 
+  # Search for a Date Status
   def search
     @datestatuses = Datestatus.search params[:name]
     respond_to do |format|

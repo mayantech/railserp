@@ -1,7 +1,9 @@
+# Controller Class for Knowlagebase Entry
 class KbarticlesController < ApplicationController
   # GET /kbarticles
   # GET /kbarticles.xml
   before_filter :login_required
+  # List all Knowlagebase Entries
   def index
     @kbarticles = Kbarticle.find(:all)
 
@@ -13,6 +15,7 @@ class KbarticlesController < ApplicationController
 
   # GET /kbarticles/1
   # GET /kbarticles/1.xml
+  # Show a Knowlagebase Entry
   def show
     @kbarticle = Kbarticle.find(params[:id])
 
@@ -24,6 +27,7 @@ class KbarticlesController < ApplicationController
 
   # GET /kbarticles/new
   # GET /kbarticles/new.xml
+  # Create a Knowlagebase Entry
   def new
     @kbarticle = Kbarticle.new
     @kblangs= Kblang.find(:all)
@@ -35,6 +39,7 @@ class KbarticlesController < ApplicationController
   end
 
   # GET /kbarticles/1/edit
+  # Edit a Knowlagebase Entry
   def edit
     @kbarticle = Kbarticle.find(params[:id])
     @kblangs= Kblang.find(:all)
@@ -43,6 +48,7 @@ class KbarticlesController < ApplicationController
 
   # POST /kbarticles
   # POST /kbarticles.xml
+  # Save a Knowlagebase Entry
   def create
     @kbarticle = Kbarticle.new(params[:kbarticle])
 
@@ -60,6 +66,7 @@ class KbarticlesController < ApplicationController
 
   # PUT /kbarticles/1
   # PUT /kbarticles/1.xml
+  # Update a Knowlagebase Entry
   def update
     @kbarticle = Kbarticle.find(params[:id])
 
@@ -77,6 +84,7 @@ class KbarticlesController < ApplicationController
 
   # DELETE /kbarticles/1
   # DELETE /kbarticles/1.xml
+  # Delete a Knowlagebase Entry
   def destroy
     @kbarticle = Kbarticle.find(params[:id])
     @kbarticle.destroy
@@ -87,6 +95,7 @@ class KbarticlesController < ApplicationController
     end
   end
 
+  # Search for a Knowlagebase Entry
   def search
     @kbarticles = Kbarticle.search params[:name]
     respond_to do |format|

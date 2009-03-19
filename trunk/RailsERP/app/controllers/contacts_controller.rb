@@ -2,7 +2,7 @@ require 'rubygems'
 require 'zip/zipfilesystem'
 require 'ftools'
 
-
+# Controller Class for Contacts
 class ContactsController < ApplicationController
   # before_filter :login_required, :only => [:edit, :update]
   # GET /contacts
@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
   # before_filter :login_required, :except => [ :index ]
   before_filter :login_required
 
-
+  # List all Contacts
   def index
     @contacts = Contact.find(:all)
 
@@ -22,6 +22,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts/1
   # GET /contacts/1.xml
+  # Show a Contact
   def show
     @contact = Contact.find(params[:id])
 
@@ -33,6 +34,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts/new
   # GET /contacts/new.xml
+  # Create a new Contact
   def new
     @contact = Contact.new
     @companies= Company.find(:all)
@@ -44,6 +46,7 @@ class ContactsController < ApplicationController
   end
 
   # GET /contacts/1/edit
+  # Edit a Contact
   def edit
     @companies= Company.find(:all)
     @contact = Contact.find(params[:id])
@@ -51,6 +54,7 @@ class ContactsController < ApplicationController
 
   # POST /contacts
   # POST /contacts.xml
+  # Save a Contact
   def create
     @contact = Contact.new(params[:contact])
 
@@ -68,6 +72,7 @@ class ContactsController < ApplicationController
 
   # PUT /contacts/1
   # PUT /contacts/1.xml
+  # Update a Contact
   def update
     @contact = Contact.find(params[:id])
 
@@ -85,6 +90,7 @@ class ContactsController < ApplicationController
 
   # DELETE /contacts/1
   # DELETE /contacts/1.xml
+  # Delete a Contact
   def destroy
     @contact = Contact.find(params[:id])
     @contact.destroy
@@ -95,6 +101,7 @@ class ContactsController < ApplicationController
     end
   end
 
+  # Search for a Contact with a String
   def search
     # @contacts = Contact.find(:all , :conditions =>{:name => params[:name]})
     @contacts = Contact.search params[:name]
@@ -104,6 +111,7 @@ class ContactsController < ApplicationController
     end
   end
 
+  # Write a Letter with OpenOffice
   def writeletter
     @contact = Contact.find(params[:id])
     #result= `cp /Users/marcel/Desktop/RailsERP/public/vorlage.odt /Users/marcel/Desktop/RailsERP/public/Out.odt`

@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   # render new.rhtml
   def new
   end
-
+  # Create a Login Session
   def create
     self.current_account = Account.authenticate(params[:login], params[:password])
     if logged_in?
@@ -21,6 +21,7 @@ class SessionsController < ApplicationController
     end
   end
 
+  # Destroy a Session
   def destroy
     self.current_account.forget_me if logged_in?
     cookies.delete :auth_token

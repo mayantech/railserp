@@ -1,7 +1,9 @@
+# Controller Class for Folder
 class FoldersController < ApplicationController
   # GET /folders
   # GET /folders.xml
    before_filter :login_required
+  # List all Folders
   def index
     @folders = Folder.find(:all)
 
@@ -13,6 +15,7 @@ class FoldersController < ApplicationController
 
   # GET /folders/1
   # GET /folders/1.xml
+  # Show Folder
   def show
     @folder = Folder.find(params[:id])
 
@@ -24,6 +27,7 @@ class FoldersController < ApplicationController
 
   # GET /folders/new
   # GET /folders/new.xml
+  # Create a Folder
   def new
     @folder = Folder.new
 
@@ -34,12 +38,14 @@ class FoldersController < ApplicationController
   end
 
   # GET /folders/1/edit
+  # Edit a Folder
   def edit
     @folder = Folder.find(params[:id])
   end
 
   # POST /folders
   # POST /folders.xml
+  # Save a Folder
   def create
     @folder = Folder.new(params[:folder])
 
@@ -57,6 +63,7 @@ class FoldersController < ApplicationController
 
   # PUT /folders/1
   # PUT /folders/1.xml
+  # Update a Folder
   def update
     @folder = Folder.find(params[:id])
 
@@ -74,6 +81,7 @@ class FoldersController < ApplicationController
 
   # DELETE /folders/1
   # DELETE /folders/1.xml
+  # Delete a Folder
   def destroy
     @folder = Folder.find(params[:id])
     @folder.destroy
@@ -84,6 +92,7 @@ class FoldersController < ApplicationController
     end
   end
 
+ # Search a Folder
  def search
     @folders = Folder.search params[:name]
     respond_to do |format|
