@@ -1,5 +1,5 @@
 require_dependency "search"
-
+# The Model for Contacts
 class Contact < ActiveRecord::Base
   belongs_to :company
   has_many :caldates

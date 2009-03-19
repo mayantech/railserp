@@ -1,7 +1,9 @@
+# Controller for Knowlagebase Language
 class KblangsController < ApplicationController
   # GET /kblangs
   # GET /kblangs.xml
    before_filter :login_required
+  # List all Knowlagebase Languages
   def index
     @kblangs = Kblang.find(:all)
 
@@ -13,6 +15,7 @@ class KblangsController < ApplicationController
 
   # GET /kblangs/1
   # GET /kblangs/1.xml
+  # Show a Knowlagebase Language
   def show
     @kblang = Kblang.find(params[:id])
 
@@ -24,6 +27,7 @@ class KblangsController < ApplicationController
 
   # GET /kblangs/new
   # GET /kblangs/new.xml
+  # Create a new Knowlagebase Language
   def new
     @kblang = Kblang.new
 
@@ -34,12 +38,14 @@ class KblangsController < ApplicationController
   end
 
   # GET /kblangs/1/edit
+  # Edit a Knowlagebase Language
   def edit
     @kblang = Kblang.find(params[:id])
   end
 
   # POST /kblangs
   # POST /kblangs.xml
+  # Save a Knowlagebase Language
   def create
     @kblang = Kblang.new(params[:kblang])
 
@@ -57,6 +63,7 @@ class KblangsController < ApplicationController
 
   # PUT /kblangs/1
   # PUT /kblangs/1.xml
+  # Update a Knowlagebase Language
   def update
     @kblang = Kblang.find(params[:id])
 
@@ -74,6 +81,7 @@ class KblangsController < ApplicationController
 
   # DELETE /kblangs/1
   # DELETE /kblangs/1.xml
+  # Delete a Knowlagebase Language
   def destroy
     @kblang = Kblang.find(params[:id])
     @kblang.destroy
@@ -84,6 +92,7 @@ class KblangsController < ApplicationController
     end
   end
 
+ # Search for a Knowlagebase Language
  def search
     @kblangs = Kblang.search params[:name]
     respond_to do |format|

@@ -1,12 +1,14 @@
+# Class to Create and Manage User Accounts
 class AccountsController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
   
 
-  # render new.rhtml
+  # Render the new User Template
   def new
   end
 
+  # Create and Save User Account
   def create
     cookies.delete :auth_token
     # protects against session fixation attacks, wreaks havoc with 

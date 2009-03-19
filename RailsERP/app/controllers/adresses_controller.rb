@@ -1,7 +1,9 @@
+# This ia the Adress Class Controller
 class AdressesController < ApplicationController
   # GET /adresses
   # GET /adresses.xml
  before_filter :login_required
+  # Rende Index and get all Data from Model
   def index
     @adresses = Adress.find(:all)
 
@@ -13,6 +15,7 @@ class AdressesController < ApplicationController
 
   # GET /adresses/1
   # GET /adresses/1.xml
+  # Show the Adress
   def show
     @adress = Adress.find(params[:id])
 
@@ -24,6 +27,7 @@ class AdressesController < ApplicationController
 
   # GET /adresses/new
   # GET /adresses/new.xml
+  # Make new Adress
   def new
     @adress = Adress.new
     @companies= Company.find(:all)
@@ -34,6 +38,7 @@ class AdressesController < ApplicationController
   end
 
   # GET /adresses/1/edit
+  # Edit the Adress
   def edit
     @adress = Adress.find(params[:id])
     @companies= Company.find(:all)
@@ -41,6 +46,7 @@ class AdressesController < ApplicationController
 
   # POST /adresses
   # POST /adresses.xml
+  # Create new Adress
   def create
     @adress = Adress.new(params[:adress])
 
@@ -58,6 +64,7 @@ class AdressesController < ApplicationController
 
   # PUT /adresses/1
   # PUT /adresses/1.xml
+  # Update a Adress
   def update
     @adress = Adress.find(params[:id])
 
@@ -75,6 +82,7 @@ class AdressesController < ApplicationController
 
   # DELETE /adresses/1
   # DELETE /adresses/1.xml
+  # Delete a Adress
   def destroy
     @adress = Adress.find(params[:id])
     @adress.destroy
@@ -84,6 +92,7 @@ class AdressesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  # Search a Adress 
   def search
     @adresses = Adress.search params[:name]
     respond_to do |format|

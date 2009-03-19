@@ -1,7 +1,9 @@
+# Controller Class for Knowlagebase Comment
 class KbcommentsController < ApplicationController
   # GET /kbcomments
   # GET /kbcomments.xml
   before_filter :login_required
+  # List all Knowlagebase Commentes
   def index
     @kbcomments = Kbcomment.find(:all)
 
@@ -13,6 +15,7 @@ class KbcommentsController < ApplicationController
 
   # GET /kbcomments/1
   # GET /kbcomments/1.xml
+  # Show a Knowlagebase Comment
   def show
     @kbcomment = Kbcomment.find(params[:id])
 
@@ -24,6 +27,7 @@ class KbcommentsController < ApplicationController
 
   # GET /kbcomments/new
   # GET /kbcomments/new.xml
+  # Create a new Knowlagebase Comment
   def new
     @kbcomment = Kbcomment.new
     @kbarticles = Kbarticle.find(:all)
@@ -34,6 +38,7 @@ class KbcommentsController < ApplicationController
   end
 
   # GET /kbcomments/1/edit
+  # Edit a Knowlagebase Comment
   def edit
     @kbcomment = Kbcomment.find(params[:id])
     @kbarticles = Kbarticle.find(:all)
@@ -41,6 +46,7 @@ class KbcommentsController < ApplicationController
 
   # POST /kbcomments
   # POST /kbcomments.xml
+  # Save a Knowlagebase Comment
   def create
     @kbcomment = Kbcomment.new(params[:kbcomment])
 
@@ -58,6 +64,7 @@ class KbcommentsController < ApplicationController
 
   # PUT /kbcomments/1
   # PUT /kbcomments/1.xml
+  # Update a Knowlagebase Comment
   def update
     @kbcomment = Kbcomment.find(params[:id])
 
@@ -75,6 +82,7 @@ class KbcommentsController < ApplicationController
 
   # DELETE /kbcomments/1
   # DELETE /kbcomments/1.xml
+  # Delete a Knowlagebase Comment
   def destroy
     @kbcomment = Kbcomment.find(params[:id])
     @kbcomment.destroy
@@ -85,6 +93,7 @@ class KbcommentsController < ApplicationController
     end
   end
 
+  # Search for a Knowlagebase Comment
   def search
     @kbcomments = Kbcomment.search params[:name]
     respond_to do |format|

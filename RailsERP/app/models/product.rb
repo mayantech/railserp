@@ -1,4 +1,5 @@
 require_dependency "search"
+# This is the Product Class this has many Parts
 class Product < ActiveRecord::Base
   searches_on :all
   has_and_belongs_to_many :parts
@@ -6,7 +7,7 @@ class Product < ActiveRecord::Base
   
   after_save :write_file
   after_destroy :delete_file
-  
+  #Def File Save
   def file=(file_data)
     
     @file_data = file_data
@@ -16,12 +17,12 @@ class Product < ActiveRecord::Base
       @filenotupload = false
     end
   end
-
+  #Write Image to Filesystem
   def write_file
    if @filenotupload == false
     if @file_data
-      FileUtils.makedirs("/Users/marcel/Desktop/RailsERP/public/images/product/#{id}")
-      File.open("/Users/marcel/Desktop/RailsERP/public/images/product/#{id}/#{id}.#{extension}", "w") { |file| file.write(@file_data.read) }
+      FileUtils.makedirs(APP_CONFIG['RailsERPPath']+"public/images/product/#{id}")
+      File.open(APP_CONFIG['RailsERPPath']+"public/images/product/#{id}/#{id}.#{extension}", "w") { |file| file.write(@file_data.read) }
       # put calls to other logic here - resizing, conversion etc.
     end
    end
@@ -29,7 +30,7 @@ class Product < ActiveRecord::Base
 
   # deletes the file(s) by removing the whole dir
   def delete_file
-    FileUtils.rm_rf("/Users/marcel/Desktop/RailsERP/public/images/product/#{id}")
+    FileUtils.rm_rf(APP_CONFIG['RailsERPPath']+"public/images/product/#{id}")
   end
 
   # just gets the extension of uploaded file

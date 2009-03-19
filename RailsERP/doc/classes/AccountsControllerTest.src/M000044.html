@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>test_should_require_email_on_signup (AccountsControllerTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File test/functional/accounts_controller_test.rb, line 51</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_should_require_email_on_signup</span>
+    <span class="ruby-identifier">assert_no_difference</span> <span class="ruby-value str">'Account.count'</span> <span class="ruby-keyword kw">do</span>
+      <span class="ruby-identifier">create_account</span>(<span class="ruby-identifier">:email</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>)
+      <span class="ruby-identifier">assert</span> <span class="ruby-identifier">assigns</span>(<span class="ruby-identifier">:account</span>).<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">on</span>(<span class="ruby-identifier">:email</span>)
+      <span class="ruby-identifier">assert_response</span> <span class="ruby-identifier">:success</span>
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

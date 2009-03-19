@@ -1,6 +1,8 @@
+# Controller Class for Products
 class ProductsController < ApplicationController
   # GET /products
   # GET /products.xml
+  # List all Product
   def index
     @products = Product.find(:all)
 
@@ -12,6 +14,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1
   # GET /products/1.xml
+  # Show a Product
   def show
     @product = Product.find(params[:id])
     @parts = Part.find(:all)
@@ -23,6 +26,7 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   # GET /products/new.xml
+  # Ceate a new Product
   def new
     @product = Product.new
 
@@ -33,12 +37,14 @@ class ProductsController < ApplicationController
   end
 
   # GET /products/1/edit
+  # Edit a Product
   def edit
     @product = Product.find(params[:id])
   end
 
   # POST /products
   # POST /products.xml
+  # Save a Product
   def create
     
     @product = Product.new(params[:product])
@@ -57,6 +63,7 @@ class ProductsController < ApplicationController
 
   # PUT /products/1
   # PUT /products/1.xml
+  # Update a Product
   def update
     @product = Product.find(params[:id])
     @product.imagepath=@product.extension
@@ -74,6 +81,7 @@ class ProductsController < ApplicationController
 
   # DELETE /products/1
   # DELETE /products/1.xml
+  # Delete a Product
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
@@ -91,11 +99,13 @@ class ProductsController < ApplicationController
     end
   end
 
+  # Add a Part to Product
   def addpart
     @product = Product.find(params['product']['id'])
     @product.parts << Part.find(params['add_parts'])
     redirect_to :action => 'show', :id => @product.id
   end
+  # Delete a Part from a Product
   def delpart
     @product = Product.find(params['id'])
     @product.parts.delete(Part.find(params["partid"]))

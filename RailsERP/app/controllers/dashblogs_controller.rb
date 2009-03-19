@@ -1,7 +1,9 @@
+# Controller Class for News
 class DashblogsController < ApplicationController
   # GET /dashblogs
   # GET /dashblogs.xml
  before_filter :login_required
+  # List all News
   def index
     @dashblogs = Dashblog.find(:all)
 
@@ -13,6 +15,7 @@ class DashblogsController < ApplicationController
 
   # GET /dashblogs/1
   # GET /dashblogs/1.xml
+  # Show a new News
   def show
     @dashblog = Dashblog.find(params[:id])
 
@@ -24,6 +27,7 @@ class DashblogsController < ApplicationController
 
   # GET /dashblogs/new
   # GET /dashblogs/new.xml
+  # Create a new News
   def new
     @dashblog = Dashblog.new
 
@@ -34,12 +38,14 @@ class DashblogsController < ApplicationController
   end
 
   # GET /dashblogs/1/edit
+  # Edit a News Entry
   def edit
     @dashblog = Dashblog.find(params[:id])
   end
 
   # POST /dashblogs
   # POST /dashblogs.xml
+  # Save a News Entry
   def create
     @dashblog = Dashblog.new(params[:dashblog])
 
@@ -57,6 +63,7 @@ class DashblogsController < ApplicationController
 
   # PUT /dashblogs/1
   # PUT /dashblogs/1.xml
+  # Update a News
   def update
     @dashblog = Dashblog.find(params[:id])
 
@@ -74,6 +81,7 @@ class DashblogsController < ApplicationController
 
   # DELETE /dashblogs/1
   # DELETE /dashblogs/1.xml
+  # Delete a News
   def destroy
     @dashblog = Dashblog.find(params[:id])
     @dashblog.destroy
@@ -84,7 +92,8 @@ class DashblogsController < ApplicationController
     end
   end
 
-    def search
+  # Search for a News with a String Fullindex
+  def search
     @dashblogs = Dashblog.search params[:name]
     respond_to do |format|
       format.html { render :template =>"dashblogs/index"}
