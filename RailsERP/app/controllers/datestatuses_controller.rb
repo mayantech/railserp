@@ -100,4 +100,14 @@ class DatestatusesController < ApplicationController
       format.xml  { render :xml => @datestatuses }
     end
   end
+
+  # Search for a Date Status with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Datestatus.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
 end

@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th><%= t 'parts_editnewshowindex_image' %></th>
+    <th><%= t 'parts_editnewshowindex_name' %></th>
+    <th><%= t 'parts_editnewshowindex_price' %></th>
+    <th><%= t 'parts_editnewshowindex_info' %></th>
+    <th><%= t 'parts_editnewshowindex_imagename' %></th>
+    <th><%= t 'parts_editnewshowindex_imageext' %></th>
+  </tr>
+
+<% for part in parts %>
+  <tr>
+    <td><%= image_tag "/images/parts/#{part.id}/#{part.id}.#{part.imageext}", :size => "100x100" %></td>
+    <td><%=h part.name %></td>
+    <td><%=h part.price %></td>
+    <td><%=h part.info %></td>
+    <td><%=h part.imagename %></td>
+    <td><%=h part.imageext %></td>
+    <td><%= link_to t('parts_editnewshowindex_show'), part %></td>
+    <td><%= link_to t('parts_editnewshowindex_edit'), edit_part_path(part) %></td>
+    <td><%= link_to t('parts_editnewshowindex_delete'), part, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

@@ -1,29 +1,8 @@
 <h1><%= t 'datetasks_index_headline' %></h1>
 <%= render :partial => '/shared/search'%>
-<table>
-  <tr>
-    <th><%= t 'datetasks_editnewshowindex_taskname' %></th>
-    <th><%= t 'datetasks_editnewshowindex_info' %></th>
-    <th><%= t 'datetasks_editnewshowindex_progress' %></th>
-    <th><%= t 'datetasks_editnewshowindex_dateprio' %></th>
-    <th><%= t 'datetasks_editnewshowindex_datestatus' %></th>
-    <th><%= t 'datetasks_editnewshowindex_date' %></th>
-  </tr>
-
-<% for datetask in @datetasks %>
-  <tr>
-    <td><%=h datetask.taskname %></td>
-    <td><%=h datetask.info %></td>
-    <td><%=h datetask.progressed %></td>
-    <td><%=h datetask.dateprio.prio %></td>
-    <td><%=h datetask.datestatus.status %></td>
-    <td><%=h datetask.caldate.info %></td>
-    <td><%= link_to t('datetasks_editnewshowindex_show'), datetask %></td>
-    <td><%= link_to t('datetasks_editnewshowindex_edit'), edit_datetask_path(datetask) %></td>
-    <td><%= link_to t('datetasks_editnewshowindex_delete'), datetask, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="list">
+<%= render :partial => 'list', :locals => { :datetasks => @datetasks } %>
+</div>
 
 <br />
 

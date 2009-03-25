@@ -1,19 +1,8 @@
 <h1><%= t 'kbcats_index_headline' %></h1>
 <%= render :partial => '/shared/search'%>
-<table>
-  <tr>
-    <th><%= t 'kbcats_editnewshowindex_name' %></th>
-  </tr>
-
-<% for kbcat in @kbcats %>
-  <tr>
-    <td><%=h kbcat.name %></td>
-    <td><%= link_to t('kbcats_editnewshowindex_show'), kbcat %></td>
-    <td><%= link_to t('kbcats_editnewshowindex_edit'), edit_kbcat_path(kbcat) %></td>
-    <td><%= link_to t('kbcats_editnewshowindex_delete'), kbcat, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="list">
+<%= render :partial => 'list', :locals => { :kbcats => @kbcats } %>
+</div>
 
 <br />
 

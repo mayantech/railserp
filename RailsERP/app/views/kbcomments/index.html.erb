@@ -1,21 +1,8 @@
 <h1><%= t 'kbcomments_index_headline' %></h1>
 <%= render :partial => '/shared/search'%>
-<table>
-  <tr>
-    <th><%= t 'kbcomments_editnewshowindex_artikel' %></th>
-    <th><%= t 'kbcomments_editnewshowindex_comment' %></th>
-  </tr>
-
-<% for kbcomment in @kbcomments %>
-  <tr>
-    <td><%= link_to kbcomment.kbarticle_id , kbcomment.kbarticle %></td>
-    <td><%=h kbcomment.comment %></td>
-    <td><%= link_to t('kbcomments_editnewshowindex_show'), kbcomment %></td>
-    <td><%= link_to t('kbcomments_editnewshowindex_edit'), edit_kbcomment_path(kbcomment) %></td>
-    <td><%= link_to t('kbcomments_editnewshowindex_delete'), kbcomment, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="list">
+<%= render :partial => 'list', :locals => { :kbcomments => @kbcomments } %>
+</div>
 
 <br />
 

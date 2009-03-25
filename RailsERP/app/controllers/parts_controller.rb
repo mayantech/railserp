@@ -100,4 +100,14 @@ class PartsController < ApplicationController
       format.xml  { render :xml => @parts }
     end
   end
+
+    # Search for a Parts with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Part.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
 end

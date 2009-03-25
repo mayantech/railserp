@@ -1,0 +1,16 @@
+<table border="1px">
+  <tr>
+    <th><%= t 'companies_editnewshowindex_name' %></th>
+    <th><%= t 'companies_editnewshowindex_companyart' %></th>
+  </tr>
+
+<% for company in companies %>
+  <tr>
+    <td><%=h company.name %></td>
+    <td><%=h company.companyart.name %></td>
+    <td><%= link_to t('companies_editnewshowindex_show') , company %></td>
+    <td><%= link_to t('companies_editnewshowindex_edit'), edit_company_path(company) %></td>
+    <td><%= link_to t('companies_editnewshowindex_delete'), company, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

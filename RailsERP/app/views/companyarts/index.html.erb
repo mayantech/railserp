@@ -1,19 +1,8 @@
 <h1><%= t 'companiesarts_index_headline' %></h1>
 <%= render :partial => '/shared/search'%>
-<table>
-  <tr>
-    <th><%= t 'companiesarts_editnewshowindex_name'%></th>
-  </tr>
-
-<% for companyart in @companyarts %>
-  <tr>
-    <td><%=h companyart.name %></td>
-    <td><%= link_to t('companiesarts_editnewshowindex_show'), companyart %></td>
-    <td><%= link_to t('companiesarts_editnewshowindex_edit'), edit_companyart_path(companyart) %></td>
-    <td><%= link_to t('companiesarts_editnewshowindex_delete'), companyart, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="list">
+<%= render :partial => 'list', :locals => { :companyarts => @companyarts } %>
+</div>
 
 <br />
 

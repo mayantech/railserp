@@ -1,7 +1,24 @@
-<% form_tag :action => "search" do%>
+<p align="right">
+<b><%= t 'global_search' %>: </b>
+<%= text_field_tag :searchtext %>
+</p>
+
+ <%= observe_field(:searchtext,
+      :url => { :action => :live_search },
+      :frequency => 0.5,
+      :update => :list,
+      :loading => visual_effect(:fade, "list", :duration => 0.3),
+      :loaded => visual_effect(:appear , "list", :duration => 0.3),
+      :complete => visual_effect(:highlight , "list", :duration => 1.0),
+      :with => 'searchtext')
+      %>
+
+
+<!--<% form_tag :action => "search" do%>
   <p align="right">
     <b><%= t 'global_search' %> </b>
     <%= text_field_tag :name, "" %>
-   <%= submit_tag t('global_search_go') %>
+    <%= submit_tag t('global_search_go') %>
   </p>
 <% end %>
+-->

@@ -100,4 +100,13 @@ class CompanyartsController < ApplicationController
       format.xml  { render :xml => @companyarts }
     end
   end
+    # Search for a Categorie with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Companyart.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
 end

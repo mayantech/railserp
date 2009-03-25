@@ -100,4 +100,14 @@ class FoldersController < ApplicationController
       format.xml  { render :xml => @folders }
     end
   end
+
+   # Search for a Folder with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Folder.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
 end
