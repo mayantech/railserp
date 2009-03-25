@@ -100,4 +100,14 @@ class AdressesController < ApplicationController
       format.xml  { render :xml => @adresses }
     end
   end
+
+    # Search for a Adress with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Adress.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
 end

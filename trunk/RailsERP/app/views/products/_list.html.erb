@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th><%= t 'products_editnewshowindex_image' %></th>
+    <th><%= t 'products_editnewshowindex_name' %></th>
+    <th><%= t 'products_editnewshowindex_price' %></th>
+    <th><%= t 'products_editnewshowindex_info' %></th>
+  </tr>
+
+<% for product in products %>
+  <tr>
+    <td><%= image_tag "/images/product/#{product.id}/#{product.id}.#{product.imagepath}", :size => "100x100" %></td>
+    <td><%=h product.name %></td>
+    <td><%=h product.price %></td>
+    <td><%=h product.info %></td>
+    <td><%= link_to t('products_editnewshowindex_show'), product %></td>
+    <td><%= link_to t('products_editnewshowindex_edit'), edit_product_path(product) %></td>
+    <td><%= link_to t('products_editnewshowindex_delete'), product, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

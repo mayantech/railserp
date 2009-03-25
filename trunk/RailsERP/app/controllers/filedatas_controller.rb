@@ -110,4 +110,15 @@ class FiledatasController < ApplicationController
       format.xml  { render :xml => @filedatas }
     end
   end
+
+  # Search for a File with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Filedata.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
+
 end

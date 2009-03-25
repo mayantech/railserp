@@ -100,4 +100,14 @@ class DashblogsController < ApplicationController
       format.xml  { render :xml => @dashblogs }
     end
   end
+
+  # Search for a News with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Dashblog.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
 end

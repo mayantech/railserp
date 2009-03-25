@@ -1,19 +1,8 @@
 <h1><%= t 'kblang_index_headline' %></h1>
 <%= render :partial => '/shared/search'%>
-<table>
-  <tr>
-    <th><%= t 'kblang_editnewshowindex_language' %></th>
-  </tr>
-
-<% for kblang in @kblangs %>
-  <tr>
-    <td><%=h kblang.language %></td>
-    <td><%= link_to t('kblang_editnewshowindex_show'), kblang %></td>
-    <td><%= link_to t('kblang_editnewshowindex_edit'), edit_kblang_path(kblang) %></td>
-    <td><%= link_to t('kblang_editnewshowindex_delete'), kblang, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="list">
+<%= render :partial => 'list', :locals => { :kblangs => @kblangs } %>
+</div>
 
 <br />
 

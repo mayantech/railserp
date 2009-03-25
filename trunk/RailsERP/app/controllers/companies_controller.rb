@@ -100,4 +100,14 @@ class CompaniesController < ApplicationController
       format.xml  { render :xml => @companies }
     end
   end
+
+   # Search for a Company with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Company.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
 end

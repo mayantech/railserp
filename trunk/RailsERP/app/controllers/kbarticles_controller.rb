@@ -103,4 +103,14 @@ class KbarticlesController < ApplicationController
       format.xml  { render :xml => @kbarticles }
     end
   end
+
+    # Search for a Knowlagebase Entry with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Kbarticle.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
 end

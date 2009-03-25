@@ -111,6 +111,16 @@ class ContactsController < ApplicationController
     end
   end
 
+  # Search for a Contact with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Contact.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
+
   # Write a Letter with OpenOffice
   def writeletter
     @contact = Contact.find(params[:id])

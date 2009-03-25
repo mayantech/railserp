@@ -110,6 +110,18 @@ class CaldatesController < ApplicationController
       format.xml  { render :xml => @caldates }
     end
   end
+
+ # Search for a Date with a srting AJAX Search
+  def live_search
+    @today=Date.today
+    @phrase = params[:searchtext]
+    @results = Caldate.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
+
  # Filter Date
  def filterdate
    @today = params[:today]

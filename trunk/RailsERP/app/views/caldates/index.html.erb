@@ -2,65 +2,9 @@
 <%= render :partial => '/shared/search'%>
 
 <hr>
-<table align="center"><tr>
-    <td><%= link_to "<<<", {:action => "datechange", :id => 1, :today => @today<<1}  %> </td>
-<td><%= calendar({:year => @today.year, :month => @today.month}) do |d|
-  cell_text = "#{link_to d.mday, { :action => "filterdate" ,:id => 1,:date => d , :today => @today}}"
-  cell_attrs = {:class => 'day'}
-  [cell_text, cell_attrs]
-end %></td>
-<td><%= link_to ">>>", {:action => "datechange", :id => 1, :today => @today>>1}  %> </td>
-</tr></table>
-<hr>
-
-<%#*<pre>%>
-<%#=
-calendar({:year => @today.year, :month => @today.month+3}) do |d|
-  cell_text = "#{d.mday}<br />"
-  cell_attrs = {:class => 'day'}
-  @caldates.each do |e|
-    if d === e.startdate.to_date then
-      cell_text << e.info << "<br />"
-      cell_attrs[:class] = 'specialDay'
-    end
-  end
-  [cell_text, cell_attrs]
-end %>
-
-<%#*</pre>%>
-
-<table>
-  <tr>
-    <th><%= t 'caldate_editnewshowindex_startdate' %></th>
-    <th><%= t 'caldate_editnewshowindex_enddate' %></th>
-    <th><%= t 'caldate_editnewshowindex_info' %></th>
-    <th><%= t 'caldate_editnewshowindex_fullday' %></th>
-    <th><%= t 'caldate_editnewshowindex_account' %></th>
-    <th><%= t 'caldate_editnewshowindex_contact' %></th>
-    <th><%= t 'caldate_editnewshowindex_dateprio' %></th>
-    <th><%= t 'caldate_editnewshowindex_datestatus' %></th>
-    <th><%= t 'caldate_editnewshowindex_dateart' %></th>
-    <th><%= t 'caldate_editnewshowindex_reminder' %></th>
-  </tr>
-
-<% for caldate in @caldates %>
-  <tr>
-    <td><%=h caldate.startdate.day %>.<%=h caldate.startdate.month %>.<%=h caldate.startdate.year %></td>
-    <td><%=h caldate.enddate.day %>.<%=h caldate.enddate.month %>.<%=h caldate.enddate.year %></td>
-    <td><%=h caldate.info %></td>
-    <td><%=h caldate.fullday %></td>
-    <td><%=h caldate.account_id %></td>
-    <td><%=h caldate.contact.name %></td>
-    <td><%=h caldate.dateprio.prio %></td>
-    <td><%=h caldate.datestatus.status %></td>
-    <td><%=h caldate.dateart.art %></td>
-    <td><%=h caldate.reminder.day %>.<%=h caldate.reminder.month %>.<%=h caldate.reminder.year %></td>
-    <td><%= link_to t('caldate_editnewshowindex_show'), caldate %></td>
-    <td><%= link_to t('caldate_editnewshowindex_edit'), edit_caldate_path(caldate) %></td>
-    <td><%= link_to t('caldate_editnewshowindex_delete'), caldate, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="list">
+<%= render :partial => 'list', :locals => { :caldates => @caldates, :today => @today } %>
+</div>
 
 <br />
 

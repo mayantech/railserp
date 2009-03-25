@@ -99,6 +99,16 @@ class ProductsController < ApplicationController
     end
   end
 
+  # Search for a Product with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Product.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
+
   # Add a Part to Product
   def addpart
     @product = Product.find(params['product']['id'])

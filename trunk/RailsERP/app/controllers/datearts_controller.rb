@@ -100,4 +100,14 @@ class DateartsController < ApplicationController
       format.xml  { render :xml => @datearts }
     end
   end
+
+  # Search for a Date Categorie with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Dateart.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
 end

@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th><%= t 'folders_editnewshowindex_fodlername' %></th>
+    <th><%= t 'folders_editnewshowindex_info' %></th>
+  </tr>
+
+<% for folder in folders %>
+  <tr>
+    <td><%=h folder.name %></td>
+    <td><%=h folder.info %></td>
+    <td><%= link_to t('folders_editnewshowindex_show'), folder %></td>
+    <td><%= link_to t('folders_editnewshowindex_edit'), edit_folder_path(folder) %></td>
+    <td><%= link_to t('folders_editnewshowindex_delete'), folder, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

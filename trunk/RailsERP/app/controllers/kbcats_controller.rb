@@ -100,4 +100,14 @@ class KbcatsController < ApplicationController
       format.xml  { render :xml => @kbcats }
     end
   end
+
+  # Search for a Knowlagebase Categorie with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Kbcat.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
 end

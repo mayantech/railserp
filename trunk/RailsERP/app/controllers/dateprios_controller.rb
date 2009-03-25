@@ -100,4 +100,14 @@ class DatepriosController < ApplicationController
       format.xml  { render :xml => @dateprios }
     end
   end
+
+  # Search for a Date Prio with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Dateprio.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
 end

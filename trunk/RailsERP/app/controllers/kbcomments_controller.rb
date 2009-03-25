@@ -101,4 +101,14 @@ class KbcommentsController < ApplicationController
       format.xml  { render :xml => @kbcomments }
     end
   end
+
+  # Search for a KB COmment with a srting AJAX Search
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Kbcomment.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
 end
