@@ -3,6 +3,7 @@ class KbcommentsController < ApplicationController
   # GET /kbcomments
   # GET /kbcomments.xml
   before_filter :login_required
+  before_filter :has_permission?
   # List all Knowlagebase Commentes
   def index
     @kbcomments = Kbcomment.find(:all)

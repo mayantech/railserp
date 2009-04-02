@@ -1,9 +1,11 @@
+require_dependency "search"
 require 'digest/sha1'
 class Account < ActiveRecord::Base
+  belongs_to :role
   # Virtual attribute for the unencrypted password
   attr_accessor :password
 
-  validates_presence_of     :login, :email
+  validates_presence_of     :login, :email, :role_id
   validates_presence_of     :password,                   :if => :password_required?
   validates_presence_of     :password_confirmation,      :if => :password_required?
   validates_length_of       :password, :within => 4..40, :if => :password_required?
@@ -15,7 +17,7 @@ class Account < ActiveRecord::Base
   
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :login, :email, :password, :password_confirmation
+  attr_accessible :login, :email, :password, :password_confirmation, :is_admin, :role_id
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)
@@ -66,6 +68,26 @@ class Account < ActiveRecord::Base
   def recently_activated?
     @activated
   end
+  
+     # This method checks permissions for the :index action
+    def self.is_indexable_by(user, parent = nil)
+    end
+
+    # This method checks permissions for the :create and :new action
+    def self.is_creatable_by(user, parent = nil)
+    end
+
+    # This method checks permissions for the :show action
+    def is_readable_by(user, parent = nil)
+    end
+
+    # This method checks permissions for the :update and :edit action
+    def is_updatable_by(user, parent = nil)
+    end
+
+    # This method checks permissions for the :destroy action
+    def is_deletable_by(user, parent = nil)
+    end
 
   protected
     # before filter 

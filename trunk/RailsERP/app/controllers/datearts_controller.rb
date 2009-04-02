@@ -3,6 +3,7 @@ class DateartsController < ApplicationController
   # GET /datearts
   # GET /datearts.xml
    before_filter :login_required
+   before_filter :has_permission?
   # List all Date Categories
   def index
     @datearts = Dateart.find(:all)

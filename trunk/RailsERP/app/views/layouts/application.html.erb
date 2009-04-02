@@ -61,6 +61,8 @@
           <li><span class="divider divider-vert" ></span></li>
           <li><a class="item-primary" href="#" target="_self"><%= t 'naviadmin' %></a>
             <ul style="width:150px;">
+              <li><%= link_to t('naviaccounts'), :controller => "Accounts"%></li>
+              <li><%= link_to t('naviroles'), :controller => "Roles"%></li>
               <li><%= link_to t('navidateprios'), :controller => "Dateprios"%></li>
               <li><%= link_to t('navidatestatuses'), :controller => "Datestatuses"%></li>
               <li><%= link_to t('navidatearts'), :controller => "Datearts"%></li>

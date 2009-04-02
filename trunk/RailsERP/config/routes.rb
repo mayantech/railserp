@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :roles
+
   map.resources :kbarticles
 
   map.resources :kbcomments
@@ -39,6 +41,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :contacts
   map.resources :dashboards
+  map.resources :errors
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -75,6 +78,8 @@ ActionController::Routing::Routes.draw do |map|
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
 
+  map.error '/error', :controller => 'errors', :action => 'aclerror'
+  map.denied '/denied', :controller => 'errors', :action => 'acldenied'
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

@@ -1,6 +1,7 @@
 # Controller Class for Startpage
 class DashboardsController < ApplicationController
 before_filter :login_required, :except => [ :index ]
+before_filter :has_permission?, :except => [ :index , :live_search]
   #render the Startpage
   def index
     @dashblogs = Dashblog.find(:all, :conditions => {:published => true} )

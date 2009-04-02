@@ -358,3 +358,33 @@ en:
     products_editnewshowindex_delete: "Delete"
     products_editnewshowindex_new: "Create new Product"
     products_editnewshowindex_add: "Add Part to Product"
+
+    naviaccounts: "User"
+    naviroles: "Groups"
+    account_index_headline: "List System Users"
+    account_new_isadmin: "Is Admin?"
+    account_new_role: "Group"
+    account_index_delete: "Delete User"
+    account_index_new: "Create new User"
+    errors_acldenied_message: "You don´t have the rights to access this function!"
+    errors_aclerror_message: "Error: It give a error by check your User rights!"
+
+    role_new_headline: "Create Group"
+    role_edit_headline: "Change Group"
+    role_index_headline: "List Groups"
+
+    role_editnewshowindex_rolename: "Group Name"
+    role_editnewshowindex_controller: "Function"
+    role_editnewshowindex_rightread: "Read"
+    role_editnewshowindex_rightcreate: "Create"
+    role_editnewshowindex_rightupdate: "Update"
+    role_editnewshowindex_rightdelete: "Delete"
+
+    role_editnewshowindex_update: "Update"
+    role_editnewshowindex_show: "Show"
+    role_editnewshowindex_back: "Back"
+    role_editnewshowindex_create: "Create"
+    role_editnewshowindex_edit: "Edit"
+    role_editnewshowindex_delete: "Delete"
+    role_editnewshowindex_new: "Create new Group"
+    

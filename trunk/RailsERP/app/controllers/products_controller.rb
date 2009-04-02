@@ -1,5 +1,7 @@
 # Controller Class for Products
 class ProductsController < ApplicationController
+  before_filter :login_required
+  before_filter :has_permission?
   # GET /products
   # GET /products.xml
   # List all Product

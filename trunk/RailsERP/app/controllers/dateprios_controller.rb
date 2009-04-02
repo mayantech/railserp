@@ -3,6 +3,7 @@ class DatepriosController < ApplicationController
   # GET /dateprios
   # GET /dateprios.xml
    before_filter :login_required
+   before_filter :has_permission?
   # List all Date Prios
   def index
     @dateprios = Dateprio.find(:all)

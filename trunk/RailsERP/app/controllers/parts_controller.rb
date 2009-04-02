@@ -3,6 +3,7 @@ class PartsController < ApplicationController
   # GET /parts
   # GET /parts.xml
   before_filter :login_required
+  before_filter :has_permission?
   # List all Parts
   def index
     @parts = Part.find(:all)

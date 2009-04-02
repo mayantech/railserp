@@ -56,4 +56,5 @@ Rails::Initializer.run do |config|
 
   # Make Active Record use UTC-base instead of local time
   # config.active_record.default_timezone = :utc
+  config.gem "mdarby-restful_acl", :lib => 'restful_acl_controller'
 end

@@ -1,8 +1,10 @@
 # Controller Class for Company Categories
 class CompanyartsController < ApplicationController
+  
   # GET /companyarts
   # GET /companyarts.xml
   before_filter :login_required
+  before_filter :has_permission?
   # List all Categories
   def index
     @companyarts = Companyart.find(:all)

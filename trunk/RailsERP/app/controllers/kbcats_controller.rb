@@ -3,6 +3,7 @@ class KbcatsController < ApplicationController
   # GET /kbcats
   # GET /kbcats.xml
   before_filter :login_required
+  before_filter :has_permission?
   # List all Knowlagebase Categorie
   def index
     @kbcats = Kbcat.find(:all)

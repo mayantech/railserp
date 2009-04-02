@@ -4,12 +4,13 @@ require 'ftools'
 
 # Controller Class for Contacts
 class ContactsController < ApplicationController
+  
   # before_filter :login_required, :only => [:edit, :update]
   # GET /contacts
   # GET /contacts.xml
   # before_filter :login_required, :except => [ :index ]
   before_filter :login_required
-
+  before_filter :has_permission?
   # List all Contacts
   def index
     @contacts = Contact.find(:all)

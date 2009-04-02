@@ -12,6 +12,12 @@ class ApplicationController < ActionController::Base
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => '2e8cf15e111afc0a88cf55169b1084f0'
   
+  public
+  
+  def current_user
+    return current_account
+  end
+
   private
   # This function Set the Language 
   def set_locale

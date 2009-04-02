@@ -1,6 +1,7 @@
 # Controller Class for Date Task
 class DatetasksController < ApplicationController
    before_filter :login_required
+   before_filter :has_permission?
   # GET /datetasks
   # GET /datetasks.xml
   # List all Date Taskes

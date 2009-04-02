@@ -3,6 +3,7 @@ class FoldersController < ApplicationController
   # GET /folders
   # GET /folders.xml
    before_filter :login_required
+   before_filter :has_permission?
   # List all Folders
   def index
     @folders = Folder.find(:all)

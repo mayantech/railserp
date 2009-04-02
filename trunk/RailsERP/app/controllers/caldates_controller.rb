@@ -3,7 +3,8 @@ require 'date'
 class CaldatesController < ApplicationController
   # GET /caldates
   # GET /caldates.xml
-   before_filter :login_required
+  before_filter :login_required
+  before_filter :has_permission?
   #List all Dates
   def index
     @today=Date.today

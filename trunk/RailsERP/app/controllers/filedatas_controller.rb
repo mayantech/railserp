@@ -3,6 +3,7 @@ class FiledatasController < ApplicationController
   # GET /filedatas
   # GET /filedatas.xml
    before_filter :login_required
+   before_filter :has_permission?
   # List all Files
   def index
     @filedatas = Filedata.find(:all)

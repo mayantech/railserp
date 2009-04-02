@@ -3,6 +3,7 @@ class KblangsController < ApplicationController
   # GET /kblangs
   # GET /kblangs.xml
    before_filter :login_required
+   before_filter :has_permission?
   # List all Knowlagebase Languages
   def index
     @kblangs = Kblang.find(:all)

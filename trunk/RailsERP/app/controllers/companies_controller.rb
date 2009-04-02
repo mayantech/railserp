@@ -1,8 +1,10 @@
 # Controller CLass for Companies
 class CompaniesController < ApplicationController
+  
   # GET /companies
   # GET /companies.xml
   before_filter :login_required
+  before_filter :has_permission?
   # List all Companys
   def index
     @companies = Company.find(:all)

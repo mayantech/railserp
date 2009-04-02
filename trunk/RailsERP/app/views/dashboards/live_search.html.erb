@@ -1,3 +1,4 @@
+<% if current_account.role.adress_read %><hr>
 <h2 align="center"><%= t 'adress_index_headline' %></h2>
 <% if @adresses.empty? %>
   <%=h @phrase %> not found!
@@ -6,7 +7,7 @@
 <%= render :partial => '/adresses/list', :locals => { :adresses => @adresses } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.caldate_read %><hr>
 
 <h2 align="center"><%= t 'caldate_index_headline' %></h2>
 <% if @caldates.empty? %>
@@ -16,7 +17,7 @@
 <%= render :partial => '/caldates/list', :locals => { :caldates => @caldates } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.company_read %><hr>
 
 
 <h2 align="center"><%= t 'companies_index_headline' %></h2>
@@ -27,7 +28,7 @@
 <%= render :partial => '/companies/list', :locals => { :companies => @companies } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.companyart_read %><hr>
 
 
 <h2 align="center"><%= t 'companiesarts_index_headline' %></h2>
@@ -38,7 +39,7 @@
 <%= render :partial => '/companyarts/list', :locals => { :companyarts => @companyarts } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.contact_read %><hr>
 
 <h2 align="center"><%= t 'contacts_index_headline' %></h2>
 <% if @contacts.empty? %>
@@ -48,7 +49,7 @@
 <%= render :partial => '/contacts/list', :locals => { :contacts => @contacts } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.dashblog_read %><hr>
 
 <h2 align="center"><%= t 'dashblogs_index_headline' %></h2>
 <% if @dashblogs.empty? %>
@@ -58,7 +59,7 @@
 <%= render :partial => '/dashblogs/list', :locals => { :dashblogs => @dashblogs } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.dateart_read %><hr>
 
 <h2 align="center"><%= t 'dateart_index_headline' %></h2>
 <% if @datearts.empty? %>
@@ -68,7 +69,7 @@
 <%= render :partial => '/datearts/list', :locals => { :datearts => @datearts } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.dateprio_read %><hr>
 
 <h2 align="center"><%= t 'dateprio_index_headline' %></h2>
 <% if @dateprios.empty? %>
@@ -78,7 +79,7 @@
 <%= render :partial => '/dateprios/list', :locals => { :dateprios => @dateprios } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.datestatus_read %><hr>
 
 <h2 align="center"><%= t 'datestatus_index_headline' %></h2>
 <% if @datestatuses.empty? %>
@@ -88,7 +89,7 @@
 <%= render :partial => '/datestatuses/list', :locals => { :datestatuses => @datestatuses } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.datetask_read %><hr>
 
 <h2 align="center"><%= t 'datetasks_index_headline' %></h2>
 <% if @datetasks.empty? %>
@@ -98,7 +99,7 @@
 <%= render :partial => '/datetasks/list', :locals => { :datetasks => @datetasks } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.filedata_read %><hr>
 
 <h2 align="center"><%= t 'filedatas_index_headline' %></h2>
 <% if @filedatas.empty? %>
@@ -108,7 +109,7 @@
 <%= render :partial => '/filedatas/list', :locals => { :filedatas => @filedatas } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.folder_read %><hr>
 
 <h2 align="center"><%= t 'folders_index_headline' %></h2>
 <% if @folders.empty? %>
@@ -118,7 +119,7 @@
 <%= render :partial => '/folders/list', :locals => { :folders => @folders } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.kbarticle_read %><hr>
 
 <h2 align="center"><%= t 'kbarticles_index_headline' %></h2>
 <% if @kbarticles.empty? %>
@@ -128,7 +129,7 @@
 <%= render :partial => '/kbarticles/list', :locals => { :kbarticles => @kbarticles } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.kbcat_read %><hr>
 
 <h2 align="center"><%= t 'kbcats_index_headline' %></h2>
 <% if @kbcats.empty? %>
@@ -138,7 +139,7 @@
 <%= render :partial => '/kbcats/list', :locals => { :kbcats => @kbcats } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.kbcomment_read %><hr>
 
 <h2 align="center"><%= t 'kbcomments_index_headline' %></h2>
 <% if @kbcomments.empty? %>
@@ -148,7 +149,7 @@
 <%= render :partial => '/kbcomments/list', :locals => { :kbcomments => @kbcomments } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.kblang_read %><hr>
 
 <h2 align="center"><%= t 'kblang_index_headline' %></h2>
 <% if @kblangs.empty? %>
@@ -158,7 +159,7 @@
 <%= render :partial => '/kblangs/list', :locals => { :kblangs => @kblangs } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.part_read %><hr>
 
 <h2 align="center"><%= t 'parts_index_headline' %></h2>
 <% if @parts.empty? %>
@@ -168,7 +169,7 @@
 <%= render :partial => '/parts/list', :locals => { :parts => @parts } %>
 
 <% end %>
-<hr>
+<% end %><% if current_account.role.product_read %><hr>
 
 <h2 align="center"><%= t 'products_index_headline' %></h2>
 <% if @products.empty? %>
@@ -178,4 +179,4 @@
 <%= render :partial => '/products/list', :locals => { :products => @products } %>
 
 <% end %>
-<hr>
+<% end %><hr>
