@@ -1,0 +1,22 @@
+<h1><%=h t('account_index_headline')%></h1>
+<table border="1px">
+  <tr>
+    <th><%= t 'account_new_login' %></th>
+    <th><%= t 'account_new_email' %></th>
+    <th><%= t 'account_new_password' %></th>
+    <th><%= t 'account_new_isadmin' %></th>
+    <th><%= t 'account_new_role' %></th>
+
+  </tr>
+
+<% for account in accounts %>
+  <tr>
+    <td><%=h account.login %></td>
+    <td><%=h account.email %></td>
+    <td><%=h account.crypted_password %></td>
+    <td><%=h account.is_admin %></td>
+    <td><%=h account.role.rolename %></td>
+    <td><%= link_to t('account_index_delete'), account, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

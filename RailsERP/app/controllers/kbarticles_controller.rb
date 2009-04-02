@@ -3,6 +3,7 @@ class KbarticlesController < ApplicationController
   # GET /kbarticles
   # GET /kbarticles.xml
   before_filter :login_required
+  before_filter :has_permission?
   # List all Knowlagebase Entries
   def index
     @kbarticles = Kbarticle.find(:all)

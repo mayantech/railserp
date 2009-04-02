@@ -1,0 +1,8 @@
+<h1><%=h t('role_new_headline')%></h1>
+
+<% form_for(@role) do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f, :button_name => t('role_editnewshowindex_create') } %>
+
+<% end %>
+
+<%= link_to t('role_editnewshowindex_back'), roles_path %>

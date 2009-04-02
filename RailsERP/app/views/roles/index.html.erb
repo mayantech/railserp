@@ -1,0 +1,10 @@
+<h1><%=h t('role_index_headline')%></h1>
+
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :roles => @roles } %>
+</div>
+
+<br />
+
+<%= link_to t('role_editnewshowindex_new'), new_role_path %>

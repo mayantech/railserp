@@ -1,0 +1,9 @@
+<h1><%=h t('role_edit_headline')%></h1>
+
+<% form_for(@role) do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => 'form', :locals => { :f => f, :button_name => t('role_editnewshowindex_update') } %>
+<% end %>
+
+<%= link_to t('role_editnewshowindex_show'), @role %> |
+<%= link_to t('role_editnewshowindex_back'), roles_path %>

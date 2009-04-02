@@ -3,6 +3,7 @@ class DatestatusesController < ApplicationController
   # GET /datestatuses
   # GET /datestatuses.xml
    before_filter :login_required
+   before_filter :has_permission?
   # List all Date Statuses
   def index
     @datestatuses = Datestatus.find(:all)

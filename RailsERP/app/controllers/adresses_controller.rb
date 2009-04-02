@@ -3,6 +3,7 @@ class AdressesController < ApplicationController
   # GET /adresses
   # GET /adresses.xml
  before_filter :login_required
+ before_filter :has_permission?
   # Rende Index and get all Data from Model
   def index
     @adresses = Adress.find(:all)

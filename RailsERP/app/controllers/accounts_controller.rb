@@ -2,10 +2,21 @@
 class AccountsController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
-  
+  before_filter :login_required
+  before_filter :has_permission?
+  def index
+    @accounts = Account.find(:all)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @accounts }
+    end
+  end
 
   # Render the new User Template
   def new
+    @roles = Role.find(:all)
+    @account = Account.new
   end
 
   # Create and Save User Account
@@ -26,4 +37,22 @@ class AccountsController < ApplicationController
     end
   end
 
+  def destroy
+    @account = Account.find(params[:id])
+    @account.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(accounts_url) }
+      format.xml  { head :ok }
+    end
+  end
+
+  def live_search
+    @phrase = params[:searchtext]
+    @results = Account.search @phrase
+
+    @number_match = @results.length
+
+    render(:layout => false)
+  end
 end

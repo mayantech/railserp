@@ -3,6 +3,7 @@ class DashblogsController < ApplicationController
   # GET /dashblogs
   # GET /dashblogs.xml
  before_filter :login_required
+ before_filter :has_permission?
   # List all News
   def index
     @dashblogs = Dashblog.find(:all)
