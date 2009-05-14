@@ -1,11 +1,13 @@
 <table>
   <tr>
+    <th></th>
     <th><%= t 'filedatas_editnewshowindex_filename' %></th>
     <th><%= t 'filedatas_editnewshowindex_size' %></th>
   </tr>
 
 <% for filedata in filedatas %>
   <tr>
+    <td><%= image_tag("/images/icons/status/mail-attachment.png")   %></td>
     <td><a href="/files/<%= filedata.id.to_s %>/<%= filedata.id.to_s + "." + filedata.ext%>"><%=h filedata.name + "." + filedata.ext %></a></td>
     <td><%=h filedata.size/1024/1024 %></td>
     <td><%= link_to t('filedatas_editnewshowindex_show'), filedata %></td>
