@@ -478,3 +478,33 @@ de:
   products_editnewshowindex_delete: "Löschen"
   products_editnewshowindex_new: "Neues Produkt anlegen"
   products_editnewshowindex_add: "Stück zum Produkt hinzufügen"
+
+  naviaccounts: "Benutzer"
+  naviroles: "Gruppen"
+  account_index_headline: "Benutzer auflisten"
+  account_new_isadmin: "Admin Rechte?"
+  account_new_role: "Neue Gruppe"
+  account_index_delete: "Benutzer löschen"
+  account_index_new: "Neuer Benutzer erstellen"
+  errors_acldenied_message: "Leider haben Sie nicht die Rechte für diese Funktion!"
+  errors_aclerror_message: "Fehler in der Rechte verwaltung"
+
+  role_new_headline: "Gruppe erstellen"
+  role_edit_headline: "Groupen Rechte ändern"
+  role_index_headline: "Alle Gruppen auflisten"
+
+  role_editnewshowindex_rolename: "Gruppenname"
+  role_editnewshowindex_controller: "Funktion"
+  role_editnewshowindex_rightread: "Lesen"
+  role_editnewshowindex_rightcreate: "Erstellen"
+  role_editnewshowindex_rightupdate: "Ändern"
+  role_editnewshowindex_rightdelete: "Löschen"
+
+  role_editnewshowindex_update: "Ändern"
+  role_editnewshowindex_show: "Anzeigen"
+  role_editnewshowindex_back: "Zurück"
+  role_editnewshowindex_create: "Erstellen"
+  role_editnewshowindex_edit: "Ändern"
+  role_editnewshowindex_delete: "Löschen"
+  role_editnewshowindex_new: "Neue Gruppe erstellen"
+    
