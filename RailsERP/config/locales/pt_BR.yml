@@ -189,12 +189,12 @@ pt_BR:    # formatos de data e hora
   adress_edit_headline: "Editar Endereço"
   adress_index_headline: "Lista de Endereços"
 
-  adress_editnewshowindex_street: "Rua: "
-  adress_editnewshowindex_streetnr: "Nº:"
-  adress_editnewshowindex_zip: "CEP:"
-  adress_editnewshowindex_area: "Cidade:"
-  adress_editnewshowindex_land: "Estado:"
-  adress_editnewshowindex_postcode: "Postcode:"
+  adress_editnewshowindex_street: "Rua"
+  adress_editnewshowindex_streetnr: "Nº"
+  adress_editnewshowindex_city: "Cidade"
+  adress_editnewshowindex_region: "Estado / Província / Região"
+  adress_editnewshowindex_country: "País"
+  adress_editnewshowindex_postcode: "Código postal"
   adress_editnewshowindex_company: "Empresa"
 
   adress_editnewshowindex_update: "Atualizar"
@@ -231,6 +231,7 @@ pt_BR:    # formatos de data e hora
   companies_new_headline: "Nova Empresa"
   companies_edit_headline: "Editar Empresa"
   companies_index_headline: "Listar Empresas"
+  companies_show_locations_headline: "Localizações"
 
   companies_editnewshowindex_name: "Nome da Empresa"
   companies_editnewshowindex_companyart: "Categoria"

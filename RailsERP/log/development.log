@@ -4293,3 +4293,1070 @@ Processing DashboardsController#index (for 127.0.0.1 at 2009-02-28 16:43:59) [GE
 Rendering template within layouts/application
 Rendering dashboards/index
 Completed in 51ms (View: 43, DB: 1) | 200 OK [http://localhost/]
+** [RESTful_ACL] loaded
+
+
+Processing DashboardsController#index (for 127.0.0.1 at 2009-05-13 17:53:16) [GET]
+  [4;36;1mDashblog Load (4.4ms)[0m   [0;1mSELECT * FROM "dashblogs" WHERE ("dashblogs"."published" = 't') [0m
+Rendering template within layouts/application
+Rendering dashboards/index
+Rendered shared/_search (182.3ms)
+Completed in 497ms (View: 403, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-05-13 17:53:28) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 321ms (View: 306, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-05-13 17:53:36) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"7f858085f632da6a38bc68c691ea4f45e0c0e7e1", "login"=>"admin", "password"=>"admin"}
+  [4;35;1mAccount Load (1.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."login" = 'admin') LIMIT 1[0m
+Redirected to /
+Completed in 77ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing DashboardsController#index (for 127.0.0.1 at 2009-05-13 17:53:37) [GET]
+  [4;36;1mDashblog Load (6.0ms)[0m   [0;1mSELECT * FROM "dashblogs" WHERE ("dashblogs"."published" = 't') [0m
+Rendering template within layouts/application
+Rendering dashboards/index
+Rendered shared/_search (240.3ms)
+  [4;35;1mAccount Load (1.7ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+Completed in 733ms (View: 439, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing AdressesController#index (for 127.0.0.1 at 2009-05-13 17:53:47) [GET]
+  [4;36;1mAccount Load (1.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mRole Load (4.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mAdress Load (1.2ms)[0m   [0;1mSELECT * FROM "adresses" [0m
+Rendering template within layouts/application
+Rendering adresses/index
+Rendered shared/_search (20.2ms)
+  [4;35;1mCompany Load (0.9ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendered adresses/_list (327.9ms)
+Completed in 796ms (View: 593, DB: 7) | 200 OK [http://localhost/adresses]
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2009-05-13 17:54:09) [GET]
+  [4;36;1mAccount Load (1.7ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mRole Load (4.9ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mContact Load (1.1ms)[0m   [0;1mSELECT * FROM "contacts" [0m
+Rendering template within layouts/application
+Rendering contacts/index
+Rendered shared/_search (11.7ms)
+  [4;35;1mCompany Load (0.8ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendered contacts/_list (65.3ms)
+Completed in 865ms (View: 660, DB: 8) | 200 OK [http://localhost/contacts]
+
+
+Processing ContactsController#show (for 127.0.0.1 at 2009-05-13 17:54:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAccount Load (1.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mContact Load (1.1ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mRole Load (5.0ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering contacts/show
+  [4;36;1mCompany Load (0.8ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mCaldate Load (0.5ms)[0m   [0mSELECT * FROM "caldates" WHERE ("caldates".contact_id = 1) [0m
+  [4;36;1mFiledata Load (0.5ms)[0m   [0;1mSELECT * FROM "filedatas" WHERE ("filedatas".contact_id = 1) [0m
+Completed in 852ms (View: 632, DB: 9) | 200 OK [http://localhost/contacts/1]
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2009-05-13 17:54:51) [GET]
+  [4;35;1mAccount Load (3.1ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mRole Load (4.6ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCompany Load (5.4ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/application
+Rendering companies/index
+Rendered shared/_search (12.9ms)
+  [4;36;1mCompanyart Load (0.9ms)[0m   [0;1mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+Rendered companies/_list (37.1ms)
+Completed in 654ms (View: 411, DB: 14) | 200 OK [http://localhost/companies]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-13 17:55:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAccount Load (9.9ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mCompany Load (0.8ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mRole Load (12.4ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;35;1mCompanyart Load (0.7ms)[0m   [0mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;36;1mAdress Load (8.7ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mContact Load (1.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 612ms (View: 345, DB: 34) | 200 OK [http://localhost/companies/1]
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2009-05-13 17:56:07) [GET]
+  [4;36;1mAccount Load (1.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+[RESTful_ACL] Permission denied to admin at Wed May 13 17:56:07 -0400 2009 for /accounts
+Redirected to http://localhost:3000/denied
+Filter chain halted as [:has_permission?] rendered_or_redirected.
+Completed in 66ms (DB: 1) | 302 Found [http://localhost/accounts]
+
+
+Processing ErrorsController#acldenied (for 127.0.0.1 at 2009-05-13 17:56:07) [GET]
+Rendering template within layouts/application
+Rendering errors/acldenied
+  [4;35;1mAccount Load (1.1ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+Completed in 573ms (View: 556, DB: 0) | 200 OK [http://localhost/denied]
+** [RESTful_ACL] loaded
+** [RESTful_ACL] loaded
+  [4;36;1mSQL (4.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (4.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateContacts (1)
+Migrating to CreateAccounts (2)
+Migrating to CreateCompanies (3)
+Migrating to AddcompanyIdToContact (4)
+Migrating to CreateDashblogs (5)
+Migrating to CreateAdresses (6)
+Migrating to CreateCompanyarts (7)
+Migrating to AddcompanyartIdTocompany (8)
+Migrating to CreateProducts (9)
+Migrating to CreateParts (10)
+Migrating to CreateJoinPartsProducts (11)
+Migrating to CreateDatearts (12)
+Migrating to CreateDatestatuses (13)
+Migrating to CreateDateprios (14)
+Migrating to CreateDatetasks (15)
+Migrating to CreateCaldates (16)
+Migrating to CreateFolders (17)
+Migrating to CreateFiledatas (18)
+Migrating to CreateKbcats (19)
+Migrating to CreateKblangs (20)
+Migrating to CreateKbcomments (21)
+Migrating to CreateKbarticles (22)
+Migrating to CreateRoles (20090330170941)
+Migrating to AddrolenameToroles (20090330171313)
+Migrating to AddroleIdToAccounts (20090331184918)
+Migrating to UpdateAdresses (20090515001625)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE TEMPORARY TABLE "altered_adresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "street" varchar(255), "streetnr" varchar(255), "zip" integer, "area" varchar(255), "land" varchar(255), "postcode" varchar(255), "company_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("adresses")[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mDROP TABLE "adresses"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "adresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "street" varchar(255), "streetnr" varchar(255), "area" varchar(255), "land" varchar(255), "postcode" varchar(255), "company_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("altered_adresses")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mDROP TABLE "altered_adresses"[0m
+  [4;35;1mSQL (8.3ms)[0m   [0mALTER TABLE "adresses" ADD "city" varchar(255)[0m
+  [4;36;1mSQL (109.8ms)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE TEMPORARY TABLE "altered_adresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "street" varchar(255), "streetnr" varchar(255), "region" varchar(255), "land" varchar(255), "postcode" varchar(255), "company_id" integer, "created_at" datetime, "updated_at" datetime, "city" varchar(255)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("adresses")[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mDROP TABLE "adresses"[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "adresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "street" varchar(255), "streetnr" varchar(255), "region" varchar(255), "land" varchar(255), "postcode" varchar(255), "company_id" integer, "created_at" datetime, "updated_at" datetime, "city" varchar(255)) [0m
+  [4;35;1mSQL (6.6ms)[0m   [0mPRAGMA index_list("altered_adresses")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mDROP TABLE "altered_adresses"[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TEMPORARY TABLE "altered_adresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "street" varchar(255), "streetnr" varchar(255), "region" varchar(255), "country" varchar(255), "postcode" varchar(255), "company_id" integer, "created_at" datetime, "updated_at" datetime, "city" varchar(255)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("adresses")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "adresses"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "adresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "street" varchar(255), "streetnr" varchar(255), "region" varchar(255), "country" varchar(255), "postcode" varchar(255), "company_id" integer, "created_at" datetime, "updated_at" datetime, "city" varchar(255)) [0m
+  [4;35;1mSQL (4.5ms)[0m   [0mPRAGMA index_list("altered_adresses")[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mDROP TABLE "altered_adresses"[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090515001625')[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mPRAGMA index_list("accounts")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mPRAGMA index_list("adresses")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("caldates")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("companies")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("companyarts")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("contacts")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("dashblogs")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("datearts")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("dateprios")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("datestatuses")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("datetasks")[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mPRAGMA index_list("filedatas")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("folders")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("kbarticles")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("kbcats")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("kbcomments")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("kblangs")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("parts")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("parts_products")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("products")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("roles")[0m
+** [RESTful_ACL] loaded
+
+
+Processing DashboardsController#index (for 127.0.0.1 at 2009-05-14 22:39:27) [GET]
+  [4;36;1mDashblog Load (13.2ms)[0m   [0;1mSELECT * FROM "dashblogs" WHERE ("dashblogs"."published" = 't') [0m
+Rendering template within layouts/application
+Rendering dashboards/index
+Rendered shared/_search (577.6ms)
+Completed in 1035ms (View: 914, DB: 13) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-05-14 22:39:38) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 379ms (View: 367, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-05-14 22:39:45) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"da33d6a528faf2a8ec55fece254913da3577e67c", "login"=>"admin", "password"=>"admin"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."login" = 'admin') LIMIT 1[0m
+Redirected to /
+Completed in 77ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing DashboardsController#index (for 127.0.0.1 at 2009-05-14 22:39:47) [GET]
+  [4;36;1mDashblog Load (4.5ms)[0m   [0;1mSELECT * FROM "dashblogs" WHERE ("dashblogs"."published" = 't') [0m
+Rendering template within layouts/application
+Rendering dashboards/index
+Rendered shared/_search (300.7ms)
+  [4;35;1mAccount Load (24.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+Completed in 551ms (View: 478, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing AdressesController#index (for 127.0.0.1 at 2009-05-14 22:40:19) [GET]
+  [4;36;1mAccount Load (2.5ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mRole Load (6.6ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mAdress Load (1.2ms)[0m   [0;1mSELECT * FROM "adresses" [0m
+Rendering template within layouts/application
+Rendering adresses/index
+Rendered shared/_search (14.5ms)
+
+
+ActionView::TemplateError (undefined method `zip' for #<Adress:0xb5808760>) on line #16 of app/views/adresses/_list.html.erb:
+13:   <tr>
+14:     <td><%=h adress.street %></td>
+15:     <td><%=h adress.streetnr %></td>
+16:     <td><%=h adress.zip %></td>
+17:     <td><%=h adress.area %></td>
+18:     <td><%=h adress.land %></td>
+19:     <td><%=h adress.postcode %></td>
+
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/adresses/_list.html.erb:16
+    app/views/adresses/_list.html.erb:12:in `each'
+    app/views/adresses/_list.html.erb:12
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable_partial.rb:20:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable_partial.rb:19:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/partials.rb:152:in `render_partial'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:258:in `render'
+    app/views/adresses/index.html.erb:4
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/adresses_controller.rb:11:in `index'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (166.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (22.1ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AdressesController#index (for 127.0.0.1 at 2009-05-14 22:42:16) [GET]
+  [4;35;1mAccount Load (1.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mRole Load (75.1ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mAdress Load (1.5ms)[0m   [0mSELECT * FROM "adresses" [0m
+Rendering template within layouts/application
+Rendering adresses/index
+Rendered shared/_search (12.8ms)
+  [4;36;1mCompany Load (0.9ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendered adresses/_list (63.0ms)
+Completed in 731ms (View: 372, DB: 79) | 200 OK [http://localhost/adresses]
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2009-05-14 23:10:15) [GET]
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mRole Load (4.6ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCompany Load (0.8ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/application
+Rendering companies/index
+Rendered shared/_search (12.6ms)
+  [4;36;1mCompanyart Load (2.5ms)[0m   [0;1mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+Rendered companies/_list (43.5ms)
+Completed in 927ms (View: 687, DB: 10) | 200 OK [http://localhost/companies]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-14 23:10:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAccount Load (1.6ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mCompany Load (0.8ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mRole Load (7.5ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;35;1mCompanyart Load (1.1ms)[0m   [0mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;36;1mAdress Load (1.2ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `zip' for #<Adress:0xb5620e34>) on line #27 of app/views/companies/show.html.erb:
+24:   <tr>
+25:     <td><%=h adress.street %></td>
+26:     <td><%=h adress.streetnr %></td>
+27:     <td><%=h adress.zip %></td>
+28:     <td><%=h adress.area %></td>
+29:     <td><%=h adress.land %></td>
+30:     <td><%=h adress.postcode %></td>
+
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/companies/show.html.erb:27
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:359:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_proxy.rb:212:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_proxy.rb:212:in `each'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_proxy.rb:212:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_proxy.rb:212:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:359:in `method_missing'
+    app/views/companies/show.html.erb:23
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/companies_controller.rb:23:in `show'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (222.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (4.7ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AdressesController#index (for 127.0.0.1 at 2009-05-14 23:13:44) [GET]
+  [4;35;1mAccount Load (1.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mRole Load (14.6ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mAdress Load (1.0ms)[0m   [0mSELECT * FROM "adresses" [0m
+Rendering template within layouts/application
+Rendering adresses/index
+Rendered shared/_search (15.0ms)
+  [4;36;1mCompany Load (0.8ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendered adresses/_list (61.8ms)
+Completed in 809ms (View: 367, DB: 18) | 200 OK [http://localhost/adresses]
+
+
+Processing AdressesController#edit (for 127.0.0.1 at 2009-05-14 23:13:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAccount Load (3.1ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mAdress Load (1.1ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+  [4;35;1mRole Load (16.4ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+  [4;35;1mCompany Load (0.8ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/application
+Rendering adresses/edit
+
+
+ActionView::TemplateError (undefined method `zip' for #<Adress:0xb57a58e0>) on line #13 of app/views/adresses/_form.html.erb:
+10: 
+11:   <p>
+12:     <b><%= t 'adress_editnewshowindex_zip' %></b><br />
+13:     <%= f.text_field :zip %>
+14:   </p>
+15: 
+16:   <p>
+
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:653:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:653:in `value_before_type_cast'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:641:in `value_before_type_cast'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:560:in `to_input_field_tag'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:354:in `text_field'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:745:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:745:in `text_field'
+    app/views/adresses/_form.html.erb:13
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable_partial.rb:20:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable_partial.rb:19:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/partials.rb:152:in `render_partial'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:258:in `render'
+    app/views/adresses/edit.html.erb:6
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/adresses/edit.html.erb:5
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (660.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (15.1ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AdressesController#edit (for 127.0.0.1 at 2009-05-14 23:15:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAccount Load (1.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mAdress Load (1.1ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+  [4;36;1mRole Load (5.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+  [4;36;1mCompany Load (1.6ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/application
+Rendering adresses/edit
+Rendered adresses/_form (27.9ms)
+Completed in 1034ms (View: 760, DB: 9) | 200 OK [http://localhost/adresses/2/edit]
+
+
+Processing AdressesController#update (for 127.0.0.1 at 2009-05-14 23:15:55) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"da33d6a528faf2a8ec55fece254913da3577e67c", "adress"=>{"region"=>"KY", "city"=>"Independence", "postcode"=>"41051", "country"=>"United States of America", "street"=>"173 Pelly Road", "company_id"=>"1", "streetnr"=>"Suite 3"}, "id"=>"2"}
+  [4;35;1mAccount Load (1.6ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mAdress Load (1.4ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+  [4;35;1mRole Load (8.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+  [4;35;1mAdress Update (2.1ms)[0m   [0mUPDATE "adresses" SET "updated_at" = '2009-05-14 23:15:55', "streetnr" = 'Suite 3', "city" = 'Independence', "postcode" = '41051', "region" = 'KY', "country" = 'United States of America', "street" = '173 Pelly Road' WHERE "id" = 2[0m
+Redirected to #<Adress:0xb56d9b8c>
+Completed in 264ms (DB: 13) | 302 Found [http://localhost/adresses/2]
+
+
+Processing AdressesController#show (for 127.0.0.1 at 2009-05-14 23:15:56) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAccount Load (1.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mAdress Load (16.0ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+  [4;36;1mRole Load (6.0ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering adresses/show
+
+
+ActionView::TemplateError (undefined method `zip' for #<Adress:0xb57b7a7c>) on line #13 of app/views/adresses/show.html.erb:
+10: 
+11: <p>
+12:   <b><%= t 'adress_editnewshowindex_zip' %></b>
+13:   <%=h @adress.zip %>
+14: </p>
+15: 
+16: <p>
+
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/adresses/show.html.erb:13
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/adresses_controller.rb:23:in `show'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (128.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (287.6ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AdressesController#show (for 127.0.0.1 at 2009-05-14 23:17:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAccount Load (1.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mAdress Load (1.0ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+  [4;36;1mRole Load (5.1ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering adresses/show
+  [4;36;1mCompany Load (0.8ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 706ms (View: 347, DB: 8) | 200 OK [http://localhost/adresses/2]
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2009-05-14 23:17:46) [GET]
+  [4;35;1mAccount Load (1.1ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mRole Load (4.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCompany Load (1.3ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/application
+Rendering companies/index
+Rendered shared/_search (6.0ms)
+  [4;36;1mCompanyart Load (1.2ms)[0m   [0;1mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+Rendered companies/_list (42.6ms)
+Completed in 830ms (View: 630, DB: 8) | 200 OK [http://localhost/companies]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-14 23:17:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAccount Load (1.1ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mCompany Load (0.8ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mRole Load (5.7ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;35;1mCompanyart Load (0.8ms)[0m   [0mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;36;1mAdress Load (1.5ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `zip' for #<Adress:0xb5603014>) on line #27 of app/views/companies/show.html.erb:
+24:   <tr>
+25:     <td><%=h adress.street %></td>
+26:     <td><%=h adress.streetnr %></td>
+27:     <td><%=h adress.zip %></td>
+28:     <td><%=h adress.area %></td>
+29:     <td><%=h adress.land %></td>
+30:     <td><%=h adress.postcode %></td>
+
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/companies/show.html.erb:27
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:359:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_proxy.rb:212:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_proxy.rb:212:in `each'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_proxy.rb:212:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_proxy.rb:212:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/associations/association_collection.rb:359:in `method_missing'
+    app/views/companies/show.html.erb:23
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/companies_controller.rb:23:in `show'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/jdub/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /home/jdub/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (342.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (3.4ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-14 23:19:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAccount Load (2.7ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mCompany Load (0.9ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mRole Load (13.9ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;35;1mCompanyart Load (1.0ms)[0m   [0mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;36;1mAdress Load (1.1ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mContact Load (4.7ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 795ms (View: 432, DB: 24) | 200 OK [http://localhost/companies/1]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-14 23:20:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAccount Load (1.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mCompany Load (0.8ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mRole Load (5.9ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;36;1mCompanyart Load (8.6ms)[0m   [0;1mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;35;1mAdress Load (4.0ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mContact Load (1.1ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts".company_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 904ms (View: 442, DB: 22) | 200 OK [http://localhost/companies/1]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-14 23:24:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAccount Load (7.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mCompany Load (0.8ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mRole Load (14.6ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;35;1mCompanyart Load (0.8ms)[0m   [0mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;36;1mAdress Load (1.0ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mContact Load (1.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 1078ms (View: 704, DB: 26) | 200 OK [http://localhost/companies/1]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-14 23:31:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAccount Load (1.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mCompany Load (0.8ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mRole Load (8.7ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;36;1mCompanyart Load (0.7ms)[0m   [0;1mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;35;1mAdress Load (6.2ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mContact Load (9.5ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts".company_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 1442ms (View: 439, DB: 27) | 200 OK [http://localhost/companies/1]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-14 23:31:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAccount Load (1.1ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mCompany Load (0.9ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mRole Load (4.9ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;35;1mCompanyart Load (0.7ms)[0m   [0mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;36;1mAdress Load (1.0ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mContact Load (1.4ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 630ms (View: 321, DB: 10) | 200 OK [http://localhost/companies/1]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-14 23:36:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAccount Load (1.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mCompany Load (0.8ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mRole Load (5.2ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;36;1mCompanyart Load (0.7ms)[0m   [0;1mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;35;1mAdress Load (6.0ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mContact Load (1.2ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts".company_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 1045ms (View: 838, DB: 15) | 200 OK [http://localhost/companies/1]
+
+
+Processing AdressesController#edit (for 127.0.0.1 at 2009-05-14 23:36:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAccount Load (7.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mAdress Load (1.1ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+  [4;35;1mRole Load (6.7ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+  [4;35;1mCompany Load (3.2ms)[0m   [0mSELECT * FROM "companies" [0m
+Rendering template within layouts/application
+Rendering adresses/edit
+Rendered adresses/_form (16.1ms)
+Completed in 1046ms (View: 304, DB: 18) | 200 OK [http://localhost/adresses/2/edit]
+
+
+Processing AdressesController#update (for 127.0.0.1 at 2009-05-14 23:37:08) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"da33d6a528faf2a8ec55fece254913da3577e67c", "adress"=>{"region"=>"KY", "city"=>"Independence", "postcode"=>"41051", "country"=>"United States of America", "street"=>"173 Pelly Road", "company_id"=>"1", "streetnr"=>""}, "id"=>"2"}
+  [4;36;1mAccount Load (1.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mAdress Load (1.2ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+  [4;36;1mRole Load (4.6ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+  [4;36;1mAdress Update (1.2ms)[0m   [0;1mUPDATE "adresses" SET "updated_at" = '2009-05-14 23:37:08', "streetnr" = '' WHERE "id" = 2[0m
+Redirected to #<Adress:0xb55f68f0>
+Completed in 408ms (DB: 8) | 302 Found [http://localhost/adresses/2]
+
+
+Processing AdressesController#show (for 127.0.0.1 at 2009-05-14 23:37:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAccount Load (1.1ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mAdress Load (1.2ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+  [4;35;1mRole Load (5.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering adresses/show
+  [4;35;1mCompany Load (0.8ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 555ms (View: 297, DB: 8) | 200 OK [http://localhost/adresses/2]
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2009-05-14 23:37:23) [GET]
+  [4;36;1mAccount Load (1.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mRole Load (6.8ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCompany Load (0.8ms)[0m   [0;1mSELECT * FROM "companies" [0m
+Rendering template within layouts/application
+Rendering companies/index
+Rendered shared/_search (5.8ms)
+  [4;35;1mCompanyart Load (3.4ms)[0m   [0mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+Rendered companies/_list (54.5ms)
+Completed in 804ms (View: 558, DB: 12) | 200 OK [http://localhost/companies]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-14 23:37:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAccount Load (1.6ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mCompany Load (0.8ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mRole Load (6.6ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;36;1mCompanyart Load (0.7ms)[0m   [0;1mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;35;1mAdress Load (1.2ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mContact Load (79.5ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts".company_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 791ms (View: 447, DB: 90) | 200 OK [http://localhost/companies/1]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-14 23:58:26) [GET]
+  Parameters: {"id"=>"1", "locale"=>"cn"}
+  [4;35;1mAccount Load (1.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mCompany Load (2.5ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mRole Load (6.8ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;35;1mCompanyart Load (1.4ms)[0m   [0mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;36;1mAdress Load (10.6ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mContact Load (1.1ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 1040ms (View: 733, DB: 24) | 200 OK [http://localhost/companies/1?locale=cn]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-14 23:59:00) [GET]
+  Parameters: {"id"=>"1", "locale"=>"en"}
+  [4;36;1mAccount Load (10.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mCompany Load (0.9ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mRole Load (5.7ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;36;1mCompanyart Load (0.7ms)[0m   [0;1mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;35;1mAdress Load (1.0ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mContact Load (2.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts".company_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 790ms (View: 510, DB: 20) | 200 OK [http://localhost/companies/1?locale=en]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-15 00:44:05) [GET]
+  Parameters: {"id"=>"1", "locale"=>"in"}
+  [4;35;1mAccount Load (1.1ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mCompany Load (0.9ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mRole Load (4.8ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;35;1mCompanyart Load (1.7ms)[0m   [0mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;36;1mAdress Load (1.5ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mContact Load (1.7ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 607ms (View: 370, DB: 12) | 200 OK [http://localhost/companies/1?locale=in]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-15 00:44:32) [GET]
+  Parameters: {"id"=>"1", "locale"=>"fr"}
+  [4;36;1mAccount Load (1.8ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;35;1mCompany Load (0.8ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mRole Load (4.8ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;36;1mCompanyart Load (0.7ms)[0m   [0;1mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;35;1mAdress Load (2.0ms)[0m   [0mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mContact Load (8.0ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts".company_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 613ms (View: 366, DB: 18) | 200 OK [http://localhost/companies/1?locale=fr]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-05-15 00:44:40) [GET]
+  Parameters: {"id"=>"1", "locale"=>"en"}
+  [4;35;1mAccount Load (1.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 5) LIMIT 1[0m
+  [4;36;1mCompany Load (0.8ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;35;1mRole Load (32.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;35;1mCompanyart Load (1.2ms)[0m   [0mSELECT * FROM "companyarts" WHERE ("companyarts"."id" = 2) [0m
+  [4;36;1mAdress Load (1.6ms)[0m   [0;1mSELECT * FROM "adresses" WHERE ("adresses".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+  [4;36;1mContact Load (1.3ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts".company_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 1) [0m
+Completed in 503ms (View: 294, DB: 38) | 200 OK [http://localhost/companies/1?locale=en]

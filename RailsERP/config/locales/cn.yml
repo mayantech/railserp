@@ -173,12 +173,12 @@ cn:
   adress_edit_headline : "修改地址"
   adress_index_headline : "列表地址"
 
-  adress_editnewshowindex_street : "街: "
-  adress_editnewshowindex_streetnr : "街上午十时十五分: "
-  adress_editnewshowindex_zip : "邮编: "
-  adress_editnewshowindex_area : "面积: "
-  adress_editnewshowindex_land : "土地: "
-  adress_editnewshowindex_postcode : "邮编: "
+  adress_editnewshowindex_street : "街"
+  adress_editnewshowindex_streetnr : "街上午十时十五分"
+  adress_editnewshowindex_city : "城市,都市,市 / 鎮;市鎮"
+  adress_editnewshowindex_region : "狀況,狀態 / 省,州 / 地區,地帶;行政區域"
+  adress_editnewshowindex_country : "國家;國土"
+  adress_editnewshowindex_postcode : "邮编"
   adress_editnewshowindex_company : "本公司"
 
   adress_editnewshowindex_update : "更新"
@@ -215,6 +215,7 @@ cn:
   companies_new_headline : "创建公司"
   companies_edit_headline : "修改公司"
   companies_index_headline : "上市公司"
+  companies_show_locations_headline: "地點"
 
   companies_editnewshowindex_name : "公司名称"
   companies_editnewshowindex_companyart : "分类"

@@ -179,11 +179,11 @@ fr:
   adress_index_headline: "Liste d'adresses"
 
   adress_editnewshowindex_street: "la rue"
-  adress_editnewshowindex_streetnr: "Street nr:"
-  adress_editnewshowindex_zip: "Code postal:"
-  adress_editnewshowindex_area: "Zone:"
-  adress_editnewshowindex_land: "Terre"
-  adress_editnewshowindex_postcode: "Code postal:"
+  adress_editnewshowindex_streetnr: "Street nr"
+  adress_editnewshowindex_city: "Ville / Commune"
+  adress_editnewshowindex_region: "Province / Région"
+  adress_editnewshowindex_country: "Terre"
+  adress_editnewshowindex_postcode: "Code postal"
   adress_editnewshowindex_company: "Société"
 
   adress_editnewshowindex_update: "Update"
@@ -220,6 +220,7 @@ fr:
   companies_new_headline: "Créer l'entreprise"
   companies_edit_headline: "Modifier l'entreprise"
   companies_index_headline: "Liste des Sociétés"
+  companies_show_locations_headline: "Localisations"
 
   companies_editnewshowindex_name: "Nom de la société"
   companies_editnewshowindex_companyart: "Catégorie"

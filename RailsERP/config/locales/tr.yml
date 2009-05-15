@@ -182,12 +182,12 @@ tr:
   adress_edit_headline: "Adresi Düzenle"
   adress_index_headline: "Adres Listele"
 
-  adress_editnewshowindex_street: "Sokak: "
-  adress_editnewshowindex_streetnr: "Sokak No:"
-  adress_editnewshowindex_zip: "Posta Kodu:"
-  adress_editnewshowindex_area: "Alan:"
-  adress_editnewshowindex_land: "Bölge:"
-  adress_editnewshowindex_postcode: "Posta Kodu:"
+  adress_editnewshowindex_street: "Sokak"
+  adress_editnewshowindex_streetnr: "Sokak No"
+  adress_editnewshowindex_city: "Şehir / Kasaba"
+  adress_editnewshowindex_region: "Eyalet / İl / Bölge"
+  adress_editnewshowindex_country: "Ülke"
+  adress_editnewshowindex_postcode: "Posta Kodu"
   adress_editnewshowindex_company: "Şirket"
 
   adress_editnewshowindex_update: "Güncelle"
@@ -224,6 +224,7 @@ tr:
   companies_new_headline: "Şirket Oluştur"
   companies_edit_headline: "Şirket Bilgisi Düzenle"
   companies_index_headline: "Şirketleri Listele"
+  companies_show_locations_headline: "Mekanlar"
 
   companies_editnewshowindex_name: "Şirket Adı"
   companies_editnewshowindex_companyart: "Kategori"

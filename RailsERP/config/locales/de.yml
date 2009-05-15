@@ -179,12 +179,12 @@ de:
   adress_edit_headline: "Adresse bearbeiten"
   adress_index_headline: "Adressen auflisten"
 
-  adress_editnewshowindex_street: "Straße:"
-  adress_editnewshowindex_streetnr: "Nr.:"
-  adress_editnewshowindex_zip: "PLZ:"
-  adress_editnewshowindex_area: "Ort:"
-  adress_editnewshowindex_land: "Land:"
-  adress_editnewshowindex_postcode: "Postfach:"
+  adress_editnewshowindex_street: "Straße"
+  adress_editnewshowindex_streetnr: "Nr."
+  adress_editnewshowindex_city: "City / Stadt"
+  adress_editnewshowindex_region: "Zustand / Provinz / Gebiet"
+  adress_editnewshowindex_country: "Land"
+  adress_editnewshowindex_postcode: "Postfach"
   adress_editnewshowindex_company: "Firma"
 
   adress_editnewshowindex_update: "Aktualisieren"
@@ -221,6 +221,7 @@ de:
   companies_new_headline: "Firma erstellen"
   companies_edit_headline: "Firma bearbeiten"
   companies_index_headline: "Firmen auflisten"
+  companies_show_locations_headline: "Standorte"
 
   companies_editnewshowindex_name: "Firmenname"
   companies_editnewshowindex_companyart: "Kategorie"
