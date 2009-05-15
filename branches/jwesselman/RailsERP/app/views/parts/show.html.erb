@@ -1,0 +1,29 @@
+<%= image_tag "/images/parts/#{@part.id}/#{@part.id}.#{@part.imageext}", :size => "200x200" %>
+<p>
+  <b><%= t 'parts_editnewshowindex_name' %>:</b>
+  <%=h @part.name %>
+</p>
+
+<p>
+  <b><%= t 'parts_editnewshowindex_price' %>:</b>
+  <%=h @part.price %>
+</p>
+
+<p>
+  <b><%= t 'parts_editnewshowindex_info' %>:</b>
+  <%=h @part.info %>
+</p>
+
+<p>
+  <b><%= t 'parts_editnewshowindex_imagename' %>:</b>
+  <%=h @part.imagename %>
+</p>
+
+<p>
+  <b><%= t 'parts_editnewshowindex_imageext' %>:</b>
+  <%=h @part.imageext %>
+</p>
+
+
+<%= link_to t('parts_editnewshowindex_edit'), edit_part_path(@part) %> |
+<%= link_to t('parts_editnewshowindex_back'), parts_path %>

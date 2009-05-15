@@ -1,0 +1,9 @@
+<h1><%= t 'kbcats_new_headline' %></h1>
+
+<%= error_messages_for :kbcat %>
+
+<% form_for(@kbcat) do |f| %>
+<%= render :partial => 'form', :locals => { :f => f, :button_name => t('kbcats_editnewshowindex_create') } %>
+<% end %>
+
+<%= link_to t('kbcats_editnewshowindex_back'), kbcats_path %>

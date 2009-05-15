@@ -1,0 +1,8 @@
+<h1><%= t 'dashblogs_index_headline'%></h1>
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :dashblogs => @dashblogs } %>
+</div>
+<br />
+
+<%= link_to t('dashblogs_editnewshowindex_new'), new_dashblog_path %>

@@ -1,0 +1,10 @@
+<h1><%= t 'kbarticles_index_headline' %></h1>
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :kbarticles => @kbarticles } %>
+</div>
+
+
+<br />
+
+<%= link_to t('kbarticles_editnewshowindex_new'), new_kbarticle_path %>

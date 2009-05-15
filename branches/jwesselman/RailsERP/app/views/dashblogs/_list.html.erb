@@ -1,0 +1,18 @@
+<table border="1px">
+  <tr>
+    <th><%= t 'dashblogs_editnewshowindex_title' %></th>
+    <th><%= t 'dashblogs_editnewshowindex_blogtext' %></th>
+    <th><%= t 'dashblogs_editnewshowindex_published' %></th>
+  </tr>
+
+<% for dashblog in dashblogs %>
+  <tr>
+    <td><%=h dashblog.title %></td>
+    <td><%=h dashblog.blogtext %></td>
+    <td><%=h dashblog.published %></td>
+    <td><%= link_to t('dashblogs_editnewshowindex_show'), dashblog %></td>
+    <td><%= link_to t('dashblogs_editnewshowindex_edit'), edit_dashblog_path(dashblog) %></td>
+    <td><%= link_to t('dashblogs_editnewshowindex_delete'), dashblog, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

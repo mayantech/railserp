@@ -1,0 +1,10 @@
+<h1><%= t 'datestatus_index_headline' %></h1>
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :datestatuses => @datestatuses } %>
+</div>
+
+
+<br />
+
+<%= link_to t('datestatus_editnewshowindex_new'), new_datestatus_path %>

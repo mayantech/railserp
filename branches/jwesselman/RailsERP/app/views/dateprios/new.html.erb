@@ -1,0 +1,9 @@
+<h1><%= t 'dateprio_new_headline' %></h1>
+
+<%= error_messages_for :dateprio %>
+
+<% form_for(@dateprio) do |f| %>
+<%= render :partial => 'form', :locals => { :f => f, :button_name => t('dateprio_editnewshowindex_create') } %>
+<% end %>
+
+<%= link_to t('dateprio_editnewshowindex_back'), dateprios_path %>

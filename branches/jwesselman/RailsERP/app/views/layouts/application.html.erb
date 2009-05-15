@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Rails ERP: <%= controller.controller_name %> -> <%= controller.action_name %></title>
+    <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag 'facebox' %>
+    <%= stylesheet_link_tag 'global' %>
+    <%= stylesheet_link_tag 'facebox' %>
+  </head>
+  <body>
+    <div id="Page">
+
+      <div class="nav-container-outer">
+        <img src="/images/nav-bg-l.jpg" alt="" class="float-left" />
+        <img src="/images/nav-bg-r.jpg" alt="" class="float-right" />
+        <ul id="nav-container" class="nav-container">
+          <li><a class="item-primary" href="#" target="_self"><%= t 'navinews' %></a>
+            <ul style="width:150px;">
+              <li><%= link_to t('navidashblogs') , :controller => "Dashblogs"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li><a class="item-primary" href="#" target="_self"><%=  t 'navisales' %></a>
+            <ul style="width:150px;">
+              <li><%= link_to t('navicontacts') , :controller => "contacts"%></li>
+              <li><%= link_to t('navicompanies'), :controller => "Companies"%></li>
+              <li><%= link_to t('naviadresses'), :controller => "Adresses"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li><a class="item-primary" href="#" target="_self"><%= t 'naviproduction' %></a>
+            <ul style="width:150px;">
+              <li><%= link_to t('naviproducts'), :controller => "Products"%></li>
+              <li><%= link_to t('naviparts'), :controller => "Parts"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li><a class="item-primary" href="#" target="_self"><%= t 'navisupport' %></a>
+            <ul style="width:150px;">
+              <li><%= link_to t('navikbcomments'), :controller => "Kbcomments"%></li>
+              <li><%= link_to t('navikbarticles'), :controller => "Kbarticles"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li><a class="item-primary" href="#" target="_self"><%= t 'navidocuments' %></a>
+            <ul style="width:150px;">
+              <li><%= link_to t('navifolders'), :controller => "Folders"%></li>
+              <li><%= link_to t('navifiles'), :controller => "Filedatas"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li><a class="item-primary" href="#" target="_self"><%= t 'naviorganisation' %></a>
+            <ul style="width:150px;">
+              <li><%= link_to t('navicaldates'), :controller => "Caldates"%></li>
+              <li><%= link_to t('navidatetasks'), :controller => "Datetasks"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li><a class="item-primary" href="#" target="_self"><%= t 'naviadmin' %></a>
+            <ul style="width:150px;">
+              <li><%= link_to t('naviaccounts'), :controller => "Accounts"%></li>
+              <li><%= link_to t('naviroles'), :controller => "Roles"%></li>
+              <li><%= link_to t('navidateprios'), :controller => "Dateprios"%></li>
+              <li><%= link_to t('navidatestatuses'), :controller => "Datestatuses"%></li>
+              <li><%= link_to t('navidatearts'), :controller => "Datearts"%></li>
+              <li><%= link_to t('navikbcats'), :controller => "Kbcats"%></li>
+              <li><%= link_to t('navikblangs'), :controller => "Kblangs"%></li>
+              <li><%= link_to t('navicompanyarts'), :controller => "Companyarts"%></li>
+            </ul>
+          </li>
+          <li><span class="divider divider-vert" ></span></li>
+          <li class="clear"> </li>
+        </ul>
+      </div>
+
+      <div id="header">
+        <div id="Login">
+          <% if logged_in? %>
+            <p><%= t 'loginwelcom' %> <%= current_account.login %><br> <%= t 'logofftext' %>( <%= link_to "Logoff", logout_path %> )</p>
+          <%  else %>
+            <p><%= t 'logintext' %>
+              (<%= link_to "Login", login_path %> )<br>
+              <%= t 'registertext' %>(<%= link_to "Register", signup_path %> )
+            </p>
+          <% end %>
+        </div>
+
+        <div id="Path">
+          <%= link_to t('startpagelink'), :controller => 'dashboards' %>
+          -> ( <%= controller.controller_name %> -> <%= controller.action_name %>)
+        </div>
+
+        <div id="lanchanger">
+          <p>
+            <%= t 'language' %> <%= @current_locale %><br>
+            (
+            <%= link_to image_tag("englishflag.png"),params.merge(:locale=>'en') %>,
+            <%= link_to image_tag("germanflag.png"),params.merge(:locale=>'de') %> ,
+            <%= link_to image_tag("turkeyflag.png"),params.merge(:locale=>'tr') %> ,
+            <%= link_to image_tag("chinaflag.png"),params.merge(:locale=>'cn') %> ,
+            <%= link_to image_tag("indiaflag.png"),params.merge(:locale=>'in') %> ,
+            <%= link_to image_tag("franceflag.png"),params.merge(:locale=>'fr') %> ,
+            <%= link_to image_tag("russiaflag.png"),params.merge(:locale=>'ru') %> ,
+            <%= link_to image_tag("brazilflag.png"),params.merge(:locale=>'pt_BR') %>
+            )
+          </p>
+        </div>
+
+
+      </div>
+
+      <div id="Logo">
+        <%=  image_tag("RailsERP-logo.png", :size => "300x200")   %>
+      </div>
+
+
+      <div align="center" id="flash">
+        <p style="color: green"><%= flash[:notice] %></p>
+      </div>
+
+
+
+
+
+      <div id="main">
+        <%= yield  %>
+      </div>
+    </div>
+  </body>
+</html>

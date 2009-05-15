@@ -1,0 +1,37 @@
+<p>
+    <b><%= t 'adress_editnewshowindex_street' %></b><br />
+    <%= f.text_field :street %>
+  </p>
+
+  <p>
+    <b><%= t 'adress_editnewshowindex_streetnr' %></b><br />
+    <%= f.text_field :streetnr %>
+  </p>
+
+  <p>
+    <b><%= t 'adress_editnewshowindex_city' %></b><br />
+    <%= f.text_field :city %>
+  </p>
+
+  <p>
+    <b><%= t 'adress_editnewshowindex_region' %></b><br />
+    <%= f.text_field :region %>
+  </p>
+
+  <p>
+    <b><%= t 'adress_editnewshowindex_country' %></b><br />
+    <%= f.text_field :country %>
+  </p>
+
+  <p>
+    <b><%= t 'adress_editnewshowindex_postcode' %></b><br />
+    <%= f.text_field :postcode %>
+  </p>
+
+ <p><b><%= t 'adress_editnewshowindex_company' %></b><br />
+    <%= f.collection_select :company_id ,companies, :id, :name %>
+  </p>
+
+  <p>
+    <%= f.submit button_name %>
+  </p>

@@ -1,0 +1,10 @@
+<h1><%= t 'dateart_edit_headline' %></h1>
+
+<%= error_messages_for :dateart %>
+
+<% form_for(@dateart) do |f| %>
+<%= render :partial => 'form', :locals => { :f => f, :button_name => t('dateart_editnewshowindex_update') } %>
+<% end %>
+
+<%= link_to t('dateart_editnewshowindex_show'), @dateart %> |
+<%= link_to t('dateart_editnewshowindex_back'), datearts_path %>

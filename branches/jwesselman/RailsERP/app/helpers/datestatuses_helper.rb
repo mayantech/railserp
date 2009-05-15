@@ -1,0 +1,2 @@
+module DatestatusesHelper
+end

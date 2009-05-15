@@ -1,0 +1,31 @@
+<h1><%=  t 'kbarticles_index_headline' %></h1>
+<hr>
+<table>
+  <tr>
+    <th><%= t 'kbarticles_editnewshowindex_symptoms' %></th>
+    <th><%= t 'kbarticles_editnewshowindex_cause' %></th>
+    <th><%= t 'kbarticles_editnewshowindex_solution' %></th>
+    <th><%= t 'kbarticles_editnewshowindex_kbcat' %></th>
+    <th><%= t 'kbarticles_editnewshowindex_kblang' %></th>
+  </tr>
+  <tr>
+    <td><%=h @kbcomment.kbarticle.symptoms %></td>
+    <td><%=h @kbcomment.kbarticle.cause %></td>
+    <td><%=h @kbcomment.kbarticle.solution %></td>
+    <td><%=h @kbcomment.kbarticle.kbcat.name %></td>
+    <td><%=h @kbcomment.kbarticle.kblang.language %></td>
+    <td><%= link_to t('kbarticles_editnewshowindex_show'), @kbcomment.kbarticle %></td>
+    <td><%= link_to t('kbarticles_editnewshowindex_edit'), edit_kbarticle_path(@kbcomment.kbarticle) %></td>
+    <td><%= link_to t('kbarticles_editnewshowindex_delete'), @kbcomment.kbarticle, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+</table>
+<hr>
+  
+<p>
+  <b><%= t 'kbcomments_editnewshowindex_comment' %></b>
+  <%=h @kbcomment.comment %>
+</p>
+
+
+<%= link_to t('kbcomments_editnewshowindex_edit'), edit_kbcomment_path(@kbcomment) %> |
+<%= link_to t('kbcomments_editnewshowindex_back'), kbcomments_path %>

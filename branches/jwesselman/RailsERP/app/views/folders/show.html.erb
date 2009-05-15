@@ -1,0 +1,38 @@
+<p>
+  <b><%= t 'folders_editnewshowindex_fodlername' %></b>
+  <%=h @folder.name %>
+</p>
+
+<p>
+  <b><%= t 'folders_editnewshowindex_info' %></b>
+  <%=h @folder.info %>
+</p>
+<hr>
+<h1><%= t 'filedatas_index_headline' %></h1>
+  <br>
+<table>
+  <tr>
+    <th><%= t 'filedatas_editnewshowindex_filename' %></th>
+    <th><%= t 'filedatas_editnewshowindex_size' %></th>
+  </tr>
+
+<% for filedata in @folder.filedatas %>
+  <tr>
+    <td><a href="/files/<%= filedata.id.to_s %>/<%= filedata.id.to_s + "." + filedata.ext%>"><%=h filedata.name + "." + filedata.ext %></a></td>
+    <td><%=h filedata.size/1024/1024 %></td>
+    <td><%= link_to t('filedatas_editnewshowindex_show'), filedata %></td>
+    <td><%= link_to t('filedatas_editnewshowindex_edit'), edit_filedata_path(filedata) %></td>
+    <td><%= link_to t('filedatas_editnewshowindex_delete'), filedata, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to t('filedatas_editnewshowindex_new'), new_filedata_path %>
+<br>
+  <hr>
+
+
+<%= link_to t('folders_editnewshowindex_edit'), edit_folder_path(@folder) %> |
+<%= link_to t('folders_editnewshowindex_back'), folders_path %>

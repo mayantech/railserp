@@ -1,0 +1,28 @@
+<p>
+  <b><%= t 'filedatas_editnewshowindex_filename' %></b>
+  <%=h @filedata.name + "." + @filedata.ext%>
+</p>
+
+<p>
+  <b><%= t 'filedatas_editnewshowindex_size' %></b>
+  <%=h @filedata.size/1024/1024 %>
+</p>
+
+<p>
+  <b><%= t 'filedatas_editnewshowindex_Info' %></b>
+  <%=h @filedata.info %>
+</p>
+
+<p>
+  <b><%= t 'filedatas_editnewshowindex_contact' %></b>
+  <%=h @filedata.contact.name %>
+</p>
+
+<p>
+  <b><%= t 'filedatas_editnewshowindex_folder' %></b>
+  <%=h @filedata.folder.name %>
+</p>
+
+
+<%= link_to t('filedatas_editnewshowindex_edit'), edit_filedata_path(@filedata) %> |
+<%= link_to t('filedatas_editnewshowindex_back'), filedatas_path %>

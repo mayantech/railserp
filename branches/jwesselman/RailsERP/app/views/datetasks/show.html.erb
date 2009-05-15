@@ -1,0 +1,33 @@
+<p>
+  <b><%= t 'datetasks_editnewshowindex_taskname' %></b>
+  <%=h @datetask.taskname %>
+</p>
+
+<p>
+  <b><%= t 'datetasks_editnewshowindex_info' %></b>
+  <%=h @datetask.info %>
+</p>
+
+<p>
+  <b><%= t 'datetasks_editnewshowindex_progress' %></b>
+  <%=h @datetask.progressed %>
+</p>
+
+<p>
+  <b><%= t 'datetasks_editnewshowindex_dateprio' %></b>
+  <%=h @datetask.dateprio.prio %>
+</p>
+
+<p>
+  <b><%= t 'datetasks_editnewshowindex_datestatus' %></b>
+  <%=h @datetask.datestatus.status %>
+</p>
+
+<p>
+  <b><%= t 'datetasks_editnewshowindex_date' %></b>
+  <%=h @datetask.caldate.info %>
+</p>
+
+
+<%= link_to t('datetasks_editnewshowindex_edit'), edit_datetask_path(@datetask) %> |
+<%= link_to t('datetasks_editnewshowindex_back'), datetasks_path %>

@@ -1,0 +1,23 @@
+<%= error_messages_for :account %>
+<% form_for :account, :url => accounts_path do |f| -%>
+<p><label for="login"><%= t 'account_new_login' %></label><br/>
+<%= f.text_field :login %></p>
+
+<p><label for="email"><%= t 'account_new_email' %></label><br/>
+<%= f.text_field :email %></p>
+
+<p><label for="password"><%=  t 'account_new_password' %></label><br/>
+<%= f.password_field :password %></p>
+
+<p><label for="password_confirmation"><%= t 'account_new_confirmpassword' %></label><br/>
+<%= f.password_field :password_confirmation %></p>
+
+<p><label for="is_admin"><%= t 'account_new_isadmin' %></label><br/>
+<%= f.check_box :is_admin %></p>
+
+<p><label for="role_id"><%= t 'account_new_role' %></label><br/>
+<%= f.collection_select :role_id ,@roles, :id, :rolename %>
+
+
+<p><%= submit_tag t 'account_new_sigup'  %></p>
+<% end -%>

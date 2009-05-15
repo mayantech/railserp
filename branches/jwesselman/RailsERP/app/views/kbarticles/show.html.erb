@@ -1,0 +1,47 @@
+<p>
+  <b><%= t 'kbarticles_editnewshowindex_symptoms' %>:</b>
+  <%=h @kbarticle.symptoms %>
+</p>
+
+<p>
+  <b><%= t 'kbarticles_editnewshowindex_cause' %></b>
+  <%=h @kbarticle.cause %>
+</p>
+
+<p>
+  <b><%= t 'kbarticles_editnewshowindex_solution' %></b>
+  <%=h @kbarticle.solution %>
+</p>
+
+<p>
+  <b><%= t 'kbarticles_editnewshowindex_kbcat' %></b>
+  <%=h @kbarticle.kbcat.name %>
+</p>
+
+<p>
+  <b><%= t 'kbarticles_editnewshowindex_kblang' %></b>
+  <%=h @kbarticle.kblang.language %>
+</p>
+
+
+<hr>
+<h1>All Comments</h1>
+<br>
+  <table>
+  <tr>
+    <th>Comment</th>
+  </tr>
+
+<% for kbcomment in @kbarticle.kbcomments %>
+  <tr>
+    <td><%=h kbcomment.comment %></td>
+    <td><%= link_to 'Show', kbcomment %></td>
+    <td><%= link_to 'Edit', edit_kbcomment_path(kbcomment) %></td>
+    <td><%= link_to 'Destroy', kbcomment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br>
+
+<%= link_to t('kbarticles_editnewshowindex_edit'), edit_kbarticle_path(@kbarticle) %> |
+<%= link_to t('kbarticles_editnewshowindex_back'), kbarticles_path %>

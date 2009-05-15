@@ -1,0 +1,9 @@
+<h1><%= t 'filedatas_index_headline' %></h1>
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :filedatas => @filedatas } %>
+</div>
+
+<br />
+
+<%= link_to t('filedatas_editnewshowindex_new'), new_filedata_path %>

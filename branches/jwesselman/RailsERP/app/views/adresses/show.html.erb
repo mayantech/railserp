@@ -1,0 +1,38 @@
+<p>
+  <b><%= t 'adress_editnewshowindex_street' %></b>
+  <%=h @adress.street %>
+</p>
+
+<p>
+  <b><%= t 'adress_editnewshowindex_streetnr' %></b>
+  <%=h @adress.streetnr %>
+</p>
+
+<p>
+  <b><%= t 'adress_editnewshowindex_city' %></b>
+  <%=h @adress.city %>
+</p>
+
+<p>
+  <b><%= t 'adress_editnewshowindex_region' %></b>
+  <%=h @adress.region %>
+</p>
+
+<p>
+  <b><%= t 'adress_editnewshowindex_country' %></b>
+  <%=h @adress.country %>
+</p>
+
+<p>
+  <b><%= t 'adress_editnewshowindex_postcode' %></b>
+  <%=h @adress.postcode %>
+</p>
+
+<p>
+  <b><%= t 'adress_editnewshowindex_company' %></b>
+  <%=h @adress.company.name %>
+</p>
+
+
+<%= link_to t('adress_editnewshowindex_edit'), edit_adress_path(@adress) %> |
+<%= link_to t('adress_editnewshowindex_back'), adresses_path %>

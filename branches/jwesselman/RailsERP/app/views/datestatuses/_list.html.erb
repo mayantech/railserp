@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th><%= t 'datestatus_editnewshowindex_status' %></th>
+  </tr>
+
+<% for datestatus in datestatuses %>
+  <tr>
+    <td><%=h datestatus.status %></td>
+    <td><%= link_to t('datestatus_editnewshowindex_show'), datestatus %></td>
+    <td><%= link_to t('datestatus_editnewshowindex_edit'), edit_datestatus_path(datestatus) %></td>
+    <td><%= link_to t('datestatus_editnewshowindex_delete'), datestatus, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

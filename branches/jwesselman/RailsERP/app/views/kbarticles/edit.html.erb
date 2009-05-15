@@ -1,0 +1,10 @@
+<h1><%= t 'kbarticles_edit_headline' %></h1>
+
+<%= error_messages_for :kbarticle %>
+
+<% form_for(@kbarticle) do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f, :button_name => t('kbarticles_editnewshowindex_update'), :kblangs => @kblangs , :kbcats => @kbcats } %>
+<% end %>
+
+<%= link_to t('kbarticles_editnewshowindex_show'), @kbarticle %> |
+<%= link_to t('kbarticles_editnewshowindex_back'), kbarticles_path %>

@@ -1,0 +1,89 @@
+<p>
+  <b><%= t 'companies_editnewshowindex_name' %> </b>
+  <%=h @company.name %>
+</p>
+<p>
+  <b><%= t 'companies_editnewshowindex_companyart' %> </b>
+  <%=h @company.companyart.name %>
+</p>
+
+<b><u><p><%= t 'companies_show_locations_headline' %>: </p></u></b>
+<% addy_count = 1 -%>
+<% for adress in @company.adresses -%>
+  <p>
+    <b><%= addy_count %></b> <%= link_to t('adress_editnewshowindex_edit'), edit_adress_path(adress) %> <%= link_to t('adress_editnewshowindex_delete'), adress, :confirm => 'Are you sure?', :method => :delete %><br />
+    <%=h adress.street %><br />
+    <% if adress.streetnr? -%><%=h adress.streetnr %><br /><% end -%>
+    <%=h adress.city %> <%=h adress.region %>, <%=h adress.postcode %><br />
+    <%=h adress.country %>
+  </p>
+<% end -%>
+<table border="1px">
+  <tr>
+    <th><%= t('adress_editnewshowindex_street') %></th>
+    <th><%= t('adress_editnewshowindex_streetnr') %></th>
+    <th><%= t('adress_editnewshowindex_city') %></th>
+    <th><%= t('adress_editnewshowindex_region') %></th>
+    <th><%= t('adress_editnewshowindex_country')%></th>
+    <th><%= t('adress_editnewshowindex_postcode') %></th>
+    <th><%= t('adress_editnewshowindex_company') %></th>
+  </tr>
+
+<% for adress in @company.adresses %>
+  <tr>
+    <td><%=h adress.street %></td>
+    <td><%=h adress.streetnr %></td>
+    <td><%=h adress.city %></td>
+    <td><%=h adress.region %></td>
+    <td><%=h adress.country %></td>
+    <td><%=h adress.postcode %></td>
+    <td><%=h adress.company.name%></td>
+    <td><%= link_to t('adress_editnewshowindex_show'), adress %></td>
+    <td><%= link_to t('adress_editnewshowindex_edit'), edit_adress_path(adress) %></td>
+    <td><%= link_to t('adress_editnewshowindex_delete'), adress, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br>
+  <b><u><p>Contacts from <%= @company.name  %> : </p></u></b>
+<br>
+
+<table border="1px">
+  <tr>
+    <th>Name</th>
+    <th>Lastname</th> 
+    <th>Position</th>
+    <th>Tel</th>
+    <th>Mobile</th>
+    <th>Email</th>
+    <th>Info</th>
+    <th>Birthday</th>
+    <th>Company</th>
+    <th>Functions</th>
+  </tr>
+
+<% for contact in @company.contacts %>
+  <tr>
+    <td><%=h contact.name %></td>
+    <td><%=h contact.lastname %></td>
+    <td><%=h contact.position %></td>
+    <td><%=h contact.tel %></td>
+    <td><%=h contact.mobile %></td>
+    <td><%=h contact.email %></td>
+    <td><%=h contact.Info %></td>
+    <td><%=h contact.birthday %></td>
+    <td><%=h contact.company.name %> </td>
+    <td><%= link_to 'Show', contact %></td>
+    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+    <td><%= link_to 'Destroy', contact, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br>
+
+
+
+
+<%= link_to t('companies_editnewshowindex_edit'), edit_company_path(@company) %> |
+<%= link_to t('companies_editnewshowindex_back'), companies_path %>

@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>Rolename</th>
+  </tr>
+
+<% for role in roles %>
+  <tr>
+    <td><%=h role.rolename %></td>
+
+    <td><%= link_to t('role_editnewshowindex_show'), role %></td>
+    <td><%= link_to t('role_editnewshowindex_edit'), edit_role_path(role) %></td>
+    <td><%= link_to t('role_editnewshowindex_delete'), role, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

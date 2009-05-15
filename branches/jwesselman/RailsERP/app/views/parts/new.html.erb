@@ -1,0 +1,9 @@
+<h1><%= t 'parts_new_headline' %></h1>
+
+<%= error_messages_for :part %>
+
+<% form_for(@part, :html => { :multipart => true }) do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f, :button_name => t('parts_editnewshowindex_create') } %>
+<% end %>
+
+<%= link_to t('parts_editnewshowindex_back'), parts_path %>

@@ -1,0 +1,9 @@
+<h1><%= t 'dateart_index_headline' %></h1>
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :datearts => @datearts } %>
+</div>
+
+<br />
+
+<%= link_to t('dateart_editnewshowindex_new'), new_dateart_path %>

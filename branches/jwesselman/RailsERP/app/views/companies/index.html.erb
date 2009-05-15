@@ -1,0 +1,9 @@
+<h1><%= t 'companies_index_headline' %></h1>
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :companies => @companies } %>
+</div>
+
+<br />
+
+<%= link_to t('companies_editnewshowindex_new'), new_company_path %>

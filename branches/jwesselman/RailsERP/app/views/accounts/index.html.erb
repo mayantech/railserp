@@ -1,0 +1,8 @@
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :accounts => @accounts } %>
+</div>
+
+<br />
+
+<%= link_to t('account_index_new'), new_account_path %>

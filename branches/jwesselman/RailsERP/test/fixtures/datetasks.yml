@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  taskname: MyString
+  info: MyText
+  progressed: 1
+  dateprio_id: 1
+  datestatus_id: 1
+  caldate_id: 1
+
+two:
+  taskname: MyString
+  info: MyText
+  progressed: 1
+  dateprio_id: 1
+  datestatus_id: 1
+  caldate_id: 1

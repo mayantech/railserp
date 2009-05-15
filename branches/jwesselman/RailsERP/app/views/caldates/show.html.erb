@@ -1,0 +1,82 @@
+<p>
+  <b><%= t 'caldate_editnewshowindex_startdate' %></b>
+  <%=h @caldate.startdate %>
+</p>
+
+<p>
+  <b><%= t 'caldate_editnewshowindex_enddate' %></b>
+  <%=h @caldate.enddate %>
+</p>
+
+<p>
+  <b><%= t 'caldate_editnewshowindex_info' %></b>
+  <%=h @caldate.info %>
+</p>
+
+<p>
+  <b><%= t 'caldate_editnewshowindex_fullday' %></b>
+  <%=h @caldate.fullday %>
+</p>
+
+<p>
+  <b><%= t 'caldate_editnewshowindex_account' %></b>
+  <%=h @caldate.account_id %>
+</p>
+
+<p>
+  <b><%= t 'caldate_editnewshowindex_contact' %></b>
+  <%=h @caldate.contact.name %>
+</p>
+
+<p>
+  <b><%= t 'caldate_editnewshowindex_dateprio' %></b>
+  <%=h @caldate.dateprio.prio %>
+</p>
+
+<p>
+  <b><%= t 'caldate_editnewshowindex_datestatus' %></b>
+  <%=h @caldate.datestatus.status %>
+</p>
+
+<p>
+  <b><%= t 'caldate_editnewshowindex_dateart' %></b>
+  <%=h @caldate.dateart.art %>
+</p>
+
+<p>
+  <b><%= t 'caldate_editnewshowindex_reminder' %></b>
+  <%=h @caldate.reminder %>
+</p>
+<hr>
+
+<table>
+  <tr>
+    <th>Taskname</th>
+    <th>Info</th>
+    <th>Progressed</th>
+    <th>Dateprio</th>
+    <th>Datestatus</th>
+    <th>Date</th>
+  </tr>
+
+<% for datetask in @caldate.datetasks %>
+  <tr>
+    <td><%=h datetask.taskname %></td>
+    <td><%=h datetask.info %></td>
+    <td><%=h datetask.progressed %></td>
+    <td><%=h datetask.dateprio.prio %></td>
+    <td><%=h datetask.datestatus.status %></td>
+    <td><%=h datetask.caldate.info %></td>
+    <td><%= link_to 'Show', datetask %></td>
+    <td><%= link_to 'Edit', edit_datetask_path(datetask) %></td>
+    <td><%= link_to 'Destroy', datetask, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<hr>
+<br />
+
+<%= link_to 'New datetask', new_datetask_path %><br><br>
+
+<%= link_to t('caldate_editnewshowindex_edit'), edit_caldate_path(@caldate) %> |
+<%= link_to t('caldate_editnewshowindex_back'), caldates_path %>

@@ -1,0 +1,154 @@
+<%= f.error_messages %>
+
+  <p>
+    <%= f.label t('role_editnewshowindex_rolename') %><br />
+    <%= f.text_field :rolename %>
+  </p>
+
+<table border="1">
+<tr>
+  <th><%=h t('role_editnewshowindex_controller') %></th>
+  <th><%=h t('role_editnewshowindex_rightread') %></th>
+  <th><%=h t('role_editnewshowindex_rightcreate') %></th>
+  <th><%=h t('role_editnewshowindex_rightupdate') %></th>
+  <th><%=h t('role_editnewshowindex_rightdelete') %></th>
+</tr>
+<tr>
+  <td>Account</td>
+  <td><%= f.check_box :account_read %></td>
+  <td><%= f.check_box :account_create %></td>
+  <td><%= f.check_box :account_update %></td>
+  <td><%= f.check_box :account_delete %></td>
+</tr>
+<tr>
+  <td>Adress</td>
+  <td><%= f.check_box :adress_read %></td>
+  <td><%= f.check_box :adress_create %></td>
+  <td><%= f.check_box :adress_update %></td>
+  <td><%= f.check_box :adress_delete %></td>
+</tr>
+<tr>
+  <td>Caldate</td>
+  <td><%= f.check_box :caldate_read %></td>
+  <td><%= f.check_box :caldate_create %></td>
+  <td><%= f.check_box :caldate_update %></td>
+  <td><%= f.check_box :caldate_delete %></td>
+</tr>
+<tr>
+  <td>Company</td>
+  <td><%= f.check_box :company_read %></td>
+  <td><%= f.check_box :company_create %></td>
+  <td><%= f.check_box :company_update %></td>
+  <td><%= f.check_box :company_delete %></td>
+</tr>
+<tr>
+  <td>Companyart</td>
+  <td><%= f.check_box :companyart_read %></td>
+  <td><%= f.check_box :companyart_create %></td>
+  <td><%= f.check_box :companyart_update %></td>
+  <td><%= f.check_box :companyart_delete %></td>
+</tr>
+<tr>
+  <td>Contact</td>
+  <td><%= f.check_box :contact_read %></td>
+  <td><%= f.check_box :contact_create %></td>
+  <td><%= f.check_box :contact_update %></td>
+  <td><%= f.check_box :contact_delete %></td>
+</tr>
+<tr>
+  <td>Dashblog</td>
+  <td><%= f.check_box :dashblog_read %></td>
+  <td><%= f.check_box :dashblog_create %></td>
+  <td><%= f.check_box :dashblog_update %></td>
+  <td><%= f.check_box :dashblog_delete %></td>
+</tr>
+<tr>
+  <td>Dateart</td>
+  <td><%= f.check_box :dateart_read %></td>
+  <td><%= f.check_box :dateart_create %></td>
+  <td><%= f.check_box :dateart_update %></td>
+  <td><%= f.check_box :dateart_delete %></td>
+</tr>
+<tr>
+  <td>Dateprio</td>
+  <td><%= f.check_box :dateprio_read %></td>
+  <td><%= f.check_box :dateprio_create %></td>
+  <td><%= f.check_box :dateprio_update %></td>
+  <td><%= f.check_box :dateprio_delete %></td>
+</tr>
+<tr>
+  <td>Datestatus</td>
+  <td><%= f.check_box :datestatus_read %></td>
+  <td><%= f.check_box :datestatus_create %></td>
+  <td><%= f.check_box :datestatus_update %></td>
+  <td><%= f.check_box :datestatus_delete %></td>
+</tr>
+<tr>
+  <td>Datetask</td>
+  <td><%= f.check_box :datetask_read %></td>
+  <td><%= f.check_box :datetask_create %></td>
+  <td><%= f.check_box :datetask_update %></td>
+  <td><%= f.check_box :datetask_delete %></td>
+</tr>
+<tr>
+  <td>Filedata</td>
+  <td><%= f.check_box :filedata_read %></td>
+  <td><%= f.check_box :filedata_create %></td>
+  <td><%= f.check_box :filedata_update %></td>
+  <td><%= f.check_box :filedata_delete %></td>
+</tr>
+<tr>
+  <td>Folder</td>
+  <td><%= f.check_box :folder_read %></td>
+  <td><%= f.check_box :folder_create %></td>
+  <td><%= f.check_box :folder_update %></td>
+  <td><%= f.check_box :folder_delete %></td>
+</tr>
+<tr>
+  <td>KBArticle</td>
+  <td><%= f.check_box :kbarticle_read %></td>
+  <td><%= f.check_box :kbarticle_create %></td>
+  <td><%= f.check_box :kbarticle_update %></td>
+  <td><%= f.check_box :kbarticle_delete %></td>
+</tr>
+<tr>
+  <td>Kbcat</td>
+  <td><%= f.check_box :kbcat_read %></td>
+  <td><%= f.check_box :kbcat_create %></td>
+  <td><%= f.check_box :kbcat_update %></td>
+  <td><%= f.check_box :kbcat_delete %></td>
+</tr>
+<tr>
+  <td>KBcomment</td>
+  <td><%= f.check_box :kbcomment_read %></td>
+  <td><%= f.check_box :kbcomment_create %></td>
+  <td><%= f.check_box :kbcomment_update %></td>
+  <td><%= f.check_box :kbcomment_delete %></td>
+</tr>
+<tr>
+  <td>Kblang</td>
+  <td><%= f.check_box :kblang_read %></td>
+  <td><%= f.check_box :kblang_create %></td>
+  <td><%= f.check_box :kblang_update %></td>
+  <td><%= f.check_box :kblang_delete %></td>
+</tr>
+<tr>
+  <td>Part</td>
+  <td><%= f.check_box :part_read %></td>
+  <td><%= f.check_box :part_create %></td>
+  <td><%= f.check_box :part_update %></td>
+  <td><%= f.check_box :part_delete %></td>
+</tr>
+<tr>
+  <td>Product</td>
+  <td><%= f.check_box :product_read %></td>
+  <td><%= f.check_box :product_create %></td>
+  <td><%= f.check_box :product_update %></td>
+  <td><%= f.check_box :product_delete %></td>
+</tr>
+
+</table>
+
+  <p>
+    <%= f.submit button_name %>
+  </p>

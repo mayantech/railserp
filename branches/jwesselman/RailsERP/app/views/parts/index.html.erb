@@ -1,0 +1,9 @@
+<h1><%= t 'parts_index_headline' %></h1>
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :parts => @parts } %>
+</div>
+
+<br />
+
+<%= link_to t('parts_editnewshowindex_new'), new_part_path %>

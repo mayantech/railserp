@@ -1,0 +1,182 @@
+<% if current_account.role.adress_read %><hr>
+<h2 align="center"><%= t 'adress_index_headline' %></h2>
+<% if @adresses.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @adresses_match %></b> time(s)!
+<%= render :partial => '/adresses/list', :locals => { :adresses => @adresses } %>
+
+<% end %>
+<% end %><% if current_account.role.caldate_read %><hr>
+
+<h2 align="center"><%= t 'caldate_index_headline' %></h2>
+<% if @caldates.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @caldates_match %></b> time(s)!
+<%= render :partial => '/caldates/list', :locals => { :caldates => @caldates } %>
+
+<% end %>
+<% end %><% if current_account.role.company_read %><hr>
+
+
+<h2 align="center"><%= t 'companies_index_headline' %></h2>
+<% if @companies.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @companies_match %></b> time(s)!
+<%= render :partial => '/companies/list', :locals => { :companies => @companies } %>
+
+<% end %>
+<% end %><% if current_account.role.companyart_read %><hr>
+
+
+<h2 align="center"><%= t 'companiesarts_index_headline' %></h2>
+<% if @companyarts.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @companyarts_match %></b> time(s)!
+<%= render :partial => '/companyarts/list', :locals => { :companyarts => @companyarts } %>
+
+<% end %>
+<% end %><% if current_account.role.contact_read %><hr>
+
+<h2 align="center"><%= t 'contacts_index_headline' %></h2>
+<% if @contacts.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @contacts_match %></b> time(s)!
+<%= render :partial => '/contacts/list', :locals => { :contacts => @contacts } %>
+
+<% end %>
+<% end %><% if current_account.role.dashblog_read %><hr>
+
+<h2 align="center"><%= t 'dashblogs_index_headline' %></h2>
+<% if @dashblogs.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @dashblogs_match %></b> time(s)!
+<%= render :partial => '/dashblogs/list', :locals => { :dashblogs => @dashblogs } %>
+
+<% end %>
+<% end %><% if current_account.role.dateart_read %><hr>
+
+<h2 align="center"><%= t 'dateart_index_headline' %></h2>
+<% if @datearts.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @datearts_match %></b> time(s)!
+<%= render :partial => '/datearts/list', :locals => { :datearts => @datearts } %>
+
+<% end %>
+<% end %><% if current_account.role.dateprio_read %><hr>
+
+<h2 align="center"><%= t 'dateprio_index_headline' %></h2>
+<% if @dateprios.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @dateprios_match %></b> time(s)!
+<%= render :partial => '/dateprios/list', :locals => { :dateprios => @dateprios } %>
+
+<% end %>
+<% end %><% if current_account.role.datestatus_read %><hr>
+
+<h2 align="center"><%= t 'datestatus_index_headline' %></h2>
+<% if @datestatuses.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @datestatuses_match %></b> time(s)!
+<%= render :partial => '/datestatuses/list', :locals => { :datestatuses => @datestatuses } %>
+
+<% end %>
+<% end %><% if current_account.role.datetask_read %><hr>
+
+<h2 align="center"><%= t 'datetasks_index_headline' %></h2>
+<% if @datetasks.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @datetasks_match %></b> time(s)!
+<%= render :partial => '/datetasks/list', :locals => { :datetasks => @datetasks } %>
+
+<% end %>
+<% end %><% if current_account.role.filedata_read %><hr>
+
+<h2 align="center"><%= t 'filedatas_index_headline' %></h2>
+<% if @filedatas.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @filedatas_match %></b> time(s)!
+<%= render :partial => '/filedatas/list', :locals => { :filedatas => @filedatas } %>
+
+<% end %>
+<% end %><% if current_account.role.folder_read %><hr>
+
+<h2 align="center"><%= t 'folders_index_headline' %></h2>
+<% if @folders.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @folders_match %></b> time(s)!
+<%= render :partial => '/folders/list', :locals => { :folders => @folders } %>
+
+<% end %>
+<% end %><% if current_account.role.kbarticle_read %><hr>
+
+<h2 align="center"><%= t 'kbarticles_index_headline' %></h2>
+<% if @kbarticles.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @kbarticles_match %></b> time(s)!
+<%= render :partial => '/kbarticles/list', :locals => { :kbarticles => @kbarticles } %>
+
+<% end %>
+<% end %><% if current_account.role.kbcat_read %><hr>
+
+<h2 align="center"><%= t 'kbcats_index_headline' %></h2>
+<% if @kbcats.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @kbcats_match %></b> time(s)!
+<%= render :partial => '/kbcats/list', :locals => { :kbcats => @kbcats } %>
+
+<% end %>
+<% end %><% if current_account.role.kbcomment_read %><hr>
+
+<h2 align="center"><%= t 'kbcomments_index_headline' %></h2>
+<% if @kbcomments.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @kbcomments_match %></b> time(s)!
+<%= render :partial => '/kbcomments/list', :locals => { :kbcomments => @kbcomments } %>
+
+<% end %>
+<% end %><% if current_account.role.kblang_read %><hr>
+
+<h2 align="center"><%= t 'kblang_index_headline' %></h2>
+<% if @kblangs.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @kblangs_match %></b> time(s)!
+<%= render :partial => '/kblangs/list', :locals => { :kblangs => @kblangs } %>
+
+<% end %>
+<% end %><% if current_account.role.part_read %><hr>
+
+<h2 align="center"><%= t 'parts_index_headline' %></h2>
+<% if @parts.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @parts_match %></b> time(s)!
+<%= render :partial => '/parts/list', :locals => { :parts => @parts } %>
+
+<% end %>
+<% end %><% if current_account.role.product_read %><hr>
+
+<h2 align="center"><%= t 'products_index_headline' %></h2>
+<% if @products.empty? %>
+  <%=h @phrase %> not found!
+<% else %>
+  <%=h @phrase %> found <b><%= @products_match %></b> time(s)!
+<%= render :partial => '/products/list', :locals => { :products => @products } %>
+
+<% end %>
+<% end %><hr>

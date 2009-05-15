@@ -1,0 +1,12 @@
+<p>
+  <b><%=  t 'companies_editnewshowindex_name' %></b><br />
+  <%= f.text_field :name %>
+</p>
+
+<p><b><%= t 'companies_editnewshowindex_companyart' %> </b><br />
+  <%= f.collection_select :companyart_id, companyarts, :id, :name %>
+</p>
+
+<p>
+  <%= f.submit button_name %>
+</p>

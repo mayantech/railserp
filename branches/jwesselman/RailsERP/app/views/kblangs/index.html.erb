@@ -1,0 +1,9 @@
+<h1><%= t 'kblang_index_headline' %></h1>
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :kblangs => @kblangs } %>
+</div>
+
+<br />
+
+<%= link_to t('kblang_editnewshowindex_new'), new_kblang_path %>

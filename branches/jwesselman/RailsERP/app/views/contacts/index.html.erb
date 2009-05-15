@@ -1,0 +1,12 @@
+<h1><%= t 'contacts_index_headline'%></h1>
+<%= render :partial => '/shared/search'%>
+
+<div id="list">
+<%= render :partial => 'list', :locals => { :contacts => @contacts } %>
+</div>
+
+
+<br />
+
+<%= link_to t('contacts_editnewshowindex_create'), new_contact_path %>
+

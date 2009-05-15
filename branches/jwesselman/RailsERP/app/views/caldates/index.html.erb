@@ -1,0 +1,11 @@
+<h1><%= t 'caldate_index_headline' %></h1>
+<%= render :partial => '/shared/search'%>
+
+<hr>
+<div id="list">
+<%= render :partial => 'list', :locals => { :caldates => @caldates, :today => @today } %>
+</div>
+
+<br />
+
+<%= link_to t('caldate_editnewshowindex_new'), new_caldate_path %>

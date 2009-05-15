@@ -1,0 +1,9 @@
+<h1><%= t 'caldate_new_headline' %></h1>
+
+<%= error_messages_for :caldate %>
+
+<% form_for(@caldate) do |f| %>
+ <%= render :partial => 'form', :locals => { :f => f, :button_name => t('caldate_editnewshowindex_create'), :datearts => @datearts, :datestatuses => @datestatuses, :dateprios => @dateprios , :contacts => @contacts } %>
+<% end %>
+
+<%= link_to t('caldate_editnewshowindex_back'), caldates_path %>

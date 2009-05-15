@@ -1,0 +1,511 @@
+# From -> http://github.com/svenfuchs/rails-i18n/tree/e5878d3c661e0b9ad364951c96f1f4f39960a2f1/rails/locale
+de:
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      short: "%e. %b"
+      long: "%e. %B %Y"
+      only_day: "%e"
+
+    day_names: [Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag]
+    abbr_day_names: [So, Mo, Di, Mi, Do, Fr, Sa]
+    month_names: [~, Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
+    abbr_month_names: [~, Jan, Feb, Mär, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov, Dez]
+    order: [ :day, :month, :year ]
+
+  time:
+    formats:
+      default: "%A, %e. %B %Y, %H:%M Uhr"
+      short: "%e. %B, %H:%M Uhr"
+      long: "%A, %e. %B %Y, %H:%M Uhr"
+      time: "%H:%M"
+
+    am: "vormittags"
+    pm: "nachmittags"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: 'eine halbe Minute'
+      less_than_x_seconds:
+        zero: 'weniger als 1 Sekunde'
+        one: 'weniger als 1 Sekunde'
+        other: 'weniger als {{count}} Sekunden'
+      x_seconds:
+        one: '1 Sekunde'
+        other: '{{count}} Sekunden'
+      less_than_x_minutes:
+        zero: 'weniger als 1 Minute'
+        one: 'weniger als eine Minute'
+        other: 'weniger als {{count}} Minuten'
+      x_minutes:
+        one: '1 Minute'
+        other: '{{count}} Minuten'
+      about_x_hours:
+        one: 'etwa 1 Stunde'
+        other: 'etwa {{count}} Stunden'
+      x_days:
+        one: '1 Tag'
+        other: '{{count}} Tage'
+      about_x_months:
+        one: 'etwa 1 Monat'
+        other: 'etwa {{count}} Monate'
+      x_months:
+        one: '1 Monat'
+        other: '{{count}} Monate'
+      about_x_years:
+        one: 'etwa 1 Jahr'
+        other: 'etwa {{count}} Jahre'
+      over_x_years:
+        one: 'mehr als 1 Jahr'
+        other: 'mehr als {{count}} Jahre'
+
+  number:
+    format:
+      precision: 2
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: '€'
+        format: '%n%u'
+        separator:
+        delimiter:
+        precision:
+    percentage:
+      format:
+        delimiter: ""
+    precision:
+      format:
+        delimiter: ""
+    human:
+      format:
+        delimiter: ""
+        precision: 1
+
+  support:
+    array:
+      sentence_connector: "und"
+      skip_last_comma: true
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one:    "Konnte dieses {{model}} Objekt nicht speichern: 1 Fehler."
+          other:  "Konnte dieses {{model}} Objekt nicht speichern: {{count}} Fehler."
+        body: "Bitte überprüfen Sie die folgenden Felder:"
+
+      messages:
+        inclusion: "ist kein gültiger Wert"
+        exclusion: "ist nicht verfügbar"
+        invalid: "ist nicht gültig"
+        confirmation: "stimmt nicht mit der Bestätigung überein"
+        accepted: "muss akzeptiert werden"
+        empty: "muss ausgefüllt werden"
+        blank: "muss ausgefüllt werden"
+        too_long: "ist zu lang (nicht mehr als {{count}} Zeichen)"
+        too_short: "ist zu kurz (nicht weniger als {{count}} Zeichen)"
+        wrong_length: "hat die falsche Länge (muss genau {{count}} Zeichen haben)"
+        taken: "ist bereits vergeben"
+        not_a_number: "ist keine Zahl"
+        greater_than: "muss größer als {{count}} sein"
+        greater_than_or_equal_to: "muss größer oder gleich {{count}} sein"
+        equal_to: "muss genau {{count}} sein"
+        less_than: "muss kleiner als {{count}} sein"
+        less_than_or_equal_to: "muss kleiner oder gleich {{count}} sein"
+        odd: "muss ungerade sein"
+        even: "muss gerade sein"
+  
+
+
+  ## YAML Template.
+  language: "Die Aktuelle Sprache ist"
+  loginwelcom: "Willkommen "
+  logofftext: "Zum Auslogen hier klicken ->"
+  logintext: "Zum Einlogen hier klicken ->"
+  registertext: "Sie haben noch keinen Login hier klicken ->"
+  startpagelink: "Startseite"
+
+  ## Navi
+  navinews: "Neues"
+  navidashblogs: "Neue Nachrichten"
+
+  navisales: "Vertrieb"
+  navicontacts: "Kontakte"
+  navicompanies: "Firmen"
+  naviadresses: "Firmen Adressen"
+  navicompanyarts: "Firmen Kategorien"
+
+  naviproduction: "Produktion"
+  naviproducts: "Produkte"
+  naviparts: "Teile"
+
+  navisupport: "Unterstützung"
+  navikbcomments: "WissensDB Kommentare"
+  navikbarticles: "WissensDB Einträge"
+
+  navidocuments: "Dokumente"
+  navifolders: "Ordner"
+  navifiles: "Dateien"
+
+  naviorganisation: "Organisation"
+  navicaldates: "Kalendar"
+  navidatetasks: "Kalendar Aufgaben"
+
+  naviadmin: "Administration"
+  navidateprios: "Kalendar Prioritäten"
+  navidatestatuses: "Kalendar Zustände"
+  navidatearts: "Kalendar Kategorien"
+  navikbcats: "WissensDB Kategorien"
+  navikblangs: "WissensDB Sprachen"
+
+  ## Controller
+  account_new_login: "Benutzer"
+  account_new_email: "E-Mail Adresse"
+  account_new_password: "Passwort"
+  account_new_confirmpassword: "Wiederholen Sie das Passwort"
+  account_new_sigup: "Benutzer Erstellen"
+
+  sessions_new_headline: "Einloggen bei RailsERP"
+  sessions_new_user: "Benutzername"
+  sessions_new_password: "Password"
+  sessions_new_rememberme: "Merken?"
+  sessions_new_login: "Einloggen"
+
+  global_search: "Suchen"
+  global_search_go: "Suche starten"
+
+  adress_new_headline: "Adresse erstellen"
+  adress_edit_headline: "Adresse bearbeiten"
+  adress_index_headline: "Adressen auflisten"
+
+  adress_editnewshowindex_street: "Straße"
+  adress_editnewshowindex_streetnr: "Nr."
+  adress_editnewshowindex_city: "City / Stadt"
+  adress_editnewshowindex_region: "Zustand / Provinz / Gebiet"
+  adress_editnewshowindex_country: "Land"
+  adress_editnewshowindex_postcode: "Postfach"
+  adress_editnewshowindex_company: "Firma"
+
+  adress_editnewshowindex_update: "Aktualisieren"
+  adress_editnewshowindex_show: "Anzeigen"
+  adress_editnewshowindex_back: "Zurück"
+  adress_editnewshowindex_create: "Erstellen"
+  adress_editnewshowindex_edit: "Bearbeiten"
+  adress_editnewshowindex_delete: "Löschen"
+  adress_editnewshowindex_new: "Neue Adresse"
+
+  caldate_new_headline: "Termin erstellen"
+  caldate_edit_headline: "Termin bearbeiten"
+  caldate_index_headline: "Termine auflisten"
+
+  caldate_editnewshowindex_startdate: "Termin start"
+  caldate_editnewshowindex_enddate: "Ende des Termins"
+  caldate_editnewshowindex_info: "Information"
+  caldate_editnewshowindex_fullday: "Ganzer Tag?"
+  caldate_editnewshowindex_account: "Benutzer"
+  caldate_editnewshowindex_contact: "Kontakt"
+  caldate_editnewshowindex_dateprio: "Prio"
+  caldate_editnewshowindex_datestatus: "Status"
+  caldate_editnewshowindex_dateart: "Kategorie"
+  caldate_editnewshowindex_reminder: "Erinderung"
+
+  caldate_editnewshowindex_update: "Aktualisieren"
+  caldate_editnewshowindex_show: "Anzeigen"
+  caldate_editnewshowindex_back: "Zurück"
+  caldate_editnewshowindex_create: "Erstellen"
+  caldate_editnewshowindex_edit: "Bearbeiten"
+  caldate_editnewshowindex_delete: "Löschen"
+  caldate_editnewshowindex_new: "Neue Termin"
+
+  companies_new_headline: "Firma erstellen"
+  companies_edit_headline: "Firma bearbeiten"
+  companies_index_headline: "Firmen auflisten"
+  companies_show_locations_headline: "Standorte"
+
+  companies_editnewshowindex_name: "Firmenname"
+  companies_editnewshowindex_companyart: "Kategorie"
+
+  companies_editnewshowindex_update: "Aktualisieren"
+  companies_editnewshowindex_show: "Anzeigen"
+  companies_editnewshowindex_back: "Zurück"
+  companies_editnewshowindex_create: "Erstellen"
+  companies_editnewshowindex_edit: "Bearbeiten"
+  companies_editnewshowindex_delete: "Löschen"
+  companies_editnewshowindex_new: "Neue Firma"
+
+  companiesarts_new_headline: "Firmen Kategorie erstellen"
+  companiesarts_edit_headline: "Firmen Kategorie bearbeiten"
+  companiesarts_index_headline: "Firmen Kategorien auflisten"
+
+  companiesarts_editnewshowindex_name: "Firmen Kategorie"
+
+  companiesarts_editnewshowindex_update: "Aktualisieren"
+  companiesarts_editnewshowindex_show: "Anzeigen"
+  companiesarts_editnewshowindex_back: "Zurück"
+  companiesarts_editnewshowindex_create: "Erstellen"
+  companiesarts_editnewshowindex_edit: "Bearbeiten"
+  companiesarts_editnewshowindex_delete: "Löschen"
+  companiesarts_editnewshowindex_new: "Neue Firmen Kategorie"
+
+  contacts_new_headline: "Kontakt erstellen"
+  contacts_edit_headline: "Kontakt bearbeiten"
+  contacts_index_headline: "Kontakte auflisten"
+
+  contacts_editnewshowindex_name: "Vorname"
+  contacts_editnewshowindex_lastname: "Nachname"
+  contacts_editnewshowindex_position: "Position"
+  contacts_editnewshowindex_tel: "Telefon"
+  contacts_editnewshowindex_mobile: "Handy"
+  contacts_editnewshowindex_email: "E-Mail Adresse"
+  contacts_editnewshowindex_info: "Beschreibung"
+  contacts_editnewshowindex_birthday: "Geburstag"
+  contacts_editnewshowindex_company: "Firma"
+  contacts_editnewshowindex_write: "Brief schreiben"
+
+  contacts_editnewshowindex_update: "Aktualisieren"
+  contacts_editnewshowindex_show: "Anzeigen"
+  contacts_editnewshowindex_back: "Zurück"
+  contacts_editnewshowindex_create: "Erstellen"
+  contacts_editnewshowindex_edit: "Bearbeiten"
+  contacts_editnewshowindex_delete: "Löschen"
+  contacts_editnewshowindex_new: "Neue Kontakt anlegen"
+
+  dashblogs_new_headline: "Nachricht erstellen"
+  dashblogs_edit_headline: "Nachricht bearbeiten"
+  dashblogs_index_headline: "Nachrichten auflisten"
+
+  dashblogs_editnewshowindex_title: "Überschrieft"
+  dashblogs_editnewshowindex_blogtext: "Text"
+  dashblogs_editnewshowindex_published: "Veröffentlicht?"
+
+  dashblogs_editnewshowindex_update: "Aktualisieren"
+  dashblogs_editnewshowindex_show: "Anzeigen"
+  dashblogs_editnewshowindex_back: "Zurück"
+  dashblogs_editnewshowindex_create: "Erstellen"
+  dashblogs_editnewshowindex_edit: "Bearbeiten"
+  dashblogs_editnewshowindex_delete: "Löschen"
+  dashblogs_editnewshowindex_new: "Neue Nachricht anlegen"
+
+  dateart_new_headline: "Kalendar Kategorie erstellen"
+  dateart_edit_headline: "Kalendar Kategorie bearbeiten"
+  dateart_index_headline: "Kalendar Kategorie auflisten"
+
+  dateart_editnewshowindex_art: "Kalendar Kategorie"
+
+  dateart_editnewshowindex_update: "Aktualisieren"
+  dateart_editnewshowindex_show: "Anzeigen"
+  dateart_editnewshowindex_back: "Zurück"
+  dateart_editnewshowindex_create: "Erstellen"
+  dateart_editnewshowindex_edit: "Bearbeiten"
+  dateart_editnewshowindex_delete: "Löschen"
+  dateart_editnewshowindex_new: "Neue Kalendar Kategorie anlegen"
+
+  dateprio_new_headline: "Kalendar Prio erstellen"
+  dateprio_edit_headline: "Kalendar Prio bearbeiten"
+  dateprio_index_headline: "Kalendar Prio auflisten"
+
+  dateprio_editnewshowindex_prio: "Kalendar Prio"
+
+  dateprio_editnewshowindex_update: "Aktualisieren"
+  dateprio_editnewshowindex_show: "Anzeigen"
+  dateprio_editnewshowindex_back: "Zurück"
+  dateprio_editnewshowindex_create: "Erstellen"
+  dateprio_editnewshowindex_edit: "Bearbeiten"
+  dateprio_editnewshowindex_delete: "Löschen"
+  dateprio_editnewshowindex_new: "Neue Kalendar Prio anlegen"
+
+  datestatus_new_headline: "Kalendar Status erstellen"
+  datestatus_edit_headline: "Kalendar Status bearbeiten"
+  datestatus_index_headline: "Kalendar Status auflisten"
+
+  datestatus_editnewshowindex_status: "Kalendar Status"
+
+  datestatus_editnewshowindex_update: "Aktualisieren"
+  datestatus_editnewshowindex_show: "Anzeigen"
+  datestatus_editnewshowindex_back: "Zurück"
+  datestatus_editnewshowindex_create: "Erstellen"
+  datestatus_editnewshowindex_edit: "Bearbeiten"
+  datestatus_editnewshowindex_delete: "Löschen"
+  datestatus_editnewshowindex_new: "Neue Kalendar Status anlegen"
+
+  datetasks_new_headline: "Kalendar Aufgabe erstellen"
+  datetasks_edit_headline: "Kalendar Aufgabe bearbeiten"
+  datetasks_index_headline: "Kalendar Aufgabe auflisten"
+
+  datetasks_editnewshowindex_taskname: "Aufgaben Name"
+  datetasks_editnewshowindex_info: "Beschreibung"
+  datetasks_editnewshowindex_progress: "Fortschritt"
+  datetasks_editnewshowindex_dateprio: "Priorität"
+  datetasks_editnewshowindex_datestatus: "Status"
+  datetasks_editnewshowindex_date: "Gehört zu Datum?"
+
+  datetasks_editnewshowindex_update: "Aktualisieren"
+  datetasks_editnewshowindex_show: "Anzeigen"
+  datetasks_editnewshowindex_back: "Zurück"
+  datetasks_editnewshowindex_create: "Erstellen"
+  datetasks_editnewshowindex_edit: "Bearbeiten"
+  datetasks_editnewshowindex_delete: "Löschen"
+  datetasks_editnewshowindex_new: "Neue Kalendar Aufgabe anlegen"
+
+  filedatas_new_headline: "Datei hochladen"
+  filedatas_edit_headline: "Datei ändern"
+  filedatas_index_headline: "Dateien auflisten"
+
+  filedatas_editnewshowindex_filename: "Dateiname"
+  filedatas_editnewshowindex_info: "Beschreibung"
+  filedatas_editnewshowindex_size: "Größe(MB)"
+  filedatas_editnewshowindex_contact: "Kontact"
+  filedatas_editnewshowindex_folder: "Ordner"
+
+  filedatas_editnewshowindex_update: "Ersetzten"
+  filedatas_editnewshowindex_show: "Anzeigen"
+  filedatas_editnewshowindex_back: "Zurück"
+  filedatas_editnewshowindex_create: "Hochladen"
+  filedatas_editnewshowindex_edit: "Erstetzen"
+  filedatas_editnewshowindex_delete: "Löschen"
+  filedatas_editnewshowindex_new: "Neue Datei hochladen"
+
+  folders_new_headline: "Ordner erstellen"
+  folders_edit_headline: "Ordner ändern"
+  folders_index_headline: "Ordner auflisten"
+
+  folders_editnewshowindex_fodlername: "Ordnername"
+  folders_editnewshowindex_info: "Beschreibung"
+
+  folders_editnewshowindex_update: "Aktualisieren"
+  folders_editnewshowindex_show: "Inhalt Anzeigen"
+  folders_editnewshowindex_back: "Zurück"
+  folders_editnewshowindex_create: "Anlegen"
+  folders_editnewshowindex_edit: "Ändern"
+  folders_editnewshowindex_delete: "Löschen"
+  folders_editnewshowindex_new: "Neue Ordner erstellen"
+
+  kbarticles_new_headline: "WD-Artikel erstellen"
+  kbarticles_edit_headline: "WD-Artikel ändern"
+  kbarticles_index_headline: "WD-Artikel auflisten"
+
+  kbarticles_editnewshowindex_symptoms: "Symtome"
+  kbarticles_editnewshowindex_cause: "Grund"
+  kbarticles_editnewshowindex_solution: "Lösung"
+  kbarticles_editnewshowindex_kbcat: "Kategorie"
+  kbarticles_editnewshowindex_kblang: "Sprache"
+
+  kbarticles_editnewshowindex_update: "Aktualisieren"
+  kbarticles_editnewshowindex_show: "Inhalt Anzeigen"
+  kbarticles_editnewshowindex_back: "Zurück"
+  kbarticles_editnewshowindex_create: "Anlegen"
+  kbarticles_editnewshowindex_edit: "Ändern"
+  kbarticles_editnewshowindex_delete: "Löschen"
+  kbarticles_editnewshowindex_new: "Neue WD-Artikel erstellen"
+
+  kbcats_new_headline: "WD-Kategorie erstellen"
+  kbcats_edit_headline: "WD-Kategorie ändern"
+  kbcats_index_headline: "WD-Kategorien auflisten"
+
+  kbcats_editnewshowindex_name: "Kategorie"
+
+  kbcats_editnewshowindex_update: "Aktualisieren"
+  kbcats_editnewshowindex_show: "Inhalt Anzeigen"
+  kbcats_editnewshowindex_back: "Zurück"
+  kbcats_editnewshowindex_create: "Anlegen"
+  kbcats_editnewshowindex_edit: "Ändern"
+  kbcats_editnewshowindex_delete: "Löschen"
+  kbcats_editnewshowindex_new: "Neue WD-Kategorie erstellen"
+
+  kbcomments_new_headline: "WD-Kommentar erstellen"
+  kbcomments_edit_headline: "WD-Kommentar ändern"
+  kbcomments_index_headline: "WD-Kommentar auflisten"
+
+  kbcomments_editnewshowindex_comment: "Kommentar"
+  kbcomments_editnewshowindex_artikel: "WD-Artikel"
+
+  kbcomments_editnewshowindex_update: "Aktualisieren"
+  kbcomments_editnewshowindex_show: "Inhalt Anzeigen"
+  kbcomments_editnewshowindex_back: "Zurück"
+  kbcomments_editnewshowindex_create: "Anlegen"
+  kbcomments_editnewshowindex_edit: "Ändern"
+  kbcomments_editnewshowindex_delete: "Löschen"
+  kbcomments_editnewshowindex_new: "Neue WD-Kommentar erstellen"
+
+  kblang_new_headline: "WD-Sprache erstellen"
+  kblang_edit_headline: "WD-Sprache ändern"
+  kblang_index_headline: "WD-Sprache auflisten"
+
+  kblang_editnewshowindex_language: "Sprache"
+
+  kblang_editnewshowindex_update: "Aktualisieren"
+  kblang_editnewshowindex_show: "Inhalt Anzeigen"
+  kblang_editnewshowindex_back: "Zurück"
+  kblang_editnewshowindex_create: "Anlegen"
+  kblang_editnewshowindex_edit: "Ändern"
+  kblang_editnewshowindex_delete: "Löschen"
+  kblang_editnewshowindex_new: "Neue Sprache erstellen"
+
+  parts_new_headline: "Stück erstellen"
+  parts_edit_headline: "Stück ändern"
+  parts_index_headline: "Stücklisten"
+
+  parts_editnewshowindex_name: "Stückbezeichnung"
+  parts_editnewshowindex_price: "Kosten"
+  parts_editnewshowindex_info: "Beschreibung"
+  parts_editnewshowindex_image: "Bild"
+  parts_editnewshowindex_imagename: "Bildname"
+  parts_editnewshowindex_imageext: "Type"
+
+  parts_editnewshowindex_update: "Aktualisieren"
+  parts_editnewshowindex_show: "Inhalt Anzeigen"
+  parts_editnewshowindex_back: "Zurück"
+  parts_editnewshowindex_create: "Anlegen"
+  parts_editnewshowindex_edit: "Ändern"
+  parts_editnewshowindex_delete: "Löschen"
+  parts_editnewshowindex_new: "Neue Stück anlegen"
+
+  products_new_headline: "Produkt erstellen"
+  products_edit_headline: "Produkt ändern"
+  products_index_headline: "Produkt auflisten"
+
+  products_editnewshowindex_name: "Produktbezeichnung"
+  products_editnewshowindex_price: "Kosten"
+  products_editnewshowindex_info: "Beschreibung"
+  products_editnewshowindex_image: "Bild"
+  products_editnewshowindex_imageext: "Type"
+
+  products_editnewshowindex_update: "Aktualisieren"
+  products_editnewshowindex_show: "Inhalt Anzeigen"
+  products_editnewshowindex_back: "Zurück"
+  products_editnewshowindex_create: "Anlegen"
+  products_editnewshowindex_edit: "Ändern"
+  products_editnewshowindex_delete: "Löschen"
+  products_editnewshowindex_new: "Neues Produkt anlegen"
+  products_editnewshowindex_add: "Stück zum Produkt hinzufügen"
+
+  naviaccounts: "Benutzer"
+  naviroles: "Gruppen"
+  account_index_headline: "Benutzer auflisten"
+  account_new_isadmin: "Admin Rechte?"
+  account_new_role: "Neue Gruppe"
+  account_index_delete: "Benutzer löschen"
+  account_index_new: "Neuer Benutzer erstellen"
+  errors_acldenied_message: "Leider haben Sie nicht die Rechte für diese Funktion!"
+  errors_aclerror_message: "Fehler in der Rechte verwaltung"
+
+  role_new_headline: "Gruppe erstellen"
+  role_edit_headline: "Groupen Rechte ändern"
+  role_index_headline: "Alle Gruppen auflisten"
+
+  role_editnewshowindex_rolename: "Gruppenname"
+  role_editnewshowindex_controller: "Funktion"
+  role_editnewshowindex_rightread: "Lesen"
+  role_editnewshowindex_rightcreate: "Erstellen"
+  role_editnewshowindex_rightupdate: "Ändern"
+  role_editnewshowindex_rightdelete: "Löschen"
+
+  role_editnewshowindex_update: "Ändern"
+  role_editnewshowindex_show: "Anzeigen"
+  role_editnewshowindex_back: "Zurück"
+  role_editnewshowindex_create: "Erstellen"
+  role_editnewshowindex_edit: "Ändern"
+  role_editnewshowindex_delete: "Löschen"
+  role_editnewshowindex_new: "Neue Gruppe erstellen"
+    

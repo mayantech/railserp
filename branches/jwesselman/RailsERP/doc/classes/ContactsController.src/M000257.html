@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>writeletter (ContactsController)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File app/controllers/contacts_controller.rb, line 115</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">writeletter</span>
+    <span class="ruby-ivar">@contact</span> = <span class="ruby-constant">Contact</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:id</span>])
+    <span class="ruby-comment cmt">#result= `cp /Users/marcel/Desktop/RailsERP/public/vorlage.odt /Users/marcel/Desktop/RailsERP/public/Out.odt`</span>
+    <span class="ruby-comment cmt">#Zip::ZipFile.open(&quot;/Users/marcel/Desktop/RailsERP/public/Out.odt&quot;) {</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-constant">APP_CONFIG</span>[<span class="ruby-value str">'writetemplate'</span>],<span class="ruby-constant">APP_CONFIG</span>[<span class="ruby-value str">'writetemplateout'</span>])
+    <span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">ZipFile</span>.<span class="ruby-identifier">open</span>(<span class="ruby-constant">APP_CONFIG</span>[<span class="ruby-value str">'writetemplateout'</span>]) {
+      <span class="ruby-operator">|</span><span class="ruby-identifier">zipfile</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">contect</span>=<span class="ruby-identifier">zipfile</span>.<span class="ruby-identifier">file</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value str">&quot;content.xml&quot;</span>)
+      <span class="ruby-identifier">new</span>=<span class="ruby-identifier">contect</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;%NAME%&quot;</span>,<span class="ruby-ivar">@contact</span>.<span class="ruby-identifier">name</span>)
+      <span class="ruby-identifier">new</span>=<span class="ruby-identifier">new</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;%LASTNAME%&quot;</span>,<span class="ruby-ivar">@contact</span>.<span class="ruby-identifier">lastname</span>)
+      <span class="ruby-identifier">new</span>=<span class="ruby-identifier">new</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;%EMAIL%&quot;</span>,<span class="ruby-ivar">@contact</span>.<span class="ruby-identifier">email</span>)
+      <span class="ruby-identifier">new</span>=<span class="ruby-identifier">new</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;%TEL%&quot;</span>,<span class="ruby-ivar">@contact</span>.<span class="ruby-identifier">tel</span>)
+      <span class="ruby-identifier">new</span>=<span class="ruby-identifier">new</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;%MOBILE%&quot;</span>,<span class="ruby-ivar">@contact</span>.<span class="ruby-identifier">mobile</span>)
+      <span class="ruby-identifier">new</span>=<span class="ruby-identifier">new</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;%COMPANY%&quot;</span>,<span class="ruby-ivar">@contact</span>.<span class="ruby-identifier">company</span>.<span class="ruby-identifier">name</span>)
+      <span class="ruby-identifier">new</span>=<span class="ruby-identifier">new</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;%STREET%&quot;</span>,<span class="ruby-ivar">@contact</span>.<span class="ruby-identifier">company</span>.<span class="ruby-identifier">adresses</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">street</span>)
+      <span class="ruby-identifier">new</span>=<span class="ruby-identifier">new</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;%STREETNR%&quot;</span>,<span class="ruby-ivar">@contact</span>.<span class="ruby-identifier">company</span>.<span class="ruby-identifier">adresses</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">streetnr</span>.<span class="ruby-identifier">to_s</span>)
+      <span class="ruby-identifier">new</span>=<span class="ruby-identifier">new</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;%ZIP%&quot;</span>,<span class="ruby-ivar">@contact</span>.<span class="ruby-identifier">company</span>.<span class="ruby-identifier">adresses</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">zip</span>.<span class="ruby-identifier">to_s</span>)
+      <span class="ruby-identifier">new</span>=<span class="ruby-identifier">new</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;%AREA%&quot;</span>,<span class="ruby-ivar">@contact</span>.<span class="ruby-identifier">company</span>.<span class="ruby-identifier">adresses</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">area</span>)
+      <span class="ruby-identifier">new</span>=<span class="ruby-identifier">new</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;%LAND%&quot;</span>,<span class="ruby-ivar">@contact</span>.<span class="ruby-identifier">company</span>.<span class="ruby-identifier">adresses</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">land</span>)
+      <span class="ruby-identifier">zipfile</span>.<span class="ruby-identifier">file</span>.<span class="ruby-identifier">open</span>(<span class="ruby-value str">&quot;content.xml&quot;</span>, <span class="ruby-value str">&quot;w&quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">new</span> }
+    }
+  
+    <span class="ruby-identifier">send_file</span> <span class="ruby-constant">APP_CONFIG</span>[<span class="ruby-value str">'writetemplateout'</span>]
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

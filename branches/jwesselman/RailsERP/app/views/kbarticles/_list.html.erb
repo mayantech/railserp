@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th>KB-ID</th>
+    <th><%= t 'kbarticles_editnewshowindex_symptoms' %></th>
+    <th><%= t 'kbarticles_editnewshowindex_cause' %></th>
+    <th><%= t 'kbarticles_editnewshowindex_solution' %></th>
+    <th><%= t 'kbarticles_editnewshowindex_kbcat' %></th>
+    <th><%= t 'kbarticles_editnewshowindex_kblang' %></th>
+  </tr>
+
+<% for kbarticle in kbarticles %>
+  <tr>
+    <td><%=h kbarticle.id %></td>
+    <td><%=h kbarticle.symptoms %></td>
+    <td><%=h kbarticle.cause %></td>
+    <td><%=h kbarticle.solution %></td>
+    <td><%=h kbarticle.kbcat.name %></td>
+    <td><%=h kbarticle.kblang.language %></td>
+    <td><%= link_to t('kbarticles_editnewshowindex_show'), kbarticle %></td>
+    <td><%= link_to t('kbarticles_editnewshowindex_edit'), edit_kbarticle_path(kbarticle) %></td>
+    <td><%= link_to t('kbarticles_editnewshowindex_delete'), kbarticle, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,9 @@
+<h1><%= t 'folders_index_headline' %></h1>
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :folders => @folders } %>
+</div>
+
+<br />
+
+<%= link_to t('folders_editnewshowindex_new'), new_folder_path %>

@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  startdate: 2009-01-20 19:50:05
+  enddate: 2009-01-20 19:50:05
+  info: MyText
+  fullday: 
+  account_id: 1
+  contact_id: 1
+  dateprio_id: 1
+  datestatus_id: 1
+  dateart_id: 1
+  reminder: 2009-01-20 19:50:05
+
+two:
+  startdate: 2009-01-20 19:50:05
+  enddate: 2009-01-20 19:50:05
+  info: MyText
+  fullday: 
+  account_id: 1
+  contact_id: 1
+  dateprio_id: 1
+  datestatus_id: 1
+  dateart_id: 1
+  reminder: 2009-01-20 19:50:05

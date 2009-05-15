@@ -1,0 +1,9 @@
+<h1><%= t 'dashblogs_new_headline'%></h1>
+
+<%= error_messages_for :dashblog %>
+
+<% form_for(@dashblog) do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f, :button_name => t('dashblogs_editnewshowindex_create') } %>
+<% end %>
+
+<%= link_to t('dashblogs_editnewshowindex_back'), dashblogs_path %>

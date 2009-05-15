@@ -1,0 +1,9 @@
+<h1><%= t 'kbcomments_index_headline' %></h1>
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :kbcomments => @kbcomments } %>
+</div>
+
+<br />
+
+<%= link_to t('kbcomments_editnewshowindex_new'), new_kbcomment_path %>

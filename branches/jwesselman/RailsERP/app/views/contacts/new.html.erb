@@ -1,0 +1,9 @@
+<h1><%= t 'contacts_new_headline'%></h1>
+
+<%= error_messages_for :contact %>
+
+<% form_for(@contact) do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f, :button_name => t('contacts_editnewshowindex_create'), :companies => @companies } %>
+<% end %>
+
+<%= link_to t('contacts_editnewshowindex_back'), contacts_path %>

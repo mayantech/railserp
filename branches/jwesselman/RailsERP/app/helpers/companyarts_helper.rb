@@ -1,0 +1,2 @@
+module CompanyartsHelper
+end

@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th><%= t 'dateprio_editnewshowindex_prio' %></th>
+  </tr>
+
+<% for dateprio in dateprios %>
+  <tr>
+    <td><%=h dateprio.prio %></td>
+    <td><%= link_to t('dateprio_editnewshowindex_show'), dateprio %></td>
+    <td><%= link_to t('dateprio_editnewshowindex_edit'), edit_dateprio_path(dateprio) %></td>
+    <td><%= link_to t('dateprio_editnewshowindex_delete'), dateprio, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

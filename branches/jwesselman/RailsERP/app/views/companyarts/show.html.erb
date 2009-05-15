@@ -1,0 +1,22 @@
+<p>
+  <b><%= t 'companiesarts_editnewshowindex_name'%></b>
+  <%=h @companyart.name %>
+</p>
+
+<b><u><p>Companys <%= @companyart.name  %> : </p></u></b>
+<br>
+<table>
+<% for company in @companyart.companies %>
+  <tr>
+    <td><%=h company.name %></td>
+    
+    <td><%= link_to t('companies_editnewshowindex_show'), company %></td>
+    <td><%= link_to t('companies_editnewshowindex_edit'), edit_company_path(company) %></td>
+    <td><%= link_to t('companies_editnewshowindex_delete'), company, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br>
+  <br>
+<%= link_to t('companiesarts_editnewshowindex_edit'), edit_companyart_path(@companyart) %> |
+<%= link_to t('companiesarts_editnewshowindex_back'), companyarts_path %>

@@ -1,0 +1,9 @@
+<h1><%= t 'dateprio_index_headline' %></h1>
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :dateprios => @dateprios } %>
+</div>
+
+<br />
+
+<%= link_to t('dateprio_editnewshowindex_new'), new_dateprio_path %>

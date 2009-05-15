@@ -1,0 +1,506 @@
+in:
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      short: "%e. %b"
+      long: "%e. %B %Y"
+      only_day: "%e"
+
+    day_names: [Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag]
+    abbr_day_names: [So, Mo, Di, Mi, Do, Fr, Sa]
+    month_names: [~, Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
+    abbr_month_names: [~, Jan, Feb, Mär, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov, Dez]
+    order: [ :day, :month, :year ]
+
+  time:
+    formats:
+      default: "%A, %e. %B %Y, %H:%M Uhr"
+      short: "%e. %B, %H:%M Uhr"
+      long: "%A, %e. %B %Y, %H:%M Uhr"
+      time: "%H:%M"
+
+    am: "vormittags"
+    pm: "nachmittags"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: 'eine halbe Minute'
+      less_than_x_seconds:
+        zero: 'weniger als 1 Sekunde'
+        one: 'weniger als 1 Sekunde'
+        other: 'weniger als {{count}} Sekunden'
+      x_seconds:
+        one: '1 Sekunde'
+        other: '{{count}} Sekunden'
+      less_than_x_minutes:
+        zero: 'weniger als 1 Minute'
+        one: 'weniger als eine Minute'
+        other: 'weniger als {{count}} Minuten'
+      x_minutes:
+        one: '1 Minute'
+        other: '{{count}} Minuten'
+      about_x_hours:
+        one: 'etwa 1 Stunde'
+        other: 'etwa {{count}} Stunden'
+      x_days:
+        one: '1 Tag'
+        other: '{{count}} Tage'
+      about_x_months:
+        one: 'etwa 1 Monat'
+        other: 'etwa {{count}} Monate'
+      x_months:
+        one: '1 Monat'
+        other: '{{count}} Monate'
+      about_x_years:
+        one: 'etwa 1 Jahr'
+        other: 'etwa {{count}} Jahre'
+      over_x_years:
+        one: 'mehr als 1 Jahr'
+        other: 'mehr als {{count}} Jahre'
+
+  number:
+    format:
+      precision: 2
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: '€'
+        format: '%n%u'
+        separator:
+        delimiter:
+        precision:
+    percentage:
+      format:
+        delimiter: ""
+    precision:
+      format:
+        delimiter: ""
+    human:
+      format:
+        delimiter: ""
+        precision: 1
+
+  support:
+    array:
+      sentence_connector: "und"
+      skip_last_comma: true
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one:    "Konnte dieses {{model}} Objekt nicht speichern: 1 Fehler."
+          other:  "Konnte dieses {{model}} Objekt nicht speichern: {{count}} Fehler."
+        body: "Bitte überprüfen Sie die folgenden Felder:"
+
+      messages:
+        inclusion: "ist kein gültiger Wert"
+        exclusion: "ist nicht verfügbar"
+        invalid: "ist nicht gültig"
+        confirmation: "stimmt nicht mit der Bestätigung überein"
+        accepted: "muss akzeptiert werden"
+        empty: "muss ausgefüllt werden"
+        blank: "muss ausgefüllt werden"
+        too_long: "ist zu lang (nicht mehr als {{count}} Zeichen)"
+        too_short: "ist zu kurz (nicht weniger als {{count}} Zeichen)"
+        wrong_length: "hat die falsche Länge (muss genau {{count}} Zeichen haben)"
+        taken: "ist bereits vergeben"
+        not_a_number: "ist keine Zahl"
+        greater_than: "muss größer als {{count}} sein"
+        greater_than_or_equal_to: "muss größer oder gleich {{count}} sein"
+        equal_to: "muss genau {{count}} sein"
+        less_than: "muss kleiner als {{count}} sein"
+        less_than_or_equal_to: "muss kleiner oder gleich {{count}} sein"
+        odd: "muss ungerade sein"
+        even: "muss gerade sein"
+
+  # # YAML खाका.
+  language: "वास्तविक भाषा 'है "
+  loginwelcom: "स्वागत"
+  logofftext: "Logoff करने के लिए यहाँ क्लिक करें ->"
+  logintext: "प्रवेश करने के लिए यहाँ क्लिक करें ->"
+  registertext: "आप एक लॉगिन कृपया यहाँ क्लिक करें -> नहीं है "
+  startpagelink: "होम"
+
+  # # नवी
+  navinews: "समाचार"
+  navidashblogs: "समाचार ब्लॉग"
+
+  navisales: "बिक्री"
+  navicontacts: "संपर्क"
+  navicompanies: "कंपनियों"
+  naviadresses: "कंपनी Adresses"
+  navicompanyarts: "कंपनी श्रेणियाँ"
+
+  naviproduction: "उत्पादन"
+  naviproducts: "उत्पाद"
+  naviparts: "हिस्से"
+
+  navisupport: "समर्थन"
+  navikbcomments: "KB टिप्पणियाँ"
+  navikbarticles: "KB आलेख"
+
+  navidocuments: "दस्तावेज़"
+  navifolders: "फ़ोल्डर"
+  navifiles: "फ़ाइलें"
+
+  naviorganisation: "संगठन"
+  navicaldates: "कैलेंडर"
+  navidatetasks: "कैलेंडर टास्क"
+
+  naviadmin: "प्रशासन"
+  navidateprios: "कैलेंडर Prios"
+  navidatestatuses: "कैलेंडर स्तर"
+  navidatearts: "कैलेंडर श्रेणियाँ"
+  navikbcats: "KB श्रेणियाँ"
+  navikblangs: "KB भाषा"
+
+  # # नियंत्रक
+  account_new_login: "यूजर"
+  account_new_email: "अपने ईमेल पते की!"
+  account_new_password: "पासवर्ड"
+  account_new_confirmpassword: " पासवर्ड की पुष्टि करें "
+  account_new_sigup: " प्रयोक्ता बनाएँ"
+
+  sessions_new_headline: "लॉगिन RailsERP करने के लिए"
+  sessions_new_user: "उपयोगकर्ता नाम"
+  sessions_new_password: "पासवर्ड"
+  sessions_new_rememberme: "मैं Remmember?"
+  sessions_new_login: "लॉगिन"
+
+  global_search: "खोज"
+  global_search_go: " खोज जाओ"
+  adress_new_headline: "नई पता"
+  adress_edit_headline: " पता संपादित करें"
+  adress_index_headline: "सूची पता"
+
+  adress_editnewshowindex_street: "स्ट्रीट"
+  adress_editnewshowindex_streetnr: "स्ट्रीट nr"
+  adress_editnewshowindex_city: "Kota"
+  adress_editnewshowindex_region: "Menyatakan / Propinsi / Wilayah"
+  adress_editnewshowindex_country: "Negara"
+  adress_editnewshowindex_postcode: "पिन कोड"
+  adress_editnewshowindex_company: "कंपनी"
+
+  adress_editnewshowindex_update: "अद्यतन"
+  adress_editnewshowindex_show: "दिखाना"
+  adress_editnewshowindex_back: "पिछला"
+  adress_editnewshowindex_create: " बनाएँ "
+  adress_editnewshowindex_edit: " का संपादन करें "
+  adress_editnewshowindex_delete: " हटाएँ "
+  adress_editnewshowindex_new: "नई पता"
+
+  caldate_new_headline: " दिनांक बनाएँ "
+  caldate_edit_headline: " दिनांक संपादित करें"
+  caldate_index_headline: "सूची दिनांक"
+
+  caldate_editnewshowindex_startdate: " दिनांक शुरू "
+  caldate_editnewshowindex_enddate: " तिथि समाप्ति "
+  caldate_editnewshowindex_info: "सूचना"
+  caldate_editnewshowindex_fullday: "Fullday?"
+  caldate_editnewshowindex_account: "खाता"
+  caldate_editnewshowindex_contact: "सम्पर्क"
+  caldate_editnewshowindex_dateprio: "Prio"
+  caldate_editnewshowindex_datestatus: "स्तर"
+  caldate_editnewshowindex_dateart: "कला"
+  caldate_editnewshowindex_reminder: "अनुस्मारक"
+
+  caldate_editnewshowindex_update: "अद्यतन"
+  caldate_editnewshowindex_show: "दिखाना"
+  caldate_editnewshowindex_back: "पिछला"
+  caldate_editnewshowindex_create: " बनाएँ "
+  caldate_editnewshowindex_edit: " का संपादन करें "
+  caldate_editnewshowindex_delete: " हटाएँ "
+  caldate_editnewshowindex_new: "नई दिनांक"
+
+  companies_new_headline: " कंपनी बनाएँ "
+  companies_edit_headline: " कंपनी का संपादन करें "
+  companies_index_headline: "सूची कंपनियों"
+  companies_show_locations_headline: "Lokasi"
+
+  companies_editnewshowindex_name: "कंपनी का नाम"
+  companies_editnewshowindex_companyart: "श्रेणी"
+
+  companies_editnewshowindex_update: "अद्यतन"
+  companies_editnewshowindex_show: "दिखाना"
+  companies_editnewshowindex_back: "पिछला"
+  companies_editnewshowindex_create: " बनाएँ "
+  companies_editnewshowindex_edit: " का संपादन करें "
+  companies_editnewshowindex_delete: " हटाएँ "
+  companies_editnewshowindex_new: " कंपनी बनाएँ "
+
+  companiesarts_new_headline: " कंपनी श्रेणी बनाएँ "
+  companiesarts_edit_headline: " कंपनी श्रेणी संपादित करें "
+  companiesarts_index_headline: "सूची कंपनी श्रेणियाँ"
+
+  companiesarts_editnewshowindex_name: "कंपनी श्रेणी"
+
+  companiesarts_editnewshowindex_update: "अद्यतन"
+  companiesarts_editnewshowindex_show: "दिखाना"
+  companiesarts_editnewshowindex_back: "पिछला"
+  companiesarts_editnewshowindex_create: " बनाएँ "
+  companiesarts_editnewshowindex_edit: " का संपादन करें "
+  companiesarts_editnewshowindex_delete: " हटाएँ "
+  companiesarts_editnewshowindex_new: " नई कंपनी श्रेणी बनाएँ "
+
+  contacts_new_headline: " संपर्क बनाएँ "
+  contacts_edit_headline: " संपर्क संपादित करें "
+  contacts_index_headline: "सूची संपर्क"
+
+  contacts_editnewshowindex_name: "Fristname"
+  contacts_editnewshowindex_lastname: "Lastname"
+  contacts_editnewshowindex_position: "स्थिति"
+  contacts_editnewshowindex_tel: "टेलीफोन"
+  contacts_editnewshowindex_mobile: "मोबाइल"
+  contacts_editnewshowindex_email: "e-mail"
+  contacts_editnewshowindex_info: "जानकारी"
+  contacts_editnewshowindex_birthday: "जन्मदिन"
+  contacts_editnewshowindex_company: "कंपनी"
+  contacts_editnewshowindex_write: " एक पत्र लिखें "
+
+  contacts_editnewshowindex_update: "अद्यतन"
+  contacts_editnewshowindex_show: "दिखाना"
+  contacts_editnewshowindex_back: "पिछला"
+  contacts_editnewshowindex_create: " बनाएँ "
+  contacts_editnewshowindex_edit: " का संपादन करें "
+  contacts_editnewshowindex_delete: " हटाएँ "
+  contacts_editnewshowindex_new: " नया संपर्क बनाएँ "
+
+  dashblogs_new_headline: " समाचार बनाएँ "
+  dashblogs_edit_headline: " समाचार संपादन "
+  dashblogs_index_headline: "सूची समाचार"
+
+  dashblogs_editnewshowindex_title: "शीर्षक"
+  dashblogs_editnewshowindex_blogtext: "संदेश"
+  dashblogs_editnewshowindex_published: "प्रकाशित?"
+
+  dashblogs_editnewshowindex_update: "अद्यतन"
+  dashblogs_editnewshowindex_show: "दिखाना"
+  dashblogs_editnewshowindex_back: "पिछला"
+  dashblogs_editnewshowindex_create: " बनाएँ "
+  dashblogs_editnewshowindex_edit: " का संपादन करें "
+  dashblogs_editnewshowindex_delete: " हटाएँ "
+  dashblogs_editnewshowindex_new: " नए समाचार बनाएँ "
+
+  dateart_new_headline: " कैलेंडर श्रेणी बनाएँ "
+  dateart_edit_headline: " कैलेंडर श्रेणी संपादित करें "
+  dateart_index_headline: "सूची कैलेंडर श्रेणी"
+
+  dateart_editnewshowindex_art: "कैलेंडर श्रेणी"
+
+  dateart_editnewshowindex_update: "अद्यतन"
+  dateart_editnewshowindex_show: "दिखाना"
+  dateart_editnewshowindex_back: "पिछला"
+  dateart_editnewshowindex_create: " बनाएँ "
+  dateart_editnewshowindex_edit: " का संपादन करें "
+  dateart_editnewshowindex_delete: " हटाएँ "
+  dateart_editnewshowindex_new: "नई कैलेंडर श्रेणी!"
+
+  dateprio_new_headline: " कैलेंडर Prio बनाएँ "
+  dateprio_edit_headline: " कैलेंडर Prio संपादित करें "
+  dateprio_index_headline: "सूची कैलेंडर Prio"
+
+  dateprio_editnewshowindex_prio: "कैलेंडर Prio"
+
+  dateprio_editnewshowindex_update: "अद्यतन"
+  dateprio_editnewshowindex_show: "दिखाना"
+  dateprio_editnewshowindex_back: "पिछला"
+  dateprio_editnewshowindex_create: " बनाएँ "
+  dateprio_editnewshowindex_edit: " का संपादन करें "
+  dateprio_editnewshowindex_delete: " हटाएँ "
+  dateprio_editnewshowindex_new: "नई कैलेंडर Prio!"
+
+  datestatus_new_headline: " कैलेंडर स्तर बनाएँ "
+  datestatus_edit_headline: " कैलेंडर स्तर संपादित करें "
+  datestatus_index_headline: "सूची कैलेंडर स्तर"
+
+  datestatus_editnewshowindex_status: "कैलेंडर स्तर"
+
+  datestatus_editnewshowindex_update: "अद्यतन"
+  datestatus_editnewshowindex_show: "दिखाना"
+  datestatus_editnewshowindex_back: "पिछला"
+  datestatus_editnewshowindex_create: " बनाएँ "
+  datestatus_editnewshowindex_edit: " का संपादन करें "
+  datestatus_editnewshowindex_delete: " हटाएँ "
+  datestatus_editnewshowindex_new: " नए कैलेंडर स्तर बनाएँ "
+
+  datetasks_new_headline: " कैलेंडर टास्क बनाएँ "
+  datetasks_edit_headline: " कैलेंडर कार्य संपादित करें "
+  datetasks_index_headline: "सूची कैलेंडर टास्क"
+
+  datetasks_editnewshowindex_taskname: "Taskname"
+  datetasks_editnewshowindex_info: "जानकारी"
+  datetasks_editnewshowindex_progress: "प्रगति"
+  datetasks_editnewshowindex_dateprio: "Prio"
+  datetasks_editnewshowindex_datestatus: "स्तर"
+  datetasks_editnewshowindex_date: "दिनांक?"
+
+  datetasks_editnewshowindex_update: "अद्यतन"
+  datetasks_editnewshowindex_show: "दिखाना"
+  datetasks_editnewshowindex_back: "पिछला"
+  datetasks_editnewshowindex_create: " बनाएँ "
+  datetasks_editnewshowindex_edit: " का संपादन करें "
+  datetasks_editnewshowindex_delete: " हटाएँ "
+  datetasks_editnewshowindex_new: " नए कैलेंडर टास्क बनाएँ "
+
+  filedatas_new_headline: "अपलोड संचिका "
+  filedatas_edit_headline: " परिवर्तन संचिका "
+  filedatas_index_headline: "सूची फ़ाइलें"
+
+  filedatas_editnewshowindex_filename: "फ़ाइल नाम"
+  filedatas_editnewshowindex_info: "जानकारी"
+  filedatas_editnewshowindex_size: "आकार (MB)"
+  filedatas_editnewshowindex_contact: "सम्पर्क"
+  filedatas_editnewshowindex_folder: "फ़ोल्डर"
+
+  filedatas_editnewshowindex_update: " बदलें "
+  filedatas_editnewshowindex_show: "दिखाना"
+  filedatas_editnewshowindex_back: "पिछला"
+  filedatas_editnewshowindex_create: "अपलोड"
+  filedatas_editnewshowindex_edit: " बदलें "
+  filedatas_editnewshowindex_delete: " हटाएँ "
+  filedatas_editnewshowindex_new: "नई फ़ाइल अपलोड करें"
+
+  folders_new_headline: " फ़ोल्डर बनाएँ "
+  folders_edit_headline: "बदलें फ़ोल्डर"
+  folders_index_headline: "सूची फ़ोल्डर"
+
+  folders_editnewshowindex_fodlername: "Foldername"
+  folders_editnewshowindex_info: "जानकारी"
+
+  folders_editnewshowindex_update: "अद्यतन"
+  folders_editnewshowindex_show: "दिखाना फ़ाइलें"
+  folders_editnewshowindex_back: "पिछला"
+  folders_editnewshowindex_create: " बनाएँ "
+  folders_editnewshowindex_edit: " का संपादन करें "
+  folders_editnewshowindex_delete: " हटाएँ "
+  folders_editnewshowindex_new: " नया फ़ोल्डर बनाएँ "
+
+  kbarticles_new_headline: " KB प्रवेश बनाएँ "
+  kbarticles_edit_headline: "बदलें KB प्रवेश"
+  kbarticles_index_headline: "सूची KB Entries"
+
+  kbarticles_editnewshowindex_symptoms: "Symptoms"
+  kbarticles_editnewshowindex_cause: "क्योंकि"
+  kbarticles_editnewshowindex_solution: "हल"
+  kbarticles_editnewshowindex_kbcat: "श्रेणी"
+  kbarticles_editnewshowindex_kblang: "भाषा"
+
+  kbarticles_editnewshowindex_update: "अद्यतन"
+  kbarticles_editnewshowindex_show: "दिखाना"
+  kbarticles_editnewshowindex_back: "पिछला"
+  kbarticles_editnewshowindex_create: " बनाएँ "
+  kbarticles_editnewshowindex_edit: " का संपादन करें "
+  kbarticles_editnewshowindex_delete: " हटाएँ "
+  kbarticles_editnewshowindex_new: " नया KB प्रवेश बनाएँ "
+
+  kbcats_new_headline: "KB बनाएँ-श्रेणी"
+  kbcats_edit_headline: "बदलें KB-श्रेणी"
+  kbcats_index_headline: "सूची KB-श्रेणी"
+
+  kbcats_editnewshowindex_name: "श्रेणी"
+
+  kbcats_editnewshowindex_update: "अद्यतन"
+  kbcats_editnewshowindex_show: "दिखाना"
+  kbcats_editnewshowindex_back: "पिछला"
+  kbcats_editnewshowindex_create: " बनाएँ "
+  kbcats_editnewshowindex_edit: " का संपादन करें "
+  kbcats_editnewshowindex_delete: " हटाएँ "
+  kbcats_editnewshowindex_new: "नया KB-श्रेणी बनाएँ"
+
+  kbcomments_new_headline: "KB बनाएँ-टिप्पणी"
+  kbcomments_edit_headline: "KB संपादित-टिप्पणी"
+  kbcomments_index_headline: "सूची KB-टिप्पणी"
+
+  kbcomments_editnewshowindex_comment: "KB-टिप्पणी"
+  kbcomments_editnewshowindex_artikel: "KB-अनुच्छेद"
+
+  kbcomments_editnewshowindex_update: "अद्यतन"
+  kbcomments_editnewshowindex_show: "दिखाना"
+  kbcomments_editnewshowindex_back: "पिछला"
+  kbcomments_editnewshowindex_create: " बनाएँ "
+  kbcomments_editnewshowindex_edit: " का संपादन करें "
+  kbcomments_editnewshowindex_delete: " हटाएँ "
+  kbcomments_editnewshowindex_new: " नया KB-टिप्पणी बनाएँ "
+
+  kblang_new_headline: "KB बनाएँ भाषा"
+  kblang_edit_headline: "KB संपादित-भाषा"
+  kblang_index_headline: "सूची KB- भाषा "
+
+  kblang_editnewshowindex_language: "KB-भाषा"
+
+  kblang_editnewshowindex_update: "अद्यतन"
+  kblang_editnewshowindex_show: "दिखाना"
+  kblang_editnewshowindex_back: "पिछला"
+  kblang_editnewshowindex_create: " बनाएँ"
+  kblang_editnewshowindex_edit: " का संपादन करें"
+  kblang_editnewshowindex_delete: " हटाएँ"
+  kblang_editnewshowindex_new: "नई KB-भाषा"
+
+  parts_new_headline: " भाग बनाएँ"
+  parts_edit_headline: " भाग संपादित करें"
+  parts_index_headline: "सूची हिस्से"
+
+  parts_editnewshowindex_name: "Partname"
+  parts_editnewshowindex_price: "मूल्य"
+  parts_editnewshowindex_info: "जानकारी"
+  parts_editnewshowindex_image: "छवि"
+  parts_editnewshowindex_imagename: "Imagename"
+  parts_editnewshowindex_imageext: "प्रकार"
+
+  parts_editnewshowindex_update: "अद्यतन"
+  parts_editnewshowindex_show: "दिखाना"
+  parts_editnewshowindex_back: "पिछला"
+  parts_editnewshowindex_create: " बनाएँ"
+  parts_editnewshowindex_edit: " का संपादन करें"
+  parts_editnewshowindex_delete: " हटाएँ"
+  parts_editnewshowindex_new: " नया भाग बनाएँ"
+
+  products_new_headline: " उत्पाद बनाएँ"
+  products_edit_headline: "बदलें उत्पाद"
+  products_index_headline: "सूची उत्पाद"
+
+  products_editnewshowindex_name: "उत्पाद नाम"
+  products_editnewshowindex_price: "मूल्य"
+  products_editnewshowindex_info: "जानकारी"
+  products_editnewshowindex_image: "छवि"
+  products_editnewshowindex_imageext: "प्रकार"
+
+  products_editnewshowindex_update: "अद्यतन"
+  products_editnewshowindex_show: "दिखाना"
+  products_editnewshowindex_back: "पिछला"
+  products_editnewshowindex_create: " बनाएँ"
+  products_editnewshowindex_edit: " का संपादन करें"
+  products_editnewshowindex_delete: " हटाएँ"
+  products_editnewshowindex_new: " नया उत्पाद बनाएँ "
+  products_editnewshowindex_add: "उत्पाद के लिए भाग जोड़ें "
+
+  naviaccounts: "यूजर"
+  naviroles: "समूह"
+  account_index_headline: "सूची सिस्टम उपयोक्ता"
+  account_new_isadmin: "एडमिन है?"
+  account_new_role: "समूह" 
+  account_index_delete: "यूजर हटाएँ"
+  account_index_new: "नया प्रयोक्ता बनाए"
+  errors_acldenied_message: "आप इस का उपयोग करने का अधिकार नहीं है समारोह! "
+  errors_aclerror_message: "त्रुटि: यह आपके प्रयोक्ता की जाँच द्वारा एक त्रुटि दे अधिकार! "
+
+  role_new_headline: "समूह बनाए"
+  role_edit_headline: "बदलें समूह"
+  role_index_headline: "सूची समूह"
+
+  role_editnewshowindex_rolename: "समूह का नाम"
+  role_editnewshowindex_controller: "समार"
+  role_editnewshowindex_rightread: "पढ"
+  role_editnewshowindex_rightcreate: "बनाए"
+  role_editnewshowindex_rightupdate: "अद्यतन"
+  role_editnewshowindex_rightdelete: "हटाए"
+
+  role_editnewshowindex_update: "अद्यतन"
+  role_editnewshowindex_show: "दिखाना"
+  role_editnewshowindex_back: "पिछला"
+  role_editnewshowindex_create: "बनाए"
+  role_editnewshowindex_edit: "का संपादन कर"
+  role_editnewshowindex_delete: "हटाए"
+  role_editnewshowindex_new: "नया समूह बनाए"

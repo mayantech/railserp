@@ -1,0 +1,9 @@
+<h1><%= t 'kbcats_index_headline' %></h1>
+<%= render :partial => '/shared/search'%>
+<div id="list">
+<%= render :partial => 'list', :locals => { :kbcats => @kbcats } %>
+</div>
+
+<br />
+
+<%= link_to t('kbcats_editnewshowindex_new'), new_kbcat_path %>

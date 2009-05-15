@@ -1,0 +1,32 @@
+<table border="1px">
+  <tr>
+    <th><%= t 'contacts_editnewshowindex_name'%></th>
+    <th><%= t 'contacts_editnewshowindex_lastname'%></th>
+    <th><%= t 'contacts_editnewshowindex_position'%></th>
+    <th><%= t 'contacts_editnewshowindex_tel'%></th>
+    <th><%= t 'contacts_editnewshowindex_mobile'%></th>
+    <th><%= t 'contacts_editnewshowindex_email'%></th>
+    <th><%= t 'contacts_editnewshowindex_info'%></th>
+    <th><%= t 'contacts_editnewshowindex_birthday'%></th>
+    <th><%= t 'contacts_editnewshowindex_company'%></th>
+    <th>Functions</th>
+  </tr>
+
+<% for contact in contacts %>
+  <tr>
+    <td><%=h contact.name %></td>
+    <td><%=h contact.lastname %></td>
+    <td><%=h contact.position %></td>
+    <td><%=h contact.tel %></td>
+    <td><%=h contact.mobile %></td>
+    <td><%= mail_to contact.email %></td>
+    <td><%=h contact.Info %></td>
+    <td><%=h contact.birthday %></td>
+    <td><%=h contact.company.name %> </td>
+    <td><%= link_to t('contacts_editnewshowindex_show'), contact %></td>
+    <td><%= link_to t('contacts_editnewshowindex_edit'), edit_contact_path(contact) %></td>
+    <td><%= link_to t('contacts_editnewshowindex_delete'), contact, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t('contacts_editnewshowindex_write'), { :action =>"writeletter", :id => contact} %></td>
+  </tr>
+<% end %>
+</table>

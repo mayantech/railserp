@@ -1,0 +1,9 @@
+<h1><%= t 'kbcomments_new_headline' %></h1>
+
+<%= error_messages_for :kbcomment %>
+
+<% form_for(@kbcomment) do |f| %>
+<%= render :partial => 'form', :locals => { :f => f, :button_name => t('kbcomments_editnewshowindex_create'), :kbarticles => @kbarticles } %>
+<% end %>
+
+<%= link_to t('kbcomments_editnewshowindex_back'), kbcomments_path %>

@@ -1,0 +1,10 @@
+<h1><%= t 'kbcats_edit_headline' %></h1>
+
+<%= error_messages_for :kbcat %>
+
+<% form_for(@kbcat) do |f| %>
+<%= render :partial => 'form', :locals => { :f => f, :button_name => t('kbcats_editnewshowindex_edit') } %>
+<% end %>
+
+<%= link_to t('kbcats_editnewshowindex_show'), @kbcat %> |
+<%= link_to t('kbcats_editnewshowindex_back'), kbcats_path %>
