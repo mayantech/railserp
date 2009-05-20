@@ -4,7 +4,7 @@ class RolesController < ApplicationController
   # GET /roles
   # GET /roles.xml
   def index
-    @roles = Role.find(:all)
+    @roles = Role.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

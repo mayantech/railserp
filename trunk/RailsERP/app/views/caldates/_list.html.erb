@@ -51,9 +51,9 @@ end %>
     <td><%=h caldate.datestatus.status %></td>
     <td><%=h caldate.dateart.art %></td>
     <td><%=h caldate.reminder.day %>.<%=h caldate.reminder.month %>.<%=h caldate.reminder.year %></td>
-    <td><%= link_to t('caldate_editnewshowindex_show'), caldate %></td>
-    <td><%= link_to t('caldate_editnewshowindex_edit'), edit_caldate_path(caldate) %></td>
-    <td><%= link_to t('caldate_editnewshowindex_delete'), caldate, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24')+ t('caldate_editnewshowindex_show'), caldate %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find-replace.png",:height => '24', :width => '24')+ t('caldate_editnewshowindex_edit'), edit_caldate_path(caldate) %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-delete.png",:height => '24', :width => '24')+t('caldate_editnewshowindex_delete'), caldate, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

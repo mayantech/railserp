@@ -6,5 +6,5 @@
  <%= render :partial => 'form', :locals => { :f => f, :button_name => t('filedatas_editnewshowindex_update'), :companies => @companies, :folders => @folders } %>
 <% end %>
 
-<%= link_to t('filedatas_editnewshowindex_show'), @filedata %> |
-<%= link_to t('filedatas_editnewshowindex_back'), filedatas_path %>
+<%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24') + t('filedatas_editnewshowindex_show'), @filedata %> |
+<%= link_to image_tag("/images/icons/actions/go-previous.png",:height => '24', :width => '24') + t('filedatas_editnewshowindex_back'), filedatas_path %>

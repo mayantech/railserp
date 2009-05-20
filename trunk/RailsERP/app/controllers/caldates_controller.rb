@@ -8,7 +8,7 @@ class CaldatesController < ApplicationController
   #List all Dates
   def index
     @today=Date.today
-    @caldates = Caldate.find(:all, :limit => 10)
+    @caldates = Caldate.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

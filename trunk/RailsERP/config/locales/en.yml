@@ -14,7 +14,7 @@ en:
     navisales: "Sales"
     navicontacts: "Contacts"
     navicompanies: "Companies"
-    naviadresses: "Company Adresses"
+    naviadresses: "Company Addresses"
     navicompanyarts: "Company Categories"
 
     naviproduction: "Production"
@@ -42,7 +42,7 @@ en:
 
     ## Controller
     account_new_login: "User"
-    account_new_email: "Your E-Mail adress!"
+    account_new_email: "Your E-Mail address!"
     account_new_password: "Password"
     account_new_confirmpassword: "Confirm Password"
     account_new_sigup: "Create User"
@@ -50,21 +50,21 @@ en:
     sessions_new_headline: "Login to RailsERP"
     sessions_new_user: "Username"
     sessions_new_password: "Password"
-    sessions_new_rememberme: "Remmember Me?"
+    sessions_new_rememberme: "Remember Me?"
     sessions_new_login: "Login"
 
     global_search: "Search"
     global_search_go: "Go search"
-    adress_new_headline: "New Adress"
-    adress_edit_headline: "Edit Adress"
-    adress_index_headline: "List Adress"
+    adress_new_headline: "New Address"
+    adress_edit_headline: "Edit Address"
+    adress_index_headline: "List Address"
 
-    adress_editnewshowindex_street: "Street: "
-    adress_editnewshowindex_streetnr: "Street nr:"
-    adress_editnewshowindex_zip: "Zipcode:"
-    adress_editnewshowindex_area: "Area:"
-    adress_editnewshowindex_land: "Land:"
-    adress_editnewshowindex_postcode: "Postcode:"
+    adress_editnewshowindex_street: "Address "
+    adress_editnewshowindex_streetnr: "Address"
+    adress_editnewshowindex_city: "City / Town"
+    adress_editnewshowindex_region: "State / Province / Region"
+    adress_editnewshowindex_country: "Country"
+    adress_editnewshowindex_postcode: "ZIP / Postal Code"
     adress_editnewshowindex_company: "Company"
 
     adress_editnewshowindex_update: "Update"
@@ -73,7 +73,7 @@ en:
     adress_editnewshowindex_create: "Create"
     adress_editnewshowindex_edit: "Edit"
     adress_editnewshowindex_delete: "Delete"
-    adress_editnewshowindex_new: "New Adress"
+    adress_editnewshowindex_new: "New Address"
 
     caldate_new_headline: "Create Date"
     caldate_edit_headline: "Edit Date"
@@ -101,6 +101,7 @@ en:
     companies_new_headline: "Create Company"
     companies_edit_headline: "Edit Company"
     companies_index_headline: "List Companies"
+    companies_show_locations_headline: "Locations"
 
     companies_editnewshowindex_name: "Company Name"
     companies_editnewshowindex_companyart: "Category"

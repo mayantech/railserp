@@ -6,7 +6,7 @@ class DatestatusesController < ApplicationController
    before_filter :has_permission?
   # List all Date Statuses
   def index
-    @datestatuses = Datestatus.find(:all)
+    @datestatuses = Datestatus.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

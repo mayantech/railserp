@@ -6,7 +6,7 @@ class DatetasksController < ApplicationController
   # GET /datetasks.xml
   # List all Date Taskes
   def index
-    @datetasks = Datetask.find(:all)
+    @datetasks = Datetask.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

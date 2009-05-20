@@ -247,12 +247,12 @@ ru:
   adress_edit_headline: "Изменить адрес"
   adress_index_headline: "Перечень адресов"
 
-  adress_editnewshowindex_street: "Улица:"
-  adress_editnewshowindex_streetnr: "Улица Nr:"
-  adress_editnewshowindex_zip: "Индекс:"
-  adress_editnewshowindex_area: "Площадь:"
-  adress_editnewshowindex_land: "Земля:"
-  adress_editnewshowindex_postcode: "Индекс:"
+  adress_editnewshowindex_street: "Улица"
+  adress_editnewshowindex_streetnr: "Улица Nr"
+  adress_editnewshowindex_city: "Cити / Rород"
+  adress_editnewshowindex_region: "Cостояние / Oбласть"
+  adress_editnewshowindex_country: "Cтрана"
+  adress_editnewshowindex_postcode: "Индекс"
   adress_editnewshowindex_company: "Компания"
 
   adress_editnewshowindex_update: "Обновить"
@@ -289,6 +289,7 @@ ru:
   companies_new_headline: "Создание компании"
   companies_edit_headline: "Редактировать компанию"
   companies_index_headline: "Перечень компаний"
+  companies_show_locations_headline: "Места"
 
   companies_editnewshowindex_name: "Название компании"
   companies_editnewshowindex_companyart: "Категория"

@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
   before_filter :has_permission?
   # List all Contacts
   def index
-    @contacts = Contact.find(:all)
+    @contacts = Contact.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb
@@ -26,7 +26,7 @@ class ContactsController < ApplicationController
   # Show a Contact
   def show
     @contact = Contact.find(params[:id])
-
+    @today = Date.today
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @contact }

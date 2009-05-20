@@ -6,5 +6,5 @@
 <%= render :partial => 'form', :locals => { :f => f, :button_name => t('kbcomments_editnewshowindex_update'), :kbarticles => @kbarticles } %>
 <% end %>
 
-<%= link_to t('kbcomments_editnewshowindex_show'), @kbcomment %> |
-<%= link_to t('kbcomments_editnewshowindex_back'), kbcomments_path %>
+<%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24') + t('kbcomments_editnewshowindex_show'), @kbcomment %> |
+<%= link_to image_tag("/images/icons/actions/go-previous.png",:height => '24', :width => '24') + t('kbcomments_editnewshowindex_back'), kbcomments_path %>

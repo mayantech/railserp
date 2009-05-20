@@ -33,5 +33,5 @@
 </table>
 <%= link_to t('kbarticles_editnewshowindex_new'), new_kbarticle_path %>
 
-<%= link_to t('kbcats_editnewshowindex_edit'), edit_kbcat_path(@kbcat) %> |
-<%= link_to t('kbcats_editnewshowindex_back'), kbcats_path %>
+<%= link_to image_tag("/images/icons/actions/edit-find-replace.png",:height => '24', :width => '24') + t('kbcats_editnewshowindex_edit'), edit_kbcat_path(@kbcat) %> |
+<%= link_to image_tag("/images/icons/actions/go-previous.png",:height => '24', :width => '24') + t('kbcats_editnewshowindex_back'), kbcats_path %>

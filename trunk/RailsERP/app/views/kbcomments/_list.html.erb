@@ -8,9 +8,9 @@
   <tr>
     <td><%= link_to kbcomment.kbarticle_id , kbcomment.kbarticle %></td>
     <td><%=h kbcomment.comment %></td>
-    <td><%= link_to t('kbcomments_editnewshowindex_show'), kbcomment %></td>
-    <td><%= link_to t('kbcomments_editnewshowindex_edit'), edit_kbcomment_path(kbcomment) %></td>
-    <td><%= link_to t('kbcomments_editnewshowindex_delete'), kbcomment, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24')+ t('kbcomments_editnewshowindex_show'), kbcomment %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find-replace.png",:height => '24', :width => '24')+ t('kbcomments_editnewshowindex_edit'), edit_kbcomment_path(kbcomment) %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-delete.png",:height => '24', :width => '24')+t('kbcomments_editnewshowindex_delete'), kbcomment, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

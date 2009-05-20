@@ -34,7 +34,7 @@
 </p>
 
 <p>
-  <b><%= t 'contacts_editnewshowindex_birtday'%></b>
+  <b><%= t 'contacts_editnewshowindex_birthday'%></b>
   <%=h @contact.birthday %>
 </p>
 <p>
@@ -43,70 +43,14 @@
 </p>
 
 
-<table>
-  <tr>
-    <th><%= t 'caldate_editnewshowindex_startdate' %></th>
-    <th><%= t 'caldate_editnewshowindex_enddate' %></th>
-    <th><%= t 'caldate_editnewshowindex_info' %></th>
-    <th><%= t 'caldate_editnewshowindex_fullday' %></th>
-    <th><%= t 'caldate_editnewshowindex_account' %></th>
-    <th><%= t 'caldate_editnewshowindex_contact' %></th>
-    <th><%= t 'caldate_editnewshowindex_dateprio' %></th>
-    <th><%= t 'caldate_editnewshowindex_datestatus' %></th>
-    <th><%= t 'caldate_editnewshowindex_dateart' %></th>
-    <th><%= t 'caldate_editnewshowindex_reminder' %></th>
-  </tr>
-
-<br>
-  <h1>Cal Dates with this Contact:</h1><br>
-
-<% for caldate in @contact.caldates %>
-  <tr>
-    <td><%=h caldate.startdate.day %>.<%=h caldate.startdate.month %>.<%=h caldate.startdate.year %></td>
-    <td><%=h caldate.enddate.day %>.<%=h caldate.enddate.month %>.<%=h caldate.enddate.year %></td>
-    <td><%=h caldate.info %></td>
-    <td><%=h caldate.fullday %></td>
-    <td><%=h caldate.account_id %></td>
-    <td><%=h caldate.contact.name %></td>
-    <td><%=h caldate.dateprio.prio %></td>
-    <td><%=h caldate.datestatus.status %></td>
-    <td><%=h caldate.dateart.art %></td>
-    <td><%=h caldate.reminder.day %>.<%=h caldate.reminder.month %>.<%=h caldate.reminder.year %></td>
-    <td><%= link_to t('caldate_editnewshowindex_show'), caldate %></td>
-    <td><%= link_to t('caldate_editnewshowindex_edit'), edit_caldate_path(caldate) %></td>
-    <td><%= link_to t('caldate_editnewshowindex_delete'), caldate, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<%= render :partial => '/caldates/list', :locals => { :caldates => @contact.caldates, :today => @today } %>
 
 <hr>
   <h1>Files:</h1>
   <br>
-<table>
-  <tr>
-    <th>Filename</th>
-    <th>Size:(MB)</th>
-  </tr>
-
-<% for filedata in @contact.filedatas %>
-  <tr>
-    <td><a href="/files/<%= filedata.id.to_s %>/<%= filedata.id.to_s + "." + filedata.ext%>"><%=h filedata.name + "." + filedata.ext %></a></td>
-    <td><%=h filedata.size/1024/1024 %></td>
-    <td><%= link_to 'Show', filedata %></td>
-    <td><%= link_to 'Edit', edit_filedata_path(filedata) %></td>
-    <td><%= link_to 'Destroy', filedata, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New filedata', new_filedata_path %>
-<br>
-  <hr>
+<%= render :partial => '/filedatas/list', :locals => { :filedatas => @contact.filedatas} %>
 
 
 
-
-<%= link_to t('contacts_editnewshowindex_edit'), edit_contact_path(@contact) %> |
-<%= link_to t('contacts_editnewshowindex_back'), contacts_path %>
+<%= link_to image_tag("/images/icons/actions/edit-find-replace.png",:height => '24', :width => '24') + t('contacts_editnewshowindex_edit'), edit_contact_path(@contact) %> |
+<%= link_to image_tag("/images/icons/actions/go-previous.png",:height => '24', :width => '24') + t('contacts_editnewshowindex_back'), contacts_path %>

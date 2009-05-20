@@ -16,9 +16,9 @@
     <td><%=h datetask.dateprio.prio %></td>
     <td><%=h datetask.datestatus.status %></td>
     <td><%=h datetask.caldate.info %></td>
-    <td><%= link_to t('datetasks_editnewshowindex_show'), datetask %></td>
-    <td><%= link_to t('datetasks_editnewshowindex_edit'), edit_datetask_path(datetask) %></td>
-    <td><%= link_to t('datetasks_editnewshowindex_delete'), datetask, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24')+ t('datetasks_editnewshowindex_show'), datetask %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find-replace.png",:height => '24', :width => '24')+ t('datetasks_editnewshowindex_edit'), edit_datetask_path(datetask) %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-delete.png",:height => '24', :width => '24')+t('datetasks_editnewshowindex_delete'), datetask, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

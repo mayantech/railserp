@@ -6,9 +6,9 @@
 <% for dateart in datearts %>
   <tr>
     <td><%=h dateart.art %></td>
-    <td><%= link_to t('dateart_editnewshowindex_show'), dateart %></td>
-    <td><%= link_to t('dateart_editnewshowindex_edit'), edit_dateart_path(dateart) %></td>
-    <td><%= link_to t('dateart_editnewshowindex_delete'), dateart, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24')+ t('dateart_editnewshowindex_show'), dateart %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find-replace.png",:height => '24', :width => '24')+ t('dateart_editnewshowindex_edit'), edit_dateart_path(dateart) %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-delete.png",:height => '24', :width => '24')+t('dateart_editnewshowindex_delete'), dateart, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

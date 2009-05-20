@@ -16,7 +16,7 @@
     <td><%=h account.crypted_password %></td>
     <td><%=h account.is_admin %></td>
     <td><%=h account.role.rolename %></td>
-    <td><%= link_to t('account_index_delete'), account, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-delete.png",:height => '24', :width => '24')+t('account_index_delete'), account, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

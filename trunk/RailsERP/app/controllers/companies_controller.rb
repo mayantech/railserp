@@ -7,7 +7,7 @@ class CompaniesController < ApplicationController
   before_filter :has_permission?
   # List all Companys
   def index
-    @companies = Company.find(:all)
+    @companies = Company.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

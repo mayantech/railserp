@@ -6,7 +6,7 @@ class DatepriosController < ApplicationController
    before_filter :has_permission?
   # List all Date Prios
   def index
-    @dateprios = Dateprio.find(:all)
+    @dateprios = Dateprio.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

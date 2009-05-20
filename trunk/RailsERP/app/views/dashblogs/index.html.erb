@@ -1,8 +1,12 @@
-<h1><%= t 'dashblogs_index_headline'%></h1>
+<h1><%= image_tag("/images/icons/apps/internet-news-reader.png")%>  <%= t 'dashblogs_index_headline'%></h1>
 <%= render :partial => '/shared/search'%>
-<div id="list">
-<%= render :partial => 'list', :locals => { :dashblogs => @dashblogs } %>
-</div>
-<br />
 
-<%= link_to t('dashblogs_editnewshowindex_new'), new_dashblog_path %>
+<div id="list">
+<%= render :partial => 'list', :locals => { :dashblogs => @dashblogs }%>
+<p align="center">
+  <%=  link_to image_tag("/images/icons/actions/go-previous.png",:height => '24', :width => '24'),:controller => "dashblogs", :action => "list_previous", :offset => @offset %>
+<%=h @dashblogs.length + @offset %> - <%=h @dashblogcount %>
+  <%=  link_to image_tag("/images/icons/actions/go-next.png",:height => '24', :width => '24'),:controller => "dashblogs", :action => "list_next", :offset => @offset %>
+</p>
+</div>
+<%= link_to image_tag("/images/icons/actions/list-add.png",:height => '24', :width => '24') + t('dashblogs_editnewshowindex_new'), new_dashblog_path %>

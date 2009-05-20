@@ -6,5 +6,5 @@
  <%= render :partial => 'form', :locals => { :f => f, :button_name => t('contacts_editnewshowindex_update'), :companies => @companies } %>
 <% end %>
 
-<%= link_to t('contacts_editnewshowindex_show'), @contact %> |
-<%= link_to t('contacts_editnewshowindex_back'), contacts_path %>
+<%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24') + t('contacts_editnewshowindex_show'), @contact %> |
+<%= link_to image_tag("/images/icons/actions/go-previous.png",:height => '24', :width => '24') + t('contacts_editnewshowindex_back'), contacts_path %>

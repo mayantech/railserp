@@ -6,7 +6,7 @@ class KbarticlesController < ApplicationController
   before_filter :has_permission?
   # List all Knowlagebase Entries
   def index
-    @kbarticles = Kbarticle.find(:all)
+    @kbarticles = Kbarticle.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb
