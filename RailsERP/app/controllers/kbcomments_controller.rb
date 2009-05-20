@@ -6,7 +6,7 @@ class KbcommentsController < ApplicationController
   before_filter :has_permission?
   # List all Knowlagebase Commentes
   def index
-    @kbcomments = Kbcomment.find(:all)
+    @kbcomments = Kbcomment.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

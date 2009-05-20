@@ -13,7 +13,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # :secret => '2e8cf15e111afc0a88cf55169b1084f0'
   
   public
-  
+  @@listlimit = APP_CONFIG['LISTLIMIT'].to_i
+
   def current_user
     return current_account
   end

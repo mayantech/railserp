@@ -6,8 +6,9 @@ class DashblogsController < ApplicationController
  before_filter :has_permission?
   # List all News
   def index
-    @dashblogs = Dashblog.find(:all)
-
+    @dashblogs = Dashblog.find(:all, :limit => @@listlimit )
+    @dashblogcount = Dashblog.count
+    @offset = 0
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @dashblogs }
@@ -104,11 +105,50 @@ class DashblogsController < ApplicationController
 
   # Search for a News with a srting AJAX Search
   def live_search
+    @dashblogcount = Dashblog.count
     @phrase = params[:searchtext]
+    if @phrase != "" then
     @results = Dashblog.search @phrase
-
+    end
     @number_match = @results.length
 
     render(:layout => false)
+  end
+
+  # Get the next list from Offset to Limit
+  def list_next
+    @dashblogcount = Dashblog.count
+    @offset = params[:offset]
+    @offset = @offset.to_i
+    @offset = @offset + @@listlimit
+    if @offset >= @dashblogcount 
+      @offset = @offset - @@listlimit
+    end
+    @dashblogs = Dashblog.find(:all, :offset => @offset ,:limit => @@listlimit )
+    respond_to do |format|
+      format.html { render :template =>"dashblogs/index"}
+      format.xml  { render :xml => @dashblogs }
+    end
+  end
+
+  # Get the previous list before the offset
+  def list_previous
+    @dashblogcount = Dashblog.count
+    @offset = params[:offset]
+    @offset = @offset.to_i
+    if @offset != 0
+      @offset = @offset - @@listlimit
+      @dashblogs = Dashblog.find(:all, :offset => @offset ,:limit => @@listlimit )
+      respond_to do |format|
+        format.html { render :template =>"dashblogs/index"}
+        format.xml  { render :xml => @dashblogs }
+      end
+    else
+      @dashblogs = Dashblog.find(:all, :offset => @offset ,:limit => @@listlimit )
+      respond_to do |format|
+        format.html { render :template =>"dashblogs/index"}
+        format.xml  { render :xml => @dashblogs }
+      end
+    end
   end
 end

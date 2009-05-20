@@ -6,7 +6,7 @@ class AdressesController < ApplicationController
  before_filter :has_permission?
   # Rende Index and get all Data from Model
   def index
-    @adresses = Adress.find(:all)
+    @adresses = Adress.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

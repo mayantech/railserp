@@ -6,7 +6,7 @@ class KbcatsController < ApplicationController
   before_filter :has_permission?
   # List all Knowlagebase Categorie
   def index
-    @kbcats = Kbcat.find(:all)
+    @kbcats = Kbcat.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

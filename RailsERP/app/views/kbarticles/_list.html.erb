@@ -16,9 +16,9 @@
     <td><%=h kbarticle.solution %></td>
     <td><%=h kbarticle.kbcat.name %></td>
     <td><%=h kbarticle.kblang.language %></td>
-    <td><%= link_to t('kbarticles_editnewshowindex_show'), kbarticle %></td>
-    <td><%= link_to t('kbarticles_editnewshowindex_edit'), edit_kbarticle_path(kbarticle) %></td>
-    <td><%= link_to t('kbarticles_editnewshowindex_delete'), kbarticle, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24')+ t('kbarticles_editnewshowindex_show'), kbarticle %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find-replace.png",:height => '24', :width => '24')+ t('kbarticles_editnewshowindex_edit'), edit_kbarticle_path(kbarticle) %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-delete.png",:height => '24', :width => '24')+t('kbarticles_editnewshowindex_delete'), kbarticle, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

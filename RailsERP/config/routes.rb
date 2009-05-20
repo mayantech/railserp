@@ -31,7 +31,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :adresses
 
-  map.resources :dashblogs
+  map.resources :dashblogs, :collection => {:list_next => :get, :list_previous => :get }
 
   map.resources :companies
 

@@ -6,5 +6,5 @@
  <%= render :partial => 'form', :locals => { :f => f, :button_name => t('products_editnewshowindex_update') } %>
 <% end %>
 
-<%= link_to t('products_editnewshowindex_show'), @product %> |
-<%= link_to t('products_editnewshowindex_back'), products_path %>
+<%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24') + t('products_editnewshowindex_show'), @product %> |
+<%= link_to image_tag("/images/icons/actions/go-previous.png",:height => '24', :width => '24') + t('products_editnewshowindex_back'), products_path %>

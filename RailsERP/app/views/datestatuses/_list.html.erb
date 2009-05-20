@@ -6,9 +6,9 @@
 <% for datestatus in datestatuses %>
   <tr>
     <td><%=h datestatus.status %></td>
-    <td><%= link_to t('datestatus_editnewshowindex_show'), datestatus %></td>
-    <td><%= link_to t('datestatus_editnewshowindex_edit'), edit_datestatus_path(datestatus) %></td>
-    <td><%= link_to t('datestatus_editnewshowindex_delete'), datestatus, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24')+ t('datestatus_editnewshowindex_show'), datestatus %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find-replace.png",:height => '24', :width => '24')+ t('datestatus_editnewshowindex_edit'), edit_datestatus_path(datestatus) %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-delete.png",:height => '24', :width => '24')+t('datestatus_editnewshowindex_delete'), datestatus, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

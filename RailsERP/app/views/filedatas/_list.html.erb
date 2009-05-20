@@ -10,9 +10,9 @@
     <td><%= image_tag("/images/icons/status/mail-attachment.png")   %></td>
     <td><a href="/files/<%= filedata.id.to_s %>/<%= filedata.id.to_s + "." + filedata.ext%>"><%=h filedata.name + "." + filedata.ext %></a></td>
     <td><%=h filedata.size/1024/1024 %></td>
-    <td><%= link_to t('filedatas_editnewshowindex_show'), filedata %></td>
-    <td><%= link_to t('filedatas_editnewshowindex_edit'), edit_filedata_path(filedata) %></td>
-    <td><%= link_to t('filedatas_editnewshowindex_delete'), filedata, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24')+ t('filedatas_editnewshowindex_show'), filedata %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find-replace.png",:height => '24', :width => '24')+ t('filedatas_editnewshowindex_edit'), edit_filedata_path(filedata) %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-delete.png",:height => '24', :width => '24')+t('filedatas_editnewshowindex_delete'), filedata, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

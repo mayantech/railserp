@@ -6,9 +6,9 @@
 <% for kblang in kblangs %>
   <tr>
     <td><%=h kblang.language %></td>
-    <td><%= link_to t('kblang_editnewshowindex_show'), kblang %></td>
-    <td><%= link_to t('kblang_editnewshowindex_edit'), edit_kblang_path(kblang) %></td>
-    <td><%= link_to t('kblang_editnewshowindex_delete'), kblang, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24')+ t('kblang_editnewshowindex_show'), kblang %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find-replace.png",:height => '24', :width => '24')+ t('kblang_editnewshowindex_edit'), edit_kblang_path(kblang) %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-delete.png",:height => '24', :width => '24')+t('kblang_editnewshowindex_delete'), kblang, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

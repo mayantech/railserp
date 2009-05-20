@@ -6,7 +6,7 @@ class FoldersController < ApplicationController
    before_filter :has_permission?
   # List all Folders
   def index
-    @folders = Folder.find(:all)
+    @folders = Folder.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

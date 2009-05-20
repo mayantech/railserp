@@ -6,7 +6,7 @@ class DateartsController < ApplicationController
    before_filter :has_permission?
   # List all Date Categories
   def index
-    @datearts = Dateart.find(:all)
+    @datearts = Dateart.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

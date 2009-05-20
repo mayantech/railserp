@@ -175,12 +175,12 @@ in:
   adress_edit_headline: " पता संपादित करें"
   adress_index_headline: "सूची पता"
 
-  adress_editnewshowindex_street: "स्ट्रीट:"
-  adress_editnewshowindex_streetnr: "स्ट्रीट nr:"
-  adress_editnewshowindex_zip: "ज़िपकोड:"
-  adress_editnewshowindex_area: "क्षेत्र:"
-  adress_editnewshowindex_land: "भूमि:"
-  adress_editnewshowindex_postcode: "पिन कोड:"
+  adress_editnewshowindex_street: "स्ट्रीट"
+  adress_editnewshowindex_streetnr: "स्ट्रीट nr"
+  adress_editnewshowindex_city: "Kota"
+  adress_editnewshowindex_region: "Menyatakan / Propinsi / Wilayah"
+  adress_editnewshowindex_country: "Negara"
+  adress_editnewshowindex_postcode: "पिन कोड"
   adress_editnewshowindex_company: "कंपनी"
 
   adress_editnewshowindex_update: "अद्यतन"
@@ -217,6 +217,7 @@ in:
   companies_new_headline: " कंपनी बनाएँ "
   companies_edit_headline: " कंपनी का संपादन करें "
   companies_index_headline: "सूची कंपनियों"
+  companies_show_locations_headline: "Lokasi"
 
   companies_editnewshowindex_name: "कंपनी का नाम"
   companies_editnewshowindex_companyart: "श्रेणी"

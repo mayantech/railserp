@@ -6,5 +6,5 @@
 <%= render :partial => 'form', :locals => { :f => f, :button_name => t('dateprio_editnewshowindex_update') } %>
 <% end %>
 
-<%= link_to t('dateprio_editnewshowindex_show'), @dateprio %> |
-<%= link_to t('dateprio_editnewshowindex_back'), dateprios_path %>
+<%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24') + t('dateprio_editnewshowindex_show'), @dateprio %> |
+<%= link_to image_tag("/images/icons/actions/go-previous.png",:height => '24', :width => '24') + t('dateprio_editnewshowindex_back'), dateprios_path %>

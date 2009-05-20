@@ -6,7 +6,7 @@ class PartsController < ApplicationController
   before_filter :has_permission?
   # List all Parts
   def index
-    @parts = Part.find(:all)
+    @parts = Part.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

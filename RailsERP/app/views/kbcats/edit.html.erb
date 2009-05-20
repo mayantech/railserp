@@ -6,5 +6,5 @@
 <%= render :partial => 'form', :locals => { :f => f, :button_name => t('kbcats_editnewshowindex_edit') } %>
 <% end %>
 
-<%= link_to t('kbcats_editnewshowindex_show'), @kbcat %> |
-<%= link_to t('kbcats_editnewshowindex_back'), kbcats_path %>
+<%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24') + t('kbcats_editnewshowindex_show'), @kbcat %> |
+<%= link_to image_tag("/images/icons/actions/go-previous.png",:height => '24', :width => '24') + t('kbcats_editnewshowindex_back'), kbcats_path %>

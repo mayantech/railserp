@@ -6,9 +6,9 @@
 <% for dateprio in dateprios %>
   <tr>
     <td><%=h dateprio.prio %></td>
-    <td><%= link_to t('dateprio_editnewshowindex_show'), dateprio %></td>
-    <td><%= link_to t('dateprio_editnewshowindex_edit'), edit_dateprio_path(dateprio) %></td>
-    <td><%= link_to t('dateprio_editnewshowindex_delete'), dateprio, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24')+ t('dateprio_editnewshowindex_show'), dateprio %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find-replace.png",:height => '24', :width => '24')+ t('dateprio_editnewshowindex_edit'), edit_dateprio_path(dateprio) %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-delete.png",:height => '24', :width => '24')+t('dateprio_editnewshowindex_delete'), dateprio, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

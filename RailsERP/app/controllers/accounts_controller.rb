@@ -5,7 +5,7 @@ class AccountsController < ApplicationController
   before_filter :login_required
   before_filter :has_permission?
   def index
-    @accounts = Account.find(:all)
+    @accounts = Account.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

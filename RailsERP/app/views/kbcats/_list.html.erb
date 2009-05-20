@@ -6,9 +6,9 @@
 <% for kbcat in kbcats %>
   <tr>
     <td><%=h kbcat.name %></td>
-    <td><%= link_to t('kbcats_editnewshowindex_show'), kbcat %></td>
-    <td><%= link_to t('kbcats_editnewshowindex_edit'), edit_kbcat_path(kbcat) %></td>
-    <td><%= link_to t('kbcats_editnewshowindex_delete'), kbcat, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find.png",:height => '24', :width => '24')+ t('kbcats_editnewshowindex_show'), kbcat %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-find-replace.png",:height => '24', :width => '24')+ t('kbcats_editnewshowindex_edit'), edit_kbcat_path(kbcat) %></td>
+    <td><%= link_to image_tag("/images/icons/actions/edit-delete.png",:height => '24', :width => '24')+t('kbcats_editnewshowindex_delete'), kbcat, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

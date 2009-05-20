@@ -6,4 +6,4 @@
    <%= render :partial => 'form', :locals => { :f => f, :button_name => t('datetasks_editnewshowindex_create'), :caldates => @caldates, :datestatuses => @datestatuses, :dateprios => @dateprios  } %>
 <% end %>
 
-<%= link_to t('datetasks_editnewshowindex_back'), datetasks_path %>
+<%= link_to image_tag("/images/icons/actions/go-previous.png",:height => '24', :width => '24') + t('datetasks_editnewshowindex_back'), datetasks_path %>

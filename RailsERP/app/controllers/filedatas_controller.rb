@@ -6,7 +6,7 @@ class FiledatasController < ApplicationController
    before_filter :has_permission?
   # List all Files
   def index
-    @filedatas = Filedata.find(:all)
+    @filedatas = Filedata.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

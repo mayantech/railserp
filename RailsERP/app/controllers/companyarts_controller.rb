@@ -7,7 +7,7 @@ class CompanyartsController < ApplicationController
   before_filter :has_permission?
   # List all Categories
   def index
-    @companyarts = Companyart.find(:all)
+    @companyarts = Companyart.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb

@@ -2,13 +2,16 @@ development:
     writetemplate: /Users/marcel/Desktop/RailsERP/public/vorlage.odt
     writetemplateout: /Users/marcel/Desktop/RailsERP/public/Out.odt
     RailsERPPath: /Users/marcel/Desktop/RailsERP/
+    LISTLIMIT: 3
 
 test:
     writetemplate: /Users/marcel/Desktop/RailsERP/public/vorlage.odt
     writetemplateout: /Users/marcel/Desktop/RailsERP/public/Out.odt
     RailsERPPath: /Users/marcel/Desktop/RailsERP/
+    LISTLIMIT: 3
 
 production:
     writetemplate: /Users/marcel/Desktop/RailsERP/public/vorlage.odt
     writetemplateout: /Users/marcel/Desktop/RailsERP/public/Out.odt
     RailsERPPath: /Users/marcel/Desktop/RailsERP/
+    LISTLIMIT: 3

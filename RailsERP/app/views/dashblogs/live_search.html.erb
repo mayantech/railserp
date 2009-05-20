@@ -2,6 +2,5 @@
   <%=h @phrase %> not found!
 <% else %>
   <%=h @phrase %> found <b><%= @number_match %></b> time(s)!
-<%= render :partial => 'list', :locals => { :dashblogs => @results } %>
-
+  <%= render :partial => 'list', :locals => { :dashblogs => @results} %>
 <% end %>

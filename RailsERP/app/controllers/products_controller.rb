@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   # GET /products.xml
   # List all Product
   def index
-    @products = Product.find(:all)
+    @products = Product.find(:all, :limit => @@listlimit )
 
     respond_to do |format|
       format.html # index.html.erb
